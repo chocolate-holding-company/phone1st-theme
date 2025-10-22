@@ -1,0 +1,91 @@
+// =======================
+// Typography
+// =======================
+@use "../root/variables" as *;
+
+hr {
+  border-bottom: $border;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $heading-font;
+  clear: both;
+  hyphens: none;
+  font-size: $font-size; //Remove to set browser default headings
+}
+
+p {
+  hyphens: none;
+}
+
+b,
+strong,
+dt {
+  font-weight: bolder;
+}
+
+i,
+em,
+dfn,
+cite,
+abbr,
+address {
+  font-style: italic;
+}
+
+abbr,
+acronym {
+  border-bottom: 1px dotted $medium-gray;
+  cursor: help;
+}
+
+mark,
+ins {
+  background: $light-gray;
+  text-decoration: none;
+}
+
+small {
+  font-size: 85%;
+}
+
+big {
+  font-size: 125%;
+}
+
+pre {
+  overflow: auto;
+  word-wrap: break-word;
+  white-space: pre;
+}
+
+pre,
+code,
+kbd,
+tt,
+var {
+  font-family: $code-font;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}

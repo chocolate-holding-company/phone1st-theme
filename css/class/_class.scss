@@ -1,0 +1,8 @@
+//classes can be like inline styles and become a problem with responsive design
+
+//see _media.scss and _table.scss for more classes used with Phone1st
+@forward "typography";
+@forward "margin";
+@forward "padding";
+@forward "flex";
+@forward "gap";

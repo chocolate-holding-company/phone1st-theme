@@ -1,0 +1,54 @@
+// =============
+// Images
+// =============
+
+@use "../root/" as *;
+
+figure {
+  text-align: center;
+}
+
+figcaption {
+  font-size: $secondary;
+  line-height: 1.4;
+}
+
+//framed image
+.img-framed {
+  background-color: $white;
+  padding: 1rem;
+  border-radius: $radius;
+  border: $border;
+  box-shadow: 2px 2px 2px $light-gray;
+}
+
+//circled image
+.img-circle {
+  border-radius: 50rem !important;
+}
+
+//images Phone1st
+.alignleft,
+.alignright,
+.aligncenter {
+  @include center;
+  display: block;
+  margin-bottom: $spacer;
+}
+
+// We start to align the images and captions
+@include media(900) {
+  figure.alignright,
+  img.alignright {
+    float: right;
+    margin-left: $spacer;
+    margin-top: 10px;
+  }
+
+  figure.alignleft,
+  img.alignleft {
+    float: left;
+    margin-right: $spacer;
+    margin-top: 10px;
+  }
+}

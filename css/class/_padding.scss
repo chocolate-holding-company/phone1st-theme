@@ -1,0 +1,137 @@
+@use "../root/variables" as *;
+
+//padding top and bottom
+.py {
+ padding-top: $spacer; //2rem
+ padding-bottom: $spacer; //2rem
+}
+
+.py-m {
+ padding-top: $medium-spacer; //1rem
+ padding-bottom: $medium-spacer; //1rem
+}
+
+.py-s {
+ padding-top: $small-spacer; //0.5rem
+ padding-bottom: $small-spacer; //0.5rem
+}
+
+.py-l {
+ padding-top: $large-spacer; //3rem
+ padding-bottom: $large-spacer; //3rem
+}
+
+.py-b {
+ padding-top: $big-spacer; //4rem
+ padding-bottom: $big-spacer; //4rem
+}
+
+//padding left and right
+.px {
+ padding-left: $spacer; //2rem
+ padding-right: $spacer; //2rem
+}
+
+.px-m {
+ padding-left: $medium-spacer; //1rem
+ padding-right: $medium-spacer; //1rem
+}
+
+.px-s {
+ padding-left: $small-spacer; //0.5rem
+ padding-right: $small-spacer; //0.5rem
+}
+
+.px-l {
+ padding-left: $large-spacer; //3rem
+ padding-right: $large-spacer; //3rem
+}
+
+.px-b {
+ padding-left: $big-spacer; //4rem
+ padding-right: $big-spacer; //4rem
+}
+
+//padding top
+.pt {
+ padding-top: $spacer; //2rem
+}
+
+.pt-m {
+ padding-top: $medium-spacer; //1rem
+}
+
+.pt-s {
+ padding-top: $small-spacer; //0.5rem
+}
+
+.pt-l {
+ padding-top: $large-spacer; //3rem
+}
+
+.pt-b {
+ padding-top: $big-spacer; //4rem
+}
+
+//padding bottom
+.pb {
+ padding-bottom: $spacer; //2rem
+}
+
+.pb-m {
+ padding-bottom: $medium-spacer; //1rem
+}
+
+.pb-s {
+ padding-bottom: $small-spacer; //0.5rem
+}
+
+.pb-l {
+ padding-bottom: $large-spacer; //3rem
+}
+
+.pb-b {
+ padding-bottom: $big-spacer; //4rem
+}
+
+//padding left
+.pl {
+ padding-left: $spacer; //2rem
+}
+
+.pl-m {
+ padding-left: $medium-spacer; //1rem
+}
+
+.pl-s {
+ padding-left: $small-spacer; //0.5rem
+}
+
+.pl-l {
+ padding-left: $large-spacer; //3rem
+}
+
+.pl-b {
+ padding-left: $big-spacer; //4rem
+}
+
+//padding right
+.pr {
+ padding-right: $spacer; //2rem
+}
+
+.pr-m {
+ padding-right: $medium-spacer; //1rem
+}
+
+.pr-s {
+ padding-right: $small-spacer; //0.5rem
+}
+
+.pr-l {
+ padding-right: $large-spacer; //3rem
+}
+
+.pr-b {
+ padding-right: $big-spacer; //4rem
+}

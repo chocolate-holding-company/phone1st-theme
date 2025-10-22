@@ -1,0 +1,3 @@
+# Ignore includes/_header.kit:
+includes/_header.kit
+test/templates-kit/_test-header.kit

@@ -1,0 +1,32 @@
+// =======================
+// Social Buttons
+// =======================
+
+@use "../root/" as *;
+
+.social {
+  margin-bottom: $spacer;
+  margin-top: calc($spacer / 2);
+
+  a {
+    font-size: $third;
+  }
+
+  span {
+    margin-right: 1%;
+
+    &:before {
+      font-family: $icon-font !important; //if using icon font
+    }
+  }
+  svg {
+    @include size(1.2rem); //if using svg
+    fill: $link-color;
+  }
+}
+
+@media (hover: hover) {
+  svg:hover {
+    fill: $hover-color;
+  }
+}

@@ -1,0 +1,63 @@
+@use "../root/variables" as *;
+//gap
+.gap {
+ gap: $spacer; //2rem
+}
+
+.gap-m {
+ gap: $medium-spacer; //1rem
+}
+
+.gap-s {
+ gap: $small-spacer; //0.5rem
+}
+
+.gap-l {
+ gap: $large-spacer; //3rem
+}
+
+.gap-b {
+ gap: $big-spacer; //4rem
+}
+
+//gap row
+.row-gap {
+ row-gap: $spacer; //2rem
+}
+
+.row-gap-m {
+ row-gap: $medium-spacer; //1rem
+}
+
+.row-gap-s {
+ row-gap: $small-spacer; //0.5rem
+}
+
+.row-gap-l {
+ row-gap: $large-spacer; //3rem
+}
+
+.row-gap-b {
+ row-gap: $big-spacer; //4rem
+}
+
+//gap column
+.col-gap {
+ column-gap: $spacer; //2rem
+}
+
+.col-gap-m {
+ column-gap: $medium-spacer; //1rem
+}
+
+.col-gap-s {
+ column-gap: $small-spacer; //0.5rem
+}
+
+.col-gap-l {
+ column-gap: $large-spacer; //3rem
+}
+
+.col-gap-b {
+ column-gap: $big-spacer; //4rem
+}
