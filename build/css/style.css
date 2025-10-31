@@ -122,6 +122,13 @@ h6 {
   font-size: 1.2rem;
 }
 
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
 p {
   -webkit-hyphens: none;
           hyphens: none;
@@ -203,7 +210,7 @@ figcaption {
 .img-framed {
   background-color: #fff;
   padding: 1rem;
-  border-radius: 0.55rem;
+  border-radius: 6px;
   border: 1px solid color-mix(in srgb, #1c0301, white 35%);
   box-shadow: 2px 2px 2px color-mix(in srgb, #1c0301, white 95%);
 }
@@ -215,10 +222,8 @@ figcaption {
 .alignleft,
 .alignright,
 .aligncenter {
-  margin-left: auto;
-  margin-right: auto;
   display: block;
-  margin-bottom: 2rem;
+  margin: 2rem auto;
 }
 
 @media only screen and (min-width: 900px) {
@@ -266,7 +271,7 @@ textarea {
   width: 100%;
   font-size: 1.0666666667rem;
   background-color: transparent;
-  border-radius: 0.55rem;
+  border-radius: 6px;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.26);
 }
 [type=color]:focus,
@@ -395,7 +400,7 @@ button,
   vertical-align: middle;
   white-space: nowrap;
   border: 0;
-  border-radius: 0.55rem;
+  border-radius: 6px;
   font-size: 0.9561752988rem;
   padding: 15px 20px;
 }
@@ -519,14 +524,6 @@ a {
   padding: 2rem 5%;
 }
 
-@media only screen and (min-width: 700px) {
-  h1,
-  h2,
-  h3,
-  h4 {
-    text-wrap: balance;
-  }
-}
 @media only screen and (min-width: 900px) {
   .wrapper {
     max-width: 900px;
@@ -554,13 +551,13 @@ a {
 }
 .pagination ul li:first-child a, .pagination ul li:first-child span, .pagination ul li:last-child a, .pagination ul li:last-child span {
   background: color-mix(in srgb, #1c0301, white 80%);
-  border-radius: 0.55rem;
+  border-radius: 6px;
 }
 .pagination ul li a,
 .pagination ul li span {
   padding: 0.2rem 0.6rem;
   background: color-mix(in srgb, #1c0301, white 80%);
-  border-radius: 0.55rem;
+  border-radius: 6px;
 }
 
 .prev-next {
@@ -576,7 +573,7 @@ a {
 .next-link {
   font-size: 0.9561752988rem;
   background: color-mix(in srgb, #1c0301, white 80%);
-  border-radius: 0.55rem;
+  border-radius: 6px;
   padding: 0.3rem 0.5rem;
 }
 
@@ -705,6 +702,574 @@ body.inverted {
   color: color-mix(in srgb, #1c0301, white 20%);
 }
 
+.dark-gray {
+  color: color-mix(in srgb, #1c0301, white 35%);
+}
+
+.medium-gray {
+  color: color-mix(in srgb, #1c0301, white 60%);
+}
+
+.light-gray {
+  color: color-mix(in srgb, #1c0301, white 95%);
+}
+
+.font-color {
+  color: color-mix(in srgb, #1c0301, white 20%);
+}
+
+.link-color {
+  color: color-mix(in srgb, #2365c0, white 30%);
+}
+
+.hover-color {
+  color: #af0c22;
+}
+
+.black {
+  color: #1c0301;
+}
+
+.white {
+  color: #fff;
+}
+
+.first {
+  color: #2365c0;
+}
+
+.second {
+  color: #af0c22;
+}
+
+.error-color {
+  color: #ba221d;
+}
+
+.alert-color {
+  color: #bd912f;
+}
+
+.success-color {
+  color: #3f913a;
+}
+
+.black95 {
+  color: color-mix(in srgb, #1c0301, white 95%);
+}
+
+.black90 {
+  color: color-mix(in srgb, #1c0301, white 90%);
+}
+
+.black85 {
+  color: color-mix(in srgb, #1c0301, white 85%);
+}
+
+.black80 {
+  color: color-mix(in srgb, #1c0301, white 80%);
+}
+
+.black75 {
+  color: color-mix(in srgb, #1c0301, white 75%);
+}
+
+.black70 {
+  color: color-mix(in srgb, #1c0301, white 70%);
+}
+
+.black65 {
+  color: color-mix(in srgb, #1c0301, white 65%);
+}
+
+.black60 {
+  color: color-mix(in srgb, #1c0301, white 60%);
+}
+
+.black55 {
+  color: color-mix(in srgb, #1c0301, white 55%);
+}
+
+.black50 {
+  color: color-mix(in srgb, #1c0301, white 50%);
+}
+
+.black45 {
+  color: color-mix(in srgb, #1c0301, white 45%);
+}
+
+.black40 {
+  color: color-mix(in srgb, #1c0301, white 40%);
+}
+
+.black35 {
+  color: color-mix(in srgb, #1c0301, white 35%);
+}
+
+.black30 {
+  color: color-mix(in srgb, #1c0301, white 30%);
+}
+
+.black25 {
+  color: color-mix(in srgb, #1c0301, white 25%);
+}
+
+.black20 {
+  color: color-mix(in srgb, #1c0301, white 20%);
+}
+
+.black15 {
+  color: color-mix(in srgb, #1c0301, white 15%);
+}
+
+.black10 {
+  color: color-mix(in srgb, #1c0301, white 10%);
+}
+
+.black5 {
+  color: color-mix(in srgb, #1c0301, white 5%);
+}
+
+.first95 {
+  color: color-mix(in srgb, #2365c0, white 95%);
+}
+
+.first90 {
+  color: color-mix(in srgb, #2365c0, white 90%);
+}
+
+.first85 {
+  color: color-mix(in srgb, #2365c0, white 85%);
+}
+
+.first80 {
+  color: color-mix(in srgb, #2365c0, white 80%);
+}
+
+.first75 {
+  color: color-mix(in srgb, #2365c0, white 75%);
+}
+
+.first70 {
+  color: color-mix(in srgb, #2365c0, white 70%);
+}
+
+.first65 {
+  color: color-mix(in srgb, #2365c0, white 65%);
+}
+
+.first60 {
+  color: color-mix(in srgb, #2365c0, white 60%);
+}
+
+.first55 {
+  color: color-mix(in srgb, #2365c0, white 55%);
+}
+
+.first50 {
+  color: color-mix(in srgb, #2365c0, white 50%);
+}
+
+.first45 {
+  color: color-mix(in srgb, #2365c0, white 45%);
+}
+
+.first40 {
+  color: color-mix(in srgb, #2365c0, white 40%);
+}
+
+.first35 {
+  color: color-mix(in srgb, #2365c0, white 35%);
+}
+
+.first30 {
+  color: color-mix(in srgb, #2365c0, white 30%);
+}
+
+.first25 {
+  color: color-mix(in srgb, #2365c0, white 25%);
+}
+
+.first20 {
+  color: color-mix(in srgb, #2365c0, white 20%);
+}
+
+.first15 {
+  color: color-mix(in srgb, #2365c0, white 15%);
+}
+
+.first10 {
+  color: color-mix(in srgb, #2365c0, white 10%);
+}
+
+.first5 {
+  color: color-mix(in srgb, #2365c0, white 5%);
+}
+
+.second95 {
+  color: color-mix(in srgb, #af0c22, white 95%);
+}
+
+.second90 {
+  color: color-mix(in srgb, #af0c22, white 90%);
+}
+
+.second85 {
+  color: color-mix(in srgb, #af0c22, white 85%);
+}
+
+.second80 {
+  color: color-mix(in srgb, #af0c22, white 80%);
+}
+
+.second75 {
+  color: color-mix(in srgb, #af0c22, white 75%);
+}
+
+.second70 {
+  color: color-mix(in srgb, #af0c22, white 70%);
+}
+
+.second65 {
+  color: color-mix(in srgb, #af0c22, white 65%);
+}
+
+.second60 {
+  color: color-mix(in srgb, #af0c22, white 60%);
+}
+
+.second55 {
+  color: color-mix(in srgb, #af0c22, white 55%);
+}
+
+.second50 {
+  color: color-mix(in srgb, #af0c22, white 50%);
+}
+
+.second45 {
+  color: color-mix(in srgb, #af0c22, white 45%);
+}
+
+.second40 {
+  color: color-mix(in srgb, #af0c22, white 40%);
+}
+
+.second35 {
+  color: color-mix(in srgb, #af0c22, white 35%);
+}
+
+.second30 {
+  color: color-mix(in srgb, #af0c22, white 30%);
+}
+
+.second25 {
+  color: color-mix(in srgb, #af0c22, white 25%);
+}
+
+.second20 {
+  color: color-mix(in srgb, #af0c22, white 20%);
+}
+
+.second15 {
+  color: color-mix(in srgb, #af0c22, white 15%);
+}
+
+.second10 {
+  color: color-mix(in srgb, #af0c22, white 10%);
+}
+
+.second5 {
+  color: color-mix(in srgb, #af0c22, white 5%);
+}
+
+.bg-dark-gray {
+  background-color: color-mix(in srgb, #1c0301, white 35%);
+}
+
+.bg-medium-gray {
+  background-color: color-mix(in srgb, #1c0301, white 60%);
+}
+
+.bg-light-gray {
+  background-color: color-mix(in srgb, #1c0301, white 95%);
+}
+
+.bg-font-color {
+  background-color: color-mix(in srgb, #1c0301, white 20%);
+}
+
+.bg-link-color {
+  background-color: color-mix(in srgb, #2365c0, white 30%);
+}
+
+.bg-hover-color {
+  background-color: #af0c22;
+}
+
+.bg-error-color {
+  background-color: #ba221d;
+}
+
+.bg-alert-color {
+  background-color: #bd912f;
+}
+
+.bg-success-color {
+  background-color: #3f913a;
+}
+
+.bg-background {
+  background-color: color-mix(in srgb, #1c0301, white 80%);
+}
+
+.bg-light {
+  background-color: color-mix(in srgb, color-mix(in srgb, #1c0301, white 80%), white 75%);
+}
+
+.bg-black {
+  background-color: #1c0301;
+}
+
+.bg-white {
+  background-color: #fff;
+}
+
+.bg-first {
+  background-color: #2365c0;
+}
+
+.bg-second {
+  background-color: #af0c22;
+}
+
+.bg-black95 {
+  background-color: color-mix(in srgb, #1c0301, white 95%);
+}
+
+.bg-black90 {
+  background-color: color-mix(in srgb, #1c0301, white 90%);
+}
+
+.bg-black85 {
+  background-color: color-mix(in srgb, #1c0301, white 85%);
+}
+
+.bg-black80 {
+  background-color: color-mix(in srgb, #1c0301, white 80%);
+}
+
+.bg-black75 {
+  background-color: color-mix(in srgb, #1c0301, white 75%);
+}
+
+.bg-black70 {
+  background-color: color-mix(in srgb, #1c0301, white 70%);
+}
+
+.bg-black65 {
+  background-color: color-mix(in srgb, #1c0301, white 65%);
+}
+
+.bg-black60 {
+  background-color: color-mix(in srgb, #1c0301, white 60%);
+}
+
+.bg-black55 {
+  background-color: color-mix(in srgb, #1c0301, white 55%);
+}
+
+.bg-black50 {
+  background-color: color-mix(in srgb, #1c0301, white 50%);
+}
+
+.bg-black45 {
+  background-color: color-mix(in srgb, #1c0301, white 45%);
+}
+
+.bg-black40 {
+  background-color: color-mix(in srgb, #1c0301, white 40%);
+}
+
+.bg-black35 {
+  background-color: color-mix(in srgb, #1c0301, white 35%);
+}
+
+.bg-black30 {
+  background-color: color-mix(in srgb, #1c0301, white 30%);
+}
+
+.bg-black25 {
+  background-color: color-mix(in srgb, #1c0301, white 25%);
+}
+
+.bg-black20 {
+  background-color: color-mix(in srgb, #1c0301, white 20%);
+}
+
+.bg-black15 {
+  background-color: color-mix(in srgb, #1c0301, white 15%);
+}
+
+.bg-black10 {
+  background-color: color-mix(in srgb, #1c0301, white 10%);
+}
+
+.bg-black5 {
+  background-color: color-mix(in srgb, #1c0301, white 5%);
+}
+
+.bg-first95 {
+  background-color: color-mix(in srgb, #2365c0, white 95%);
+}
+
+.bg-first90 {
+  background-color: color-mix(in srgb, #2365c0, white 90%);
+}
+
+.bg-first85 {
+  background-color: color-mix(in srgb, #2365c0, white 85%);
+}
+
+.bg-first80 {
+  background-color: color-mix(in srgb, #2365c0, white 80%);
+}
+
+.bg-first75 {
+  background-color: color-mix(in srgb, #2365c0, white 75%);
+}
+
+.bg-first70 {
+  background-color: color-mix(in srgb, #2365c0, white 70%);
+}
+
+.bg-first65 {
+  background-color: color-mix(in srgb, #2365c0, white 65%);
+}
+
+.bg-first60 {
+  background-color: color-mix(in srgb, #2365c0, white 60%);
+}
+
+.bg-first55 {
+  background-color: color-mix(in srgb, #2365c0, white 55%);
+}
+
+.bg-first50 {
+  background-color: color-mix(in srgb, #2365c0, white 50%);
+}
+
+.bg-first45 {
+  background-color: color-mix(in srgb, #2365c0, white 45%);
+}
+
+.bg-first40 {
+  background-color: color-mix(in srgb, #2365c0, white 40%);
+}
+
+.bg-first35 {
+  background-color: color-mix(in srgb, #2365c0, white 35%);
+}
+
+.bg-first30 {
+  background-color: color-mix(in srgb, #2365c0, white 30%);
+}
+
+.bg-first25 {
+  background-color: color-mix(in srgb, #2365c0, white 25%);
+}
+
+.bg-first20 {
+  background-color: color-mix(in srgb, #2365c0, white 20%);
+}
+
+.bg-first15 {
+  background-color: color-mix(in srgb, #2365c0, white 15%);
+}
+
+.bg-first10 {
+  background-color: color-mix(in srgb, #2365c0, white 10%);
+}
+
+.bg-first5 {
+  background-color: color-mix(in srgb, #2365c0, white 5%);
+}
+
+.bg-second95 {
+  background-color: color-mix(in srgb, #af0c22, white 95%);
+}
+
+.bg-second90 {
+  background-color: color-mix(in srgb, #af0c22, white 90%);
+}
+
+.bg-second85 {
+  background-color: color-mix(in srgb, #af0c22, white 85%);
+}
+
+.bg-second80 {
+  background-color: color-mix(in srgb, #af0c22, white 80%);
+}
+
+.bg-second75 {
+  background-color: color-mix(in srgb, #af0c22, white 75%);
+}
+
+.bg-second70 {
+  background-color: color-mix(in srgb, #af0c22, white 70%);
+}
+
+.bg-second65 {
+  background-color: color-mix(in srgb, #af0c22, white 65%);
+}
+
+.bg-second60 {
+  background-color: color-mix(in srgb, #af0c22, white 60%);
+}
+
+.bg-second55 {
+  background-color: color-mix(in srgb, #af0c22, white 55%);
+}
+
+.bg-second50 {
+  background-color: color-mix(in srgb, #af0c22, white 50%);
+}
+
+.bg-second45 {
+  background-color: color-mix(in srgb, #af0c22, white 45%);
+}
+
+.bg-second40 {
+  background-color: color-mix(in srgb, #af0c22, white 40%);
+}
+
+.bg-second35 {
+  background-color: color-mix(in srgb, #af0c22, white 35%);
+}
+
+.bg-second30 {
+  background-color: color-mix(in srgb, #af0c22, white 30%);
+}
+
+.bg-second25 {
+  background-color: color-mix(in srgb, #af0c22, white 25%);
+}
+
+.bg-second20 {
+  background-color: color-mix(in srgb, #af0c22, white 20%);
+}
+
+.bg-second15 {
+  background-color: color-mix(in srgb, #af0c22, white 15%);
+}
+
+.bg-second10 {
+  background-color: color-mix(in srgb, #af0c22, white 10%);
+}
+
+.bg-second5 {
+  background-color: color-mix(in srgb, #af0c22, white 5%);
+}
+
 .normal {
   font-size: 1.2rem;
 }
@@ -763,6 +1328,50 @@ body.inverted {
 
 .heading-8 {
   font-size: 1.35rem;
+}
+
+.ls-0 {
+  letter-spacing: normal;
+}
+
+.ls {
+  letter-spacing: 1px;
+}
+
+.ls-2 {
+  letter-spacing: 2px;
+}
+
+.ls-3 {
+  letter-spacing: 3px;
+}
+
+.ls-4 {
+  letter-spacing: 4px;
+}
+
+.ls-5 {
+  letter-spacing: 5px;
+}
+
+.ls-6 {
+  letter-spacing: 6px;
+}
+
+.ls-7 {
+  letter-spacing: 7px;
+}
+
+.ls-8 {
+  letter-spacing: 8px;
+}
+
+.ls-9 {
+  letter-spacing: 9px;
+}
+
+.ls-10 {
+  letter-spacing: 10px;
 }
 
 .centered {
@@ -1028,6 +1637,110 @@ body.inverted {
 
 .pr-b {
   padding-right: 4rem;
+}
+
+.block {
+  display: block;
+}
+
+.inline {
+  display: inline;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.list-none {
+  list-style: none;
+}
+
+.list-disc {
+  list-style: disc;
+}
+
+.list-decimal {
+  list-style: decimal;
+}
+
+.list-circle {
+  list-style: circle;
+}
+
+.list-square {
+  list-style: square;
+}
+
+.list-inside {
+  list-style-position: inside;
+}
+
+.list-outside {
+  list-style-position: outside;
+}
+
+@media only screen and (min-width: 700px) {
+  .heading-77 {
+    font-size: 1.6rem;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .heading-79 {
+    font-size: 1.7rem;
+  }
+}
+
+@media only screen and (min-width: 700px) {
+  .heading-57 {
+    font-size: 2.3rem;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .heading-59 {
+    font-size: 2.6rem;
+  }
+}
+
+.width100 {
+  width: 100%;
+}
+
+.width75 {
+  width: 75%;
+}
+
+.width50 {
+  width: 50%;
+}
+
+.width25 {
+  width: 25%;
+}
+
+.rad {
+  border-radius: 6px;
+}
+
+.rad-m {
+  border-radius: 10px;
+}
+
+.rad-s {
+  border-radius: 3px;
+}
+
+.rad-l {
+  border-radius: 15px;
+}
+
+.rad-b {
+  border-radius: 20px;
+}
+
+.rad-full {
+  border-radius: 50px;
 }
 
 .flex {

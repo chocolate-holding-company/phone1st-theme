@@ -1,0 +1,42 @@
+@use "../root/variables" as *;
+
+.width100 {
+ width: 100%;
+}
+
+.width75 {
+ width: 75%;
+}
+
+.width50 {
+ width: 50%;
+}
+
+.width25 {
+ width: 25%;
+}
+
+//radius
+.rad {
+ border-radius: $radius; //6px
+}
+
+.rad-m {
+ border-radius: 10px;
+}
+
+.rad-s {
+ border-radius: 3px;
+}
+
+.rad-l {
+ border-radius: 15px;
+}
+
+.rad-b {
+ border-radius: 20px;
+}
+
+.rad-full {
+ border-radius: 50px;
+}

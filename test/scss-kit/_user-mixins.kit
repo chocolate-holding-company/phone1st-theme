@@ -1,67 +1,82 @@
+<h3 id="center" class="heading-7 mb-m">Center Elements</h3>
 
-<h3 id="center">Center Elements</h3>
-
-<pre><code>.center-element {
-  @include center;//mixin
-  background: #E03D44;
-  @include size(80%, 60px);
+<pre class="mt-m mb"><code class="language-scss">.center-element {
+@include center;//mixin
+background: #E03D44;
+@include size(80%, 60px);
 }</code></pre>
 
 <div class="center-element"></div>
 
 <hr />
 
-<h3 id="hide">hide from both screenreaders and browsers</h3>
-<pre><code>@mixin hidden {
-  display: none !important;
-  visibility: hidden;
+<h3 id="hide" class="heading-7 mb-m">
+ hide from both screenreaders and browsers
+</h3>
+<pre class="mt-m mb"><code class="language-scss">@mixin hidden {
+display: none !important;
+visibility: hidden;
 }
 
 .hidden-box {
-  @include size(300px, 70px);
-  @include center;
-  padding: 7px;
-  font-size: .9rem;
-  color: orange;
-  border: 1px solid blue;
-  
+ @include size(300px, 70px);
+ @include center;
+ padding: 7px;
+ font-size: .9rem;
+ color: orange;
+ border: 1px solid blue;
+
   &:hover span {
-    @include hidden;//mixin
-  }
+   @include hidden;//mixin
+ }
 }</code></pre>
 
 <div class="hidden-box">
-  <span
-    >This text will hide on hover and be invisible to screen readers and
-    browsers</span
-  >
+ <span
+  >This text will hide on hover and be invisible to screen readers and
+  browsers</span
+ >
 </div>
 
 <hr />
 
-<h3 id="breakpoints">media breakpoints</h3>
+<h3 id="breakpoints" class="heading-7 mb-m">media breakpoints</h3>
 <p>Base styles are phone-first</p>
 
-<pre><code>.media-points p {
-  color: red;
+<pre class="mt-m mb"><code class="language-scss">.media-points p {
+ color: red;
+}
+
+@include media(600) {
+ .media-points p {
+  color: blue;
+ }
 }
 
 @include media(700) {
-  .media-points p {
-    color: blue;
-  }
+ .media-points p {
+  color: rgb(153, 71, 236);
+ }
 }
 
-@include media(900) {
-  .media-points p {
-    color: rebeccapurple;
-  }
+@include media(934) {
+ .media-points p {
+  color: rgb(34, 224, 126);
+ }
+}
+
+ @include media(93rem) {
+ .media-points p {
+  color: rgb(235, 220, 85);
+ }
 }</code></pre>
 
 <div class="media-points">
-  <p>
-    At base level this text is red<br />
-    At 700px this text is blue<br />
-    At 900px this text is purple
-  </p>
+ <p>
+  At base level this text is red<br />
+  At 600px this text is blue<br />
+  At 700px this text is purple<br />
+  At 934px this text is green<br />
+  At 93rem this text is yellow
+ </p>
 </div>

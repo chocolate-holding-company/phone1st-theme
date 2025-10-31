@@ -25,24 +25,33 @@
  white-space: nowrap;
 }
 
-// Simple breakpoints - base styles are phone first
-// eg @include media(500)
+// breakpoints - base styles are phone first
+// eg @include media(500) - min-width 500px
+// eg @include media(956) - min-width 956px
+// eg @include media(956rem) - min-width 956rem
 @mixin media($point) {
- @if $point==900 {
+ @if $point == 900 {
   @media only screen and (min-width: 900px) {
    @content;
   }
- } @else if $point==700 {
+ } @else if $point == 700 {
   @media only screen and (min-width: 700px) {
    @content;
   }
- } @else if $point==500 {
+ } @else if $point == 500 {
   @media only screen and (min-width: 500px) {
    @content;
   }
- } @else if $point==$point {
-  @media only screen and (min-width: $point + px) {
-   @content;
+ } @else {
+  // Convert unitless numbers to px, otherwise use the provided unit
+  @if unitless($point) {
+   @media only screen and (min-width: #{$point}px) {
+    @content;
+   }
+  } @else {
+   @media only screen and (min-width: #{$point}) {
+    @content;
+   }
   }
  }
 }

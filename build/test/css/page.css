@@ -1,3 +1,92 @@
+pre code.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 1em;
+}
+
+code.hljs {
+  padding: 3px 6px;
+}
+
+.hljs {
+  background: #eee;
+  color: black;
+}
+
+.hljs-link,
+.hljs-emphasis,
+.hljs-attribute,
+.hljs-addition {
+  color: #070;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong,
+.hljs-string,
+.hljs-deletion {
+  color: #d14;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-quote,
+.hljs-comment {
+  color: #998;
+}
+
+.hljs-section,
+.hljs-title {
+  color: #900;
+}
+
+.hljs-class .hljs-title,
+.hljs-title.class_,
+.hljs-type {
+  color: #458;
+}
+
+.hljs-variable,
+.hljs-template-variable {
+  color: #336699;
+}
+
+.hljs-bullet {
+  color: #997700;
+}
+
+.hljs-meta {
+  color: #3344bb;
+}
+
+.hljs-code,
+.hljs-number,
+.hljs-literal,
+.hljs-keyword,
+.hljs-selector-tag {
+  color: #099;
+}
+
+.hljs-regexp {
+  background-color: #fff0ff;
+  color: #880088;
+}
+
+.hljs-symbol {
+  color: #990073;
+}
+
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class {
+  color: #007700;
+}
+
 #topBtn {
   font-family: "antonio", sans-serif;
   text-align: center;
@@ -20,49 +109,13 @@
   }
 }
 
-h2 {
-  font-size: 1.6rem;
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-h3 {
-  font-size: 1.4rem;
-  text-align: center;
-  margin-bottom: 1rem;
-}
-
-h4 {
-  font-size: 1.4rem;
-  text-align: center;
-  color: color-mix(in srgb, #1c0301, white 60%);
-}
-
 pre {
   text-align: left;
-  padding: 1rem 2rem;
-  background: color-mix(in srgb, #1c0301, white 90%);
-  border-radius: 0.55rem;
-  color: #2365c0;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  border-radius: 6px;
 }
 
 code {
-  font-size: 0.9561752988rem;
-}
-
-ul {
-  list-style: none;
-}
-
-li {
   font-size: 1.0666666667rem;
-}
-
-.intro-para {
-  text-align: center;
-  margin-top: 2rem;
 }
 
 hr {
@@ -83,29 +136,7 @@ hr {
   font-size: 1.0666666667rem;
 }
 
-h6 {
-  letter-spacing: 2px;
-  margin-bottom: 5px;
-  margin-top: 15px;
-}
-
-.footer {
-  text-align: center;
-}
-.footer p {
-  margin-bottom: 2rem;
-}
-
 @media only screen and (min-width: 700px) {
-  h2 {
-    font-size: 1.7rem;
-  }
-  h3 {
-    font-size: 1.6rem;
-  }
-  h4 {
-    font-size: 1.6rem;
-  }
   .links {
     display: flex;
     flex-direction: row;
@@ -115,14 +146,6 @@ h6 {
   }
   .links div {
     width: 30%;
-  }
-}
-@media only screen and (min-width: 900px) {
-  h3 {
-    font-size: 1.7rem;
-  }
-  h4 {
-    font-size: 1.7rem;
   }
 }
 .scss-extras {
@@ -153,14 +176,24 @@ h6 {
 .scss-extras .media-points p {
   color: red;
 }
-@media only screen and (min-width: 700px) {
+@media only screen and (min-width: 600px) {
   .scss-extras .media-points p {
     color: blue;
   }
 }
-@media only screen and (min-width: 900px) {
+@media only screen and (min-width: 700px) {
   .scss-extras .media-points p {
-    color: rebeccapurple;
+    color: rgb(153, 71, 236);
+  }
+}
+@media only screen and (min-width: 934px) {
+  .scss-extras .media-points p {
+    color: rgb(34, 224, 126);
+  }
+}
+@media only screen and (min-width: 93rem) {
+  .scss-extras .media-points p {
+    color: rgb(235, 220, 85);
   }
 }
 .scss-extras .show-border {
@@ -276,7 +309,4 @@ h6 {
   content: "";
   top: -1rem;
   left: 6rem;
-}
-.scss-extras .inline {
-  display: inline !important;
 }

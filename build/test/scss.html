@@ -33,26 +33,26 @@
   <meta name="twitter:url" content="https://phone1st.org/test/scss.html" />
   <meta name="twitter:image:src" content="https://phone1st.org/images/phone1st-logo.webp" />
   <link rel="stylesheet" href="../css/style.css" />
-  <link rel="stylesheet" href="css/scss.css" />
+  <link rel="stylesheet" href="css/page.css" />
  </head>
 
  <body>
   <div id="top" class="wrapper">
-   <header class="header">
-    <h1 class="center heading-3">
+   <header class="mb-m">
+    <h1 class="center heading-4">
      Scss Mixins
     </h1>
    </header>
 
 
 
-<section class="main">
-        
-        
-<img src="../images/phone1st-logo.webp" alt="Phone1st logo" class="aligncenter" />
-        
+<section>
 
-<p class="intro-para">To see the full code for the mixins see <code>css/root/mixins.scss</code>
+
+<img src="../images/phone1st-logo.webp" alt="Phone1st logo" class="aligncenter" />
+
+
+<p>To see the full code for the mixins see <code>css/root/mixins.scss</code>
 </p>
 <hr />
 <h2 class="links-title">-- Links --</h2>
@@ -72,177 +72,202 @@
 </div>
 <hr />
 <div class="scss-extras">
-  <h2>-- Mixins --</h2>
+  <h2 class="heading-7 center mb-m">-- Mixins --</h2>
+  <h3 id="center" class="heading-7 mb-m">Center Elements</h3>
   
-  <h3 id="center">Center Elements</h3>
-  
-  <pre><code>.center-element {
-    @include center;//mixin
-    background: #E03D44;
-    @include size(80%, 60px);
+  <pre class="mt-m mb"><code class="language-scss">.center-element {
+  @include center;//mixin
+  background: #E03D44;
+  @include size(80%, 60px);
   }</code></pre>
   
   <div class="center-element"></div>
   
   <hr />
   
-  <h3 id="hide">hide from both screenreaders and browsers</h3>
-  <pre><code>@mixin hidden {
-    display: none !important;
-    visibility: hidden;
+  <h3 id="hide" class="heading-7 mb-m">
+   hide from both screenreaders and browsers
+  </h3>
+  <pre class="mt-m mb"><code class="language-scss">@mixin hidden {
+  display: none !important;
+  visibility: hidden;
   }
   
   .hidden-box {
-    @include size(300px, 70px);
-    @include center;
-    padding: 7px;
-    font-size: .9rem;
-    color: orange;
-    border: 1px solid blue;
-    
+   @include size(300px, 70px);
+   @include center;
+   padding: 7px;
+   font-size: .9rem;
+   color: orange;
+   border: 1px solid blue;
+  
     &:hover span {
-      @include hidden;//mixin
-    }
+     @include hidden;//mixin
+   }
   }</code></pre>
   
   <div class="hidden-box">
-    <span
-      >This text will hide on hover and be invisible to screen readers and
-      browsers</span
-    >
+   <span
+    >This text will hide on hover and be invisible to screen readers and
+    browsers</span
+   >
   </div>
   
   <hr />
   
-  <h3 id="breakpoints">media breakpoints</h3>
+  <h3 id="breakpoints" class="heading-7 mb-m">media breakpoints</h3>
   <p>Base styles are phone-first</p>
   
-  <pre><code>.media-points p {
-    color: red;
+  <pre class="mt-m mb"><code class="language-scss">.media-points p {
+   color: red;
+  }
+  
+  @include media(600) {
+   .media-points p {
+    color: blue;
+   }
   }
   
   @include media(700) {
-    .media-points p {
-      color: blue;
-    }
+   .media-points p {
+    color: rgb(153, 71, 236);
+   }
   }
   
-  @include media(900) {
-    .media-points p {
-      color: rebeccapurple;
-    }
+  @include media(934) {
+   .media-points p {
+    color: rgb(34, 224, 126);
+   }
+  }
+  
+   @include media(93rem) {
+   .media-points p {
+    color: rgb(235, 220, 85);
+   }
   }</code></pre>
   
   <div class="media-points">
-    <p>
-      At base level this text is red<br />
-      At 700px this text is blue<br />
-      At 900px this text is purple
-    </p>
+   <p>
+    At base level this text is red<br />
+    At 600px this text is blue<br />
+    At 700px this text is purple<br />
+    At 934px this text is green<br />
+    At 93rem this text is yellow
+   </p>
   </div>
   
   <hr />
-  <h3 id="border">border radius</h3>
+  <h3 id="border" class="heading-7 mb-m">border radius</h3>
   
-  <pre><code>@include border-top-radius(15px);
+  <pre
+   class="mt-m mb"
+  ><code class="language-scss">@include border-top-radius(15px);
   @include border-bottom-radius(10px);</code></pre>
   
   <div class="show-border"></div>
   
-  <pre><code>@include border-left-radius(10px);
+  <pre
+   class="mt-m mb"
+  ><code class="language-scss">@include border-left-radius(10px);
   @include border-right-radius(5px);</code></pre>
   
   <div class="show-border-two"></div>
   
   <hr />
   
-  <h3 id="ellipsis">ellipsis</h3>
-  <pre><code>@include ellipsis;</code></pre>
+  <h3 id="ellipsis" class="heading-7 mb-m">ellipsis</h3>
+  <pre class="mt-m mb"><code class="language-scss">@include ellipsis;</code></pre>
   <div class="ellipsis">
-    <span>Hover over me to see the ellipsis in action</span>
+   <span>Hover over me to see the ellipsis in action</span>
   </div>
   <hr />
   
-  <h3 id="hide-text">hide text</h3>
-  <pre><code>.hide-text {
-    @include size(220px, 120px);
-    @include center;
-    padding: 7px;
-    border: 1px solid blue;
+  <h3 id="hide-text" class="heading-7 mb-m">hide text</h3>
+  <pre class="mt-m mb"><code class="language-scss">.hide-text {
+  @include size(220px, 120px);
+  @include center;
+  padding: 7px;
+  border: 1px solid blue;
   
-    &:hover {
-      @include hide-text;//mixin
-      background: url(../test-images/taj-mahal.jpg);
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
+   &:hover {
+    @include hide-text;//mixin
+    background: url(../test-images/taj-mahal.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+   }
   }</code></pre>
   
   <div class="hide-text">
-    On hover replace text with image, text still available for SEO
+   On hover replace text with image, text still available for SEO
   </div>
   
   <hr />
   
-  <h3 id="visually">hide visually</h3>
-  <pre><code>.hide-visually {
-    @include size(220px, 120px);
-    @include center;
-    font-size: .9rem;
-    padding: 7px;
-    border: 1px solid blue;
-    
-    span {
-      font-size: 1.3rem;
-      color:#a60b55;
-      @include hide-visually;//mixin
-    }
-    &:hover span {
-      @include hide-visually("unhide");//alt mixin
-    }
+  <h3 id="visually" class="heading-7 mb-m">hide visually</h3>
+  <pre class="mt-m mb"><code class="language-scss">.hide-visually {
+  @include size(220px, 120px);
+  @include center;
+  font-size: .9rem;
+  padding: 7px;
+  border: 1px solid blue;
+  
+   span {
+    font-size: 1.3rem;
+    color:#a60b55;
+    @include hide-visually;//mixin
+   }
+  
+   &:hover span {
+    @include hide-visually("unhide");//alt mixin
+   }
   }</code></pre>
   
   <div class="hide-visually">
-    Box title is hidden but still available to screen readers, hover to view<br />
-    <span>Box Title</span>
+   Box title is hidden but still available to screen readers, hover to view<br />
+   <span>Box Title</span>
   </div>
   <hr />
   
-  <h3 id="size">size</h3>
-  <pre><code>@include size(300px, 1.8em);</code></pre>
+  <h3 id="size" class="heading-7 mb-m">size</h3>
+  <pre
+   class="mt-m mb"
+  ><code class="language-scss">@include size(300px, 1.8em);</code></pre>
   <div class="size"></div>
   <hr />
   
-  <h3 id="triangle">triangle</h3>
-  <pre><code>.element {
-    @include size(300px, 50px);
-    @include center;
-    background-color: #b25c9c;
-    position: relative;
-    
-    &::before {
-      @include triangle(up, 2rem, 1rem, #b25c9c);//mixin
-      position: absolute;
-      content: "";
-      //position triangle on box
-      top:-1rem; 
-      left:6rem;
-    }
+  <h3 id="triangle" class="heading-7 mb-m">triangle</h3>
+  <pre class="mt-m mb"><code class="language-scss">.element {
+  @include size(300px, 50px);
+  @include center;
+  background-color: #b25c9c;
+  position: relative;
+  
+   &::before {
+    @include triangle(up, 2rem, 1rem, #b25c9c);//mixin
+    position: absolute;
+    content: "";
+    //position triangle on box
+    top:-1rem;
+    left:6rem;
+   }
   }</code></pre>
-  <div class="triangle"></div>
+  
+  <div class="triangle my-l"></div>
   <hr />
   
-  
+
 </div>
-<p class="third footer-links center"><a href="../index.html">Home</a> | <a href="about.html">About</a> | <a href="test.html">Test Page</a></p>
+<p class="third center mb-m"><a href="../index.html">Home</a> | <a href="about.html">About</a> | <a href="test.html">Test Page</a> | <a href="class.html">Classes</a></p>
 </section>
 
-<footer class="footer">
+<footer class="center">
 	<a id="topBtn" class="btn" href="#top">Top</a>
-		<p class="third mt-s">&copy;2025 Phone1st Starter Theme for html <a href="https://github.com/chocolate-holding-company/phone1st-theme" title="Phone1st Starter Theme for html available on Github">available on Github</a> - by <a href="https://phone1st.org">phone1st.org</a></p>
+	<p class="third mt-s"> - <em>by</em> <a href="https://phone1st.org">phone1st.org</a> -</p>
+		<p class="third mt-s mb">&copy;2025 Phone1st Starter Theme for html <a href="https://github.com/chocolate-holding-company/phone1st-theme" title="Phone1st Starter Theme for html available on Github">available on Github</a></p>
 	</footer>
 </div><!-- wrapper   -->
 
+ <script src="js/highlight.js"></script>
 <script src="js/scroll.js"></script>
 
 </body>

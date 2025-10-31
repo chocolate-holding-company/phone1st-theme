@@ -16,12 +16,12 @@ $secondary: calc($font-size / 1.125);
 $third: calc($font-size / 1.255);
 
 // SIZE
-$radius: 0.55rem;
+$radius: 6px;
 $spacer: 2rem;
-$medium-spacer: calc($spacer / 2);//1rem
-$small-spacer: calc($spacer / 4);//0.5rem
-$large-spacer: calc($spacer * 1.5);//3rem
-$big-spacer: calc($spacer * 2);//4rem
+$medium-spacer: calc($spacer / 2); //1rem
+$small-spacer: calc($spacer / 4); //0.5rem
+$large-spacer: calc($spacer * 1.5); //3rem
+$big-spacer: calc($spacer * 2); //4rem
 
 // COLOR
 $dark-gray: $black-35;

@@ -1,0 +1,452 @@
+@use "../root/base-color" as *;
+@use "../root/variables" as *;
+
+//variables color
+.dark-gray {
+ color: $dark-gray;
+}
+.medium-gray {
+ color: $medium-gray;
+}
+.light-gray {
+ color: $light-gray;
+}
+
+.font-color {
+ color: $font-color;
+}
+.link-color {
+ color: $link-color;
+}
+.hover-color {
+ color: $hover-color;
+}
+
+.black {
+ color: $black;
+}
+.white {
+ color: $white;
+}
+.first {
+ color: $first-color;
+}
+.second {
+ color: $second-color;
+}
+
+.error-color {
+ color: $error-color;
+}
+.alert-color {
+ color: $alert-color;
+}
+.success-color {
+ color: $success-color;
+}
+
+//black
+.black95 {
+ color: $black-95;
+}
+.black90 {
+ color: $black-90;
+}
+.black85 {
+ color: $black-85;
+}
+.black80 {
+ color: $black-80;
+}
+.black75 {
+ color: $black-75;
+}
+.black70 {
+ color: $black-70;
+}
+.black65 {
+ color: $black-65;
+}
+.black60 {
+ color: $black-60;
+}
+.black55 {
+ color: $black-55;
+}
+.black50 {
+ color: $black-50;
+}
+.black45 {
+ color: $black-45;
+}
+.black40 {
+ color: $black-40;
+}
+.black35 {
+ color: $black-35;
+}
+.black30 {
+ color: $black-30;
+}
+.black25 {
+ color: $black-25;
+}
+.black20 {
+ color: $black-20;
+}
+.black15 {
+ color: $black-15;
+}
+.black10 {
+ color: $black-10;
+}
+.black5 {
+ color: $black-5;
+}
+
+//first color
+.first95 {
+ color: $first-95;
+}
+.first90 {
+ color: $first-90;
+}
+.first85 {
+ color: $first-85;
+}
+.first80 {
+ color: $first-80;
+}
+.first75 {
+ color: $first-75;
+}
+.first70 {
+ color: $first-70;
+}
+.first65 {
+ color: $first-65;
+}
+.first60 {
+ color: $first-60;
+}
+.first55 {
+ color: $first-55;
+}
+.first50 {
+ color: $first-50;
+}
+.first45 {
+ color: $first-45;
+}
+.first40 {
+ color: $first-40;
+}
+.first35 {
+ color: $first-35;
+}
+.first30 {
+ color: $first-30;
+}
+.first25 {
+ color: $first-25;
+}
+.first20 {
+ color: $first-20;
+}
+.first15 {
+ color: $first-15;
+}
+.first10 {
+ color: $first-10;
+}
+.first5 {
+ color: $first-5;
+}
+
+//second color
+.second95 {
+ color: $second-95;
+}
+.second90 {
+ color: $second-90;
+}
+.second85 {
+ color: $second-85;
+}
+.second80 {
+ color: $second-80;
+}
+.second75 {
+ color: $second-75;
+}
+.second70 {
+ color: $second-70;
+}
+.second65 {
+ color: $second-65;
+}
+.second60 {
+ color: $second-60;
+}
+.second55 {
+ color: $second-55;
+}
+.second50 {
+ color: $second-50;
+}
+.second45 {
+ color: $second-45;
+}
+.second40 {
+ color: $second-40;
+}
+.second35 {
+ color: $second-35;
+}
+.second30 {
+ color: $second-30;
+}
+.second25 {
+ color: $second-25;
+}
+.second20 {
+ color: $second-20;
+}
+.second15 {
+ color: $second-15;
+}
+.second10 {
+ color: $second-10;
+}
+.second5 {
+ color: $second-5;
+}
+
+//variables background color
+.bg-dark-gray {
+ background-color: $dark-gray;
+}
+.bg-medium-gray {
+ background-color: $medium-gray;
+}
+.bg-light-gray {
+ background-color: $light-gray;
+}
+
+.bg-font-color {
+ background-color: $font-color;
+}
+.bg-link-color {
+ background-color: $link-color;
+}
+.bg-hover-color {
+ background-color: $hover-color;
+}
+
+.bg-error-color {
+ background-color: $error-color;
+}
+.bg-alert-color {
+ background-color: $alert-color;
+}
+.bg-success-color {
+ background-color: $success-color;
+}
+
+.bg-background {
+ background-color: $background;
+}
+.bg-light {
+ background-color: $light-background;
+}
+
+//background color
+.bg-black {
+ background-color: $black;
+}
+.bg-white {
+ background-color: $white;
+}
+.bg-first {
+ background-color: $first-color;
+}
+.bg-second {
+ background-color: $second-color;
+}
+
+//background color black
+.bg-black95 {
+ background-color: $black-95;
+}
+.bg-black90 {
+ background-color: $black-90;
+}
+.bg-black85 {
+ background-color: $black-85;
+}
+.bg-black80 {
+ background-color: $black-80;
+}
+.bg-black75 {
+ background-color: $black-75;
+}
+.bg-black70 {
+ background-color: $black-70;
+}
+.bg-black65 {
+ background-color: $black-65;
+}
+.bg-black60 {
+ background-color: $black-60;
+}
+.bg-black55 {
+ background-color: $black-55;
+}
+.bg-black50 {
+ background-color: $black-50;
+}
+.bg-black45 {
+ background-color: $black-45;
+}
+.bg-black40 {
+ background-color: $black-40;
+}
+.bg-black35 {
+ background-color: $black-35;
+}
+.bg-black30 {
+ background-color: $black-30;
+}
+.bg-black25 {
+ background-color: $black-25;
+}
+.bg-black20 {
+ background-color: $black-20;
+}
+.bg-black15 {
+ background-color: $black-15;
+}
+.bg-black10 {
+ background-color: $black-10;
+}
+.bg-black5 {
+ background-color: $black-5;
+}
+
+//background color first-color
+.bg-first95 {
+ background-color: $first-95;
+}
+.bg-first90 {
+ background-color: $first-90;
+}
+.bg-first85 {
+ background-color: $first-85;
+}
+.bg-first80 {
+ background-color: $first-80;
+}
+.bg-first75 {
+ background-color: $first-75;
+}
+.bg-first70 {
+ background-color: $first-70;
+}
+.bg-first65 {
+ background-color: $first-65;
+}
+.bg-first60 {
+ background-color: $first-60;
+}
+.bg-first55 {
+ background-color: $first-55;
+}
+.bg-first50 {
+ background-color: $first-50;
+}
+.bg-first45 {
+ background-color: $first-45;
+}
+.bg-first40 {
+ background-color: $first-40;
+}
+.bg-first35 {
+ background-color: $first-35;
+}
+.bg-first30 {
+ background-color: $first-30;
+}
+.bg-first25 {
+ background-color: $first-25;
+}
+.bg-first20 {
+ background-color: $first-20;
+}
+.bg-first15 {
+ background-color: $first-15;
+}
+.bg-first10 {
+ background-color: $first-10;
+}
+.bg-first5 {
+ background-color: $first-5;
+}
+
+//background color second-color
+.bg-second95 {
+ background-color: $second-95;
+}
+.bg-second90 {
+ background-color: $second-90;
+}
+.bg-second85 {
+ background-color: $second-85;
+}
+.bg-second80 {
+ background-color: $second-80;
+}
+.bg-second75 {
+ background-color: $second-75;
+}
+.bg-second70 {
+ background-color: $second-70;
+}
+.bg-second65 {
+ background-color: $second-65;
+}
+.bg-second60 {
+ background-color: $second-60;
+}
+.bg-second55 {
+ background-color: $second-55;
+}
+.bg-second50 {
+ background-color: $second-50;
+}
+.bg-second45 {
+ background-color: $second-45;
+}
+.bg-second40 {
+ background-color: $second-40;
+}
+.bg-second35 {
+ background-color: $second-35;
+}
+.bg-second30 {
+ background-color: $second-30;
+}
+.bg-second25 {
+ background-color: $second-25;
+}
+.bg-second20 {
+ background-color: $second-20;
+}
+.bg-second15 {
+ background-color: $second-15;
+}
+.bg-second10 {
+ background-color: $second-10;
+}
+.bg-second5 {
+ background-color: $second-5;
+}

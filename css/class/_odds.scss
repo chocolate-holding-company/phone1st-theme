@@ -1,0 +1,66 @@
+//temporary odds file
+@use "../root" as *;
+
+.block {
+ display: block;
+}
+
+.inline {
+ display: inline;
+}
+
+.inline-block {
+ display: inline-block;
+}
+
+.list-none {
+ list-style: none;
+}
+
+.list-disc {
+ list-style: disc;
+}
+
+.list-decimal {
+ list-style: decimal;
+}
+
+.list-circle {
+ list-style: circle;
+}
+
+.list-square {
+ list-style: square;
+}
+
+.list-inside {
+ list-style-position: inside;
+}
+
+.list-outside {
+ list-style-position: outside;
+}
+
+.heading-77 {
+ @include media(700) {
+  font-size: 1.6rem;
+ }
+}
+
+.heading-79 {
+ @include media(900) {
+  font-size: 1.7rem;
+ }
+}
+
+.heading-57 {
+ @include media(700) {
+  font-size: 2.3rem;
+ }
+}
+
+.heading-59 {
+ @include media(900) {
+  font-size: 2.6rem;
+ }
+}

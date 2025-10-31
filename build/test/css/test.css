@@ -22,7 +22,7 @@
 
 .intro-para {
   text-align: center;
-  margin-top: 2rem;
+  margin: 2rem 0;
 }
 
 hr {
@@ -143,7 +143,7 @@ hr {
 
 .border {
   border: 1px solid color-mix(in srgb, #1c0301, white 35%);
-  border-radius: 0.55rem;
+  border-radius: 6px;
   margin-bottom: 2rem;
 }
 .border p {
@@ -241,13 +241,6 @@ hr {
   border: 1px solid color-mix(in srgb, #1c0301, white 35%);
   margin-left: 4rem;
   padding: 4rem;
-}
-
-.footer {
-  text-align: center;
-}
-.footer p {
-  margin-bottom: 2rem;
 }
 
 .dark-button {

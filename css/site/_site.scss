@@ -19,6 +19,7 @@ a {
  text-decoration-skip-ink: auto;
  transition: color $duration $timing;
 
+ //pointer: fine - accurate pointer device such as mouse, touchpads, or stylus
  @media (hover: hover) and (pointer: fine) {
   &:hover {
    color: $hover-color;
@@ -26,18 +27,10 @@ a {
  }
 }
 
+//start to build the page
+//see the test folder and test.kit
 .wrapper {
  padding: $spacer 5%;
-}
-
-@include media(700) {
- //Balance text wrapping on headings
- h1,
- h2,
- h3,
- h4 {
-  text-wrap: balance;
- }
 }
 
 @include media(900) {
