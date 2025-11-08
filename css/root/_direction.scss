@@ -1,0 +1,80 @@
+@use "sass:list";
+
+@function contains-falsy($list) {
+ @each $item in $list {
+  @if not $item {
+   @return true;
+  }
+ }
+
+ @return false;
+}
+
+@function _expand-shorthand($values) {
+ $length: list.length($values);
+
+ @if $length == 1 {
+  @return list.join($values $values $values $values, (), $separator: comma);
+ } @else if $length == 2 {
+  @return list.join(
+   list.nth($values, 1) list.nth($values, 2) list.nth($values, 1)
+    list.nth($values, 2),
+   (),
+   $separator: comma
+  );
+ } @else if $length == 3 {
+  @return list.join(
+   list.nth($values, 1) list.nth($values, 2) list.nth($values, 3)
+    list.nth($values, 2),
+   (),
+   $separator: comma
+  );
+ } @else if $length == 4 {
+  @return $values;
+ }
+
+ @return null;
+}
+
+@mixin directional-property($property, $suffix, $values) {
+ $top: $property + "-top" + if($suffix, "-#{$suffix}", "");
+ $bottom: $property + "-bottom" + if($suffix, "-#{$suffix}", "");
+ $left: $property + "-left" + if($suffix, "-#{$suffix}", "");
+ $right: $property + "-right" + if($suffix, "-#{$suffix}", "");
+ $all: $property + if($suffix, "-#{$suffix}", "");
+
+ @if $values == null {
+  #{$all}: "";
+ } @else {
+  $expanded: _expand-shorthand($values);
+
+  @if list.length($expanded) == 4 {
+   #{$top}: list.nth($expanded, 1);
+   #{$right}: list.nth($expanded, 2);
+   #{$bottom}: list.nth($expanded, 3);
+   #{$left}: list.nth($expanded, 4);
+  } @else {
+   #{$all}: $values;
+  }
+ }
+}
+
+@mixin margin($values) {
+ @include directional-property(margin, null, $values);
+}
+
+@mixin padding($values) {
+ @include directional-property(padding, null, $values);
+}
+
+@mixin border-style($values) {
+ @include directional-property(border, style, $values);
+}
+
+@mixin border-width($values) {
+ @include directional-property(border, width, $values);
+}
+
+@mixin border-color($values) {
+ @include directional-property(border, color, $values);
+}

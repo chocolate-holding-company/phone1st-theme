@@ -156,12 +156,12 @@ hr {
   margin-left: auto;
   margin-right: auto;
   background: #e03d44;
-  width: 80%;
   height: 60px;
+  width: 80%;
 }
 .scss-extras .hidden-box {
-  width: 300px;
   height: 70px;
+  width: 300px;
   margin-left: auto;
   margin-right: auto;
   padding: 7px;
@@ -197,79 +197,49 @@ hr {
   }
 }
 .scss-extras .show-border {
-  width: 300px;
   height: 80px;
+  width: 300px;
   margin-left: auto;
   margin-right: auto;
-  border-style: solid;
-  border-width: 3px;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
+  border-top-width: 5px;
+  border-right-width: 0.9em;
+  border-bottom-width: 2ex;
+  border-left-width: 0.5rem;
+  border-top-style: solid;
+  border-right-style: double;
+  border-bottom-style: inset;
+  border-left-style: dotted;
+  border-top-color: green;
+  border-right-color: blue;
+  border-bottom-color: #2365c0;
+  border-left-color: rgb(199, 199, 36);
 }
 .scss-extras .show-border-two {
-  width: 300px;
   height: 80px;
+  width: 300px;
   margin-left: auto;
   margin-right: auto;
-  border-style: dashed;
-  border-width: 2px;
-  border-bottom-left-radius: 10px;
-  border-top-left-radius: 10px;
-  border-bottom-right-radius: 5px;
-  border-top-right-radius: 5px;
-}
-.scss-extras .hide-text {
-  width: 220px;
-  height: 120px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 7px;
-  border: 1px solid blue;
-}
-.scss-extras .hide-text:hover {
-  overflow: hidden;
-  text-indent: 104%;
-  white-space: nowrap;
-  background: url(../test-images/taj-mahal.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.scss-extras .hide-visually {
-  width: 220px;
-  height: 120px;
-  margin-left: auto;
-  margin-right: auto;
-  font-size: 0.9rem;
-  padding: 7px;
-  border: 1px solid blue;
-}
-.scss-extras .hide-visually span {
-  font-size: 1.3rem;
-  color: #a60b55;
-  border: 0;
-  -webkit-clip-path: inset(100%);
-          clip-path: inset(100%);
-  height: 1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-}
-.scss-extras .hide-visually:hover span {
-  -webkit-clip-path: none;
-          clip-path: none;
-  height: auto;
-  overflow: visible;
-  position: static;
-  white-space: inherit;
-  width: auto;
+  border-bottom-left-radius: 20px;
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 25px;
+  border-top-right-radius: 25px;
+  border-top-width: thick;
+  border-right-width: 0.8ex;
+  border-left-width: 1.25ex;
+  border-top-style: dashed;
+  border-right-style: dotted;
+  border-left-style: groove;
+  border-top-color: hsla(60, 90%, 50%, 0.8);
+  border-right-color: blue;
+  border-left-color: rgb(255, 0, 0);
 }
 .scss-extras .ellipsis {
-  width: 300px;
   height: 80px;
+  width: 300px;
   margin-left: auto;
   margin-right: auto;
   font-size: 1.1rem;
@@ -284,16 +254,9 @@ hr {
   white-space: nowrap;
   word-wrap: normal;
 }
-.scss-extras .size {
-  width: 300px;
-  height: 1.8em;
-  margin-left: auto;
-  margin-right: auto;
-  border: 1px solid blue;
-}
 .scss-extras .triangle {
-  width: 300px;
   height: 50px;
+  width: 300px;
   margin-left: auto;
   margin-right: auto;
   background-color: #b25c9c;
@@ -309,4 +272,194 @@ hr {
   content: "";
   top: -1rem;
   left: 6rem;
+}
+.scss-extras .position {
+  height: 5em;
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid blue;
+  position: relative;
+}
+.scss-extras .position div {
+  position: absolute;
+  top: 10px;
+  right: 30px;
+  bottom: 30px;
+  left: 0;
+  background-color: rgba(39, 44, 49, 0.3);
+}
+.scss-extras .position-two {
+  height: 5em;
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid red;
+  position: relative;
+}
+.scss-extras .position-two div {
+  height: 20px;
+  width: 100px;
+  position: absolute;
+  top: 10px;
+  left: 0;
+  background-color: rgba(39, 44, 49, 0.3);
+}
+.scss-extras .margin {
+  height: 5em;
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid red;
+}
+.scss-extras .margin div {
+  height: 50px;
+  width: 80px;
+  margin-top: 30px;
+  margin-left: 40px;
+  border: 1px solid blue;
+}
+.scss-extras .padding {
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid red;
+  padding-top: 15px;
+  padding-right: 20px;
+  padding-bottom: 15px;
+  padding-left: 20px;
+}
+.scss-extras .size {
+  height: 1.8em;
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid blue;
+}
+.scss-extras .size-two {
+  height: 5em;
+  width: auto;
+  border: 1px solid red;
+}
+.scss-extras .buttons button, .scss-extras .buttons [type=button], .scss-extras .buttons [type=reset], .scss-extras .buttons [type=submit] {
+  padding: 15px 40px;
+  font-size: 1.0666666667rem;
+  background-color: red;
+  color: white;
+  transition: background-color 150ms ease;
+}
+@media (hover: hover) {
+  .scss-extras .buttons button:hover, .scss-extras .buttons [type=button]:hover, .scss-extras .buttons [type=reset]:hover, .scss-extras .buttons [type=submit]:hover {
+    background-color: blue;
+  }
+}
+.scss-extras .text-inputs [type=color], .scss-extras .text-inputs [type=date], .scss-extras .text-inputs [type=datetime], .scss-extras .text-inputs [type=datetime-local], .scss-extras .text-inputs [type=email], .scss-extras .text-inputs [type=month], .scss-extras .text-inputs [type=number], .scss-extras .text-inputs [type=password], .scss-extras .text-inputs [type=search], .scss-extras .text-inputs [type=tel], .scss-extras .text-inputs [type=text], .scss-extras .text-inputs [type=time], .scss-extras .text-inputs [type=url], .scss-extras .text-inputs [type=week], .scss-extras .text-inputs input:not([type]), .scss-extras .text-inputs textarea {
+  width: 300px;
+  padding-top: 10px;
+  padding-right: 5px;
+  padding-bottom: 10px;
+  padding-left: 5px;
+  margin-top: 1rem;
+  margin-right: auto;
+  margin-bottom: 1rem;
+  margin-left: auto;
+}
+.scss-extras .shade {
+  height: 100px;
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #000099;
+}
+.scss-extras .tint {
+  height: 100px;
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #6666ff;
+}
+
+.dropdown-menu {
+  display: none;
+}
+
+/* Class to show the menu */
+.open-menu {
+  display: block;
+}
+
+.dropdown-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.dropdown {
+  border: 1px solid color-mix(in srgb, #1c0301, white 35%);
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: rgba(39, 44, 49, 0.06) 8px 8px 10px, rgba(39, 44, 49, 0.03) 1px 3px 8px;
+  transition: all 0.5s ease;
+}
+
+.dropdown-header {
+  color: #2365c0;
+  padding: 14px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dropdown-header:hover {
+  cursor: pointer;
+}
+
+.dropdown-header.open {
+  background-color: #2365c0;
+  color: #fff;
+}
+
+.dropdown-menu {
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  padding: 15px 20px;
+}
+
+.dropdown-menu pre {
+  margin: 0.5rem 0;
+}
+
+.arrow {
+  width: 25px;
+  height: 25px;
+  fill: #2365c0;
+  transition: transform 0.3s ease-in-out, fill 0.3s ease-in-out, filter 0.2s ease-in-out;
+  transform-origin: center;
+}
+
+.dropdown-header.open .arrow {
+  fill: #fff;
+}
+
+.dropdown-header.open .arrow {
+  fill: #fff;
+  transform: rotate(180deg);
+}
+
+@media only screen and (min-width: 700px) {
+  .dropdown-header:hover {
+    transition: all 0.7s ease;
+    transform: translate3D(0, -1px, 0) scale(1.02);
+  }
+  .dropdown-menu pre {
+    margin-bottom: 0.5rem !important;
+  }
+}
+@media only screen and (min-width: 900px) {
+  .dropdown-menu.open-menu {
+    padding: 18px 2rem;
+  }
+  .dropdown-menu p {
+    font-size: 1.0666666667rem;
+  }
 }

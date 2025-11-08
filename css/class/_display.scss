@@ -1,0 +1,23 @@
+@use "../root" as *;
+
+.block {
+ display: block;
+}
+.inline {
+ display: inline;
+}
+.inline-block {
+ display: inline-block;
+}
+.hidden {
+ display: none;
+}
+.flex {
+ display: flex;
+}
+.hide {
+ @include hidden;
+}
+.show {
+ @include show;
+}

@@ -1,0 +1,177 @@
+<h3 id="center" class="heading-7 mb-m">center elements</h3>
+
+<pre class="mt-m mb"><code class="language-scss">.center-element {
+@include center;//mixin
+background: #E03D44;
+@include size(80%, 60px);
+}</code></pre>
+
+<div class="center-element"></div>
+
+<hr />
+
+<h3 id="hide" class="heading-7 mb-m">
+ hide from both screenreaders and browsers
+</h3>
+<pre class="mt-m mb"><code class="language-scss">.hidden-box {
+ @include size(300px, 70px);
+ @include center;
+ padding: 7px;
+ font-size: .9rem;
+ color: orange;
+ border: 1px solid blue;
+
+  &:hover span {
+   @include hidden;//mixin
+ }
+}</code></pre>
+
+<div class="hidden-box">
+ <span
+  >This text will hide on hover and be invisible to screen readers and
+  browsers</span
+ >
+</div>
+
+<hr />
+
+<h3 id="breakpoints" class="heading-7 mb-m">media breakpoints</h3>
+<p>Base styles are phone-first</p>
+
+<pre class="mt-m mb"><code class="language-scss">.media-points p {
+ color: red;
+}
+
+@include media(600) {
+ .media-points p {
+  color: blue;
+ }
+}
+
+@include media(700) {
+ .media-points p {
+  color: rgb(153, 71, 236);
+ }
+}
+
+@include media(934) {
+ .media-points p {
+  color: rgb(34, 224, 126);
+ }
+}
+
+ @include media(93rem) {
+ .media-points p {
+  color: rgb(235, 220, 85);
+ }
+}</code></pre>
+
+<div class="media-points">
+ <p>
+  At base level this text is red<br />
+  At 600px this text is blue<br />
+  At 700px this text is purple<br />
+  At 934px this text is green<br />
+  At 93rem this text is yellow
+ </p>
+</div>
+<hr />
+<h3 id="border" class="heading-7 mb-m">border</h3>
+
+<pre class="mt-m mb-l"><code class="language-scss">.show-border {
+ @include size(300px, 80px);
+ @include center;
+
+ //mixins
+ @include border-top-radius(20px);
+ @include border-bottom-radius(10px);
+ @include border-width(5px 0.9em 2ex $small-spacer);
+ @include border-style(solid double inset dotted);
+ @include border-color(green blue $first-color rgb(199, 199, 36));
+}</code></pre>
+
+<div class="show-border"></div>
+
+<pre class="mt-l mb-l"><code class="language-scss">.show-border-two {
+ @include size(300px, 80px);
+ @include center;
+
+ //mixins
+ @include border-left-radius(20px);
+ @include border-right-radius(25px);
+ @include border-width(thick 0.8ex null 1.25ex);
+ @include border-style(dashed dotted null groove);
+ @include border-color(hsl(60 90% 50% / 0.8) blue null rgb(255 0 0));
+}</code></pre>
+
+<div class="show-border-two"></div>
+
+<hr />
+
+<h3 id="ellipsis" class="heading-7 mb-m">ellipsis</h3>
+<pre class="mt-m mb"><code class="language-scss">.ellipsis {
+@include size(300px, 80px);
+@include center;
+font-size: 1.1rem;
+padding: 10px;
+border: 1px solid blue;
+ &:hover span {
+  @include ellipsis;//mixin
+ }
+}</code></pre>
+<div class="ellipsis">
+ <span>Hover over me to see the ellipsis in action</span>
+</div>
+<hr />
+
+<h3 id="triangle" class="heading-7 mb-m">triangle</h3>
+<pre class="mt-m mb"><code class="language-scss">.element {
+@include size(300px, 50px);
+@include center;
+background-color: #b25c9c;
+position: relative;
+
+ &::before {
+  @include triangle(up, 2rem, 1rem, #b25c9c);//mixin
+  position: absolute;
+  content: "";
+  //position triangle on box
+  top:-1rem;
+  left:6rem;
+ }
+}</code></pre>
+<div class="triangle my-l"></div>
+<hr />
+<h3 id="position" class="heading-7 mb-m">position</h3>
+<pre class="mt mb"><code class="language-scss">.position {
+@include size(300px, 5em);
+@include center;
+border: 1px solid blue;
+position: relative;
+ div {
+  @include position(absolute, 10px 30px 30px 0);//mixin
+  background-color: rgba(39, 44, 49, 0.3);
+ }
+}</code></pre>
+
+<div class="position">
+ <div></div>
+</div>
+
+<pre class="mt mb"><code class="language-scss">.position-two {
+@include size(300px, 5em);
+@include center;
+border: 1px solid red;
+position: relative;
+ div {
+ @include size(100px, 20px);
+ @include position(absolute, 10px null null 0);//mixin
+ background-color: rgba(39, 44, 49, 0.3);
+ }
+}</code></pre>
+
+<div class="position-two">
+ <div></div>
+</div>
+
+<hr />

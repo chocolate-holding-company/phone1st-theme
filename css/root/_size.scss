@@ -1,0 +1,75 @@
+@charset "UTF-8";
+
+@use "sass:list";
+@use "sass:meta";
+@use "sass:string";
+@use "sass:math";
+
+@function _contains($list, $values...) {
+ @each $value in $values {
+  @if meta.type-of(list.index($list, $value)) != "number" {
+   @return false;
+  }
+ }
+
+ @return true;
+}
+
+@function _is-length($value) {
+ @return meta.type-of($value) != "null" and
+  (
+   string.slice($value + "", 1, 4) == "calc" or string.slice($value + "", 1, 3)
+    == "var" or string.slice($value + "", 1, 3) == "env" or
+    list.index(auto inherit initial 0, $value) or
+    (meta.type-of($value) == "number" and not(math.is-unitless($value)))
+  );
+}
+
+@function _is-size($value) {
+ @return _is-length($value) or
+  _contains("fill" "fit-content" "min-content" "max-content", $value);
+}
+
+/// Sets the `width` and `height` of the element in one statement.
+///
+/// @argument {number (with unit) | string} $width
+///
+/// @argument {number (with unit) | string} $height [$width]
+///
+/// @example scss
+///   .first-element {
+///     @include size(2em);
+///   }
+///
+///   // CSS Output
+///   .first-element {
+///     width: 2em;
+///     height: 2em;
+///   }
+///
+/// @example scss
+///   .second-element {
+///     @include size(auto, 10em);
+///   }
+///
+///   // CSS Output
+///   .second-element {
+///     width: auto;
+///     height: 10em;
+///   }
+
+@mixin size($width, $height: $width) {
+ @if _is-size($height) {
+  height: $height;
+ } @else {
+  @error "`#{$height}` is not a valid length for the `$height` argument " +
+      "in the `size` mixin.";
+ }
+
+ @if _is-size($width) {
+  width: $width;
+ } @else {
+  @error "`#{$width}` is not a valid length for the `$width` argument " +
+      "in the `size` mixin.";
+ }
+}

@@ -16,8 +16,6 @@ This commit establishes the master branch with the initial project setup.
 
 **Download** - **Rename the folder** - **Import into CodeKit**
 
-Remove **css/\_start.scss**
-
 Alter/Remove **google analylitics** - includes/\_scripts.kit
 
 Build your site with the help of the **test folder**
@@ -52,7 +50,9 @@ To view the _test folder pages_
 - test.kit - /build/test/test.html
 - about.kit - /build/test/about.html
 - scss.kit - /build/test/scss.html
-- base.scss - /build/test/css/base.css
+- class.kit - /build/test/class.html
+- page.scss - /build/test/css/page.css
+- test.scss - /build/test/css/test.css
 
 - all test images to /build/test/test-images/
 
@@ -68,7 +68,11 @@ Use the _test_ page to set the basic elements.
 
 #### Scss Mixins Page
 
-User mixins used with the _Phone1st_ theme.
+Default mixins used with the _Phone1st_ theme.
+
+#### Class Page
+
+**Work in progress** - a class utilities page built around the theme variables - _experimental_.
 
 ---
 

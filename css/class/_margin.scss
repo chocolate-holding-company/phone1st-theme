@@ -6,6 +6,11 @@
 }
 
 //margin top and bottom
+.my-0 {
+ margin-top: 0;
+ margin-bottom: 0;
+}
+
 .my {
  margin-top: $spacer; //2rem
  margin-bottom: $spacer; //2rem
@@ -32,6 +37,11 @@
 }
 
 //margin left and right
+.mx-0 {
+ margin-left: 0;
+ margin-right: 0;
+}
+
 .mx {
  margin-left: $spacer; //2rem
  margin-right: $spacer; //2rem
@@ -58,6 +68,10 @@
 }
 
 //margin top
+.mt-0 {
+ margin-top: 0;
+}
+
 .mt {
  margin-top: $spacer; //2rem
 }
@@ -79,6 +93,10 @@
 }
 
 //margin bottom
+.mb-0 {
+ margin-bottom: 0;
+}
+
 .mb {
  margin-bottom: $spacer; //2rem
 }
@@ -100,6 +118,10 @@
 }
 
 //margin left
+.ml-0 {
+ margin-left: 0;
+}
+
 .ml {
  margin-left: $spacer; //2rem
 }
@@ -121,6 +143,10 @@
 }
 
 //margin right
+.mr-0 {
+ margin-right: 0;
+}
+
 .mr {
  margin-right: $spacer; //2rem
 }

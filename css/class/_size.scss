@@ -3,40 +3,69 @@
 .width100 {
  width: 100%;
 }
-
 .width75 {
  width: 75%;
 }
-
 .width50 {
  width: 50%;
 }
-
 .width25 {
  width: 25%;
+}
+
+//variables width
+.width {
+ width: $spacer;
+}
+.width-s {
+ width: $small-spacer;
+}
+.width-m {
+ width: $medium-spacer;
+}
+.width-l {
+ width: $large-spacer;
+}
+.width-b {
+ width: $big-spacer;
+}
+
+//height
+.height100 {
+ height: 100%;
+}
+.height {
+ height: $spacer;
+}
+.height-s {
+ height: $small-spacer;
+}
+.height-m {
+ height: $medium-spacer;
+}
+.height-l {
+ height: $large-spacer;
+}
+.height-b {
+ height: $big-spacer;
 }
 
 //radius
 .rad {
  border-radius: $radius; //6px
 }
-
 .rad-m {
  border-radius: 10px;
 }
-
 .rad-s {
  border-radius: 3px;
 }
-
 .rad-l {
  border-radius: 15px;
 }
-
 .rad-b {
  border-radius: 20px;
 }
-
 .rad-full {
  border-radius: 50px;
 }

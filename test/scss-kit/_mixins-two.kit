@@ -1,0 +1,101 @@
+<h3 id="margin" class="heading-7 mb-m">margin</h3>
+<pre class="mt mb"><code class="language-scss">.margin {
+@include size(300px, 5em);
+@include center;
+border: 1px solid red;
+ div {
+  @include size(80px, 50px);
+  @include margin(30px null null 40px);//mixin
+  border: 1px solid blue;
+ }
+}</code></pre>
+<div class="margin">
+ <div></div>
+</div>
+<hr />
+
+<h3 id="padding" class="heading-7 mb-m">padding</h3>
+<pre class="mt mb"><code class="language-scss">.padding {
+max-width: 500px;
+@include center;
+border: 1px solid red;
+@include padding(15px 20px);//mixin
+}</code></pre>
+<div class="padding">
+ <p class="third">
+  padding-top: 15px padding-right: 20px padding-bottom: 15px padding-left: 20px
+ </p>
+</div>
+<hr />
+
+<h3 id="size" class="heading-7 mb-m">size</h3>
+<pre class="mt-m mb"><code class="language-scss">.size {
+@include size(300px, 1.8em);//mixin
+ border: 1px solid blue;
+}</code></pre>
+
+<div class="size"></div>
+<pre class="mt mb"><code class="language-scss">.size-two {
+@include size(auto, 5em);//mixin
+@include center;
+border: 1px solid red;
+}</code></pre>
+<div class="size-two"></div>
+<hr />
+
+<h3 id="buttons" class="heading-7 mb-m">buttons</h3>
+<pre class="mt mb"><code class="language-scss">//see css/base/_button.scss
+.buttons {
+ #{$all-buttons} {
+  padding: 15px 40px;
+  font-size: $secondary;
+  background-color: red;
+  color: white;
+  transition: background-color $duration $timing;
+   @media (hover: hover) {
+    &:hover {
+     background-color: blue;
+   }
+  }
+ }
+}</code></pre>
+
+<div class="buttons">
+ <button>Press Me</button>
+</div>
+<hr />
+<h3 id="inputs" class="heading-7 mt mb-m">text-inputs</h3>
+<pre class="mt mb"><code class="language-scss">//see css/base/_form.scss
+.text-inputs {
+#{$all-text-inputs} {
+width: 300px;
+@include padding(10px 5px);
+@include margin($medium-spacer auto);
+ }
+}</code></pre>
+<div class="text-inputs">
+ <input type="text" placeholder="Your name" />
+ <input type="email" />
+ <input type="password" />
+ <input type="text" disabled />
+ <textarea placeholder="Your message"></textarea>
+</div>
+<hr />
+
+<h3 id="shade" class="heading-7 mb-m">shade</h3>
+<pre class="mt mb"><code class="language-scss">.shade {
+@include size(300px, 100px);
+@include center;
+background-color: shade(blue, 40%);//mix with black
+ }</code></pre>
+<div class="shade"></div>
+<hr />
+
+<h3 id="tint" class="heading-7 mb-m">tint</h3>
+<pre class="mt mb"><code class="language-scss">.tint {
+@include size(300px, 100px);
+@include center;
+background-color: tint(blue, 40%);//mix with white
+ }</code></pre>
+<div class="tint"></div>
+<hr />

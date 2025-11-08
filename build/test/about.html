@@ -2,8 +2,6 @@
 <!DOCTYPE html>
 <html lang="en">
  <head>
-  <!-- Google tag (gtag.js) -->
-
   
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -23,7 +21,7 @@
   <meta property="og:title" content="About Phone1st starter theme information and usage" />
   <meta property="og:description" content="About Phone1st - A light and basic html starter theme to get you off to a quick start with your web developments." />
   <meta property="og:url" content="https://phone1st.org/test/about.html" />
-  <meta property="og:image" content="https://phone1st.org/images/phone1st-logo.webp" />
+  <meta property="og:image" content="https://phone1st.org/test/test-images/phone1st-about.webp" />
   <meta property="og:image:width" content="580"/>
   <meta property="og:image:height" content="296"/>
   
@@ -31,7 +29,7 @@
   <meta name="twitter:title" content="About Phone1st starter theme information and usage" />
   <meta name="twitter:description" content="About Phone1st - A light and basic html starter theme to get you off to a quick start with your web developments." />
   <meta name="twitter:url" content="https://phone1st.org/test/about.html" />
-  <meta name="twitter:image:src" content="https://phone1st.org/images/phone1st-logo.webp" />
+  <meta name="twitter:image:src" content="https://phone1st.org/test/test-images/phone1st-about.webp" />
   <link rel="stylesheet" href="../css/style.css" />
   <link rel="stylesheet" href="css/page.css" />
  </head>
@@ -39,16 +37,15 @@
  <body>
   <div id="top" class="wrapper">
    <header class="mb-m">
-    <h1 class="center heading-4">
+    <h1 class="center heading-5 heading-57 heading-59">
      About
     </h1>
    </header>
 
-
  <section>
 
 
-<img src="../images/phone1st-logo.webp" alt="Phone1st logo" class="aligncenter" />
+<img src="../test/test-images/phone1st-about.webp" alt="Phone1st about" class="aligncenter width50 mt-0" />
 
 <div>
   <h2 class="heading-7 center mb">A light, clean, starter theme that starts... <strong>phone1st</strong></h2>
@@ -124,10 +121,12 @@
     <li class="secondary mb-s">test.kit - /build/test/test.html</li>
     <li class="secondary mb-s">about.kit - /build/test/about.html</li>
     <li class="secondary mb-s">scss.kit - /build/test/scss.html</li>
+    <li class="secondary mb-s">class.kit - /build/test/class.html</li>
   </ul>
 
   <ul class="pl-l list-circle">
-    <li class="secondary mb-s">base.scss - /build/test/css/base.css</li>
+    <li class="secondary mb-s">page.scss - /build/test/css/page.css</li>
+    <li class="secondary mb-s">test.scss - /build/test/css/test.css</li>
      <li>all test images to /build/test/test-images/</li>
   </ul>
 
@@ -140,8 +139,14 @@
       not effect the theme.
     </p>
 
-    <p>
+    <p class="mb-s">
       <strong>Test Page</strong> - Use the test page to set the basic elements.
+    </p>
+    <p class="mb-s">
+      <strong>Scss Page</strong> - Default mixins used with the <em>Phone1st</em> theme.
+    </p>
+    <p class="mb-s">
+      <strong>Class Page</strong> - <strong class="ls-2">Work in progress</strong> - a class utilities page built around the theme variables - <em class="ls">experimental</em> - see <a href="#experiment">Experimenting with Classes</a>.
     </p>
   </div>
   <hr>
@@ -173,7 +178,7 @@
     </p>
   </div>
   <hr>
-  <h3 class="heading-7 center mb-m">Experimenting with Classes</h3>
+  <h3 id="experiment" class="heading-7 center mb-m">Experimenting with Classes</h3>
 
    <p>
       Experimenting with the <em>class utitlity</em> method for styling. I think the more complicated classes with quite a number of styles are still easier using a stylesheet. Utitlity classes seem to work well with templates for consistant styles and speed. Will have to see how it goes and see what evolves.

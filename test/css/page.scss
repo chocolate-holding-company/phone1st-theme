@@ -128,52 +128,21 @@ hr {
  .show-border {
   @include size(300px, 80px);
   @include center;
-  border-style: solid;
-  border-width: 3px;
-
-  @include border-top-radius(15px);
+  @include border-top-radius(20px);
   @include border-bottom-radius(10px);
+  @include border-width(5px 0.9em 2ex $small-spacer);
+  @include border-style(solid double inset dotted);
+  @include border-color(green blue $first-color rgb(199, 199, 36));
  }
 
  .show-border-two {
   @include size(300px, 80px);
   @include center;
-  border-style: dashed;
-  border-width: 2px;
-
-  @include border-left-radius(10px);
-  @include border-right-radius(5px);
- }
-
- .hide-text {
-  @include size(220px, 120px);
-  @include center;
-  padding: 7px;
-  border: 1px solid blue;
-
-  &:hover {
-   @include hide-text;
-   background: url(../test-images/taj-mahal.jpg);
-   background-repeat: no-repeat;
-   background-size: cover;
-  }
- }
-
- .hide-visually {
-  @include size(220px, 120px);
-  @include center;
-  font-size: 0.9rem;
-  padding: 7px;
-  border: 1px solid blue;
-
-  span {
-   font-size: 1.3rem;
-   color: #a60b55;
-   @include hide-visually;
-  }
-  &:hover span {
-   @include hide-visually("unhide");
-  }
+  @include border-left-radius(20px);
+  @include border-right-radius(25px);
+  @include border-width(thick 0.8ex null 1.25ex);
+  @include border-style(dashed dotted null groove);
+  @include border-color(hsl(60 90% 50% / 0.8) blue null rgb(255 0 0));
  }
 
  .ellipsis {
@@ -185,12 +154,6 @@ hr {
   &:hover span {
    @include ellipsis;
   }
- }
-
- .size {
-  @include size(300px, 1.8em);
-  @include center;
-  border: 1px solid blue;
  }
 
  .triangle {
@@ -206,5 +169,189 @@ hr {
    top: -1rem;
    left: 6rem;
   }
+ }
+
+ .position {
+  @include size(300px, 5em);
+  @include center;
+  border: 1px solid blue;
+  position: relative;
+  div {
+   @include position(absolute, 10px 30px 30px 0);
+   background-color: rgba(39, 44, 49, 0.3);
+  }
+ }
+
+ .position-two {
+  @include size(300px, 5em);
+  @include center;
+  border: 1px solid red;
+  position: relative;
+  div {
+   @include size(100px, 20px);
+   @include position(absolute, 10px null null 0);
+   background-color: rgba(39, 44, 49, 0.3);
+  }
+ }
+
+ .margin {
+  @include size(300px, 5em);
+  @include center;
+  border: 1px solid red;
+  div {
+   @include size(80px, 50px);
+   @include margin(30px null null 40px);
+   border: 1px solid blue;
+  }
+ }
+
+ .padding {
+  max-width: 500px;
+  @include center;
+  border: 1px solid red;
+  @include padding(15px 20px);
+ }
+
+ .size {
+  @include size(300px, 1.8em);
+  @include center;
+  border: 1px solid blue;
+ }
+
+ .size-two {
+  @include size(auto, 5em);
+  border: 1px solid red;
+ }
+
+ .buttons {
+  #{$all-buttons} {
+   padding: 15px 40px;
+   font-size: $secondary;
+   background-color: red;
+   color: white;
+   transition: background-color $duration $timing;
+   @media (hover: hover) {
+    &:hover {
+     background-color: blue;
+    }
+   }
+  }
+ }
+
+ .text-inputs {
+  #{$all-text-inputs} {
+   width: 300px;
+   @include padding(10px 5px);
+   @include margin($medium-spacer auto);
+  }
+ }
+
+ .shade {
+  @include size(300px, 100px);
+  @include center;
+  background-color: shade(blue, 40%);
+ }
+ .tint {
+  @include size(300px, 100px);
+  @include center;
+  background-color: tint(blue, 40%);
+ }
+}
+
+//dropdowns
+.dropdown-menu {
+ display: none;
+}
+
+/* Class to show the menu */
+.open-menu {
+ display: block;
+ //padding: 30px !important;
+}
+
+.dropdown-container {
+ width: 100%;
+ display: flex;
+ flex-direction: column;
+ gap: 20px;
+}
+
+.dropdown {
+ border: $border;
+ border-radius: 6px;
+ overflow: hidden;
+ box-shadow: rgba(39, 44, 49, 0.06) 8px 8px 10px,
+  rgba(39, 44, 49, 0.03) 1px 3px 8px;
+ transition: all 0.5s ease;
+}
+
+.dropdown-header {
+ color: $first-color;
+ padding: 14px 16px;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+}
+
+.dropdown-header:hover {
+ cursor: pointer;
+}
+
+.dropdown-header.open {
+ background-color: $first-color;
+ color: $white;
+}
+
+.dropdown-menu {
+ transition: max-height 0.3s ease, padding 0.3s ease;
+ padding: 15px 20px;
+}
+
+.dropdown-menu {
+ pre {
+  margin: $small-spacer 0;
+ }
+}
+
+.arrow {
+ width: 25px;
+ height: 25px;
+ fill: $first-color;
+ transition: transform 0.3s ease-in-out, fill 0.3s ease-in-out,
+  filter 0.2s ease-in-out;
+ transform-origin: center;
+}
+
+// .rotate {
+//  transform: rotate(180deg);
+// }
+
+.dropdown-header.open .arrow {
+ fill: $white;
+}
+
+.dropdown-header.open .arrow {
+ fill: $white;
+ transform: rotate(180deg);
+}
+
+@include media(700) {
+ .dropdown-header:hover {
+  transition: all 0.7s ease;
+  transform: translate3D(0, -1px, 0) scale(1.02);
+ }
+ .dropdown-menu {
+  pre {
+   margin-bottom: $small-spacer !important;
+  }
+ }
+}
+
+@include media(900) {
+ .dropdown-menu.open-menu {
+  padding: 18px $spacer;
+ }
+ .dropdown-menu p {
+  font-size: $secondary;
  }
 }

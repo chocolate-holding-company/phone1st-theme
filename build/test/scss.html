@@ -2,8 +2,6 @@
 <!DOCTYPE html>
 <html lang="en">
  <head>
-  <!-- Google tag (gtag.js) -->
-
   
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -23,7 +21,7 @@
   <meta property="og:title" content="Scss Mixins including user and Bourbon Mixins" />
   <meta property="og:description" content="Examples of Scss Mixins from the Bourbon Mixins Library and User Mixins embeded in the theme" />
   <meta property="og:url" content="https://phone1st.org/test/scss.html" />
-  <meta property="og:image" content="https://phone1st.org/images/phone1st-logo.webp" />
+  <meta property="og:image" content="https://phone1st.org/test/test-images/phone1st-with-weights.webp" />
   <meta property="og:image:width" content="580"/>
   <meta property="og:image:height" content="296"/>
   
@@ -31,7 +29,7 @@
   <meta name="twitter:title" content="Scss Mixins including user and Bourbon Mixins" />
   <meta name="twitter:description" content="Examples of Scss Mixins from the Bourbon Mixins Library and User Mixins embeded in the theme" />
   <meta name="twitter:url" content="https://phone1st.org/test/scss.html" />
-  <meta name="twitter:image:src" content="https://phone1st.org/images/phone1st-logo.webp" />
+  <meta name="twitter:image:src" content="https://phone1st.org/test/test-images/phone1st-with-weights.webp" />
   <link rel="stylesheet" href="../css/style.css" />
   <link rel="stylesheet" href="css/page.css" />
  </head>
@@ -39,41 +37,46 @@
  <body>
   <div id="top" class="wrapper">
    <header class="mb-m">
-    <h1 class="center heading-4">
+    <h1 class="center heading-5 heading-57 heading-59">
      Scss Mixins
     </h1>
    </header>
 
 
-
 <section>
 
 
-<img src="../images/phone1st-logo.webp" alt="Phone1st logo" class="aligncenter" />
+<img src="../test/test-images/phone1st-with-weights.webp" alt="Phone1st with weights" class="aligncenter width50 mt-0" />
 
 
-<p>To see the full code for the mixins see <code>css/root/mixins.scss</code>
+<p>To see the full code for the mixins see <code>css/root/</code>
 </p>
 <hr />
 <h2 class="links-title">-- Links --</h2>
 <div class="links">
   <div>
-    <a href="#center">Center Elements</a>
+    <a href="#center">center elements</a>
     <a href="#hide">hide from screenreaders</a>
     <a href="#breakpoints">media breakpoints</a>
+    <a href="#border">border</a>
     <a href="#ellipsis">ellipsis</a>
+    <a href="#triangle">triangle</a>
+    <a href="#position">position</a>
   </div>
   <div>
-    <a href="#hide-text">hide text</a>
-    <a href="#visually">hide visually</a>
+    <a href="#margin">margin</a>
+    <a href="#padding">padding</a>
     <a href="#size">size</a>
-    <a href="#triangle">triangle</a>
+    <a href="#buttons">buttons</a>
+     <a href="#inputs">inputs</a>
+     <a href="#shade">shade</a>
+     <a href="#tint">tint</a>
+
   </div>
 </div>
 <hr />
 <div class="scss-extras">
-  <h2 class="heading-7 center mb-m">-- Mixins --</h2>
-  <h3 id="center" class="heading-7 mb-m">Center Elements</h3>
+  <h3 id="center" class="heading-7 mb-m">center elements</h3>
   
   <pre class="mt-m mb"><code class="language-scss">.center-element {
   @include center;//mixin
@@ -88,12 +91,7 @@
   <h3 id="hide" class="heading-7 mb-m">
    hide from both screenreaders and browsers
   </h3>
-  <pre class="mt-m mb"><code class="language-scss">@mixin hidden {
-  display: none !important;
-  visibility: hidden;
-  }
-  
-  .hidden-box {
+  <pre class="mt-m mb"><code class="language-scss">.hidden-box {
    @include size(300px, 70px);
    @include center;
    padding: 7px;
@@ -155,84 +153,53 @@
     At 93rem this text is yellow
    </p>
   </div>
-  
   <hr />
-  <h3 id="border" class="heading-7 mb-m">border radius</h3>
+  <h3 id="border" class="heading-7 mb-m">border</h3>
   
-  <pre
-   class="mt-m mb"
-  ><code class="language-scss">@include border-top-radius(15px);
-  @include border-bottom-radius(10px);</code></pre>
+  <pre class="mt-m mb-l"><code class="language-scss">.show-border {
+   @include size(300px, 80px);
+   @include center;
+  
+   //mixins
+   @include border-top-radius(20px);
+   @include border-bottom-radius(10px);
+   @include border-width(5px 0.9em 2ex $small-spacer);
+   @include border-style(solid double inset dotted);
+   @include border-color(green blue $first-color rgb(199, 199, 36));
+  }</code></pre>
   
   <div class="show-border"></div>
   
-  <pre
-   class="mt-m mb"
-  ><code class="language-scss">@include border-left-radius(10px);
-  @include border-right-radius(5px);</code></pre>
+  <pre class="mt-l mb-l"><code class="language-scss">.show-border-two {
+   @include size(300px, 80px);
+   @include center;
+  
+   //mixins
+   @include border-left-radius(20px);
+   @include border-right-radius(25px);
+   @include border-width(thick 0.8ex null 1.25ex);
+   @include border-style(dashed dotted null groove);
+   @include border-color(hsl(60 90% 50% / 0.8) blue null rgb(255 0 0));
+  }</code></pre>
   
   <div class="show-border-two"></div>
   
   <hr />
   
   <h3 id="ellipsis" class="heading-7 mb-m">ellipsis</h3>
-  <pre class="mt-m mb"><code class="language-scss">@include ellipsis;</code></pre>
+  <pre class="mt-m mb"><code class="language-scss">.ellipsis {
+  @include size(300px, 80px);
+  @include center;
+  font-size: 1.1rem;
+  padding: 10px;
+  border: 1px solid blue;
+   &:hover span {
+    @include ellipsis;//mixin
+   }
+  }</code></pre>
   <div class="ellipsis">
    <span>Hover over me to see the ellipsis in action</span>
   </div>
-  <hr />
-  
-  <h3 id="hide-text" class="heading-7 mb-m">hide text</h3>
-  <pre class="mt-m mb"><code class="language-scss">.hide-text {
-  @include size(220px, 120px);
-  @include center;
-  padding: 7px;
-  border: 1px solid blue;
-  
-   &:hover {
-    @include hide-text;//mixin
-    background: url(../test-images/taj-mahal.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-   }
-  }</code></pre>
-  
-  <div class="hide-text">
-   On hover replace text with image, text still available for SEO
-  </div>
-  
-  <hr />
-  
-  <h3 id="visually" class="heading-7 mb-m">hide visually</h3>
-  <pre class="mt-m mb"><code class="language-scss">.hide-visually {
-  @include size(220px, 120px);
-  @include center;
-  font-size: .9rem;
-  padding: 7px;
-  border: 1px solid blue;
-  
-   span {
-    font-size: 1.3rem;
-    color:#a60b55;
-    @include hide-visually;//mixin
-   }
-  
-   &:hover span {
-    @include hide-visually("unhide");//alt mixin
-   }
-  }</code></pre>
-  
-  <div class="hide-visually">
-   Box title is hidden but still available to screen readers, hover to view<br />
-   <span>Box Title</span>
-  </div>
-  <hr />
-  
-  <h3 id="size" class="heading-7 mb-m">size</h3>
-  <pre
-   class="mt-m mb"
-  ><code class="language-scss">@include size(300px, 1.8em);</code></pre>
-  <div class="size"></div>
   <hr />
   
   <h3 id="triangle" class="heading-7 mb-m">triangle</h3>
@@ -251,10 +218,144 @@
     left:6rem;
    }
   }</code></pre>
-  
   <div class="triangle my-l"></div>
   <hr />
+  <h3 id="position" class="heading-7 mb-m">position</h3>
+  <pre class="mt mb"><code class="language-scss">.position {
+  @include size(300px, 5em);
+  @include center;
+  border: 1px solid blue;
+  position: relative;
+   div {
+    @include position(absolute, 10px 30px 30px 0);//mixin
+    background-color: rgba(39, 44, 49, 0.3);
+   }
+  }</code></pre>
   
+  <div class="position">
+   <div></div>
+  </div>
+  
+  <pre class="mt mb"><code class="language-scss">.position-two {
+  @include size(300px, 5em);
+  @include center;
+  border: 1px solid red;
+  position: relative;
+   div {
+   @include size(100px, 20px);
+   @include position(absolute, 10px null null 0);//mixin
+   background-color: rgba(39, 44, 49, 0.3);
+   }
+  }</code></pre>
+  
+  <div class="position-two">
+   <div></div>
+  </div>
+  
+  <hr />
+  
+  <h3 id="margin" class="heading-7 mb-m">margin</h3>
+    <pre class="mt mb"><code class="language-scss">.margin {
+    @include size(300px, 5em);
+    @include center;
+    border: 1px solid red;
+     div {
+      @include size(80px, 50px);
+      @include margin(30px null null 40px);//mixin
+      border: 1px solid blue;
+     }
+    }</code></pre>
+    <div class="margin">
+     <div></div>
+    </div>
+    <hr />
+    
+    <h3 id="padding" class="heading-7 mb-m">padding</h3>
+    <pre class="mt mb"><code class="language-scss">.padding {
+    max-width: 500px;
+    @include center;
+    border: 1px solid red;
+    @include padding(15px 20px);//mixin
+    }</code></pre>
+    <div class="padding">
+     <p class="third">
+      padding-top: 15px padding-right: 20px padding-bottom: 15px padding-left: 20px
+     </p>
+    </div>
+    <hr />
+    
+    <h3 id="size" class="heading-7 mb-m">size</h3>
+    <pre class="mt-m mb"><code class="language-scss">.size {
+    @include size(300px, 1.8em);//mixin
+     border: 1px solid blue;
+    }</code></pre>
+    
+    <div class="size"></div>
+    <pre class="mt mb"><code class="language-scss">.size-two {
+    @include size(auto, 5em);//mixin
+    @include center;
+    border: 1px solid red;
+    }</code></pre>
+    <div class="size-two"></div>
+    <hr />
+    
+    <h3 id="buttons" class="heading-7 mb-m">buttons</h3>
+    <pre class="mt mb"><code class="language-scss">//see css/base/_button.scss
+    .buttons {
+     #{$all-buttons} {
+      padding: 15px 40px;
+      font-size: $secondary;
+      background-color: red;
+      color: white;
+      transition: background-color $duration $timing;
+       @media (hover: hover) {
+        &:hover {
+         background-color: blue;
+       }
+      }
+     }
+    }</code></pre>
+    
+    <div class="buttons">
+     <button>Press Me</button>
+    </div>
+    <hr />
+    <h3 id="inputs" class="heading-7 mt mb-m">text-inputs</h3>
+    <pre class="mt mb"><code class="language-scss">//see css/base/_form.scss
+    .text-inputs {
+    #{$all-text-inputs} {
+    width: 300px;
+    @include padding(10px 5px);
+    @include margin($medium-spacer auto);
+     }
+    }</code></pre>
+    <div class="text-inputs">
+     <input type="text" placeholder="Your name" />
+     <input type="email" />
+     <input type="password" />
+     <input type="text" disabled />
+     <textarea placeholder="Your message"></textarea>
+    </div>
+    <hr />
+    
+    <h3 id="shade" class="heading-7 mb-m">shade</h3>
+    <pre class="mt mb"><code class="language-scss">.shade {
+    @include size(300px, 100px);
+    @include center;
+    background-color: shade(blue, 40%);//mix with black
+     }</code></pre>
+    <div class="shade"></div>
+    <hr />
+    
+    <h3 id="tint" class="heading-7 mb-m">tint</h3>
+    <pre class="mt mb"><code class="language-scss">.tint {
+    @include size(300px, 100px);
+    @include center;
+    background-color: tint(blue, 40%);//mix with white
+     }</code></pre>
+    <div class="tint"></div>
+    <hr />
+    
 
 </div>
 <p class="third center mb-m"><a href="../index.html">Home</a> | <a href="about.html">About</a> | <a href="test.html">Test Page</a> | <a href="class.html">Classes</a></p>
@@ -267,6 +368,7 @@
 	</footer>
 </div><!-- wrapper   -->
 
+ </div>
  <script src="js/highlight.js"></script>
 <script src="js/scroll.js"></script>
 

@@ -2,8 +2,6 @@
 <!DOCTYPE html>
 <html lang="en">
  <head>
-  <!-- Google tag (gtag.js) -->
-
   
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -23,7 +21,7 @@
   <meta property="og:title" content="Phone1st Classes" />
   <meta property="og:description" content="Classes used with Phone1st for quick styling." />
   <meta property="og:url" content="https://phone1st.org/test/class.html" />
-  <meta property="og:image" content="https://phone1st.org/images/phone1st-logo.webp" />
+  <meta property="og:image" content="https://phone1st.org/test/test-images/phone1st-class.webp" />
   <meta property="og:image:width" content="580"/>
   <meta property="og:image:height" content="296"/>
   
@@ -31,7 +29,7 @@
   <meta name="twitter:title" content="Phone1st Classes" />
   <meta name="twitter:description" content="Classes used with Phone1st for quick styling." />
   <meta name="twitter:url" content="https://phone1st.org/test/class.html" />
-  <meta name="twitter:image:src" content="https://phone1st.org/images/phone1st-logo.webp" />
+  <meta name="twitter:image:src" content="https://phone1st.org/test/test-images/phone1st-class.webp" />
   <link rel="stylesheet" href="../css/style.css" />
   <link rel="stylesheet" href="css/page.css" />
  </head>
@@ -39,16 +37,15 @@
  <body>
   <div id="top" class="wrapper">
    <header class="mb-m">
-    <h1 class="center heading-4">
+    <h1 class="center heading-5 heading-57 heading-59">
      Phone1st Classes
     </h1>
    </header>
 
-
  <section>
 
 
-<img src="../images/phone1st-logo.webp" alt="Phone1st logo" class="aligncenter" />
+<img src="../test/test-images/phone1st-class.webp" alt="Phone1st class" class="aligncenter width50 mt-0" />
 
 <div>
   <p class="center lead mb-s">Experimenting with <em>classes.</em></p>
@@ -63,16 +60,30 @@
     <a href="#color">Color</a>
     <a href="#type">Typography</a>
     <a href="#margin">Margin</a>
-  </div>
-  <div>
     <a href="#padding">Padding</a>
     <a href="#size">Size</a>
   </div>
+  <div>
+    <a href="#display">Display</a>
+    <a href="#appearance">Appearance</a>
+    <a href="#flex">Flex</a>
+    <a href="#gap">Gap</a>
+  </div>
 </div>
 <hr />
-<h3 id="color" class="heading-7 center ls-2 heading-77 heading-79">Color</h3>
 
-  <pre class="mt-m mb"><code class="language-scss">//variables color
+  <div class="dropdown-container">
+<div id="color" class="dropdown">
+ <div class="dropdown-header" data-target="#dropdown-menu-10">
+  Color
+  <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+   <path d="M7 10l5 5 5-5z" />
+  </svg>
+ </div>
+
+ <div id="dropdown-menu-10" class="dropdown-menu">
+  
+  <pre><code class="language-scss">//variables color
 dark-gray - color: $dark-gray;
 medium-gray - color: $medium-gray;
 light-gray - color: $light-gray;
@@ -233,16 +244,29 @@ bg-second20 - background-color: $second-20;
 bg-second15 - background-color: $second-15;
 bg-second10 - background-color: $second-10;
 bg-second5 - background-color: $second-5;</code></pre>
+ </div>
+</div>
 
-  <h3 id="type" class="heading-7 center ls-2 heading-77 heading-79">Typography</h3>
+<div id="type" class="dropdown">
+ <div class="dropdown-header" data-target="#dropdown-menu-11">
+  Typography
+  <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+   <path d="M7 10l5 5 5-5z" />
+  </svg>
+ </div>
+<div id="dropdown-menu-11" class="dropdown-menu">
+ <pre><code class="language-scss">//font family
+font - font-family: $font;
+heading-font - font-family: $heading-font;
+code-font - font-family: $code-font;
 
-  <pre class="mt-m mb"><code class="language-scss">//Size
-normal - $font-size
+//font-size
+normal - $font-size//1.2rem
 lead - $lead
 secondary - $secondary
 third - $third
 
-//position
+//align
 center - text-align: center
 left - text-align: left
 right - text-align: right
@@ -268,13 +292,68 @@ ls-6 - letter-spacing: 6px;
 ls-7 - letter-spacing: 7px;
 ls-8 - letter-spacing: 8px;
 ls-9 - letter-spacing: 9px;
-ls-10 - letter-spacing: 10px;</code></pre>
+ls-10 - letter-spacing: 10px;
 
-<h3 id="margin" class="heading-7 center ls-2 heading-77 heading-79">Margin</h3>
-<pre class="mt-m mb"><code class="language-scss">//centered
+//line-height
+lh - line-height: 1;
+lh-1 - line-height: 1.1;
+lh-2 - line-height: 1.2;
+lh-3 - line-height: 1.3;
+lh-4 - line-height: 1.4;
+lh-5 - line-height: 1.5;
+lh-6 - line-height: 1.6;
+lh-7 - line-height: 1.7;
+lh-8 - line-height: 1.8;
+lh-9 - line-height: 1.9;
+lh-20 - line-height: 2;
+lh-21 - line-height: 2.1;
+
+//font width
+font100 - font-weight: 100;
+font200 - font-weight: 200;
+font300 - font-weight: 300;
+font400 - font-weight: 400;
+font500 - font-weight: 500;
+font600 - font-weight: 600;
+font700 - font-weight: 700;
+font800 - font-weight: 800;
+font900 - font-weight: 900;
+
+//font-style
+italic - font-style: italic;
+not-italic - font-style: normal;
+
+//text-transform
+upper - text-transform: uppercase;
+lower - text-transform: lowercase;
+caps - text-transform: capitalize;
+normal-case - text-transform: none;
+
+//list-style
+list-none - list-style: none;
+list-disc - list-style: disc;
+list-decimal - list-style: decimal;
+list-circle - list-style: circle;
+list-square - list-style: square;
+list-inside - list-style-position: inside;
+list-outside - list-style-position: outside;</code></pre>
+</div>
+
+</div>
+
+<div id="margin" class="dropdown">
+ <div class="dropdown-header" data-target="#dropdown-menu-12">
+  Margin
+  <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+   <path d="M7 10l5 5 5-5z" />
+  </svg>
+ </div>
+<div id="dropdown-menu-12" class="dropdown-menu">
+ <pre><code class="language-scss">//centered
 centered - margin-left: auto; - margin-right: auto;
 
 //margin top and bottom
+my-0 - margin-top: 0; - margin-bottom: 0;
 my - margin-top: $spacer; - margin-bottom: $spacer;//2rem
 my-m - margin-top: $medium-spacer; - margin-bottom: $medium-spacer;//1rem
 my-s - margin-top: $small-spacer; - margin-bottom: $small-spacer;//0.5rem
@@ -282,6 +361,7 @@ my-l - margin-top: $large-spacer; - margin-bottom: $large-spacer;//3rem
 my-b - margin-top: $big-spacer; - margin-bottom: $big-spacer;//4rem
 
 //margin left and right
+mx-0 - margin-left: 0; - margin-right: 0;
 mx - margin-left: $spacer; - margin-right: $spacer;//2rem
 mx-m - margin-left: $medium-spacer; - margin-right: $medium-spacer;//1rem
 mx-s - margin-left: $small-spacer; - margin-right: $small-spacer;//0.5rem
@@ -289,6 +369,7 @@ mx-l - margin-left: $large-spacer; - margin-right: $large-spacer;//3rem
 mx-b - margin-left: $big-spacer; - margin-right: $big-spacer;//4rem
 
 //margin top
+mt-0 - margin-top: 0;
 mt - margin-top: $spacer;//2rem
 mt-m - margin-top: $medium-spacer;//1rem
 mt-s - margin-top: $small-spacer;//0.5rem
@@ -296,6 +377,7 @@ mt-l - margin-top: $large-spacer;//3rem
 mt-b - margin-top: $big-spacer;//4rem
 
 //margin bottom
+mb-0 - margin-bottom: 0;
 mb - margin-bottom: $spacer;//2rem
 mb-m - margin-bottom: $medium-spacer;//1rem
 mb-s - margin-bottom: $small-spacer;//0.5rem
@@ -303,6 +385,7 @@ mb-l - margin-bottom: $large-spacer;//3rem
 mb-b - margin-bottom: $big-spacer;//4rem
 
 //margin left
+ml-0 - margin-left: 0;
 ml - margin-left: $spacer;//2rem
 ml-m - margin-left: $medium-spacer;//1rem
 ml-s - margin-left: $small-spacer;//0.5rem
@@ -310,14 +393,26 @@ ml-l - margin-left: $large-spacer;//3rem
 ml-b - margin-left: $big-spacer;//4rem
 
 //margin right
+mr-0 - margin-right: 0;
 mr - margin-right: $spacer;//2rem
 mr-m - margin-right: $medium-spacer;//1rem
 mr-s - margin-right: $small-spacer;//0.5rem
 mr-l - margin-right: $large-spacer;//3rem
 mr-b - margin-right: $big-spacer;//4rem</code></pre>
+</div>
 
-<h3 id="padding" class="heading-7 center ls-2 heading-77 heading-79">Padding</h3>
-<pre class="mt-m mb"><code class="language-scss">//padding top and bottom
+</div>
+
+<div id="padding" class="dropdown">
+ <div class="dropdown-header" data-target="#dropdown-menu-13">
+  Padding
+  <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+   <path d="M7 10l5 5 5-5z" />
+  </svg>
+ </div>
+<div id="dropdown-menu-13" class="dropdown-menu">
+ <pre><code class="language-scss">//padding top and bottom
+py-0 - padding-top: 0; - padding-bottom: 0;
 py - padding-top: $spacer; - padding-bottom: $spacer;//2rem
 py-m - padding-top: $medium-spacer; - padding-bottom: $medium-spacer;//1rem
 py-s - padding-top: $small-spacer; - padding-bottom: $small-spacer;//0.5rem
@@ -325,6 +420,7 @@ py-l - padding-top: $large-spacer; - padding-bottom: $large-spacer;//3rem
 py-b - padding-top: $big-spacer; - padding-bottom: $big-spacer;//4rem
 
 //padding left and right
+px-0 - padding-left: 0; - padding-right: 0;
 px - padding-left: $spacer; - padding-right: $spacer;//2rem
 px-m - padding-left: $medium-spacer; - padding-right: $medium-spacer;//1rem
 px-s - padding-left: $small-spacer; - padding-right: $small-spacer;//0.5rem
@@ -332,6 +428,7 @@ px-l - padding-left: $large-spacer; - padding-right: $large-spacer;//3rem
 px-b - padding-left: $big-spacer; - padding-right: $big-spacer;//4rem
 
 //padding top
+pt-0 - padding-top: 0;
 pt - padding-top: $spacer;//2rem
 pt-m - padding-top: $medium-spacer;//1rem
 pt-s - padding-top: $small-spacer;//0.5rem
@@ -339,6 +436,7 @@ pt-l - padding-top: $large-spacer;//3rem
 pt-b - padding-top: $big-spacer;//4rem
 
 //padding bottom
+pb-0 - padding-bottom: 0;
 pb - padding-bottom: $spacer;//2rem
 pb-m - padding-bottom: $medium-spacer;//1rem
 pb-s - padding-bottom: $small-spacer;//0.5rem
@@ -346,6 +444,7 @@ pb-l - padding-bottom: $large-spacer;//3rem
 pb-b - padding-bottom: $big-spacer;//4rem
 
 //padding left
+pl-0 - padding-left: 0;
 pl - padding-left: $spacer;//2rem
 pl-m - padding-left: $medium-spacer;//1rem
 pl-s - padding-left: $small-spacer;//0.5rem
@@ -353,19 +452,44 @@ pl-l - padding-left: $large-spacer;//3rem
 pl-b - padding-left: $big-spacer;//4rem
 
 //padding right
+pr-0 - padding-right: 0;
 pr - padding-right: $spacer;//2rem
 pr-m - padding-right: $medium-spacer;//1rem
 pr-s - padding-right: $small-spacer;//0.5rem
 pr-l - padding-right: $large-spacer;//3rem
 pr-b - padding-right: $big-spacer;//4rem</code></pre>
+</div>
 
-<h3 id="size" class="heading-7 center ls-2 heading-77 heading-79">Size</h3>
+</div>
 
-  <pre class="mt-m mb"><code class="language-scss">//size
+<div id="size" class="dropdown">
+ <div class="dropdown-header" data-target="#dropdown-menu-14">
+  Size
+  <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+   <path d="M7 10l5 5 5-5z" />
+  </svg>
+ </div>
+<div id="dropdown-menu-14" class="dropdown-menu">
+ <pre><code class="language-scss">//width
 width100 - width: 100%;
 width75 - width: 75%;
 width50 - width: 50%;
 width25 - width: 25%;
+
+//width variables
+width - width: $spacer;
+width-s - width: $small-spacer;
+width-m - width: $medium-spacer;
+width-l - width: $large-spacer;
+width-b - width: $big-spacer;
+
+//height
+height100 - height: 100%;
+height - height: $spacer;
+height-s - height: $small-spacer;
+height-m - height: $medium-spacer;
+height-l - height: $large-spacer;
+height-b - height: $big-spacer;
 
 //radius
 rad - border-radius: $radius;//6px
@@ -374,8 +498,129 @@ rad-s - border-radius: 3px;
 rad-l - border-radius: 15px;
 rad-b - border-radius: 20px;
 rad-full - border-radius: 50px;</code></pre>
+</div>
 
 </div>
+
+<div id="display" class="dropdown">
+ <div class="dropdown-header" data-target="#dropdown-menu-15">
+  Display
+  <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+   <path d="M7 10l5 5 5-5z" />
+  </svg>
+ </div>
+<div id="dropdown-menu-15" class="dropdown-menu">
+ <pre><code class="language-scss">//display
+block - display: block;
+inline - display: inline;
+inline-block - display: inline-block;
+hidden - display: none;
+flex - display: flex;
+hide - @include hidden;
+show - @include show;</code></pre>
+</div>
+
+</div>
+
+<div id="appearance" class="dropdown">
+ <div class="dropdown-header" data-target="#dropdown-menu-16">
+  Appearance
+  <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+   <path d="M7 10l5 5 5-5z" />
+  </svg>
+ </div>
+<div id="dropdown-menu-16" class="dropdown-menu">
+ <pre><code class="language-scss">//cursor
+cursor - cursor: default;
+cursor-p - cursor: pointer;
+cursor-h - cursor: help;
+cursor-w - cursor: wait;
+cursor-ch - cursor: crosshair;
+cursor-na - cursor: not-allowed;
+cursor-zi - cursor: zoom-in;
+cursor-zo - cursor: zoom-out;
+cursor-g - cursor: grab;</code></pre>
+</div>
+
+</div>
+
+<div id="flex" class="dropdown">
+ <div class="dropdown-header" data-target="#dropdown-menu-17">
+  Flex
+  <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+   <path d="M7 10l5 5 5-5z" />
+  </svg>
+ </div>
+<div id="dropdown-menu-17" class="dropdown-menu">
+ <pre><code class="language-scss">//flex direction
+//row is default
+flex-row - flex-direction: row;
+row-reverse - flex-direction: row-reverse;
+flex-col - flex-direction: column;
+col-reverse - flex-direction: column-reverse;
+
+//flex-wrap
+no-wrap - flex-wrap: nowrap;
+wrap - flex-wrap: wrap;
+wrap-reverse - flex-wrap: wrap-reverse;
+
+//justify content
+content-start - justify-content: flex-start;
+content-end - justify-content: flex-end;
+content-center - justify-content: center;
+content-between - justify-content: space-between;
+content-around - justify-content: space-around;
+content-evenly - justify-content: space-evenly;
+
+//align-items
+items-start - align-items: flex-start;
+items-end - align-items: flex-end;
+items-center - align-items: center;
+items-baseline - align-items: baseline;
+items-stretch - align-items: stretch;
+
+//flex container items
+grow - flex-grow: 1;</code></pre>
+</div>
+
+</div>
+
+<div id="gap" class="dropdown">
+ <div class="dropdown-header" data-target="#dropdown-menu-18">
+  Gap
+  <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+   <path d="M7 10l5 5 5-5z" />
+  </svg>
+ </div>
+<div id="dropdown-menu-18" class="dropdown-menu">
+ <pre><code class="language-scss">//gap
+gap-0 - gap: 0;
+gap - gap: $spacer; //2rem
+gap-m - gap: $medium-spacer; //1rem
+gap-s - gap: $small-spacer; //0.5rem
+gap-l - gap: $large-spacer; //3rem
+gap-b - gap: $big-spacer; //4rem
+
+//gap row
+row-gap-0 - row-gap: 0;
+row-gap - row-gap: $spacer; //2rem
+row-gap-m - row-gap: $medium-spacer; //1rem
+row-gap-s - row-gap: $small-spacer; //0.5rem
+row-gap-l - row-gap: $large-spacer; //3rem
+row-gap-b - row-gap: $big-spacer; //4rem
+
+//gap column
+col-gap-0 - column-gap: 0;
+col-gap - column-gap: $spacer; //2rem
+col-gap-m - column-gap: $medium-spacer; //1rem
+col-gap-s - column-gap: $small-spacer; //0.5rem
+col-gap-l - column-gap: $large-spacer; //3rem
+col-gap-b - column-gap: $big-spacer; //4rem</code></pre>
+</div>
+
+</div>
+</div>
+  </div>
 <hr>
 <p class="third center mb-m"><a href="../index.html">Home</a> | <a href="about.html">About</a> | <a href="test.html">Test Page</a> | <a href="scss.html">Scss Mixins</a></p>
 </section>
@@ -388,6 +633,7 @@ rad-full - border-radius: 50px;</code></pre>
 
  <script src="js/highlight.js"></script>
   <script src="js/scroll.js"></script>
+   <script src="js/dropdown.js"></script>
 
 </body>
 </html>

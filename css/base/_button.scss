@@ -5,46 +5,40 @@
 @use "../root/" as *;
 
 //Use a btn class for tags such as <a>
-button,
-[type="button"],
-[type="reset"],
-[type="submit"],
+#{$all-buttons},
 .btn {
-  appearance: none;
-  cursor: pointer;
-  display: inline-block;
-  line-height: 1;
-  text-align: center;
-  text-decoration: none;
-  transition: background-color $duration $timing;
-  user-select: none;
-  vertical-align: middle;
-  white-space: nowrap;
-  border: 0;
-  border-radius: $radius;
-  font-size: $third;
-  padding: 15px 20px;
+ appearance: none;
+ cursor: pointer;
+ display: inline-block;
+ line-height: 1;
+ text-align: center;
+ text-decoration: none;
+ transition: background-color $duration $timing;
+ user-select: none;
+ vertical-align: middle;
+ white-space: nowrap;
+ border: 0;
+ border-radius: $radius;
+ font-size: $third;
+ padding: 15px 20px;
 
-  &:disabled {
-    cursor: not-allowed;
-    opacity: 0.5;
-  }
+ &:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+ }
 }
 
 //set the color and hover-color
-button,
-[type="button"],
-[type="reset"],
-[type="submit"],
+#{$all-buttons},
 .btn {
-  background-color: $button-background;
-  color: $button-color;
-  transition: background-color $duration $timing;
+ background-color: $button-background;
+ color: $button-color;
+ transition: background-color $duration $timing;
 
-  @media (hover: hover) {
-    &:hover {
-      background-color: $button-background-hover;
-      color: $button-color-hover;
-    }
+ @media (hover: hover) {
+  &:hover {
+   background-color: $button-background-hover;
+   color: $button-color-hover;
   }
+ }
 }

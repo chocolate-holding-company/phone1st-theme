@@ -3,14 +3,14 @@
 <!-- $description About Phone1st - A light and basic html starter theme to get you off to a quick start with your web developments. -->
 <!-- $keyword About, Phone1st -->
 <!-- $url test/about.html -->
-<!-- $post-image images/phone1st-logo.webp -->
+<!-- $post-image test/test-images/phone1st-about.webp -->
 <!-- $css page.css -->
 
 <!-- @import includes-kit/_test-header -->
  <section>
 
 
-<img src="../<!-- $post-image -->" alt="Phone1st logo" class="aligncenter" />
+<img src="../<!-- $post-image -->" alt="Phone1st about" class="aligncenter width50 mt-0" />
 
 <div>
   <h2 class="heading-7 center mb">A light, clean, starter theme that starts... <strong>phone1st</strong></h2>
@@ -86,10 +86,12 @@
     <li class="secondary mb-s">test.kit - /build/test/test.html</li>
     <li class="secondary mb-s">about.kit - /build/test/about.html</li>
     <li class="secondary mb-s">scss.kit - /build/test/scss.html</li>
+    <li class="secondary mb-s">class.kit - /build/test/class.html</li>
   </ul>
 
   <ul class="pl-l list-circle">
-    <li class="secondary mb-s">base.scss - /build/test/css/base.css</li>
+    <li class="secondary mb-s">page.scss - /build/test/css/page.css</li>
+    <li class="secondary mb-s">test.scss - /build/test/css/test.css</li>
      <li>all test images to /build/test/test-images/</li>
   </ul>
 
@@ -102,8 +104,14 @@
       not effect the theme.
     </p>
 
-    <p>
+    <p class="mb-s">
       <strong>Test Page</strong> - Use the test page to set the basic elements.
+    </p>
+    <p class="mb-s">
+      <strong>Scss Page</strong> - Default mixins used with the <em>Phone1st</em> theme.
+    </p>
+    <p class="mb-s">
+      <strong>Class Page</strong> - <strong class="ls-2">Work in progress</strong> - a class utilities page built around the theme variables - <em class="ls">experimental</em> - see <a href="#experiment">Experimenting with Classes</a>.
     </p>
   </div>
   <hr>
@@ -135,7 +143,7 @@
     </p>
   </div>
   <hr>
-  <h3 class="heading-7 center mb-m">Experimenting with Classes</h3>
+  <h3 id="experiment" class="heading-7 center mb-m">Experimenting with Classes</h3>
 
    <p>
       Experimenting with the <em>class utitlity</em> method for styling. I think the more complicated classes with quite a number of styles are still easier using a stylesheet. Utitlity classes seem to work well with templates for consistant styles and speed. Will have to see how it goes and see what evolves.
