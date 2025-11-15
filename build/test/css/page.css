@@ -396,7 +396,7 @@ hr {
 }
 
 .dropdown {
-  border: 1px solid color-mix(in srgb, #1c0301, white 35%);
+  border: 1px solid rgb(107.45, 91.2, 89.9);
   border-radius: 6px;
   overflow: hidden;
   box-shadow: rgba(39, 44, 49, 0.06) 8px 8px 10px, rgba(39, 44, 49, 0.03) 1px 3px 8px;

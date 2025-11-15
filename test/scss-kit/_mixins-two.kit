@@ -1,5 +1,6 @@
-<h3 id="margin" class="heading-7 mb-m">margin</h3>
-<pre class="mt mb"><code class="language-scss">.margin {
+<h3 id="margin" class="mb-m">margin</h3>
+<pre class="mt mb"><code class="language-scss">//see css/root/_direction.scss
+.margin {
 @include size(300px, 5em);
 @include center;
 border: 1px solid red;
@@ -14,8 +15,9 @@ border: 1px solid red;
 </div>
 <hr />
 
-<h3 id="padding" class="heading-7 mb-m">padding</h3>
-<pre class="mt mb"><code class="language-scss">.padding {
+<h3 id="padding" class="mb-m">padding</h3>
+<pre class="mt mb"><code class="language-scss">//see css/root/_direction.scss
+.padding {
 max-width: 500px;
 @include center;
 border: 1px solid red;
@@ -28,14 +30,16 @@ border: 1px solid red;
 </div>
 <hr />
 
-<h3 id="size" class="heading-7 mb-m">size</h3>
-<pre class="mt-m mb"><code class="language-scss">.size {
+<h3 id="size" class="mb-m">size</h3>
+<pre class="mt-m mb"><code class="language-scss">//see css/root/_size.scss
+.size {
 @include size(300px, 1.8em);//mixin
  border: 1px solid blue;
 }</code></pre>
 
 <div class="size"></div>
-<pre class="mt mb"><code class="language-scss">.size-two {
+<pre class="mt mb"><code class="language-scss">//see css/root/_size.scss
+.size-two {
 @include size(auto, 5em);//mixin
 @include center;
 border: 1px solid red;
@@ -43,8 +47,11 @@ border: 1px solid red;
 <div class="size-two"></div>
 <hr />
 
-<h3 id="buttons" class="heading-7 mb-m">buttons</h3>
-<pre class="mt mb"><code class="language-scss">//see css/base/_button.scss
+<h3 id="buttons" class="mb-m">buttons</h3>
+<pre
+ class="mt mb"
+><code class="language-scss">//see css/root/_buttons-inputs.scss
+//see css/base/_button.scss for inherited styles
 .buttons {
  #{$all-buttons} {
   padding: 15px 40px;
@@ -64,8 +71,11 @@ border: 1px solid red;
  <button>Press Me</button>
 </div>
 <hr />
-<h3 id="inputs" class="heading-7 mt mb-m">text-inputs</h3>
-<pre class="mt mb"><code class="language-scss">//see css/base/_form.scss
+<h3 id="inputs" class="mt mb-m">text-inputs</h3>
+<pre
+ class="mt mb"
+><code class="language-scss">//see css/root/_buttons-inputs.scss
+//see css/base/_form.scss for inherited styles
 .text-inputs {
 #{$all-text-inputs} {
 width: 300px;
@@ -75,15 +85,16 @@ width: 300px;
 }</code></pre>
 <div class="text-inputs">
  <input type="text" placeholder="Your name" />
- <input type="email" />
- <input type="password" />
- <input type="text" disabled />
+ <input type="email" placeholder="a valid email" />
+ <input type="password" placeholder="your password" />
+ <input type="text" placeholder="disabled" disabled />
  <textarea placeholder="Your message"></textarea>
 </div>
 <hr />
 
-<h3 id="shade" class="heading-7 mb-m">shade</h3>
-<pre class="mt mb"><code class="language-scss">.shade {
+<h3 id="shade" class="mb-m">shade</h3>
+<pre class="mt mb"><code class="language-scss">//see css/root/_shade-tint.scss
+.shade {
 @include size(300px, 100px);
 @include center;
 background-color: shade(blue, 40%);//mix with black
@@ -91,8 +102,9 @@ background-color: shade(blue, 40%);//mix with black
 <div class="shade"></div>
 <hr />
 
-<h3 id="tint" class="heading-7 mb-m">tint</h3>
-<pre class="mt mb"><code class="language-scss">.tint {
+<h3 id="tint" class="mb-m">tint</h3>
+<pre class="mt mb"><code class="language-scss">//see css/root/_shade-tint.scss
+.tint {
 @include size(300px, 100px);
 @include center;
 background-color: tint(blue, 40%);//mix with white

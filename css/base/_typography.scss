@@ -1,6 +1,7 @@
 // =======================
 // Typography
 // =======================
+@use "sass:math";
 @use "../root/variables" as *;
 
 hr {
@@ -30,8 +31,10 @@ h4 {
  text-wrap: balance;
 }
 
-p {
+p,
+.para {
  hyphens: none;
+ font-size: clamp($font-size, 1.1385rem + 0.3077vw, 1.35rem);
 }
 
 b,
@@ -62,11 +65,11 @@ ins {
 }
 
 small {
- font-size: 85%;
+ font-size: 70%;
 }
 
 big {
- font-size: 125%;
+ font-size: 145%;
 }
 
 pre {
@@ -97,3 +100,36 @@ sup {
 sub {
  bottom: -0.25em;
 }
+
+//Set the headings
+h1,
+.h1 {
+ font-size: clamp(2rem, 0.58rem + 3.77vw, 3rem);
+}
+
+h2,
+.h2 {
+ font-size: clamp(1.75rem, 0.69rem + 2.83vw, 2.5rem);
+}
+
+h3,
+.h3 {
+ font-size: clamp(1.5rem, 0.79rem + 1.89vw, 2rem);
+}
+
+h4,
+.h4 {
+ font-size: clamp(1.25rem, 0.54rem + 1.89vw, 1.75rem);
+}
+
+h5,
+.h5 {
+ font-size: clamp(1.13rem, 0.59rem + 1.42vw, 1.5rem);
+}
+
+h6,
+.h6 {
+ font-size: clamp(1rem, 0.65rem + 0.94vw, 1.25rem);
+}
+
+//go to https://clamp.font-size.app to set your own type sizes using the css clamp function

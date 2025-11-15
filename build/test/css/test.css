@@ -95,32 +95,35 @@ hr {
 }
 
 .dark-gray {
-  background: color-mix(in srgb, #1c0301, white 35%);
+  background: rgb(107.45, 91.2, 89.9);
 }
 .dark-gray p {
   color: #fff;
 }
 
 .medium-gray {
-  background: color-mix(in srgb, #1c0301, white 60%);
+  background: rgb(164.2, 154.2, 153.4);
 }
 .medium-gray p {
   color: #fff;
 }
 
 .light-gray {
-  background: color-mix(in srgb, #1c0301, white 95%);
+  background: rgb(220.95, 217.2, 216.9);
+}
+.light-gray p {
+  color: #1c0301;
 }
 
 .font-color {
-  background: color-mix(in srgb, #1c0301, white 20%);
+  background: rgb(73.4, 53.4, 51.8);
 }
 .font-color p {
   color: #fff;
 }
 
 .link-color {
-  background: color-mix(in srgb, #2365c0, white 30%);
+  background: rgb(101, 147.2, 210.9);
 }
 .link-color p {
   color: #fff;
@@ -134,15 +137,15 @@ hr {
 }
 
 .background {
-  background: color-mix(in srgb, #1c0301, white 80%);
+  background: rgb(209.6, 204.6, 204.2);
 }
 
 .light-background {
-  background: color-mix(in srgb, color-mix(in srgb, #1c0301, white 80%), white 75%);
+  background: rgb(241.38, 239.88, 239.76);
 }
 
 .border {
-  border: 1px solid color-mix(in srgb, #1c0301, white 35%);
+  border: 1px solid rgb(107.45, 91.2, 89.9);
   border-radius: 6px;
   margin-bottom: 2rem;
 }
@@ -208,37 +211,37 @@ hr {
 }
 
 .margin-spacer {
-  border-left: 1px solid color-mix(in srgb, #1c0301, white 35%);
+  border-left: 1px solid rgb(107.45, 91.2, 89.9);
 }
 .margin-spacer p {
   font-size: 1.0666666667rem;
 }
 .margin-spacer .normal-margin {
-  border: 1px solid color-mix(in srgb, #1c0301, white 35%);
+  border: 1px solid rgb(107.45, 91.2, 89.9);
   margin-left: 2rem;
   margin-bottom: 1rem;
   padding: 2rem;
 }
 .margin-spacer .medium-margin {
-  border: 1px solid color-mix(in srgb, #1c0301, white 35%);
+  border: 1px solid rgb(107.45, 91.2, 89.9);
   margin-left: 1rem;
   margin-bottom: 1rem;
   padding: 1rem;
 }
 .margin-spacer .small-margin {
-  border: 1px solid color-mix(in srgb, #1c0301, white 35%);
+  border: 1px solid rgb(107.45, 91.2, 89.9);
   margin-left: 0.5rem;
   padding: 0.5rem;
   margin-bottom: 1rem;
 }
 .margin-spacer .large-margin {
-  border: 1px solid color-mix(in srgb, #1c0301, white 35%);
+  border: 1px solid rgb(107.45, 91.2, 89.9);
   margin-left: 3rem;
   padding: 3rem;
   margin-bottom: 1rem;
 }
 .margin-spacer .big-margin {
-  border: 1px solid color-mix(in srgb, #1c0301, white 35%);
+  border: 1px solid rgb(107.45, 91.2, 89.9);
   margin-left: 4rem;
   padding: 4rem;
 }
@@ -280,7 +283,7 @@ input[type=checkbox]:checked + .switch::after {
 }
 
 input[type=checkbox]:checked + .switch {
-  background-color: color-mix(in srgb, #2365c0, white 30%);
+  background-color: rgb(101, 147.2, 210.9);
 }
 
 .offscreen {
@@ -289,9 +292,6 @@ input[type=checkbox]:checked + .switch {
 }
 
 .inverted .white-color p {
-  color: #1c0301;
-}
-.inverted .light-gray p {
   color: #1c0301;
 }
 .inverted .background p {

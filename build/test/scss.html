@@ -37,7 +37,7 @@
  <body>
   <div id="top" class="wrapper">
    <header class="mb-m">
-    <h1 class="center heading-5 heading-57 heading-59">
+    <h1 class="center">
      Scss Mixins
     </h1>
    </header>
@@ -49,7 +49,8 @@
 <img src="../test/test-images/phone1st-with-weights.webp" alt="Phone1st with weights" class="aligncenter width50 mt-0" />
 
 
-<p>To see the full code for the mixins see <code>css/root/</code>
+<p>To see the full code for the mixins see <code>css/root/</code><br>
+Most of the mixins import <code>css/root/_helpers.scss</code>
 </p>
 <hr />
 <h2 class="links-title">-- Links --</h2>
@@ -76,21 +77,25 @@
 </div>
 <hr />
 <div class="scss-extras">
-  <h3 id="center" class="heading-7 mb-m">center elements</h3>
+  <h3 id="center" class="mb-m">center elements</h3>
   
   <pre class="mt-m mb"><code class="language-scss">.center-element {
   @include center;//mixin
   background: #E03D44;
   @include size(80%, 60px);
+  }
+  
+  // this may need display: block to work in some cases
+  @mixin center {
+   margin-left: auto;
+   margin-right: auto;
   }</code></pre>
   
   <div class="center-element"></div>
   
   <hr />
   
-  <h3 id="hide" class="heading-7 mb-m">
-   hide from both screenreaders and browsers
-  </h3>
+  <h3 id="hide" class="mb-m">hide from both screenreaders and browsers</h3>
   <pre class="mt-m mb"><code class="language-scss">.hidden-box {
    @include size(300px, 70px);
    @include center;
@@ -102,6 +107,11 @@
     &:hover span {
      @include hidden;//mixin
    }
+  }
+  
+  @mixin hidden {
+   display: none !important;
+   visibility: hidden;
   }</code></pre>
   
   <div class="hidden-box">
@@ -113,7 +123,7 @@
   
   <hr />
   
-  <h3 id="breakpoints" class="heading-7 mb-m">media breakpoints</h3>
+  <h3 id="breakpoints" class="mb-m">media breakpoints</h3>
   <p>Base styles are phone-first</p>
   
   <pre class="mt-m mb"><code class="language-scss">.media-points p {
@@ -142,6 +152,14 @@
    .media-points p {
     color: rgb(235, 220, 85);
    }
+  }
+  
+  @mixin media($point) {
+   // Convert unitless numbers to px, otherwise use the provided unit
+   $breakpoint: if(math.is-unitless($point), #{$point}px, $point);
+   @media only screen and (min-width: $breakpoint) {
+    @content;
+   }
   }</code></pre>
   
   <div class="media-points">
@@ -154,9 +172,12 @@
    </p>
   </div>
   <hr />
-  <h3 id="border" class="heading-7 mb-m">border</h3>
+  <h3 id="border" class="mb-m">border</h3>
   
-  <pre class="mt-m mb-l"><code class="language-scss">.show-border {
+  <pre
+   class="mt-m mb-l"
+  ><code class="language-scss">//see css/root/_direction.scss and _border-radius.scss
+  .show-border {
    @include size(300px, 80px);
    @include center;
   
@@ -170,7 +191,10 @@
   
   <div class="show-border"></div>
   
-  <pre class="mt-l mb-l"><code class="language-scss">.show-border-two {
+  <pre
+   class="mt-l mb-l"
+  ><code class="language-scss">//see css/root/_direction.scss and _border-radius.scss
+  .show-border-two {
    @include size(300px, 80px);
    @include center;
   
@@ -186,7 +210,7 @@
   
   <hr />
   
-  <h3 id="ellipsis" class="heading-7 mb-m">ellipsis</h3>
+  <h3 id="ellipsis" class="mb-m">ellipsis</h3>
   <pre class="mt-m mb"><code class="language-scss">.ellipsis {
   @include size(300px, 80px);
   @include center;
@@ -196,14 +220,25 @@
    &:hover span {
     @include ellipsis;//mixin
    }
+  }
+  
+  @mixin ellipsis($width: 100%, $display: inline-block) {
+   display: $display;
+   max-width: $width;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   white-space: nowrap;
+   word-wrap: normal;
   }</code></pre>
+  
   <div class="ellipsis">
    <span>Hover over me to see the ellipsis in action</span>
   </div>
   <hr />
   
-  <h3 id="triangle" class="heading-7 mb-m">triangle</h3>
-  <pre class="mt-m mb"><code class="language-scss">.element {
+  <h3 id="triangle" class="mb-m">triangle</h3>
+  <pre class="mt-m mb"><code class="language-scss">//see css/root/_mixins.scss
+  .element {
   @include size(300px, 50px);
   @include center;
   background-color: #b25c9c;
@@ -220,13 +255,15 @@
   }</code></pre>
   <div class="triangle my-l"></div>
   <hr />
-  <h3 id="position" class="heading-7 mb-m">position</h3>
-  <pre class="mt mb"><code class="language-scss">.position {
+  <h3 id="position" class="mb-m">position</h3>
+  <pre class="mt mb"><code class="language-scss">//see css/root/_mixins.scss
+  .position {
   @include size(300px, 5em);
   @include center;
   border: 1px solid blue;
   position: relative;
    div {
+    //no size needed
     @include position(absolute, 10px 30px 30px 0);//mixin
     background-color: rgba(39, 44, 49, 0.3);
    }
@@ -236,7 +273,8 @@
    <div></div>
   </div>
   
-  <pre class="mt mb"><code class="language-scss">.position-two {
+  <pre class="mt mb"><code class="language-scss">//see css/root/_mixins.scss
+  .position-two {
   @include size(300px, 5em);
   @include center;
   border: 1px solid red;
@@ -254,8 +292,9 @@
   
   <hr />
   
-  <h3 id="margin" class="heading-7 mb-m">margin</h3>
-    <pre class="mt mb"><code class="language-scss">.margin {
+  <h3 id="margin" class="mb-m">margin</h3>
+    <pre class="mt mb"><code class="language-scss">//see css/root/_direction.scss
+    .margin {
     @include size(300px, 5em);
     @include center;
     border: 1px solid red;
@@ -270,8 +309,9 @@
     </div>
     <hr />
     
-    <h3 id="padding" class="heading-7 mb-m">padding</h3>
-    <pre class="mt mb"><code class="language-scss">.padding {
+    <h3 id="padding" class="mb-m">padding</h3>
+    <pre class="mt mb"><code class="language-scss">//see css/root/_direction.scss
+    .padding {
     max-width: 500px;
     @include center;
     border: 1px solid red;
@@ -284,14 +324,16 @@
     </div>
     <hr />
     
-    <h3 id="size" class="heading-7 mb-m">size</h3>
-    <pre class="mt-m mb"><code class="language-scss">.size {
+    <h3 id="size" class="mb-m">size</h3>
+    <pre class="mt-m mb"><code class="language-scss">//see css/root/_size.scss
+    .size {
     @include size(300px, 1.8em);//mixin
      border: 1px solid blue;
     }</code></pre>
     
     <div class="size"></div>
-    <pre class="mt mb"><code class="language-scss">.size-two {
+    <pre class="mt mb"><code class="language-scss">//see css/root/_size.scss
+    .size-two {
     @include size(auto, 5em);//mixin
     @include center;
     border: 1px solid red;
@@ -299,8 +341,11 @@
     <div class="size-two"></div>
     <hr />
     
-    <h3 id="buttons" class="heading-7 mb-m">buttons</h3>
-    <pre class="mt mb"><code class="language-scss">//see css/base/_button.scss
+    <h3 id="buttons" class="mb-m">buttons</h3>
+    <pre
+     class="mt mb"
+    ><code class="language-scss">//see css/root/_buttons-inputs.scss
+    //see css/base/_button.scss for inherited styles
     .buttons {
      #{$all-buttons} {
       padding: 15px 40px;
@@ -320,8 +365,11 @@
      <button>Press Me</button>
     </div>
     <hr />
-    <h3 id="inputs" class="heading-7 mt mb-m">text-inputs</h3>
-    <pre class="mt mb"><code class="language-scss">//see css/base/_form.scss
+    <h3 id="inputs" class="mt mb-m">text-inputs</h3>
+    <pre
+     class="mt mb"
+    ><code class="language-scss">//see css/root/_buttons-inputs.scss
+    //see css/base/_form.scss for inherited styles
     .text-inputs {
     #{$all-text-inputs} {
     width: 300px;
@@ -331,15 +379,16 @@
     }</code></pre>
     <div class="text-inputs">
      <input type="text" placeholder="Your name" />
-     <input type="email" />
-     <input type="password" />
-     <input type="text" disabled />
+     <input type="email" placeholder="a valid email" />
+     <input type="password" placeholder="your password" />
+     <input type="text" placeholder="disabled" disabled />
      <textarea placeholder="Your message"></textarea>
     </div>
     <hr />
     
-    <h3 id="shade" class="heading-7 mb-m">shade</h3>
-    <pre class="mt mb"><code class="language-scss">.shade {
+    <h3 id="shade" class="mb-m">shade</h3>
+    <pre class="mt mb"><code class="language-scss">//see css/root/_shade-tint.scss
+    .shade {
     @include size(300px, 100px);
     @include center;
     background-color: shade(blue, 40%);//mix with black
@@ -347,8 +396,9 @@
     <div class="shade"></div>
     <hr />
     
-    <h3 id="tint" class="heading-7 mb-m">tint</h3>
-    <pre class="mt mb"><code class="language-scss">.tint {
+    <h3 id="tint" class="mb-m">tint</h3>
+    <pre class="mt mb"><code class="language-scss">//see css/root/_shade-tint.scss
+    .tint {
     @include size(300px, 100px);
     @include center;
     background-color: tint(blue, 40%);//mix with white

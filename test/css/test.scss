@@ -126,6 +126,9 @@ hr {
 
 .light-gray {
  background: $light-gray;
+ p {
+  color: $black;
+ }
 }
 
 .font-color {
@@ -305,11 +308,6 @@ input[type="checkbox"]:checked + .switch {
 //Dark Theme
 .inverted {
  .white-color {
-  p {
-   color: $black;
-  }
- }
- .light-gray {
   p {
    color: $black;
   }

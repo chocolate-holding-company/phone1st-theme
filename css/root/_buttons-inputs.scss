@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 @use "sass:list";
 @use "sass:string";
 
@@ -24,7 +26,7 @@ $_buttons-list: (
 ///     background-color: #f00;
 ///   }
 ///
-///   // CSS Output
+///   CSS Output
 ///   button,
 ///   [type='button'],
 ///   [type='reset'],
@@ -42,7 +44,7 @@ $all-buttons: _assign-inputs($_buttons-list);
 ///     background-color: #00f;
 ///   }
 ///
-///   // CSS Output
+///   CSS Output
 ///   button:active,
 ///   [type='button']:active,
 ///   [type='reset']:active,
@@ -60,7 +62,7 @@ $all-buttons-active: _assign-inputs($_buttons-list, active);
 ///     background-color: #0f0;
 ///   }
 ///
-///   // CSS Output
+///   CSS Output
 ///   button:focus,
 ///   [type='button']:focus,
 ///   [type='reset']:focus,
@@ -78,7 +80,7 @@ $all-buttons-focus: _assign-inputs($_buttons-list, focus);
 ///     background-color: #0f0;
 ///   }
 ///
-///   // CSS Output
+///   CSS Output
 ///   button:hover,
 ///   [type='button']:hover,
 ///   [type='reset']:hover,
@@ -89,7 +91,6 @@ $all-buttons-focus: _assign-inputs($_buttons-list, focus);
 $all-buttons-hover: _assign-inputs($_buttons-list, hover);
 
 //text inputs
-////
 $_text-inputs-list: (
  "[type='color']",
  "[type='date']",
@@ -116,7 +117,7 @@ $_text-inputs-list: (
 ///     border: 1px solid #ccc;
 ///   }
 ///
-///   // CSS Output
+///   CSS Output
 ///   [type='color'],
 ///   [type='date'],
 ///   [type='datetime'],
@@ -146,7 +147,7 @@ $all-text-inputs: _assign-inputs($_text-inputs-list);
 ///     border: 1px solid #aaa;
 ///   }
 ///
-///   // CSS Output
+///   CSS Output
 ///   [type='color']:active,
 ///   [type='date']:active,
 ///   [type='datetime']:active,
@@ -176,7 +177,7 @@ $all-text-inputs-active: _assign-inputs($_text-inputs-list, active);
 ///     border: 1px solid #1565c0;
 ///   }
 ///
-///   // CSS Output
+///   CSS Output
 ///   [type='color']:focus,
 ///   [type='date']:focus,
 ///   [type='datetime']:focus,
@@ -206,7 +207,7 @@ $all-text-inputs-focus: _assign-inputs($_text-inputs-list, focus);
 ///     border: 1px solid #aaa;
 ///   }
 ///
-///   // CSS Output
+///   CSS Output
 ///   [type='color']:hover,
 ///   [type='date']:hover,
 ///   [type='datetime']:hover,
@@ -236,7 +237,7 @@ $all-text-inputs-hover: _assign-inputs($_text-inputs-list, hover);
 ///     border: 1px solid #00f;
 ///   }
 ///
-///   // CSS Output
+///   CSS Output
 ///   [type='color']:invalid,
 ///   [type='date']:invalid,
 ///   [type='datetime']:invalid,

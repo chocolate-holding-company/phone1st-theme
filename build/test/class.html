@@ -37,7 +37,7 @@
  <body>
   <div id="top" class="wrapper">
    <header class="mb-m">
-    <h1 class="center heading-5 heading-57 heading-59">
+    <h1 class="center">
      Phone1st Classes
     </h1>
    </header>
@@ -272,14 +272,22 @@ left - text-align: left
 right - text-align: right
 
 //headings
-heading-1 - font-size: 4rem
-heading-2 - font-size: 3.5rem
-heading-3 - font-size: 3rem
-heading-4 - font-size: 2.5rem
-heading-5 - font-size: 2rem
-heading-6 - font-size: 1.75rem
-heading-7 - font-size: 1.5rem
-heading-8 - font-size: 1.35rem
+//set your css Clamp function settings at https://clamp.font-size.app
+//see css/base/_typography.scss
+h1 - font-size: clamp(2rem, 0.58rem + 3.77vw, 3rem);
+h2 - font-size: clamp(1.75rem, 0.69rem + 2.83vw, 2.5rem);
+h3 - font-size: clamp(1.5rem, 0.79rem + 1.89vw, 2rem);
+h4 - font-size: clamp(1.25rem, 0.54rem + 1.89vw, 1.75rem);
+h5 - font-size: clamp(1.13rem, 0.59rem + 1.42vw, 1.5rem);
+h6 - font-size: clamp(1rem, 0.65rem + 0.94vw, 1.25rem);
+para - hyphens: none; font-size: clamp($font-size, 1.1385rem + 0.3077vw, 1.35rem);
+
+//big heading sizes - classes only!
+//see css/class/_typography.scss
+bighead-1 - font-size: clamp(2.5rem, 2.2949rem + 1.0256vw, 3rem);
+bighead-2 - font-size: clamp(3rem, 2.7949rem + 1.0256vw, 3.5rem);
+bighead-3 - font-size: clamp(3.5rem, 3.2949rem + 1.0256vw, 4rem);
+bighead-4 - font-size: clamp(4rem, 3.7949rem + 1.0256vw, 4.5rem);
 
 //letter spacing
 ls-0 - letter-spacing: normal;
@@ -308,7 +316,7 @@ lh-9 - line-height: 1.9;
 lh-20 - line-height: 2;
 lh-21 - line-height: 2.1;
 
-//font width
+//font weight
 font100 - font-weight: 100;
 font200 - font-weight: 200;
 font300 - font-weight: 300;
@@ -477,19 +485,19 @@ width50 - width: 50%;
 width25 - width: 25%;
 
 //width variables
-width - width: $spacer;
-width-s - width: $small-spacer;
-width-m - width: $medium-spacer;
-width-l - width: $large-spacer;
-width-b - width: $big-spacer;
+width - width: $spacer;//2rem
+width-s - width: $small-spacer;//0.5rem
+width-m - width: $medium-spacer;//1rem
+width-l - width: $large-spacer;//3rem
+width-b - width: $big-spacer;//4rem
 
 //height
 height100 - height: 100%;
-height - height: $spacer;
-height-s - height: $small-spacer;
-height-m - height: $medium-spacer;
-height-l - height: $large-spacer;
-height-b - height: $big-spacer;
+height - height: $spacer;//2rem
+height-s - height: $small-spacer;//0.5rem
+height-m - height: $medium-spacer;//1rem
+height-l - height: $large-spacer;//3rem
+height-b - height: $big-spacer;//4rem
 
 //radius
 rad - border-radius: $radius;//6px
@@ -539,7 +547,10 @@ cursor-ch - cursor: crosshair;
 cursor-na - cursor: not-allowed;
 cursor-zi - cursor: zoom-in;
 cursor-zo - cursor: zoom-out;
-cursor-g - cursor: grab;</code></pre>
+cursor-g - cursor: grab;
+
+//border
+border - border: $border;</code></pre>
 </div>
 
 </div>

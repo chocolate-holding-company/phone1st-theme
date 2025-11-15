@@ -1,40 +1,7 @@
+@charset "UTF-8";
+
 @use "sass:list";
-
-@function contains-falsy($list) {
- @each $item in $list {
-  @if not $item {
-   @return true;
-  }
- }
-
- @return false;
-}
-
-@function _expand-shorthand($values) {
- $length: list.length($values);
-
- @if $length == 1 {
-  @return list.join($values $values $values $values, (), $separator: comma);
- } @else if $length == 2 {
-  @return list.join(
-   list.nth($values, 1) list.nth($values, 2) list.nth($values, 1)
-    list.nth($values, 2),
-   (),
-   $separator: comma
-  );
- } @else if $length == 3 {
-  @return list.join(
-   list.nth($values, 1) list.nth($values, 2) list.nth($values, 3)
-    list.nth($values, 2),
-   (),
-   $separator: comma
-  );
- } @else if $length == 4 {
-  @return $values;
- }
-
- @return null;
-}
+@use "helpers" as *;
 
 @mixin directional-property($property, $suffix, $values) {
  $top: $property + "-top" + if($suffix, "-#{$suffix}", "");
@@ -46,7 +13,7 @@
  @if $values == null {
   #{$all}: "";
  } @else {
-  $expanded: _expand-shorthand($values);
+  $expanded: expand-shorthand($values);
 
   @if list.length($expanded) == 4 {
    #{$top}: list.nth($expanded, 1);

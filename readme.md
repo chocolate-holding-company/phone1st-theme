@@ -100,6 +100,12 @@ See _includes/\_meta.kit_.
 
 ---
 
+### Experimenting with Classes
+
+Experimenting with the class _utitlity_ method for styling. I think the more complicated classes with quite a number of styles are still easier using conventional styles or stylesheet. Utitlity classes seem to work well with template structures ensuring consistant styles potentially leading to faster development and execution times. _Will have to see how it goes and see what evolves_.
+
+---
+
 ### NOTES
 
 #### Dart Scss

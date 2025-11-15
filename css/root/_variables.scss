@@ -2,6 +2,7 @@
 // Variables
 // =======================
 @use "base-color" as *;
+@use "shade-tint" as *;
 
 // TYPOGRAPHY
 $font: "Raleway", sans-serif;
@@ -11,7 +12,7 @@ $icon-font: "";
 
 $font-size: 1.2rem;
 
-$lead: calc($font-size * 1.134);
+$lead: calc($font-size * 1.234);
 $secondary: calc($font-size / 1.125);
 $third: calc($font-size / 1.255);
 
@@ -26,7 +27,7 @@ $big-spacer: calc($spacer * 2); //4rem
 // COLOR
 $dark-gray: $black-35;
 $medium-gray: $black-60;
-$light-gray: $black-95;
+$light-gray: $black-85;
 
 // Font Colors
 $font-color: $black-20;
@@ -35,7 +36,7 @@ $hover-color: $second-color;
 
 // Background Colors
 $background: $black-80;
-$light-background: color-mix(in srgb, $background, white 75%);
+$light-background: tint($background, 70%);
 
 // Informaton colors
 $error-color: #ba221d;

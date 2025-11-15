@@ -1,18 +1,20 @@
 @charset "UTF-8";
+
 @use "sass:color";
+@use "helpers" as *;
 /// Mixes a color with black.
 /// @example scss
 ///   .element {
 ///     background-color: shade(#ffbb52, 60%);
 ///   }
 ///
-///   // CSS Output
+///   CSS Output
 ///   .element {
 ///     background-color: #664a20;
 ///   }
 
 @function shade($color, $percent) {
- @if not _is-color($color) {
+ @if not is-color($color) {
   @error "`#{$color}` is not a valid color for the `$color` argument in " +
       "the `shade` mixin.";
  } @else {
@@ -26,13 +28,13 @@
 ///     background-color: tint(#6ecaa6, 40%);
 ///   }
 ///
-///   // CSS Output
+///   CSS Output
 ///   .element {
 ///     background-color: #a8dfc9;
 ///   }
 
 @function tint($color, $percent) {
- @if not _is-color($color) {
+ @if not is-color($color) {
   @error "`#{$color}` is not a valid color for the `$color` argument in " +
       "the `tint` mixin.";
  } @else {

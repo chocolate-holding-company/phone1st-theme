@@ -1,0 +1,56 @@
+@use "sass:list";
+@use "sass:meta";
+@use "sass:string";
+@use "sass:math";
+
+// Check if a value is a valid color
+@function is-color($value) {
+ @return meta.type-of($value) == "color";
+}
+// Check if a value is a valid length
+@function is-length($value) {
+ @return meta.type-of($value) != "null" and
+  (
+   string.slice($value + "", 1, 4) == "calc" or string.slice($value + "", 1, 3)
+    == "var" or string.slice($value + "", 1, 3) == "env" or
+    list.index(auto inherit initial 0, $value) or
+    (meta.type-of($value) == "number" and not(math.is-unitless($value)))
+  );
+}
+// Check if a list contains specific values
+@function contains($list, $values...) {
+ @each $value in $values {
+  @if meta.type-of(list.index($list, $value)) != "number" {
+   @return false;
+  }
+ }
+
+ @return true;
+}
+// Transforms shorthand that can range from 1-to-4 values to be 4 values
+@function expand-shorthand($values) {
+ $length: list.length($values);
+
+ @if $length == 1 {
+  $value: list.nth($values, 1);
+  @return ($value, $value, $value, $value);
+ } @else if $length == 2 {
+  @return (
+   list.nth($values, 1),
+   list.nth($values, 2),
+   list.nth($values, 1),
+   list.nth($values, 2)
+  );
+ } @else if $length == 3 {
+  @return (
+   list.nth($values, 1),
+   list.nth($values, 2),
+   list.nth($values, 3),
+   list.nth($values, 2)
+  );
+ } @else if $length == 4 {
+  @return $values;
+ }
+
+ @return null;
+}
