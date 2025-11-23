@@ -111,7 +111,7 @@ code.hljs {
 
 pre {
   text-align: left;
-  border-radius: 6px;
+  border-radius: 0.375rem;
 }
 
 code {
@@ -159,7 +159,8 @@ hr {
   height: 60px;
   width: 80%;
 }
-.scss-extras .hidden-box {
+.scss-extras .hidden-box,
+.scss-extras .show-box {
   height: 70px;
   width: 300px;
   margin-left: auto;
@@ -172,6 +173,14 @@ hr {
 .scss-extras .hidden-box:hover span {
   display: none !important;
   visibility: hidden;
+}
+.scss-extras .show-box span {
+  display: none !important;
+  visibility: hidden;
+}
+.scss-extras .show-box:hover span {
+  display: block !important;
+  visibility: visible;
 }
 .scss-extras .media-points p {
   color: red;
@@ -396,7 +405,7 @@ hr {
 }
 
 .dropdown {
-  border: 1px solid rgb(107.45, 91.2, 89.9);
+  border: 0.063rem solid rgb(107.45, 91.2, 89.9);
   border-radius: 6px;
   overflow: hidden;
   box-shadow: rgba(39, 44, 49, 0.06) 8px 8px 10px, rgba(39, 44, 49, 0.03) 1px 3px 8px;

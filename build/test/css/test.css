@@ -22,7 +22,7 @@
 
 .intro-para {
   text-align: center;
-  margin: 2rem 0;
+  margin-bottom: 2rem;
 }
 
 hr {
@@ -145,8 +145,8 @@ hr {
 }
 
 .border {
-  border: 1px solid rgb(107.45, 91.2, 89.9);
-  border-radius: 6px;
+  border: 0.063rem solid rgb(107.45, 91.2, 89.9);
+  border-radius: 0.375rem;
   margin-bottom: 2rem;
 }
 .border p {
@@ -211,37 +211,37 @@ hr {
 }
 
 .margin-spacer {
-  border-left: 1px solid rgb(107.45, 91.2, 89.9);
+  border-left: 0.063rem solid rgb(107.45, 91.2, 89.9);
 }
 .margin-spacer p {
   font-size: 1.0666666667rem;
 }
 .margin-spacer .normal-margin {
-  border: 1px solid rgb(107.45, 91.2, 89.9);
+  border: 0.063rem solid rgb(107.45, 91.2, 89.9);
   margin-left: 2rem;
   margin-bottom: 1rem;
   padding: 2rem;
 }
 .margin-spacer .medium-margin {
-  border: 1px solid rgb(107.45, 91.2, 89.9);
+  border: 0.063rem solid rgb(107.45, 91.2, 89.9);
   margin-left: 1rem;
   margin-bottom: 1rem;
   padding: 1rem;
 }
 .margin-spacer .small-margin {
-  border: 1px solid rgb(107.45, 91.2, 89.9);
+  border: 0.063rem solid rgb(107.45, 91.2, 89.9);
   margin-left: 0.5rem;
   padding: 0.5rem;
   margin-bottom: 1rem;
 }
 .margin-spacer .large-margin {
-  border: 1px solid rgb(107.45, 91.2, 89.9);
+  border: 0.063rem solid rgb(107.45, 91.2, 89.9);
   margin-left: 3rem;
   padding: 3rem;
   margin-bottom: 1rem;
 }
 .margin-spacer .big-margin {
-  border: 1px solid rgb(107.45, 91.2, 89.9);
+  border: 0.063rem solid rgb(107.45, 91.2, 89.9);
   margin-left: 4rem;
   padding: 4rem;
 }

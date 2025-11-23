@@ -84,17 +84,29 @@ hr {
   @include size(80%, 60px);
  }
 
- .hidden-box {
+ .hidden-box,
+ .show-box {
   @include size(300px, 70px);
   @include center;
   padding: 7px;
   font-size: 0.9rem;
   color: orange;
   border: 1px solid blue;
+ }
 
+ .hidden-box {
   &:hover span {
    @include hidden;
   }
+ }
+
+ .show-box {
+  span {
+    @include hidden;
+  }
+  &:hover span {
+   @include show;
+ }
  }
 
  .media-points p {

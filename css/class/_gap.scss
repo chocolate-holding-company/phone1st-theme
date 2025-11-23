@@ -1,4 +1,5 @@
 @use "../root/variables" as *;
+@use "../root/mixins" as *;
 
 //gap
 .gap-0 {
@@ -58,4 +59,202 @@
 }
 .col-gap-b {
  column-gap: $big-spacer; //4rem
+}
+
+/////////////////////////////////////
+////////////////////////////////////
+//breakpoint 700px
+
+@include media(700) {
+ //gap
+ .gap-0_7 {
+  gap: 0;
+ }
+ .gap_7 {
+  gap: $spacer; //2rem
+ }
+ .gap-m_7 {
+  gap: $medium-spacer; //1rem
+ }
+ .gap-s_7 {
+  gap: $small-spacer; //0.5rem
+ }
+ .gap-l_7 {
+  gap: $large-spacer; //3rem
+ }
+ .gap-b_7 {
+  gap: $big-spacer; //4rem
+ }
+
+ //gap row
+ .row-gap-0_7 {
+  row-gap: 0;
+ }
+ .row-gap_7 {
+  row-gap: $spacer; //2rem
+ }
+ .row-gap-m_7 {
+  row-gap: $medium-spacer; //1rem
+ }
+ .row-gap-s_7 {
+  row-gap: $small-spacer; //0.5rem
+ }
+ .row-gap-l_7 {
+  row-gap: $large-spacer; //3rem
+ }
+ .row-gap-b_7 {
+  row-gap: $big-spacer; //4rem
+ }
+
+ //gap column
+ .col-gap-0_7 {
+  column-gap: 0;
+ }
+ .col-gap_7 {
+  column-gap: $spacer; //2rem
+ }
+ .col-gap-m_7 {
+  column-gap: $medium-spacer; //1rem
+ }
+ .col-gap-s_7 {
+  column-gap: $small-spacer; //0.5rem
+ }
+ .col-gap-l_7 {
+  column-gap: $large-spacer; //3rem
+ }
+ .col-gap-b_7 {
+  column-gap: $big-spacer; //4rem
+ }
+}
+
+/////////////////////////////////////
+////////////////////////////////////
+//breakpoint 900px
+
+@include media(900) {
+ //gap
+ .gap-0_9 {
+  gap: 0;
+ }
+ .gap_9 {
+  gap: $spacer; //2rem
+ }
+ .gap-m_9 {
+  gap: $medium-spacer; //1rem
+ }
+ .gap-s_9 {
+  gap: $small-spacer; //0.5rem
+ }
+ .gap-l_9 {
+  gap: $large-spacer; //3rem
+ }
+ .gap-b_9 {
+  gap: $big-spacer; //4rem
+ }
+
+ //gap row
+ .row-gap-0_9 {
+  row-gap: 0;
+ }
+ .row-gap_9 {
+  row-gap: $spacer; //2rem
+ }
+ .row-gap-m_9 {
+  row-gap: $medium-spacer; //1rem
+ }
+ .row-gap-s_9 {
+  row-gap: $small-spacer; //0.5rem
+ }
+ .row-gap-l_9 {
+  row-gap: $large-spacer; //3rem
+ }
+ .row-gap-b_9 {
+  row-gap: $big-spacer; //4rem
+ }
+
+ //gap column
+ .col-gap-0_9 {
+  column-gap: 0;
+ }
+ .col-gap_9 {
+  column-gap: $spacer; //2rem
+ }
+ .col-gap-m_9 {
+  column-gap: $medium-spacer; //1rem
+ }
+ .col-gap-s_9 {
+  column-gap: $small-spacer; //0.5rem
+ }
+ .col-gap-l_9 {
+  column-gap: $large-spacer; //3rem
+ }
+ .col-gap-b_9 {
+  column-gap: $big-spacer; //4rem
+ }
+}
+
+/////////////////////////////////////
+////////////////////////////////////
+//breakpoint 1100px
+
+@include media(1100) {
+ //gap
+ .gap-0_11 {
+  gap: 0;
+ }
+ .gap_11 {
+  gap: $spacer; //2rem
+ }
+ .gap-m_11 {
+  gap: $medium-spacer; //1rem
+ }
+ .gap-s_11 {
+  gap: $small-spacer; //0.5rem
+ }
+ .gap-l_11 {
+  gap: $large-spacer; //3rem
+ }
+ .gap-b_11 {
+  gap: $big-spacer; //4rem
+ }
+
+ //gap row
+ .row-gap-0_11 {
+  row-gap: 0;
+ }
+ .row-gap_11 {
+  row-gap: $spacer; //2rem
+ }
+ .row-gap-m_11 {
+  row-gap: $medium-spacer; //1rem
+ }
+ .row-gap-s_11 {
+  row-gap: $small-spacer; //0.5rem
+ }
+ .row-gap-l_11 {
+  row-gap: $large-spacer; //3rem
+ }
+ .row-gap-b_11 {
+  row-gap: $big-spacer; //4rem
+ }
+
+ //gap column
+ .col-gap-0_11 {
+  column-gap: 0;
+ }
+ .col-gap_11 {
+  column-gap: $spacer; //2rem
+ }
+ .col-gap-m_11 {
+  column-gap: $medium-spacer; //1rem
+ }
+ .col-gap-s_11 {
+  column-gap: $small-spacer; //0.5rem
+ }
+ .col-gap-l_11 {
+  column-gap: $large-spacer; //3rem
+ }
+ .col-gap-b_11 {
+  column-gap: $big-spacer; //4rem
+ }
 }

@@ -1,6 +1,8 @@
 <div id="dropdown-menu-14" class="dropdown-menu">
  <pre><code class="language-scss">//width
 width100 - width: 100%;
+width90 - width: 90%;
+width80 - width: 80%;
 width75 - width: 75%;
 width50 - width: 50%;
 width25 - width: 25%;
@@ -21,10 +23,22 @@ height-l - height: $large-spacer;//3rem
 height-b - height: $big-spacer;//4rem
 
 //radius
-rad - border-radius: $radius;//6px
-rad-m - border-radius: 10px;
-rad-s - border-radius: 3px;
-rad-l - border-radius: 15px;
-rad-b - border-radius: 20px;
-rad-full - border-radius: 50px;</code></pre>
+rad - border-radius: $radius; //6px - 0.375rem
+rad-m - border-radius: 0.625rem;
+rad-s - border-radius: 0.1875rem;
+rad-l - border-radius: 0.9375rem;
+rad-b - border-radius: 1.25rem;
+rad-full - border-radius: 3.125rem;
+
+//media breakpoints
+//@media min-width 700px, 900px, 1100px
+//use _7, _9, _11 at the end of the class
+
+//examples
+width90_7 - width: 90%;//@700px
+width-s_9 - width: $small-spacer;//@900px
+height-m_11 - height: $medium-spacer;//@1100px
+lh-2_7 - line-height: 1.2;//@700px
+rad-m_9 - border-radius: 0.625rem;//@900px
+height-b_11 - height: $big-spacer;//@1100px</code></pre>
 </div>

@@ -1,4 +1,7 @@
+@use "../root/base-color" as *;
 @use "../root/variables" as *;
+@use "../root/mixins" as *;
+
 //cursor
 .cursor {
  cursor: default;
@@ -28,7 +31,423 @@
  cursor: grab;
 }
 
+//list-style
+.list-none {
+ list-style: none;
+}
+.list-disc {
+ list-style: disc;
+}
+.list-decimal {
+ list-style: decimal;
+}
+.list-circle {
+ list-style: circle;
+}
+.list-square {
+ list-style: square;
+}
+.list-inside {
+ list-style-position: inside;
+}
+.list-outside {
+ list-style-position: outside;
+}
+
 //border
 .border {
  border: $border;
+}
+.no-border {
+ border: none;
+}
+
+//border width
+.border-2 {
+ border-width: 0.125rem;
+}
+.border-3 {
+ border-width: 0.188rem;
+}
+.border-4 {
+ border-width: 0.25rem;
+}
+.border-5 {
+ border-width: 0.313rem;
+}
+.border-6 {
+ border-width: 0.375rem;
+}
+.border-7 {
+ border-width: 0.438rem;
+}
+.border-8 {
+ border-width: 0.5rem;
+}
+.border-9 {
+ border-width: 0.563rem;
+}
+.border-10 {
+ border-width: 0.625rem;
+}
+
+//border style
+.border-solid {
+ border-style: solid;
+}
+.border-dashed {
+ border-style: dashed;
+}
+.border-groove {
+ border-style: groove;
+}
+.border-double {
+ border-style: double;
+}
+.border-dotted {
+ border-style: dotted;
+}
+.border-ridge {
+ border-style: ridge;
+}
+.border-inset {
+ border-style: inset;
+}
+.border-outset {
+ border-style: outset;
+}
+.border-none {
+ border-style: none;
+}
+.border-hidden {
+ border-style: hidden;
+}
+
+//border color
+.border-light {
+ border-color: $light-gray;
+}
+.border-medium {
+ border-color: $medium-gray;
+}
+.border-dark {
+ border-color: $dark-gray;
+}
+.border-first {
+ border-color: $first-color;
+}
+.border-second {
+ border-color: $second-color;
+}
+.border-black {
+ border-color: $black;
+}
+.border-white {
+ border-color: $white;
+}
+.border-trans {
+ border-color: transparent;
+}
+
+////////////////////////////////////////////////
+///////////////////////////////////////////////
+//breakpoint 700px
+
+@include media(700) {
+ //border
+ .border_7 {
+  border: $border;
+ }
+ .no-border_7 {
+  border: none;
+ }
+
+ //border width
+ .border-2_7 {
+  border-width: 0.125rem;
+ }
+ .border-3_7 {
+  border-width: 0.188rem;
+ }
+ .border-4_7 {
+  border-width: 0.25rem;
+ }
+ .border-5_7 {
+  border-width: 0.313rem;
+ }
+ .border-6_7 {
+  border-width: 0.375rem;
+ }
+ .border-7_7 {
+  border-width: 0.438rem;
+ }
+ .border-8_7 {
+  border-width: 0.5rem;
+ }
+ .border-9_7 {
+  border-width: 0.563rem;
+ }
+ .border-10_7 {
+  border-width: 0.625rem;
+ }
+
+ //border style
+ .border-solid_7 {
+  border-style: solid;
+ }
+ .border-dashed_7 {
+  border-style: dashed;
+ }
+ .border-groove_7 {
+  border-style: groove;
+ }
+ .border-double_7 {
+  border-style: double;
+ }
+ .border-dotted_7 {
+  border-style: dotted;
+ }
+ .border-ridge_7 {
+  border-style: ridge;
+ }
+ .border-inset_7 {
+  border-style: inset;
+ }
+ .border-outset_7 {
+  border-style: outset;
+ }
+ .border-none_7 {
+  border-style: none;
+ }
+ .border-hidden_7 {
+  border-style: hidden;
+ }
+
+ //border color
+ .border-light_7 {
+  border-color: $light-gray;
+ }
+ .border-medium_7 {
+  border-color: $medium-gray;
+ }
+ .border-dark_7 {
+  border-color: $dark-gray;
+ }
+ .border-first_7 {
+  border-color: $first-color;
+ }
+ .border-second_7 {
+  border-color: $second-color;
+ }
+ .border-black_7 {
+  border-color: $black;
+ }
+ .border-white_7 {
+  border-color: $white;
+ }
+ .border-trans_7 {
+  border-color: transparent;
+ }
+}
+
+////////////////////////////////////////////////
+///////////////////////////////////////////////
+//breakpoint 900px
+
+@include media(900) {
+ //border
+ .border_9 {
+  border: $border;
+ }
+ .no-border_9 {
+  border: none;
+ }
+
+ //border width
+ .border-2_9 {
+  border-width: 0.125rem;
+ }
+ .border-3_9 {
+  border-width: 0.188rem;
+ }
+ .border-4_9 {
+  border-width: 0.25rem;
+ }
+ .border-5_9 {
+  border-width: 0.313rem;
+ }
+ .border-6_9 {
+  border-width: 0.375rem;
+ }
+ .border-7_9 {
+  border-width: 0.438rem;
+ }
+ .border-8_9 {
+  border-width: 0.5rem;
+ }
+ .border-9_9 {
+  border-width: 0.563rem;
+ }
+ .border-10_9 {
+  border-width: 0.625rem;
+ }
+
+ //border style
+ .border-solid_9 {
+  border-style: solid;
+ }
+ .border-dashed_9 {
+  border-style: dashed;
+ }
+ .border-groove_9 {
+  border-style: groove;
+ }
+ .border-double_9 {
+  border-style: double;
+ }
+ .border-dotted_9 {
+  border-style: dotted;
+ }
+ .border-ridge_9 {
+  border-style: ridge;
+ }
+ .border-inset_9 {
+  border-style: inset;
+ }
+ .border-outset_9 {
+  border-style: outset;
+ }
+ .border-none_9 {
+  border-style: none;
+ }
+ .border-hidden_9 {
+  border-style: hidden;
+ }
+
+ //border color
+ .border-light_9 {
+  border-color: $light-gray;
+ }
+ .border-medium_9 {
+  border-color: $medium-gray;
+ }
+ .border-dark_9 {
+  border-color: $dark-gray;
+ }
+ .border-first_9 {
+  border-color: $first-color;
+ }
+ .border-second_9 {
+  border-color: $second-color;
+ }
+ .border-black_9 {
+  border-color: $black;
+ }
+ .border-white_9 {
+  border-color: $white;
+ }
+ .border-trans_9 {
+  border-color: transparent;
+ }
+}
+
+////////////////////////////////////////////////
+///////////////////////////////////////////////
+//breakpoint 1100px
+
+@include media(1100) {
+ //border
+ .border_11 {
+  border: $border;
+ }
+ .no-border_11 {
+  border: none;
+ }
+
+ //border width
+ .border-2_11 {
+  border-width: 0.125rem;
+ }
+ .border-3_11 {
+  border-width: 0.188rem;
+ }
+ .border-4_11 {
+  border-width: 0.25rem;
+ }
+ .border-5_11 {
+  border-width: 0.313rem;
+ }
+ .border-6_11 {
+  border-width: 0.375rem;
+ }
+ .border-7_11 {
+  border-width: 0.438rem;
+ }
+ .border-8_11 {
+  border-width: 0.5rem;
+ }
+ .border-9_11 {
+  border-width: 0.563rem;
+ }
+ .border-10_11 {
+  border-width: 0.625rem;
+ }
+
+ //border style
+ .border-solid_11 {
+  border-style: solid;
+ }
+ .border-dashed_11 {
+  border-style: dashed;
+ }
+ .border-groove_11 {
+  border-style: groove;
+ }
+ .border-double_11 {
+  border-style: double;
+ }
+ .border-dotted_11 {
+  border-style: dotted;
+ }
+ .border-ridge_11 {
+  border-style: ridge;
+ }
+ .border-inset_11 {
+  border-style: inset;
+ }
+ .border-outset_11 {
+  border-style: outset;
+ }
+ .border-none_11 {
+  border-style: none;
+ }
+ .border-hidden_11 {
+  border-style: hidden;
+ }
+
+ //border color
+ .border-light_11 {
+  border-color: $light-gray;
+ }
+ .border-medium_11 {
+  border-color: $medium-gray;
+ }
+ .border-dark_11 {
+  border-color: $dark-gray;
+ }
+ .border-first_11 {
+  border-color: $first-color;
+ }
+ .border-second_11 {
+  border-color: $second-color;
+ }
+ .border-black_11 {
+  border-color: $black;
+ }
+ .border-white_11 {
+  border-color: $white;
+ }
+ .border-trans_11 {
+  border-color: transparent;
+ }
 }

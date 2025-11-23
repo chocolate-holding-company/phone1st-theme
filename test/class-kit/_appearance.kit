@@ -10,6 +10,59 @@ cursor-zi - cursor: zoom-in;
 cursor-zo - cursor: zoom-out;
 cursor-g - cursor: grab;
 
+//list-style
+list-none - list-style: none;
+list-disc - list-style: disc;
+list-decimal - list-style: decimal;
+list-circle - list-style: circle;
+list-square - list-style: square;
+list-inside - list-style-position: inside;
+list-outside - list-style-position: outside;
+
 //border
-border - border: $border;</code></pre>
+border - border: $border;
+no-border - border: none;
+
+//border width
+border-2 - border-width: 0.125rem;
+border-3 - border-width: 0.188rem;
+border-4 - border-width: 0.25rem;
+border-5 - border-width: 0.313rem;
+border-6 - border-width: 0.375rem;
+border-7 - border-width: 0.438rem;
+border-8 - border-width: 0.5rem;
+border-9 - border-width: 0.563rem;
+border-10 - border-width: 0.625rem;
+
+//border style
+border-solid - border-style: solid;
+border-dashed - border-style: dashed;
+border-groove - border-style: groove;
+border-double - border-style: double;
+border-dotted - border-style: dotted;
+border-ridge - border-style: ridge;
+border-inset - border-style: inset;
+border-outset - border-style: outset;
+border-none - border-style: none;
+border-hidden - border-style: hidden;
+
+//border color
+border-light - border-color: $light-gray;
+border-medium - border-color: $medium-gray;
+border-dark - border-color: $dark-gray;
+border-first - border-color: $first-color;
+border-second - border-color: $second-color;
+border-black - border-color: $black;
+border-white - border-color: $white;
+border-trans - border-color: transparent;
+
+//media breakpoints
+//no media breaks for cursor and list styles
+//@media min-width 700px, 900px, 1100px
+//use _7, _9, _11 at the end of the class
+
+//examples
+border_7 - border: $border;//@700px
+border-3_9 - border-width: 0.188rem;//@900px
+border-groove_11 - border-style: groove;//@1100px</code></pre>
 </div>

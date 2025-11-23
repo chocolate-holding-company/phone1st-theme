@@ -35,6 +35,7 @@ p,
 .para {
  hyphens: none;
  font-size: clamp($font-size, 1.1385rem + 0.3077vw, 1.35rem);
+ //based on screen width 320px to 1100px
 }
 
 b,
@@ -131,5 +132,5 @@ h6,
 .h6 {
  font-size: clamp(1rem, 0.65rem + 0.94vw, 1.25rem);
 }
-
+//the above is based on screen width 320px to 1100px
 //go to https://clamp.font-size.app to set your own type sizes using the css clamp function

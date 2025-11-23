@@ -17,7 +17,7 @@ $secondary: calc($font-size / 1.125);
 $third: calc($font-size / 1.255);
 
 // SIZE
-$radius: 6px;
+$radius: 0.375rem;
 $spacer: 2rem;
 $medium-spacer: calc($spacer / 2); //1rem
 $small-spacer: calc($spacer / 4); //0.5rem
@@ -50,7 +50,7 @@ $button-color-hover: $black-80;
 $button-background-hover: $hover-color;
 
 // Border
-$border: 1px solid $dark-gray;
+$border: 0.063rem solid $dark-gray;
 
 // Animations
 $duration: 150ms;

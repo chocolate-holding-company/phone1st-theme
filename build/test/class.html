@@ -45,7 +45,7 @@
  <section>
 
 
-<img src="../test/test-images/phone1st-class.webp" alt="Phone1st class" class="aligncenter width50 mt-0" />
+<img src="../test/test-images/phone1st-class.webp" alt="Phone1st class" class="width50 centered block" />
 
 <div>
   <p class="center lead mb-s">Experimenting with <em>classes.</em></p>
@@ -80,10 +80,8 @@
    <path d="M7 10l5 5 5-5z" />
   </svg>
  </div>
-
- <div id="dropdown-menu-10" class="dropdown-menu">
-  
-  <pre><code class="language-scss">//variables color
+<div id="dropdown-menu-10" class="dropdown-menu">
+ <pre><code class="language-scss">//variables color
 dark-gray - color: $dark-gray;
 medium-gray - color: $medium-gray;
 light-gray - color: $light-gray;
@@ -243,8 +241,12 @@ bg-second25 - background-color: $second-25;
 bg-second20 - background-color: $second-20;
 bg-second15 - background-color: $second-15;
 bg-second10 - background-color: $second-10;
-bg-second5 - background-color: $second-5;</code></pre>
- </div>
+bg-second5 - background-color: $second-5;
+
+//media breakpoints
+//none for color as yet</code></pre>
+</div>
+
 </div>
 
 <div id="type" class="dropdown">
@@ -274,6 +276,7 @@ right - text-align: right
 //headings
 //set your css Clamp function settings at https://clamp.font-size.app
 //see css/base/_typography.scss
+//all clamp functions based on screen width 320px to 1100px
 h1 - font-size: clamp(2rem, 0.58rem + 3.77vw, 3rem);
 h2 - font-size: clamp(1.75rem, 0.69rem + 2.83vw, 2.5rem);
 h3 - font-size: clamp(1.5rem, 0.79rem + 1.89vw, 2rem);
@@ -290,17 +293,18 @@ bighead-3 - font-size: clamp(3.5rem, 3.2949rem + 1.0256vw, 4rem);
 bighead-4 - font-size: clamp(4rem, 3.7949rem + 1.0256vw, 4.5rem);
 
 //letter spacing
+ls-tight - letter-spacing: -0.025em;
 ls-0 - letter-spacing: normal;
-ls - letter-spacing: 1px;
-ls-2 - letter-spacing: 2px;
-ls-3 - letter-spacing: 3px;
-ls-4 - letter-spacing: 4px;
-ls-5 - letter-spacing: 5px;
-ls-6 - letter-spacing: 6px;
-ls-7 - letter-spacing: 7px;
-ls-8 - letter-spacing: 8px;
-ls-9 - letter-spacing: 9px;
-ls-10 - letter-spacing: 10px;
+ls - letter-spacing: 0.0625rem;
+ls-2 - letter-spacing: 0.125rem;
+ls-3 - letter-spacing: 0.1875rem;
+ls-4 - letter-spacing: 0.25rem;
+ls-5 - letter-spacing: 0.3125rem;
+ls-6 - letter-spacing: 0.375rem;
+ls-7 - letter-spacing: 0.4375rem;
+ls-8 - letter-spacing: 0.5rem;
+ls-9 - letter-spacing: 0.5625rem;
+ls-10 - letter-spacing: 0.625rem;
 
 //line-height
 lh - line-height: 1;
@@ -337,14 +341,18 @@ lower - text-transform: lowercase;
 caps - text-transform: capitalize;
 normal-case - text-transform: none;
 
-//list-style
-list-none - list-style: none;
-list-disc - list-style: disc;
-list-decimal - list-style: decimal;
-list-circle - list-style: circle;
-list-square - list-style: square;
-list-inside - list-style-position: inside;
-list-outside - list-style-position: outside;</code></pre>
+//media breakpoints
+//not included font-family or headings. Headings using clamp function at the moment
+//@media min-width 700px, 900px, 1100px
+//use _7, _9, _11 at the end of the class
+
+//examples
+lead_7 - font-size: $lead;//@700px
+center_9 - text-align: center;//@900px
+ls-tight_11 - letter-spacing: -0.025em;//@1100px
+lh-2_7 - line-height: 1.2;//@700px
+font300_9 - font-weight: 300;//@900px
+caps_11 text-transform: capitalize;//@1100px</code></pre>
 </div>
 
 </div>
@@ -406,7 +414,16 @@ mr - margin-right: $spacer;//2rem
 mr-m - margin-right: $medium-spacer;//1rem
 mr-s - margin-right: $small-spacer;//0.5rem
 mr-l - margin-right: $large-spacer;//3rem
-mr-b - margin-right: $big-spacer;//4rem</code></pre>
+mr-b - margin-right: $big-spacer;//4rem
+
+//media breakpoints
+//@media min-width 700px, 900px, 1100px
+//use _7, _9, _11 at the end of the class
+
+//examples
+my_7 - margin-top: $spacer; - margin-bottom: $spacer;//@700px
+mx_9 - margin-left: $spacer; - margin-right: $spacer;//@900px
+mt_11 - margin-top: $spacer;//@1100px</code></pre>
 </div>
 
 </div>
@@ -465,7 +482,16 @@ pr - padding-right: $spacer;//2rem
 pr-m - padding-right: $medium-spacer;//1rem
 pr-s - padding-right: $small-spacer;//0.5rem
 pr-l - padding-right: $large-spacer;//3rem
-pr-b - padding-right: $big-spacer;//4rem</code></pre>
+pr-b - padding-right: $big-spacer;//4rem
+
+//media breakpoints
+//@media min-width 700px, 900px, 1100px
+//use _7, _9, _11 at the end of the class
+
+//examples
+py_7 - padding-top: $spacer; - padding-bottom: $spacer;//@700px
+px_9 - padding-left: $spacer; - padding-right: $spacer;//@900px
+pt_11 - padding-top: $spacer;//@1100px</code></pre>
 </div>
 
 </div>
@@ -480,6 +506,8 @@ pr-b - padding-right: $big-spacer;//4rem</code></pre>
 <div id="dropdown-menu-14" class="dropdown-menu">
  <pre><code class="language-scss">//width
 width100 - width: 100%;
+width90 - width: 90%;
+width80 - width: 80%;
 width75 - width: 75%;
 width50 - width: 50%;
 width25 - width: 25%;
@@ -500,12 +528,24 @@ height-l - height: $large-spacer;//3rem
 height-b - height: $big-spacer;//4rem
 
 //radius
-rad - border-radius: $radius;//6px
-rad-m - border-radius: 10px;
-rad-s - border-radius: 3px;
-rad-l - border-radius: 15px;
-rad-b - border-radius: 20px;
-rad-full - border-radius: 50px;</code></pre>
+rad - border-radius: $radius; //6px - 0.375rem
+rad-m - border-radius: 0.625rem;
+rad-s - border-radius: 0.1875rem;
+rad-l - border-radius: 0.9375rem;
+rad-b - border-radius: 1.25rem;
+rad-full - border-radius: 3.125rem;
+
+//media breakpoints
+//@media min-width 700px, 900px, 1100px
+//use _7, _9, _11 at the end of the class
+
+//examples
+width90_7 - width: 90%;//@700px
+width-s_9 - width: $small-spacer;//@900px
+height-m_11 - height: $medium-spacer;//@1100px
+lh-2_7 - line-height: 1.2;//@700px
+rad-m_9 - border-radius: 0.625rem;//@900px
+height-b_11 - height: $big-spacer;//@1100px</code></pre>
 </div>
 
 </div>
@@ -525,7 +565,16 @@ inline-block - display: inline-block;
 hidden - display: none;
 flex - display: flex;
 hide - @include hidden;
-show - @include show;</code></pre>
+show - @include show;
+
+//media breakpoints
+//@media min-width 700px, 900px, 1100px
+//use _7, _9, _11 at the end of the class
+
+//examples
+inline_7 - display: inline;//@700px
+hidden_9 - display: none;//@900px
+flex_11 - display: flex;//@1100px</code></pre>
 </div>
 
 </div>
@@ -549,8 +598,61 @@ cursor-zi - cursor: zoom-in;
 cursor-zo - cursor: zoom-out;
 cursor-g - cursor: grab;
 
+//list-style
+list-none - list-style: none;
+list-disc - list-style: disc;
+list-decimal - list-style: decimal;
+list-circle - list-style: circle;
+list-square - list-style: square;
+list-inside - list-style-position: inside;
+list-outside - list-style-position: outside;
+
 //border
-border - border: $border;</code></pre>
+border - border: $border;
+no-border - border: none;
+
+//border width
+border-2 - border-width: 0.125rem;
+border-3 - border-width: 0.188rem;
+border-4 - border-width: 0.25rem;
+border-5 - border-width: 0.313rem;
+border-6 - border-width: 0.375rem;
+border-7 - border-width: 0.438rem;
+border-8 - border-width: 0.5rem;
+border-9 - border-width: 0.563rem;
+border-10 - border-width: 0.625rem;
+
+//border style
+border-solid - border-style: solid;
+border-dashed - border-style: dashed;
+border-groove - border-style: groove;
+border-double - border-style: double;
+border-dotted - border-style: dotted;
+border-ridge - border-style: ridge;
+border-inset - border-style: inset;
+border-outset - border-style: outset;
+border-none - border-style: none;
+border-hidden - border-style: hidden;
+
+//border color
+border-light - border-color: $light-gray;
+border-medium - border-color: $medium-gray;
+border-dark - border-color: $dark-gray;
+border-first - border-color: $first-color;
+border-second - border-color: $second-color;
+border-black - border-color: $black;
+border-white - border-color: $white;
+border-trans - border-color: transparent;
+
+//media breakpoints
+//no media breaks for cursor and list styles
+//@media min-width 700px, 900px, 1100px
+//use _7, _9, _11 at the end of the class
+
+//examples
+border_7 - border: $border;//@700px
+border-3_9 - border-width: 0.188rem;//@900px
+border-groove_11 - border-style: groove;//@1100px</code></pre>
 </div>
 
 </div>
@@ -591,7 +693,16 @@ items-baseline - align-items: baseline;
 items-stretch - align-items: stretch;
 
 //flex container items
-grow - flex-grow: 1;</code></pre>
+grow - flex-grow: 1;
+
+//media breakpoints
+//@media min-width 700px, 900px, 1100px
+//use _7, _9, _11 at the end of the class
+
+//examples
+flex-row_7 - flex-direction: row;//@700px
+content-start_9 - justify-content: flex-start;//@900px
+items-center_11 - align-items: center;//@1100px</code></pre>
 </div>
 
 </div>
@@ -626,7 +737,16 @@ col-gap - column-gap: $spacer; //2rem
 col-gap-m - column-gap: $medium-spacer; //1rem
 col-gap-s - column-gap: $small-spacer; //0.5rem
 col-gap-l - column-gap: $large-spacer; //3rem
-col-gap-b - column-gap: $big-spacer; //4rem</code></pre>
+col-gap-b - column-gap: $big-spacer; //4rem
+
+//media breakpoints
+//@media min-width 700px, 900px, 1100px
+//use _7, _9, _11 at the end of the class
+
+//examples
+gap-m_7 - gap: $medium-spacer;//@700px
+row-gap-m_9 - row-gap: $medium-spacer;//@900px
+col-gap-l_11 - column-gap: $large-spacer;//@1100px</code></pre>
 </div>
 
 </div>
