@@ -26,6 +26,34 @@
  }
 }
 
+// The new way to come - not recognised by preprocessors at time of writing
+// @mixin directional-property($property, $suffix: null, $values...) {
+//  $suffix-string: if(
+//   sass($suffix): "-#{$suffix}",
+//   else: "",
+//  );
+
+//  $top: $property + "-top" + $suffix-string;
+//  $bottom: $property + "-bottom" + $suffix-string;
+//  $left: $property + "-left" + $suffix-string;
+//  $right: $property + "-right" + $suffix-string;
+//  $all: $property + $suffix-string;
+//  @if list.length($values) > 0 {
+//   $expanded: expand-shorthand($values);
+
+//   @if list.length($expanded) == 4 {
+//    #{$top}: list.nth($expanded, 1);
+//    #{$right}: list.nth($expanded, 2);
+//    #{$bottom}: list.nth($expanded, 3);
+//    #{$left}: list.nth($expanded, 4);
+//   } @else {
+//    #{$all}: $values;
+//   }
+//  } @else {
+//   #{$all}: "";
+//  }
+// }
+
 @mixin margin($values) {
  @include directional-property(margin, null, $values);
 }

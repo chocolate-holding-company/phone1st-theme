@@ -13,7 +13,7 @@
 }
 
 //font-size
-//see css/base/_typography.scss for <p> .para
+//see css/base/_typography.scss for <p> .p
 .normal {
  font-size: $font-size; //1.2rem
 }
@@ -25,26 +25,6 @@
 }
 .third {
  font-size: $third;
-}
-
-.small {
- font-size: 70%;
-}
-
-.big {
- font-size: 145%;
-}
-
-//see _media.scss
-//align
-.center {
- text-align: center;
-}
-.left {
- text-align: left;
-}
-.right {
- text-align: right;
 }
 
 //see css/base/_typography.scss for headings h1, h2 etc.
@@ -61,6 +41,29 @@
 }
 .bighead-4 {
  font-size: clamp(4rem, 3.7949rem + 1.0256vw, 4.5rem);
+}
+
+//hyphens
+.hyphens {
+ hyphens: auto;
+}
+.hyphens-man {
+ hyphens: manual;
+}
+.hyphens-none {
+ hyphens: none;
+}
+
+//see _media.scss
+//align
+.center {
+ text-align: center;
+}
+.left {
+ text-align: left;
+}
+.right {
+ text-align: right;
 }
 
 //letter spacing
@@ -207,14 +210,6 @@
  }
  .third_7 {
   font-size: $third;
- }
-
- .small_7 {
-  font-size: 70%;
- }
-
- .big_7 {
-  font-size: 145%;
  }
 
  //align
@@ -375,14 +370,6 @@
   font-size: $third;
  }
 
- .small_9 {
-  font-size: 70%;
- }
-
- .big_9 {
-  font-size: 145%;
- }
-
  //align
  .center_9 {
   text-align: center;
@@ -539,14 +526,6 @@
  }
  .third_11 {
   font-size: $third;
- }
-
- .small_11 {
-  font-size: 70%;
- }
-
- .big_11 {
-  font-size: 145%;
  }
 
  //align

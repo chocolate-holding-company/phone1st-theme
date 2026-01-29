@@ -5,7 +5,7 @@
   
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <title>Scss Mixins including user and Bourbon Mixins</title>
   <meta name="HandheldFriendly" content="True" />
   <meta name="mobile-web-app-capable" content="yes">
@@ -126,7 +126,7 @@ Most of the mixins import <code>css/root/_helpers.scss</code>
   
   <h3 id="show" class="mb-m">show</h3>
   <pre class="mt-m mb"><code class="language-scss">.show-box {
-   @include size(300px, 70px);
+   @include size(300px, 100px);
    @include center;
    padding: 7px;
    font-size: .9rem;
@@ -148,9 +148,9 @@ Most of the mixins import <code>css/root/_helpers.scss</code>
   }</code></pre>
   
   <div class="show-box">
+   Hover
    <span
-    >This text will show on hover and be visible to screen readers and
-    browsers</span
+    >This text shows on hover and be visible to screen readers and browsers</span
    >
   </div>
   

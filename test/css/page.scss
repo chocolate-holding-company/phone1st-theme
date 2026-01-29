@@ -86,7 +86,6 @@ hr {
 
  .hidden-box,
  .show-box {
-  @include size(300px, 70px);
   @include center;
   padding: 7px;
   font-size: 0.9rem;
@@ -95,18 +94,20 @@ hr {
  }
 
  .hidden-box {
+  @include size(300px, 70px);
   &:hover span {
    @include hidden;
   }
  }
 
  .show-box {
+  @include size(300px, 100px);
   span {
-    @include hidden;
+   @include hidden;
   }
   &:hover span {
    @include show;
- }
+  }
  }
 
  .media-points p {

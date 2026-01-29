@@ -10,10 +10,8 @@ lead - $lead
 secondary - $secondary
 third - $third
 
-//align
-center - text-align: center
-left - text-align: left
-right - text-align: right
+//see css/base/_typography.scss
+p - font-size: clamp($font-size, 1.1385rem + 0.3077vw, 1.35rem);
 
 //headings
 //set your css Clamp function settings at https://clamp.font-size.app
@@ -25,7 +23,6 @@ h3 - font-size: clamp(1.5rem, 0.79rem + 1.89vw, 2rem);
 h4 - font-size: clamp(1.25rem, 0.54rem + 1.89vw, 1.75rem);
 h5 - font-size: clamp(1.13rem, 0.59rem + 1.42vw, 1.5rem);
 h6 - font-size: clamp(1rem, 0.65rem + 0.94vw, 1.25rem);
-para - hyphens: none; font-size: clamp($font-size, 1.1385rem + 0.3077vw, 1.35rem);
 
 //big heading sizes - classes only!
 //see css/class/_typography.scss
@@ -33,6 +30,16 @@ bighead-1 - font-size: clamp(2.5rem, 2.2949rem + 1.0256vw, 3rem);
 bighead-2 - font-size: clamp(3rem, 2.7949rem + 1.0256vw, 3.5rem);
 bighead-3 - font-size: clamp(3.5rem, 3.2949rem + 1.0256vw, 4rem);
 bighead-4 - font-size: clamp(4rem, 3.7949rem + 1.0256vw, 4.5rem);
+
+//hyphens
+hyphens - hyphens: auto;
+hyphens-man - hyphens: manual;
+hyphens-none - hyphens: none;
+
+//align
+center - text-align: center
+left - text-align: left
+right - text-align: right
 
 //letter spacing
 ls-tight - letter-spacing: -0.025em;
