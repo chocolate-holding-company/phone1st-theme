@@ -1,5 +1,37 @@
-<h3 id="margin" class="mb-m">margin</h3>
-<pre class="mt mb"><code class="language-scss">//see css/root/_direction.scss
+<h3 id="position">position</h3>
+<pre class="mt-4 mb-8"><code class="language-scss">//see css/root/_position.scss
+ .position {
+  @include size(300px, 5em);
+  @include center;
+  border: 1px solid var(--first);
+  position: relative;
+  div {
+   @include position(absolute, 10px 30px 30px 0);
+   background-color: var(--bg);
+  }
+ }</code></pre>
+
+<div class="position mb-8"><div></div></div>
+
+<pre class="mt-4 mb-8"><code class="language-scss">//see css/root/_position.scss
+ .position-two {
+  @include size(300px, 5em);
+  @include center;
+  border: 1px solid var(--first);
+  position: relative;
+  div {
+   @include size(100px, 20px);
+   @include position(absolute, 10px null null 0);
+   background-color: var(--bg);
+  }
+ }</code></pre>
+
+<div class="position-two"><div></div></div>
+
+<hr>
+
+<h3 id="margin" class="mb-4">margin</h3>
+<pre class="mt-4 mb-8"><code class="language-scss">//see css/root/_direction.scss
 .margin {
 @include size(300px, 5em);
 @include center;
@@ -15,8 +47,8 @@ border: 1px solid red;
 </div>
 <hr />
 
-<h3 id="padding" class="mb-m">padding</h3>
-<pre class="mt mb"><code class="language-scss">//see css/root/_direction.scss
+<h3 id="padding" class="mb-4">padding</h3>
+<pre class="mt-4 mb-8"><code class="language-scss">//see css/root/_direction.scss
 .padding {
 max-width: 500px;
 @include center;
@@ -30,84 +62,20 @@ border: 1px solid red;
 </div>
 <hr />
 
-<h3 id="size" class="mb-m">size</h3>
-<pre class="mt-m mb"><code class="language-scss">//see css/root/_size.scss
+<h3 id="size" class="mb-4">size</h3>
+<pre class="mt-4 mb-8"><code class="language-scss">//see css/root/_size.scss
 .size {
 @include size(300px, 1.8em);//mixin
  border: 1px solid blue;
 }</code></pre>
 
-<div class="size"></div>
-<pre class="mt mb"><code class="language-scss">//see css/root/_size.scss
+<div class="size mb-8"></div>
+<pre class="mt-4 mb-8"><code class="language-scss">//see css/root/_size.scss
 .size-two {
 @include size(auto, 5em);//mixin
 @include center;
 border: 1px solid red;
 }</code></pre>
-<div class="size-two"></div>
-<hr />
+<div class="size-two mb-10"></div>
+<hr>
 
-<h3 id="buttons" class="mb-m">buttons</h3>
-<pre
- class="mt mb"
-><code class="language-scss">//see css/root/_buttons-inputs.scss
-//see css/base/_button.scss for inherited styles
-.buttons {
- #{$all-buttons} {
-  padding: 15px 40px;
-  font-size: $secondary;
-  background-color: red;
-  color: white;
-  transition: background-color $duration $timing;
-   @media (hover: hover) {
-    &:hover {
-     background-color: blue;
-   }
-  }
- }
-}</code></pre>
-
-<div class="buttons">
- <button>Press Me</button>
-</div>
-<hr />
-<h3 id="inputs" class="mt mb-m">text-inputs</h3>
-<pre
- class="mt mb"
-><code class="language-scss">//see css/root/_buttons-inputs.scss
-//see css/base/_form.scss for inherited styles
-.text-inputs {
-#{$all-text-inputs} {
-width: 300px;
-@include padding(10px 5px);
-@include margin($medium-spacer auto);
- }
-}</code></pre>
-<div class="text-inputs">
- <input type="text" placeholder="Your name" />
- <input type="email" placeholder="a valid email" />
- <input type="password" placeholder="your password" />
- <input type="text" placeholder="disabled" disabled />
- <textarea placeholder="Your message"></textarea>
-</div>
-<hr />
-
-<h3 id="shade" class="mb-m">shade</h3>
-<pre class="mt mb"><code class="language-scss">//see css/root/_shade-tint.scss
-.shade {
-@include size(300px, 100px);
-@include center;
-background-color: shade(blue, 40%);//mix with black
- }</code></pre>
-<div class="shade"></div>
-<hr />
-
-<h3 id="tint" class="mb-m">tint</h3>
-<pre class="mt mb"><code class="language-scss">//see css/root/_shade-tint.scss
-.tint {
-@include size(300px, 100px);
-@include center;
-background-color: tint(blue, 40%);//mix with white
- }</code></pre>
-<div class="tint"></div>
-<hr />

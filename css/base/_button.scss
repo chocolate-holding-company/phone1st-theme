@@ -5,40 +5,35 @@
 @use "../root/" as *;
 
 //Use a btn class for tags such as <a>
-#{$all-buttons},
+button,
+[type="button"],
+[type="reset"],
+[type="submit"],
 .btn {
  appearance: none;
  cursor: pointer;
+ border: 0;
+ font-family: $font;
+ font-size: $third;
  display: inline-block;
- line-height: 1;
  text-align: center;
  text-decoration: none;
- transition: background-color $duration $timing;
  user-select: none;
  vertical-align: middle;
  white-space: nowrap;
- border: 0;
  border-radius: $radius;
- font-size: $third;
- padding: 15px 20px;
+ padding: 10px 6px;
+ width: 150px;
+ color: var(--button-color);
+ background: var(--button-bg);
+
+ &:hover {
+  background: var(--button-bg-hover);
+  color: var(--button-color);
+ }
 
  &:disabled {
   cursor: not-allowed;
   opacity: 0.5;
- }
-}
-
-//set the color and hover-color
-#{$all-buttons},
-.btn {
- background-color: $button-background;
- color: $button-color;
- transition: background-color $duration $timing;
-
- @media (hover: hover) {
-  &:hover {
-   background-color: $button-background-hover;
-   color: $button-color-hover;
-  }
  }
 }

@@ -1,6 +1,6 @@
-<h3 id="center" class="mb-m">center elements</h3>
+<h3 id="center" class="mb-4">center elements</h3>
 
-<pre class="mt-m mb"><code class="language-scss">.center-element {
+<pre class="mt-4 mb-8"><code class="language-scss">.center-element {
 @include center;//mixin
 background: #E03D44;
 @include size(80%, 60px);
@@ -16,8 +16,8 @@ background: #E03D44;
 
 <hr />
 
-<h3 id="hide" class="mb-m">hide</h3>
-<pre class="mt-m mb"><code class="language-scss">.hidden-box {
+<h3 id="hide" class="mb-4">hide</h3>
+<pre class="mt-4 mb-8"><code class="language-scss">.hidden-box {
  @include size(300px, 70px);
  @include center;
  padding: 7px;
@@ -44,8 +44,8 @@ background: #E03D44;
 
 <hr />
 
-<h3 id="show" class="mb-m">show</h3>
-<pre class="mt-m mb"><code class="language-scss">.show-box {
+<h3 id="show" class="mb-4">show</h3>
+<pre class="mt-4 mb-8"><code class="language-scss">.show-box {
  @include size(300px, 100px);
  @include center;
  padding: 7px;
@@ -76,10 +76,10 @@ background: #E03D44;
 
 <hr />
 
-<h3 id="breakpoints" class="mb-m">media breakpoints</h3>
+<h3 id="breakpoints" class="mb-2">media breakpoints</h3>
 <p>Base styles are phone-first</p>
 
-<pre class="mt-m mb"><code class="language-scss">.media-points p {
+<pre class="mt-4 mb-8"><code class="language-scss">.media-points p {
  color: red;
 }
 
@@ -125,46 +125,9 @@ background: #E03D44;
  </p>
 </div>
 <hr />
-<h3 id="border" class="mb-m">border</h3>
 
-<pre
- class="mt-m mb-l"
-><code class="language-scss">//see css/root/_direction.scss and _border-radius.scss
-.show-border {
- @include size(300px, 80px);
- @include center;
-
- //mixins
- @include border-top-radius(20px);
- @include border-bottom-radius(10px);
- @include border-width(5px 0.9em 2ex $small-spacer);
- @include border-style(solid double inset dotted);
- @include border-color(green blue $first-color rgb(199, 199, 36));
-}</code></pre>
-
-<div class="show-border"></div>
-
-<pre
- class="mt-l mb-l"
-><code class="language-scss">//see css/root/_direction.scss and _border-radius.scss
-.show-border-two {
- @include size(300px, 80px);
- @include center;
-
- //mixins
- @include border-left-radius(20px);
- @include border-right-radius(25px);
- @include border-width(thick 0.8ex null 1.25ex);
- @include border-style(dashed dotted null groove);
- @include border-color(hsl(60 90% 50% / 0.8) blue null rgb(255 0 0));
-}</code></pre>
-
-<div class="show-border-two"></div>
-
-<hr />
-
-<h3 id="ellipsis" class="mb-m">ellipsis</h3>
-<pre class="mt-m mb"><code class="language-scss">.ellipsis {
+<h3 id="ellipsis" class="mb-4">ellipsis</h3>
+<pre class="mt-4 mb-8"><code class="language-scss">.ellipsis {
 @include size(300px, 80px);
 @include center;
 font-size: 1.1rem;
@@ -189,16 +152,16 @@ border: 1px solid blue;
 </div>
 <hr />
 
-<h3 id="triangle" class="mb-m">triangle</h3>
-<pre class="mt-m mb"><code class="language-scss">//see css/root/_mixins.scss
+<h3 id="triangle" class="mb-4">triangle</h3>
+<pre class="mt-4 mb-10"><code class="language-scss">//see css/root/_mixins.scss
 .element {
 @include size(300px, 50px);
 @include center;
-background-color: #b25c9c;
+background-color: blue;
 position: relative;
 
  &::before {
-  @include triangle(up, 2rem, 1rem, #b25c9c);//mixin
+  @include triangle(up, 2rem, 1rem, blue);//mixin
   position: absolute;
   content: "";
   //position triangle on box
@@ -206,41 +169,5 @@ position: relative;
   left:6rem;
  }
 }</code></pre>
-<div class="triangle my-l"></div>
-<hr />
-<h3 id="position" class="mb-m">position</h3>
-<pre class="mt mb"><code class="language-scss">//see css/root/_mixins.scss
-.position {
-@include size(300px, 5em);
-@include center;
-border: 1px solid blue;
-position: relative;
- div {
-  //no size needed
-  @include position(absolute, 10px 30px 30px 0);//mixin
-  background-color: rgba(39, 44, 49, 0.3);
- }
-}</code></pre>
-
-<div class="position">
- <div></div>
-</div>
-
-<pre class="mt mb"><code class="language-scss">//see css/root/_mixins.scss
-.position-two {
-@include size(300px, 5em);
-@include center;
-border: 1px solid red;
-position: relative;
- div {
- @include size(100px, 20px);
- @include position(absolute, 10px null null 0);//mixin
- background-color: rgba(39, 44, 49, 0.3);
- }
-}</code></pre>
-
-<div class="position-two">
- <div></div>
-</div>
-
+<div class="triangle"></div>
 <hr />

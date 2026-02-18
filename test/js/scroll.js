@@ -1,43 +1,17 @@
-//scroll
+//top progress bar and back to top
+window.addEventListener("scroll", () => {
+ const scrollTotal = document.documentElement.scrollHeight - window.innerHeight;
+ const scrollPercent = scrollTotal > 0 ? window.scrollY / scrollTotal : 0;
 
-// function smoothScroll(target) {
-//  const element = document.getElementById(target);
-//  if (element) {
-//   window.scrollTo({
-//    top: element.offsetTop,
-//    behavior: "smooth",
-//   });
-//  }
-// }
+ document.getElementById("top-progress-bar").style.width =
+  scrollPercent * 100 + "%";
 
-// document.addEventListener("DOMContentLoaded", function () {
-//  const anchors = document.querySelectorAll('a[href^="#"]');
-//  anchors.forEach(function (anchor) {
-//   anchor.addEventListener("click", function (event) {
-//    event.preventDefault();
-//    const target = anchor.getAttribute("href").substring(1);
-//    smoothScroll(target);
-//   });
-//  });
-// });
-
-//show/hide the back button
-const backButton = document.getElementById("topBtn");
-function isVisible() {
- window.onscroll =
-  ("scroll",
-  () => {
-   if (
-    document.body.scrollTop > 200 ||
-    document.documentElement.scrollTop > 200
-   ) {
-    backButton.style.display = "block";
-   } else {
-    backButton.style.display = "none";
-   }
-  });
-}
-
-isVisible();
+ const ring = document.getElementById("progress-ring");
+ const circum = 22 * 2 * Math.PI;
+ ring.style.strokeDashoffset = circum - scrollPercent * circum;
+ document
+  .getElementById("back-to-top")
+  .classList.toggle("visible", window.scrollY > 300);
+});
 //highlight js
 hljs.highlightAll();

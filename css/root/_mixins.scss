@@ -37,7 +37,29 @@
  }
 }
 
-//@include triangle("up", 2rem, 1rem, #b25c9c);
+//bighead font title sizes - classes also -class/_typography.scss
+//@include bighead-1;
+@mixin bighead-1 {
+ font-size: clamp(2.5rem, 2.2949rem + 1.0256vw, 3rem);
+ line-height: 1.2;
+}
+
+@mixin bighead-2 {
+ font-size: clamp(3rem, 2.7949rem + 1.0256vw, 3.5rem);
+ line-height: 1.1;
+}
+
+@mixin bighead-3 {
+ font-size: clamp(3.5rem, 3.2949rem + 1.0256vw, 4rem);
+ line-height: 1.1;
+}
+
+@mixin bighead-4 {
+ font-size: clamp(4rem, 3.7949rem + 1.0256vw, 4.5rem);
+ line-height: 1.1;
+}
+
+//@include triangle("up", 2rem, 1rem, blue);
 @mixin triangle($direction, $width, $height, $color) {
  @if not
   list.index(

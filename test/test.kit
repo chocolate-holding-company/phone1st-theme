@@ -22,12 +22,8 @@
   your site.</p>
   <p class="my-m font700 center">-- So start your website by making this page look <em>pretty!</em> --
 </p>
-<!-- Dark Theme -->
-<div class="dark-button">
-  <p class="third">Switch to Dark Theme</p>
-<input type="checkbox" id="toggle" class="offscreen" />
-<label for="toggle" class="switch"></label>
-</div>
+<button id="theme-toggle" class="centered block" onclick="toggleTheme()">🌙 Dark Mode</button>
+
 <hr />
 <h2 class="links-title">-- Links --</h2>
 <div class="links">
@@ -35,11 +31,9 @@
     <a href="#typography">Typography</a>
     <a href="#forms">Forms</a>
     <a href="#tables">Tables</a>
-    <a href="#images">Images</a>
   </div>
   <div>
-    <a href="#navigation">Page Navigation</a>
-    <a href="#social">Social Buttons</a>
+    <a href="#images">Images</a>
     <a href="#404">404 Page Not Found</a>
   </div>
 </div>
@@ -64,19 +58,12 @@
 <hr />
 <!-- @import test-kit/_images -->
 <hr />
-<h2 class="test-subheader" id="navigation">Page Navigation</h2>
-<hr />
-<!-- @import test-kit/_page-navigation -->
-<hr />
-<h2 class="test-subheader" id="social">Social Buttons</h2>
-<hr />
-<!-- @import test-kit/_social -->
-<hr />
+
 <h2 class="test-subheader" id="404">404 Page Not Found</h2>
 <p>Change the 404 to your liking</p>
 <a class="secondary" href="../404.html">404.html</a>
 <hr />
-<p class="third center mb-m"><a href="../index.html">Home</a> | <a href="about.html">About</a> | <a href="scss.html">Scss Mixins</a> | <a href="class.html">Classes</a></p>
+<p class="third center mb-4"><a href="../index.html">Home</a> | <a href="about.html">About</a> | <a href="scss.html">Scss Mixins</a> | <a href="class.html">Classes</a></p>
 </section>
 
 <!-- @import includes-kit/_test-footer -->

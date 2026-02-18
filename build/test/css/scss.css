@@ -1,0 +1,210 @@
+:root {
+  --font-color: oklch(37.2% 0.044 257.287deg);
+  --heading-color: oklch(20.8% 0.042 265.755deg);
+  --link-color: oklch(39.1% 0.09 240.876deg);
+  --hover-color: oklch(44.3% 0.11 240.79deg);
+  --opacity: 0.75;
+  --first: oklch(54.6% 0.245 262.881deg);
+  --dark-gray: oklch(37.1% 0 0deg);
+  --medium-gray: oklch(55.6% 0 0deg);
+  --light-gray: oklch(92.2% 0 0deg);
+  --viewport-bg: oklch(96.8% 0.007 247.896deg);
+  --bg: oklch(55.4% 0.046 257.417deg);
+  --light-bg: oklch(92.9% 0.013 255.508deg);
+  --input-bg: transparent;
+  --border: 0.063rem solid oklch(27.9% 0.041 260.031deg);
+  --table-hover: oklch(27.9% 0.041 260.031deg);
+  --button-color: oklch(95.1% 0.026 236.824deg);
+  --button-bg: oklch(39.1% 0.09 240.876deg);
+  --button-bg-hover: oklch(50% 0.134 242.749deg);
+  --error: oklch(51.4% 0.222 16.935deg);
+  --alert: oklch(76.9% 0.188 70.08deg);
+  --success: oklch(52.7% 0.154 150.069deg);
+  --form-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.26);
+  --form-focus-box-shadow: inset 0 1px 1px rgba(#000, 0.5);
+  --filter-shadow: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
+}
+
+[data-theme=dark] {
+  --font-color: oklch(96.8% 0.007 247.896deg);
+  --heading-color: oklch(96.8% 0.007 247.896deg);
+  --link-color: oklch(58.8% 0.158 241.966deg);
+  --hover-color: oklch(74.6% 0.16 232.661deg);
+  --viewport-bg: oklch(27.9% 0.041 260.031deg);
+  --input-bg: oklch(92.9% 0.013 255.508deg);
+  --border: 0.063rem solid oklch(92.9% 0.013 255.508deg);
+  --form-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.26);
+  --form-focus-box-shadow: inset 0 1px 1px rgba(#000, 0.5);
+  --filter-shadow: drop-shadow(0px 0px 10px rgba(200, 200, 200, 0.5));
+}
+
+.scss-extras {
+  text-align: center;
+  overflow: hidden;
+}
+.scss-extras code {
+  font-size: 0.9865470852rem;
+}
+.scss-extras .center-element {
+  margin-left: auto;
+  margin-right: auto;
+  background: var(--bg);
+  height: 60px;
+  width: 80%;
+}
+.scss-extras .hidden-box,
+.scss-extras .show-box {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 7px;
+  font-size: 0.9rem;
+  color: var(--error);
+  border: 1px solid var(--first);
+}
+.scss-extras .hidden-box {
+  height: 70px;
+  width: 300px;
+}
+.scss-extras .hidden-box:hover span {
+  display: none !important;
+  visibility: hidden;
+}
+.scss-extras .show-box {
+  height: 100px;
+  width: 300px;
+}
+.scss-extras .show-box span {
+  display: none !important;
+  visibility: hidden;
+}
+.scss-extras .show-box:hover span {
+  display: block !important;
+  visibility: visible;
+}
+.scss-extras .media-points p {
+  color: red;
+}
+@media only screen and (min-width: 600px) {
+  .scss-extras .media-points p {
+    color: blue;
+  }
+}
+@media only screen and (min-width: 700px) {
+  .scss-extras .media-points p {
+    color: rgb(153, 71, 236);
+  }
+}
+@media only screen and (min-width: 934px) {
+  .scss-extras .media-points p {
+    color: rgb(34, 224, 126);
+  }
+}
+@media only screen and (min-width: 93rem) {
+  .scss-extras .media-points p {
+    color: rgb(235, 220, 85);
+  }
+}
+.scss-extras .ellipsis {
+  height: 80px;
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.1rem;
+  padding: 10px;
+  border: 1px solid var(--first);
+}
+.scss-extras .ellipsis:hover span {
+  display: inline-block;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+}
+.scss-extras .triangle {
+  height: 50px;
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #6060ff;
+  position: relative;
+}
+.scss-extras .triangle::before {
+  border-style: solid;
+  height: 0;
+  width: 0;
+  border-color: transparent transparent #6060ff;
+  border-width: 0 1rem 1rem;
+  position: absolute;
+  content: "";
+  top: -1rem;
+  left: 6rem;
+}
+.scss-extras .position {
+  height: 5em;
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid var(--first);
+  position: relative;
+}
+.scss-extras .position div {
+  position: absolute;
+  top: 10px;
+  right: 30px;
+  bottom: 30px;
+  left: 0;
+  background-color: var(--bg);
+}
+.scss-extras .position-two {
+  height: 5em;
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid var(--first);
+  position: relative;
+}
+.scss-extras .position-two div {
+  height: 20px;
+  width: 100px;
+  position: absolute;
+  top: 10px;
+  left: 0;
+  background-color: var(--bg);
+}
+.scss-extras .margin {
+  height: 5em;
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid red;
+}
+.scss-extras .margin div {
+  height: 50px;
+  width: 80px;
+  margin-top: 30px;
+  margin-left: 40px;
+  border: 1px solid var(--first);
+}
+.scss-extras .padding {
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid var(--first);
+  padding-top: 15px;
+  padding-right: 20px;
+  padding-bottom: 15px;
+  padding-left: 20px;
+}
+.scss-extras .size {
+  height: 1.8em;
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid var(--first);
+}
+.scss-extras .size-two {
+  height: 5em;
+  width: auto;
+  border: 1px solid var(--first);
+}

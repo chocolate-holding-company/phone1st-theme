@@ -2,10 +2,11 @@
 // Typography
 // =======================
 @use "sass:math";
+@use "../root/base-color" as *;
 @use "../root/variables" as *;
 
 hr {
- border-bottom: $border;
+ border-bottom: var(--border);
  border-left: 0;
  border-right: 0;
  border-top: 0;
@@ -18,9 +19,11 @@ h4,
 h5,
 h6 {
  font-family: $heading-font;
+ color: var(--heading-color);
+ line-height: 1.2;
  clear: both;
  hyphens: none;
- font-size: $font-size; //Remove to set browser default headings
+ margin-bottom: math.div($spacer, 4);
 }
 
 //Balance text wrapping on headings
@@ -33,8 +36,15 @@ h4 {
 
 p,
 .p {
- font-size: clamp($font-size, 1.1385rem + 0.3077vw, 1.35rem);
- //based on screen width 320px to 1100px
+ font-size: clamp(1.1rem, 1.291rem + -0.0597vw, 1.25rem);
+ //based on screen width 320px to 1100px and fontsize 1.1rem to 1.25rem
+}
+
+p,
+blockquote,
+pre {
+ margin-bottom: $spacer;
+ color: var(--font-color);
 }
 
 b,
@@ -54,18 +64,19 @@ address {
 
 abbr,
 acronym {
- border-bottom: 1px dotted $medium-gray;
+ border-bottom: 1px dotted var(--medium-gray);
  cursor: help;
 }
 
 mark,
 ins {
- background: $light-gray;
+ background: var(--light-gray);
  text-decoration: none;
+ color: $black;
 }
 
 del {
- text-decoration-color: red;
+ text-decoration-color: var(--error);
 }
 
 small {
@@ -84,6 +95,7 @@ kbd,
 tt,
 var {
  font-family: $code-font;
+ color: var(--font-color);
 }
 
 sub,

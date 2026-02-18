@@ -1,0 +1,121 @@
+// =======================
+// Refactored Variables
+// =======================
+@use "base-color" as *;
+
+// 1. STATIC SASS VARIABLES (For math and scales)
+$font: "Raleway", sans-serif !default;
+$heading-font: $font !default;
+$code-font: "Source Code Pro", monospace !default;
+$icon-font: "" !default;
+
+$font-size: 1.1rem !default;
+$lead: calc($font-size * 1.234) !default;
+$secondary: calc($font-size / 0.965) !default;
+$third: calc($font-size / 1.115) !default;
+
+// SIZE
+$s-0: 0 !default;
+$s-1: 0.25rem !default;
+$s-2: 0.5rem !default;
+$s-3: 0.75rem !default;
+$s-4: 1rem !default;
+$s-5: 1.25rem !default;
+$s-6: 1.5rem !default;
+$s-7: 1.75rem !default;
+$s-8: 2rem !default;
+$s-9: 2.25rem !default;
+$s-10: 3rem !default;
+$s-11: 3.5rem !default;
+$s-12: 4rem !default;
+$s-13: 4.5rem !default;
+$s-14: 5rem !default;
+$s-15: 5.5rem !default;
+
+$radius: calc($s-1 * 1.2) !default;
+$spacer: $s-8 !default;
+
+$duration: 150ms !default;
+$timing: ease !default;
+
+// 2. THEME TOKENS (CSS Custom Properties)
+:root {
+ // Typography & General
+ --font-color: #{$slate-700};
+ --heading-color: #{$slate-900};
+ --link-color: #{$sky-900};
+ --hover-color: #{$sky-800};
+ --opacity: 0.75;
+
+ // COLOR
+ --first: #{$blue-600};
+ --dark-gray: #{$neutral-700};
+ --medium-gray: #{$neutral-500};
+ --light-gray: #{$neutral-200};
+
+ // Backgrounds
+ --viewport-bg: #{$slate-100};
+ --bg: #{$slate-500};
+ --light-bg: #{$slate-200};
+ --input-bg: transparent;
+
+ // Components
+ --border: 0.063rem solid #{$slate-800};
+ --table-hover: #{$slate-800};
+
+ // Buttons
+ --button-color: #{$sky-100};
+ --button-bg: #{$sky-900};
+ --button-bg-hover: #{$sky-700};
+
+ // Status
+ --error: #{$rose-700};
+ --alert: #{$amber-500};
+ --success: #{$green-700};
+
+ // Shadows
+ --form-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.26);
+ --form-focus-box-shadow: inset 0 1px 1px rgba(#000, 0.5);
+ --filter-shadow: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
+}
+
+// 3. DARK THEME OVERRIDES
+[data-theme="dark"] {
+ // Typography & General
+ --font-color: #{$slate-100};
+ --heading-color: #{$slate-100};
+ --link-color: #{$sky-600};
+ --hover-color: #{$sky-400};
+ //--opacity: 0.75;
+
+ // COLOR
+ // --first: #{$blue-600};
+ // --dark-gray: #{$neutral-700};
+ // --medium-gray: #{$neutral-500};
+ // --light-gray: #{$neutral-200};
+
+ // Backgrounds
+ --viewport-bg: #{$slate-800};
+ // --bg: #{$slate-500};
+ // --light-bg: #{$slate-200};
+ --input-bg: #{$slate-200};
+
+ // Components
+ --border: 0.063rem solid #{$slate-200};
+ //--table-hover: #{$slate-800};
+
+ // Buttons
+ //--button-color: #{$sky-100};
+ //--button-bg: #{$sky-900};
+ //--button-bg-hover: #{$sky-700};
+
+ // Status
+ //--error: #{$rose-700};
+ //--alert: #{$amber-500};
+ //--success: #{$green-700};
+
+ // Shadows
+ --form-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.26);
+ --form-focus-box-shadow: inset 0 1px 1px rgba(#000, 0.5);
+ --filter-shadow: drop-shadow(0px 0px 10px rgba(200, 200, 200, 0.5));
+}

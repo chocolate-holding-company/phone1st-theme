@@ -13,48 +13,34 @@
 .width75 {
  width: 75%;
 }
+.width70 {
+ width: 70%;
+}
+.width60 {
+ width: 60%;
+}
 .width50 {
  width: 50%;
+}
+.width40 {
+ width: 40%;
+}
+.width30 {
+ width: 30%;
 }
 .width25 {
  width: 25%;
 }
-
-//variables width
-.width {
- width: $spacer;
+.width20 {
+ width: 20%;
 }
-.width-s {
- width: $small-spacer;
-}
-.width-m {
- width: $medium-spacer;
-}
-.width-l {
- width: $large-spacer;
-}
-.width-b {
- width: $big-spacer;
+.width10 {
+ width: 10%;
 }
 
 //height
 .height100 {
  height: 100%;
-}
-.height {
- height: $spacer;
-}
-.height-s {
- height: $small-spacer;
-}
-.height-m {
- height: $medium-spacer;
-}
-.height-l {
- height: $large-spacer;
-}
-.height-b {
- height: $big-spacer;
 }
 
 //radius
@@ -77,8 +63,6 @@
  border-radius: 3.125rem;
 }
 
-/////////////////////////////////
-////////////////////////////////
 //breakpoint 700px
 
 @include media(700) {
@@ -94,48 +78,34 @@
  .width75_7 {
   width: 75%;
  }
+ .width70_7 {
+  width: 70%;
+ }
+ .width60_7 {
+  width: 60%;
+ }
  .width50_7 {
   width: 50%;
+ }
+ .width40_7 {
+  width: 40%;
+ }
+ .width30_7 {
+  width: 30%;
  }
  .width25_7 {
   width: 25%;
  }
-
- //variables width
- .width_7 {
-  width: $spacer;
+ .width20_7 {
+  width: 20%;
  }
- .width-s_7 {
-  width: $small-spacer;
- }
- .width-m_7 {
-  width: $medium-spacer;
- }
- .width-l_7 {
-  width: $large-spacer;
- }
- .width-b_7 {
-  width: $big-spacer;
+ .width10_7 {
+  width: 10%;
  }
 
  //height
  .height100_7 {
   height: 100%;
- }
- .height_7 {
-  height: $spacer;
- }
- .height-s_7 {
-  height: $small-spacer;
- }
- .height-m_7 {
-  height: $medium-spacer;
- }
- .height-l_7 {
-  height: $large-spacer;
- }
- .height-b_7 {
-  height: $big-spacer;
  }
 
  //radius
@@ -159,12 +129,10 @@
  }
 }
 
-/////////////////////////////////
-////////////////////////////////
 //breakpoint 900px
 
 @include media(900) {
- .width100_9 {
+ .width100 {
   width: 100%;
  }
  .width90_9 {
@@ -176,48 +144,34 @@
  .width75_9 {
   width: 75%;
  }
+ .width70_9 {
+  width: 70%;
+ }
+ .width60_9 {
+  width: 60%;
+ }
  .width50_9 {
   width: 50%;
  }
- .width25_7 {
+ .width40_9 {
+  width: 40%;
+ }
+ .width30_9 {
+  width: 30%;
+ }
+ .width25_9 {
   width: 25%;
  }
-
- //variables width
- .width_9 {
-  width: $spacer;
+ .width20_9 {
+  width: 20%;
  }
- .width-s_9 {
-  width: $small-spacer;
- }
- .width-m_9 {
-  width: $medium-spacer;
- }
- .width-l_9 {
-  width: $large-spacer;
- }
- .width-b_9 {
-  width: $big-spacer;
+ .width10_9 {
+  width: 10%;
  }
 
  //height
  .height100_9 {
   height: 100%;
- }
- .height_9 {
-  height: $spacer;
- }
- .height-s_9 {
-  height: $small-spacer;
- }
- .height-m_9 {
-  height: $medium-spacer;
- }
- .height-l_9 {
-  height: $large-spacer;
- }
- .height-b_9 {
-  height: $big-spacer;
  }
 
  //radius
@@ -241,8 +195,6 @@
  }
 }
 
-/////////////////////////////////
-////////////////////////////////
 //breakpoint 1100px
 
 @include media(1100) {
@@ -258,48 +210,34 @@
  .width75_11 {
   width: 75%;
  }
+ .width70_11 {
+  width: 70%;
+ }
+ .width60_11 {
+  width: 60%;
+ }
  .width50_11 {
   width: 50%;
+ }
+ .width40_11 {
+  width: 40%;
+ }
+ .width30_11 {
+  width: 30%;
  }
  .width25_11 {
   width: 25%;
  }
-
- //variables width
- .width_11 {
-  width: $spacer;
+ .width20_11 {
+  width: 20%;
  }
- .width-s_11 {
-  width: $small-spacer;
- }
- .width-m_11 {
-  width: $medium-spacer;
- }
- .width-l_11 {
-  width: $large-spacer;
- }
- .width-b_11 {
-  width: $big-spacer;
+ .width10_11 {
+  width: 10%;
  }
 
  //height
  .height100_11 {
   height: 100%;
- }
- .height_11 {
-  height: $spacer;
- }
- .height-s_11 {
-  height: $small-spacer;
- }
- .height-m_11 {
-  height: $medium-spacer;
- }
- .height-l_11 {
-  height: $large-spacer;
- }
- .height-b_11 {
-  height: $big-spacer;
  }
 
  //radius

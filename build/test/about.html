@@ -32,9 +32,11 @@
   <meta name="twitter:image:src" content="https://phone1st.org/test/test-images/phone1st-about.webp" />
   <link rel="stylesheet" href="../css/style.css" />
   <link rel="stylesheet" href="css/page.css" />
+  <link rel="stylesheet" href="css/page.css" />
  </head>
 
  <body>
+  <div id="top-progress-container"><div id="top-progress-bar"></div></div>
   <div id="top" class="wrapper">
    <header class="mb-m">
     <h1 class="center">
@@ -48,7 +50,7 @@
 <img src="../test/test-images/phone1st-about.webp" alt="Phone1st about" class="width50 centered block" />
 
 <div>
-  <h2 class="center mb">A light, clean, starter theme that starts... <strong>phone1st</strong></h2>
+  <h2 class="center">A light, clean, starter theme that starts... <strong>phone1st</strong></h2>
     <p>
       A light and basic html starter theme to get you off to a quick start with
       your web developments. The CSS is put together using SCSS, a popular way
@@ -57,24 +59,24 @@
     </p>
   <hr>
 
-  <h3 class="center mb-m">Quick Start</h3>
+  <h3 class="center mb-4">Quick Start</h3>
   <div class="center">
-    <p class="mb-s">-
+    <p class="mb-3">-
       <strong>Download</strong> - <strong>Rename the folder</strong> -
       <strong>Import into CodeKit</strong>
     -</p>
 
-    <p class="mb-s">- Build your site with the help of the <strong>test folder</strong> -</p>
+    <p class="mb-3">- Build your site with the help of the <strong>test folder</strong> -</p>
 
-    <p class="mb-s">- Remove the <strong>test folder</strong> -</p>
+    <p class="mb-3">- Remove the <strong>test folder</strong> -</p>
 
-    <p class="mb-s">- Upload the <strong>build folder</strong> to your server -</p>
+    <p class="mb-3">- Upload the <strong>build folder</strong> to your server -</p>
   </div>
   <hr>
 
-  <h3 class="center mb-m">CodeKit</h3>
+  <h3 class="center mb-4">CodeKit</h3>
   <div>
-    <p class="mb-s">
+    <p class="mb-3">
       Phone1st is designed to be used with
       <a href="https://codekitapp.com/">CodeKit</a> (<em>Mac only</em>). Taking
       advantage of <em>CodeKits</em> - <em>kit</em> templates and
@@ -82,21 +84,21 @@
     </p>
 
     <p>
-     If you don't have <em>CodeKit</em> the <em>css</em> folder and <em>scss</em> files may be adapted to suit your use. You'll need a <em>Scss processor</em> to parse the <em>scss</em>. The <em>Css</em> style-sheet in the <em>build</em> folder isn't minified.
+     If you don't have <em>CodeKit</em> the <em>css</em> folder and <em>scss</em> files may be adapted to suit your use. You'll need a <em>Scss processor</em> to parse the <em>scss</em>. The main <em>Css</em> style-sheet in the <em>build</em> folder isn't minified and measures <em>82kb</em>. Minified it measures <em>28kb</em>.
     </p>
 <hr>
-    <p class="mb-s">
+    <p class="mb-3">
       The theme should build correctly when imported into Codekit, but if not:
     </p>
-<ul class="pl-l list-square">
-    <li class="normal mb-s">
+<ul class="pl-4 list-square" style="list-style: square;">
+    <li class="normal mb-2">
       <em
         >You can delete the <strong>build</strong> folder and
         <strong>re-build</strong>.</em
       >
     </li>
 
-    <li class="normal mb-s">
+    <li class="normal mb-3">
       <em
         >Remove the <strong>config.codekit3</strong> file and re-import into
         <strong>CodeKit</strong> using your CodeKit settings.</em
@@ -104,48 +106,50 @@
     </li>
 </ul>
 <hr>
-    <p class="mb-s"><em>You can set the paths to the 'build' folder to suit yourself but phone1st uses:</em></p>
+    <p class="mb-3"><em>You can set the paths to the 'build' folder to suit yourself but phone1st uses:</em></p>
   </div>
-  <ul class="pl-l list-circle">
-    <li class="secondary mb-s">style.scss - /build/css/style.css</li>
-    <li class="secondary mb-s">app.js - /build/js/app.js</li>
-    <li class="secondary mb-s">images - /build/images/</li>
+  <ul class="pl-4" style="list-style: circle;">
+    <li class="secondary mb-2">style.scss - /build/css/style.css</li>
+    <li class="secondary mb-2">app.js - /build/js/app.js</li>
+    <li class="secondary mb-2">images - /build/images/</li>
     <li class="secondary">index.kit - /build/index.html</li>
   </ul>
 
-  <p class="mt-m mb-s">
+  <p class="mt-4 mb-3">
     <strong>To view the <em>test folder pages</em></strong>
   </p>
 
-  <ul class="pl-l list-circle">
-    <li class="secondary mb-s">test.kit - /build/test/test.html</li>
-    <li class="secondary mb-s">about.kit - /build/test/about.html</li>
-    <li class="secondary mb-s">scss.kit - /build/test/scss.html</li>
-    <li class="secondary mb-s">class.kit - /build/test/class.html</li>
+  <ul class="pl-4" style="list-style: circle;">
+    <li class="secondary mb-2">test.kit - /build/test/test.html</li>
+    <li class="secondary mb-2">about.kit - /build/test/about.html</li>
+    <li class="secondary mb-2">scss.kit - /build/test/scss.html</li>
+    <li class="secondary mb-2">class.kit - /build/test/class.html</li>
   </ul>
 
-  <ul class="pl-l list-circle">
-    <li class="secondary mb-s">page.scss - /build/test/css/page.css</li>
-    <li class="secondary mb-s">test.scss - /build/test/css/test.css</li>
+  <ul class="pl-4" style="list-style: circle;">
+    <li class="secondary mb-2">page.scss - /build/test/css/page.css</li>
+    <li class="secondary mb-2">test.scss - /build/test/css/test.css</li>
+    <li class="secondary mb-2">scss.scss - /build/test/css/scss.css</li>
+    <li class="secondary mb-2">classes.scss - /build/test/css/classes.css</li>
      <li class="secondary">all test images to /build/test/test-images/</li>
   </ul>
 
   <hr>
 
-  <h3 class="center mb-m">The Test Folder</h3>
+  <h3 class="center mb-4">The Test Folder</h3>
   <div>
-    <p class="mb-s">
+    <p class="mb-3">
       The <em>test</em> folder can be removed when no longer required it will
       not effect the theme.
     </p>
 
-    <p class="mb-s">
+    <p class="mb-3">
       <strong>Test Page</strong> - Use the test page to set the basic elements.
     </p>
-    <p class="mb-s">
+    <p class="mb-3">
       <strong>Scss Page</strong> - Default mixins used with the <em>Phone1st</em> theme.
     </p>
-    <p class="mb-s">
+    <p class="mb-3">
       <strong>Class Page</strong> - <strong class="ls-2">Work in progress</strong> - a class utilities page built around the theme variables - <em class="ls">experimental</em> - see <a href="#experiment">Experimenting with Classes</a>.
     </p>
   </div>
@@ -153,22 +157,22 @@
 
   <h3 class="center mb-m">Basic SEO</h3>
 
-  <p class="mb-s">
+  <p class="mb-3">
     The following <em>variables</em> for Meta Data are available with some
     <em>Facebook</em> and <em>Twitter</em> meta. These are optional and you
     should add or subtract what you require.
   </p>
 
-  <p><strong>Meta variables:</strong></p>
+  <p class="mb-3"><strong>Meta variables:</strong></p>
 
-  <pre class="my-m"><code class="language-html">&lt;!-- $title Page Title --&gt;// - Basic page title for use with navigation etc. eg <em>Home, About, etc</em>
+  <pre class="my-4"><code class="language-html">&lt;!-- $title Page Title --&gt;// - Basic page title for use with navigation etc. eg <em>Home, About, etc</em>
 &lt;!-- $SEO-title A Longer Title--&gt;//- A more descriptive title - 60ish characters
 &lt;!-- $description Page Description --&gt;// - 120ish characters
 &lt;!-- $keyword Home, About --&gt;// - word or words
 &lt;!-- $url index.html --&gt;// - exact url (<em>canonical</em>)
-&lt;!-- $post-image eg tile-wide.png --&gt;// - image to use for Facebook and Twitter meta image</code></pre>
+&lt;!-- $post-image tile-wide.png --&gt;// - image to use for Facebook and Twitter meta image</code></pre>
   <div>
-    <p class="mb-s">
+    <p class="secondary mb-3">
       See <em>includes/_meta.kit</em>.
     </p>
 
@@ -178,26 +182,55 @@
     </p>
   </div>
   <hr>
-  <h3 id="experiment" class="center mb-m">Experimenting with Classes</h3>
+  <h3 id="experiment" class="center mb-3">Experimenting with Classes</h3>
 
    <p>
       Experimenting with the <em>class utitlity</em> method for styling. I think the more complicated elements with quite a number of styles are still easier using a conventional stylesheet. Utitlity classes seem to work well with template structures ensuring consistant styles potentially leading to faster development and execution times. <em>Will have to see how it goes and see what evolves</em>.
     </p>
 <hr>
-  <h3 class="center mb-m">Contact Info:</h3>
-<div class="flex content-between">
-  <p class="secondary">email: <a href="mailto:h@phone1st.org">h@phone1st.org</a></p>
-  <p class="secondary">Web: <a href="https://phone1st.org/">phone1st.org</a></p>
+  <h3 class="center mb-4">Contact Info:</h3>
+<div class="flex justify-between">
+  <p class="secondary mb-0">email: <a href="mailto:h@phone1st.org">h@phone1st.org</a></p>
+  <p class="secondary mb-0">Web: <a href="https://phone1st.org/">phone1st.org</a></p>
   </div>
 </div>
 <hr>
-<p class="third center mb-m"><a href="../index.html">Home</a> | <a href="test.html">Test Page</a> | <a href="scss.html">Scss Mixins</a> | <a href="class.html">Classes</a></p>
+<p class="third center mb-4"><a href="../index.html">Home</a> | <a href="test.html">Test Page</a> | <a href="scss.html">Scss Mixins</a> | <a href="class.html">Classes</a></p>
 </section>
 <footer class="center">
-	<a id="topBtn" class="btn" href="#top">Top</a>
-	<p class="third mt-s"> - <em>by</em> <a href="https://phone1st.org">phone1st.org</a> -</p>
-		<p class="third mt-s mb">&copy;2025 Phone1st Starter Theme for html <a href="https://github.com/chocolate-holding-company/phone1st-theme" title="Phone1st Starter Theme for html available on Github">available on Github</a></p>
+	<p class="third mt-3 mb-0"> - <em>by</em> <a href="https://phone1st.org">phone1st.org</a> -</p>
+		<p class="third mt-3 mb-4">&copy;2026 Phone1st Starter Theme for html <a href="https://github.com/chocolate-holding-company/phone1st-theme" title="Phone1st Starter Theme for html available on Github">available on Github</a></p>
 	</footer>
+	<button
+   id="back-to-top"
+   onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+  >
+   <svg width="50" height="50">
+    <circle
+     cx="25"
+     cy="25"
+     r="22"
+     stroke="#e5e7eb"
+     stroke-width="3"
+     fill="transparent"
+    />
+    <circle
+     id="progress-ring"
+     cx="25"
+     cy="25"
+     r="22"
+     stroke="#2563eb"
+     stroke-width="3"
+     fill="transparent"
+     stroke-dasharray="138.2"
+     stroke-dashoffset="138.2"
+    />
+   </svg>
+   <span style="position: absolute; color: #2563eb; font-weight: bold"
+    >↑</span
+   >
+  </button>
+
 </div><!-- wrapper   -->
 
  <script src="js/highlight.js"></script>

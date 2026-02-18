@@ -4,64 +4,83 @@
 
 @use "../root/" as *;
 
-input,
-label,
-select,
-textarea {
-  display: block;
+label {
+ display: block;
+ font-weight: 600;
+ color: var(--font-color);
 }
 
-#{$all-text-inputs} {
-  appearance: none;
-  border: $border;
-  transition: border-color $duration $timing;
-  width: 100%;
-  font-size: $secondary;
-  background-color: transparent;
-  border-radius: $radius;
-  box-shadow: inset 0 1px 1px rgba(#000, 0.26);
+input,
+select,
+textarea {
+ display: block;
+ outline: none;
+ color: var(--dark-gray);
+}
 
-  &:focus {
-    outline: 1.5px solid $link-color;
-    box-shadow: inset 0 1px 1px rgba(#000, 0.4);
-  }
+[type="color"],
+[type="date"],
+[type="datetime"],
+[type="datetime-local"],
+[type="email"],
+[type="month"],
+[type="number"],
+[type="password"],
+[type="search"],
+[type="tel"],
+[type="text"],
+[type="time"],
+[type="url"],
+[type="week"],
+input:not([type]),
+textarea {
+ appearance: none;
+ width: 100%;
+ font-family: $font;
+ background-color: var(--input-bg);
+ transition: all $duration $timing;
+ font-size: $secondary;
+ border-radius: $radius;
+ border: var(--border);
+ box-shadow: var(--form-box-shadow);
 
-  &:disabled {
-    cursor: not-allowed;
-    box-shadow: none;
+ &:focus {
+  outline: 1px solid var(--hover-color);
+  box-shadow: var(--form-focus-box-shadow);
+ }
 
-    @media (hover: hover) {
-      &:hover {
-        border-color: $error-color;
-      }
-    }
+ &:disabled {
+  cursor: not-allowed;
+  box-shadow: none;
+
+  @media (hover: hover) {
+   &:hover {
+    border-color: var(--error);
+   }
   }
-  &::placeholder {
-    color: $font-color;
-    opacity: 0.75;
-  }
+ }
+ &::placeholder {
+  color: var(--medium-gray);
+  font-size: $third;
+  opacity: var(--opacity);
+ }
 }
 
 [type="search"] {
-  appearance: textfield;
+ appearance: textfield;
+}
+
+[type="file"] {
+ appearance: textfield;
+ color: var(--font-color);
 }
 
 textarea {
-  resize: vertical;
+ resize: vertical;
 }
 
 [type="checkbox"],
 [type="radio"] {
-  display: inline;
-  margin: 0;
-}
-
-[type="checkbox"],
-[type="radio"],
-[type="file"],
-select {
-  &:focus {
-    outline: 2.5px solid $link-color;
-    outline-offset: 2.5px;
-  }
+ display: inline;
+ margin: 0;
 }

@@ -1,0 +1,95 @@
+@use "sass:math";
+@use "../../css/root/" as *;
+
+//dropdowns
+.dropdown-menu {
+ display: none;
+}
+
+/* Class to show the menu */
+.open-menu {
+ display: block;
+}
+
+.dropdown-container {
+ width: 100%;
+ display: flex;
+ flex-direction: column;
+ gap: 20px;
+}
+
+.dropdown {
+ border: var(--border);
+ border-radius: 6px;
+ overflow: hidden;
+ box-shadow:
+  rgba(39, 44, 49, 0.06) 8px 8px 10px,
+  rgba(39, 44, 49, 0.03) 1px 3px 8px;
+ transition: all 0.5s ease;
+}
+
+.dropdown-header {
+ color: $blue-800;
+ padding: 14px 16px;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+}
+
+.dropdown-header:hover {
+ cursor: pointer;
+}
+
+.dropdown-header.open {
+ background-color: var(--first);
+ color: $white;
+}
+
+.dropdown-menu {
+ transition: max-height 0.3s ease;
+ padding: 0.3s ease;
+ padding: 15px 20px;
+}
+
+.dropdown-menu {
+ pre {
+  margin-bottom: $spacer;
+  line-height: 1.7;
+ }
+}
+
+.arrow {
+ width: 25px;
+ height: 25px;
+ fill: $blue-800;
+ transition:
+  transform 0.3s ease-in-out,
+  fill 0.3s ease-in-out,
+  filter 0.2s ease-in-out;
+ transform-origin: center;
+}
+
+.dropdown-header.open .arrow {
+ fill: $white;
+}
+
+.dropdown-header.open .arrow {
+ fill: $white;
+ transform: rotate(180deg);
+}
+
+@include media(700) {
+ .dropdown-header:hover {
+  transition: all 0.7s ease;
+  transform: translate3D(0, -1px, 0) scale(1.02);
+ }
+}
+
+@include media(900) {
+ .dropdown-menu.open-menu {
+  padding: 18px $spacer;
+ }
+ .dropdown-menu p {
+  font-size: $secondary;
+ }
+}

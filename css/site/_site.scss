@@ -5,20 +5,23 @@
 @use "../root/" as *;
 
 html {
-  scroll-behavior: smooth;
+ box-sizing: border-box;
+ scroll-behavior: smooth;
 }
 
 body {
- color: $font-color;
- font-family: $font;
  font-feature-settings: "kern", "liga", "pnum";
+ text-rendering: optimizeLegibility;
+ background-color: var(--viewport-bg);
+ color: var(--font-color);
+ font-family: $font;
  font-size: $font-size;
  line-height: 1.6;
- text-rendering: optimizeLegibility;
 }
 
 a {
- color: $link-color;
+ color: var(--link-color);
+ font-weight: 600;
  text-decoration: none;
  text-decoration-skip-ink: auto;
  transition: color $duration $timing;
@@ -26,7 +29,7 @@ a {
  //pointer: fine - accurate pointer device such as mouse, touchpads, or stylus
  @media (hover: hover) and (pointer: fine) {
   &:hover {
-   color: $hover-color;
+   color: var(--hover-color);
   }
  }
 }
@@ -41,5 +44,7 @@ a {
  .wrapper {
   max-width: 900px;
   @include center;
+  color: var(--link-color);
+  transition: color $duration $timing;
  }
 }

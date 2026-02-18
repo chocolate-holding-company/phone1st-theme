@@ -4,73 +4,16 @@
 @use "sass:math";
 @use "../../css/root/" as *;
 
-// Back to Top
-#topBtn {
- font-family: $heading-font;
- text-align: center;
- @include border-right-radius(0);
- position: fixed;
- bottom: 50px;
- right: 0;
- background: $black;
- display: none;
- padding: 0.7rem;
- font-size: $third;
- letter-spacing: 1px;
- color: $white;
- opacity: 0.7;
-
- @media (hover: hover) {
-  &:active,
-  &:focus,
-  &:hover {
-   opacity: 1;
-  }
- }
-}
-
 .intro-para {
  text-align: center;
  margin-bottom: $spacer;
-}
-
-hr {
- margin: $spacer math.div($spacer, 2);
-}
-
-.links-title {
- font-size: 1.6rem;
- text-align: center;
-}
-
-.links {
- margin: math.div($spacer, 2) 0 $spacer 0;
- text-align: center;
-
- a {
-  display: block;
-  font-size: $secondary;
- }
+ color: var(--font-color);
 }
 
 .test-subheader {
- font-size: 1.6rem;
  text-align: center;
  margin-bottom: $spacer;
-}
-
-@include media(700) {
- .links {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-evenly;
-  align-items: flex-start;
- }
-
- .test-subheader {
-  font-size: 1.7rem;
- }
+ letter-spacing: 2px;
 }
 
 .theme-variables div {
@@ -82,18 +25,9 @@ hr {
 }
 
 .first-color {
- background: $first-color;
-
+ background: var(--first);
  p {
-  color: #fff;
- }
-}
-
-.second-color {
- background: $second-color;
-
- p {
-  color: #fff;
+  color: $white;
  }
 }
 
@@ -101,68 +35,77 @@ hr {
  background: $black;
 
  p {
-  color: #fff;
+  color: $white;
  }
 }
 
 .white-color {
  background: $white;
+ p {
+  color: $black;
+ }
 }
 
 .dark-gray {
- background: $dark-gray;
+ background: var(--dark-gray);
 
  p {
-  color: #fff;
+  color: $white;
  }
 }
 
 .medium-gray {
- background: $medium-gray;
+ background: var(--medium-gray);
  p {
-  color: #fff;
+  color: $white;
  }
 }
 
 .light-gray {
- background: $light-gray;
+ background: var(--light-gray);
  p {
   color: $black;
  }
 }
 
 .font-color {
- background: $font-color;
+ background: var(--font-color);
 
  p {
-  color: #fff;
+  color: $black;
  }
 }
 
 .link-color {
- background: $link-color;
+ background: var(--link-color);
  p {
-  color: #fff;
+  color: $white;
  }
 }
 
 .hover-color {
- background: $hover-color;
+ background: var(--hover-color);
  p {
-  color: #fff;
+  color: $white;
  }
 }
 
 .background {
- background: $background;
+ background: var(--bg);
+ p {
+  color: $white;
+ }
 }
 
 .light-background {
- background: $light-background;
+ background: var(--light-bg);
+ p {
+  color: $black;
+ }
 }
 
 .border {
- border: $border;
+ border: var(--border);
  border-radius: $radius;
  margin-bottom: 2rem;
 
@@ -172,16 +115,23 @@ hr {
 }
 
 .error-color {
- background: $error-color;
+ background: var(--error);
  p {
-  color: #fff;
+  color: $white;
  }
 }
 
 .alert-color {
- background: $alert-color;
+ background: var(--alert);
  p {
-  color: #fff;
+  color: $white;
+ }
+}
+
+.success-color {
+ background: var(--success);
+ p {
+  color: $white;
  }
 }
 
@@ -221,111 +171,43 @@ hr {
  font-weight: 900;
 }
 
-.success-color {
- background: $success-color;
- p {
-  color: #fff;
- }
-}
-
 .margin-spacer {
- border-left: $border;
+ border-left: var(--border);
  p {
   font-size: $secondary;
  }
- .normal-margin {
-  border: $border;
-  margin-left: $spacer;
-  margin-bottom: $medium-spacer;
-  padding: $spacer;
+ .small-margin {
+  border: var(--border);
+  margin-left: $s-2;
+  margin-bottom: $s-2;
+  padding: $s-2;
  }
  .medium-margin {
-  border: $border;
-  margin-left: $medium-spacer;
-  margin-bottom: $medium-spacer;
-  padding: $medium-spacer;
+  border: var(--border);
+  margin-left: $s-4;
+  margin-bottom: $s-4;
+  padding: $s-4;
  }
- .small-margin {
-  border: $border;
-  margin-left: $small-spacer;
-  padding: $small-spacer;
-  margin-bottom: $medium-spacer;
+ .normal-margin {
+  border: var(--border);
+  margin-left: $spacer;
+  margin-bottom: $spacer;
+  padding: $spacer;
  }
  .large-margin {
-  border: $border;
-  margin-left: $large-spacer;
-  padding: $large-spacer;
-  margin-bottom: $medium-spacer;
+  border: var(--border);
+  margin-left: $s-10;
+  margin-bottom: $s-10;
+  padding: $s-10;
  }
  .big-margin {
-  border: $border;
-  margin-left: $big-spacer;
-  padding: $big-spacer;
+  border: var(--border);
+  margin-left: $s-12;
+  margin-bottom: $s-12;
+  padding: $s-12;
  }
 }
 
-//switch to Dark theme button
-.dark-button {
- text-align: center;
- p {
-  margin-bottom: 10px;
- }
-
- label {
-  margin-bottom: 0;
- }
-}
-
-.switch {
- position: relative;
- display: inline-block;
- @include size(46px, 24px);
- background-color: rgba(0, 0, 0, 0.25);
- border-radius: 22px;
- transition: all 0.3s;
-}
-.switch::after {
- content: "";
- position: absolute;
- top: 1px;
- left: 1px;
- @include size(22px, 22px);
- border-radius: 22px;
- background-color: $white;
- transition: all 0.3s;
-}
-input[type="checkbox"]:checked + .switch::after {
- transform: translateX(22px);
-}
-input[type="checkbox"]:checked + .switch {
- background-color: $link-color;
-}
-.offscreen {
- position: absolute;
- left: -9999px;
-}
-
-//Dark Theme
-.inverted {
- .white-color {
-  p {
-   color: $black;
-  }
- }
- .background {
-  p {
-   color: $black;
-  }
- }
-
- .light-background {
-  p {
-   color: $black;
-  }
- }
-
- #topBtn {
-  background: $white;
-  color: $black;
- }
+.shadow {
+ filter: var(--filter-shadow);
 }

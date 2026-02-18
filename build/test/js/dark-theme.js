@@ -1,7 +1,10 @@
 //change theme to dark mode
-const changeTheme = document.getElementById('toggle')
-const Body = document.querySelector('body')
-
-changeTheme.addEventListener('click', () => {
-  Body.classList.toggle('inverted')
-})
+function toggleTheme() {
+ const isDark = document.body.getAttribute("data-theme") === "dark";
+ document.body.setAttribute("data-theme", isDark ? "light" : "dark");
+ document.getElementById("theme-toggle").innerText = isDark
+  ? "🌙 Dark Mode"
+  : "☀️ Light Mode";
+ localStorage.setItem("theme", isDark ? "light" : "dark");
+}
+if (localStorage.getItem("theme") === "dark") toggleTheme();

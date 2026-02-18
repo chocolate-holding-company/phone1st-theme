@@ -10,6 +10,7 @@
 //  =============
 @use "base/fonts";
 @use "base/typography";
+@use "base/lists";
 @use "base/media";
 @use "base/form";
 @use "base/button";
@@ -21,17 +22,5 @@
 //start to build the stylesheet
 @use "site/site";
 
-@use "site/menu";
-@use "site/navigation";
-@use "site/social";
-
-//Dark Theme
-@use "site/dark-theme";
-
 //classes
 @use "class/class";
-
-// =============
-// Print styles
-// =============
-@use "base/print";

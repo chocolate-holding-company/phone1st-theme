@@ -32,9 +32,11 @@
   <meta name="twitter:image:src" content="https://phone1st.org/test/test-images/phone1st-class.webp" />
   <link rel="stylesheet" href="../css/style.css" />
   <link rel="stylesheet" href="css/page.css" />
+  <link rel="stylesheet" href="css/classes.css" />
  </head>
 
  <body>
+  <div id="top-progress-container"><div id="top-progress-bar"></div></div>
   <div id="top" class="wrapper">
    <header class="mb-m">
     <h1 class="center">
@@ -82,166 +84,44 @@
  </div>
 <div id="dropdown-menu-10" class="dropdown-menu">
  <pre><code class="language-scss">//variables color
-dark-gray - color: $dark-gray;
-medium-gray - color: $medium-gray;
-light-gray - color: $light-gray;
-font-color - color: $font-color;
-link-color - color: $link-color;
-hover-color - color: $hover-color;
+dark-gray - color: var(--dark-gray);
+medium-gray color: var(--medium-gray);
+light-gray - color: var(--light-gray);
+first - color: var(--first);
+black - color: var(--black);
+white - color: var(--white);
 
-black - color: $black;
-white - color: $white;
-first - color: $first-color;
-second - color: $second-color;
+font-color color: var(--font-color);
+link-color - color: var(--link-color);
+hover-color - color: var(--hover-color);
 
-error-color - color: $error-color;
-alert-color - color: $alert-color;
-success-color - color: $success-color;
+page-bg - color: var(--viewport-bg);
+bg - color: var(--bg);
+light-bg - color: var(--light-bg);
 
-//black
-black95 - color: $black-95;
-black90 - color: $black-90;
-black85 - color: $black-85;
-black80 - color: $black-80;
-black75 - color: $black-75;
-black70 - color: $black-70;
-black65 - color: $black-65;
-black60 - color: $black-60;
-black55 - color: $black-55;
-black50 - color: $black-50;
-black45 - color: $black-45;
-black40 - color: $black-40;
-black35 - color: $black-35;
-black30 - color: $black-30;
-black25 - color: $black-25;
-black20 - color: $black-20;
-black15 - color: $black-15;
-black10 - color: $black-10;
-black5 - color: $black-5;
+error - color: var(--error);
+alert - color: var(--alert);
+success - color: var(--success);
 
-//first color
-first95 - color: $first-95;
-first90 - color: $first-90;
-first85 - color: $first-85;
-first80 - color: $first-80;
-first75 - color: $first-75;
-first70 - color: $first-70;
-first65 - color: $first-65;
-first60 - color: $first-60;
-first55 - color: $first-55;
-first50 - color: $first-50;
-first45 - color: $first-45;
-first40 - color: $first-40;
-first35 - color: $first-35;
-first30 - color: $first-30;
-first25 - color: $first-25;
-first20 - color: $first-20;
-first15 - color: $first-15;
-first10 - color: $first-10;
-first5 - color: $first-5;
+//variables background-color
+bg-dark-gray - background-color: var(--dark-gray);
+bg-medium-gray background-color: var(--medium-gray);
+bg-light-gray - background-color: var(--light-gray);
+bg-first - background-color: var(--first);
+bg-black - background-color: var(--black);
+bg-white - background-color: var(--white);
 
-//second color
-second95 - color: $second-95;
-second90 - color: $second-90;
-second85 - color: $second-85;
-second80 - color: $second-80;
-second75 - color: $second-75;
-second70 - color: $second-70;
-second65 - color: $second-65;
-second60 - color: $second-60;
-second55 - color: $second-55;
-second50 - color: $second-50;
-second45 - color: $second-45;
-second40 - color: $second-40;
-second35 - color: $second-35;
-second30 - color: $second-30;
-second25 - color: $second-25;
-second20 - color: $second-20;
-second15 - color: $second-15;
-second10 - color: $second-10;
-second5 - color: $second-5;
+bg-font-color background-color: var(--font-color);
+bg-link-color - background-color: var(--link-color);
+bg-hover-color - background-color: var(--hover-color);
 
-//background color
-//variables background color
-bg-dark-gray - background-color: $dark-gray;
-bg-medium-gray - background-color: $medium-gray;
-bg-light-gray - background-color: $light-gray;
+bg-page-bg - background-color: var(--viewport-bg);
+bg-bg - background-color: var(--bg);
+bg-light-bg - background-color: var(--light-bg);
 
-bg-font-color - background-color: $font-color;
-bg-link-color - background-color: $link-color;
-bg-hover-color - background-color: $hover-color;
-
-bg-error-color - background-color: $error-color;
-bg-alert-color - background-color: $alert-color;
-bg-success-color - background-color: $success-color;
-
-bg-black - background-color: $black;
-bg-white - background-color: $white;
-bg-first - background-color: $first-color;
-bg-second - background-color: $second-color;
-
-//background color - black
-bg-black95 - background-color: $black-95;
-bg-black90 - background-color: $black-90;
-bg-black85 - background-color: $black-85;
-bg-black80 - background-color: $black-80;
-bg-black75 - background-color: $black-75;
-bg-black70 - background-color: $black-70;
-bg-black65 - background-color: $black-65;
-bg-black60 - background-color: $black-60;
-bg-black55 - background-color: $black-55;
-bg-black50 - background-color: $black-50;
-bg-black45 - background-color: $black-45;
-bg-black40 - background-color: $black-40;
-bg-black35 - background-color: $black-35;
-bg-black30 - background-color: $black-30;
-bg-black25 - background-color: $black-25;
-bg-black20 - background-color: $black-20;
-bg-black15 - background-color: $black-15;
-bg-black10 - background-color: $black-10;
-bg-black5 - background-color: $black-5;
-
-//background color - first color
-bg-first95 - background-color: $first-95;
-bg-first90 - background-color: $first-90;
-bg-first85 - background-color: $first-85;
-bg-first80 - background-color: $first-80;
-bg-first75 - background-color: $first-75;
-bg-first70 - background-color: $first-70;
-bg-first65 - background-color: $first-65;
-bg-first60 - background-color: $first-60;
-bg-first55 - background-color: $first-55;
-bg-first50 - background-color: $first-50;
-bg-first45 - background-color: $first-45;
-bg-first40 - background-color: $first-40;
-bg-first35 - background-color: $first-35;
-bg-first30 - background-color: $first-30;
-bg-first25 - background-color: $first-25;
-bg-first20 - background-color: $first-20;
-bg-first15 - background-color: $first-15;
-bg-first10 - background-color: $first-10;
-bg-first5 - background-color: $first-5;
-
-//background color - second color
-bg-second95 - background-color: $second-95;
-bg-second90 - background-color: $second-90;
-bg-second85 - background-color: $second-85;
-bg-second80 - background-color: $second-80;
-bg-second75 - background-color: $second-75;
-bg-second70 - background-color: $second-70;
-bg-second65 - background-color: $second-65;
-bg-second60 - background-color: $second-60;
-bg-second55 - background-color: $second-55;
-bg-second50 - background-color: $second-50;
-bg-second45 - background-color: $second-45;
-bg-second40 - background-color: $second-40;
-bg-second35 - background-color: $second-35;
-bg-second30 - background-color: $second-30;
-bg-second25 - background-color: $second-25;
-bg-second20 - background-color: $second-20;
-bg-second15 - background-color: $second-15;
-bg-second10 - background-color: $second-10;
-bg-second5 - background-color: $second-5;
+bg-error - background-color: var(--error);
+bg-alert - background-color: var(--alert);
+bg-success - background-color: var(--success);
 
 //media breakpoints
 //none for color as yet</code></pre>
@@ -282,7 +162,7 @@ h4 - font-size: clamp(1.25rem, 0.54rem + 1.89vw, 1.75rem);
 h5 - font-size: clamp(1.13rem, 0.59rem + 1.42vw, 1.5rem);
 h6 - font-size: clamp(1rem, 0.65rem + 0.94vw, 1.25rem);
 
-//big heading sizes - classes only!
+//big heading sizes - classes and mixins
 //see css/class/_typography.scss
 bighead-1 - font-size: clamp(2.5rem, 2.2949rem + 1.0256vw, 3rem);
 bighead-2 - font-size: clamp(3rem, 2.7949rem + 1.0256vw, 3.5rem);
@@ -377,60 +257,120 @@ centered - margin-left: auto; - margin-right: auto;
 
 //margin top and bottom
 my-0 - margin-top: 0; - margin-bottom: 0;
-my - margin-top: $spacer; - margin-bottom: $spacer;//2rem
-my-m - margin-top: $medium-spacer; - margin-bottom: $medium-spacer;//1rem
-my-s - margin-top: $small-spacer; - margin-bottom: $small-spacer;//0.5rem
-my-l - margin-top: $large-spacer; - margin-bottom: $large-spacer;//3rem
-my-b - margin-top: $big-spacer; - margin-bottom: $big-spacer;//4rem
+my-1 - margin-top: 0.25rem; - margin-bottom: 0.25rem;
+my-2 - margin-top: 0.5rem; - margin-bottom: 0.5rem;
+my-3 - margin-top: 0.75rem; - margin-bottom: 0.75rem;
+my-4 - margin-top: 1rem; - margin-bottom: 1rem;
+my-5 - margin-top: 1.25rem; - margin-bottom: 1.25rem;
+my-6 - margin-top: 1.5em; - margin-bottom: 1.5em;
+my-7 - margin-top: 1.75rem; - margin-bottom: 1.75rem;
+my-8 - margin-top: 2rem; - margin-bottom: 2rem;
+my-9 - margin-top: 2.5rem; - margin-bottom: 2.5rem;
+my-10 - margin-top: 3rem; - margin-bottom: 3rem;
+my-11 - margin-top: 3.5rem; - margin-bottom: 3.5rem;
+my-12 - margin-top: 4rem; - margin-bottom: 4rem;
+my-13 - margin-top: 4.5rem; - margin-bottom: 4.5rem;
+my-14 - margin-top: 5rem; - margin-bottom: 5rem;
+my-15 - margin-top: 5.5rem; - margin-bottom: 5.5rem;
 
 //margin left and right
 mx-0 - margin-left: 0; - margin-right: 0;
-mx - margin-left: $spacer; - margin-right: $spacer;//2rem
-mx-m - margin-left: $medium-spacer; - margin-right: $medium-spacer;//1rem
-mx-s - margin-left: $small-spacer; - margin-right: $small-spacer;//0.5rem
-mx-l - margin-left: $large-spacer; - margin-right: $large-spacer;//3rem
-mx-b - margin-left: $big-spacer; - margin-right: $big-spacer;//4rem
+mx-1 - margin-left: 0.25rem; - margin-right: 0.25rem;
+mx-2 - margin-left: 0.5rem; - margin-right: 0.5rem;
+mx-3 - margin-left: 0.75rem; - margin-right: 0.75rem;
+mx-4 - margin-left: 1rem; - margin-right: 1rem;
+mx-5 - margin-left: 1.25rem; - margin-right: 1.25rem;
+mx-6 - margin-left: 1.5em; - margin-right: 1.5em;
+mx-7 - margin-left: 1.75rem; - margin-right: 1.75rem;
+mx-8 - margin-left: 2rem; - margin-right: 2rem;
+mx-9 - margin-left: 2.5rem; - margin-right: 2.5rem;
+mx-10 - margin-left: 3rem; - margin-right: 3rem;
+mx-11 - margin-left: 3.5rem; - margin-right: 3.5rem;
+mx-12 - margin-left: 4rem; - margin-right: 4rem;
+mx-13 - margin-left: 4.5rem; - margin-right: 4.5rem;
+mx-14 - margin-left: 5rem; - margin-right: 5rem;
+mx-15 - margin-left: 5.5rem; - margin-right: 5.5rem;
 
 //margin top
 mt-0 - margin-top: 0;
-mt - margin-top: $spacer;//2rem
-mt-m - margin-top: $medium-spacer;//1rem
-mt-s - margin-top: $small-spacer;//0.5rem
-mt-l - margin-top: $large-spacer;//3rem
-mt-b - margin-top: $big-spacer;//4rem
+mt-1 - margin-top: 0.25rem;
+mt-2 - margin-top: 0.5rem;
+mt-3 - margin-top: 0.75rem;
+mt-4 - margin-top: 1rem;
+mt-5 - margin-top: 1.25rem;
+mt-6 - margin-top: 1.5em;
+mt-7 - margin-top: 1.75rem;
+mt-8 - margin-top: 2rem;
+mt-9 - margin-top: 2.5rem;
+mt-10 - margin-top: 3rem;
+mt-11 - margin-top: 3.5rem;
+mt-12 - margin-top: 4rem;
+mt-13 - margin-top: 4.5rem;
+mt-14 - margin-top: 5rem;
+mt-15 - margin-top: 5.5rem;
 
 //margin bottom
 mb-0 - margin-bottom: 0;
-mb - margin-bottom: $spacer;//2rem
-mb-m - margin-bottom: $medium-spacer;//1rem
-mb-s - margin-bottom: $small-spacer;//0.5rem
-mb-l - margin-bottom: $large-spacer;//3rem
-mb-b - margin-bottom: $big-spacer;//4rem
+mb-1 - margin-bottom: 0.25rem;
+mb-2 - margin-bottom: 0.5rem;
+mb-3 - margin-bottom: 0.75rem;
+mb-4 - margin-bottom: 1rem;
+mb-5 - margin-bottom: 1.25rem;
+mb-6 - margin-bottom: 1.5em;
+mb-7 - margin-bottom: 1.75rem;
+mb-8 - margin-bottom: 2rem;
+mb-9 - margin-bottom: 2.5rem;
+mb-10 - margin-bottom: 3rem;
+mb-11 - margin-bottom: 3.5rem;
+mb-12 - margin-bottom: 4rem;
+mb-13 - margin-bottom: 4.5rem;
+mb-14 - margin-bottom: 5rem;
+mb-15 - margin-bottom: 5.5rem;
 
 //margin left
 ml-0 - margin-left: 0;
-ml - margin-left: $spacer;//2rem
-ml-m - margin-left: $medium-spacer;//1rem
-ml-s - margin-left: $small-spacer;//0.5rem
-ml-l - margin-left: $large-spacer;//3rem
-ml-b - margin-left: $big-spacer;//4rem
+ml-1 - margin-left: 0.25rem;
+ml-2 - margin-left: 0.5rem;
+ml-3 - margin-left: 0.75rem;
+ml-4 - margin-left: 1rem;
+ml-5 - margin-left: 1.25rem;
+ml-6 - margin-left: 1.5em;
+ml-7 - margin-left: 1.75rem;
+ml-8 - margin-left: 2rem;
+ml-9 - margin-left: 2.5rem;
+ml-10 - margin-left: 3rem;
+ml-11 - margin-left: 3.5rem;
+ml-12 - margin-left: 4rem;
+ml-13 - margin-left: 4.5rem;
+ml-14 - margin-left: 5rem;
+ml-15 - margin-left: 5.5rem;
 
 //margin right
 mr-0 - margin-right: 0;
-mr - margin-right: $spacer;//2rem
-mr-m - margin-right: $medium-spacer;//1rem
-mr-s - margin-right: $small-spacer;//0.5rem
-mr-l - margin-right: $large-spacer;//3rem
-mr-b - margin-right: $big-spacer;//4rem
+mr-1 - margin-right: 0.25rem;
+mr-2 - margin-right: 0.5rem;
+mr-3 - margin-right: 0.75rem;
+mr-4 - margin-right: 1rem;
+mr-5 - margin-right: 1.25rem;
+mr-6 - margin-right: 1.5em;
+mr-7 - margin-right: 1.75rem;
+mr-8 - margin-right: 2rem;
+mr-9 - margin-right: 2.5rem;
+mr-10 - margin-right: 3rem;
+mr-11 - margin-right: 3.5rem;
+mr-12 - margin-right: 4rem;
+mr-13 - margin-right: 4.5rem;
+mr-14 - margin-right: 5rem;
+mr-15 - margin-right: 5.5rem;
 
 //media breakpoints
 //@media min-width 700px, 900px, 1100px
 //use _7, _9, _11 at the end of the class
 
 //examples
-my_7 - margin-top: $spacer; - margin-bottom: $spacer;//@700px
-mx_9 - margin-left: $spacer; - margin-right: $spacer;//@900px
-mt_11 - margin-top: $spacer;//@1100px</code></pre>
+my-7_7 - margin-top: 1.75rem; - margin-bottom: 1.75rem;//@700px
+mx-11_9 - margin-left: 3.5rem; - margin-right: 3.5rem;//@900px
+mt-2_11 - margin-top: 0.5rem;//@1100px</code></pre>
 </div>
 
 </div>
@@ -445,60 +385,116 @@ mt_11 - margin-top: $spacer;//@1100px</code></pre>
 <div id="dropdown-menu-13" class="dropdown-menu">
  <pre><code class="language-scss">//padding top and bottom
 py-0 - padding-top: 0; - padding-bottom: 0;
-py - padding-top: $spacer; - padding-bottom: $spacer;//2rem
-py-m - padding-top: $medium-spacer; - padding-bottom: $medium-spacer;//1rem
-py-s - padding-top: $small-spacer; - padding-bottom: $small-spacer;//0.5rem
-py-l - padding-top: $large-spacer; - padding-bottom: $large-spacer;//3rem
-py-b - padding-top: $big-spacer; - padding-bottom: $big-spacer;//4rem
+py-1 - padding-top: 0.25rem; - padding-bottom: 0.25rem;
+py-2 - padding-top: 0.5rem; - padding-bottom: 0.5rem;
+py-3 - padding-top: 0.75rem; - padding-bottom: 0.75rem;
+py-4 - padding-top: 1rem; - padding-bottom: 1rem;
+py-5 - padding-top: 1.25rem; - padding-bottom: 1.25rem;
+py-6 - padding-top: 1.5em; - padding-bottom: 1.5em;
+py-7 - padding-top: 1.75rem; - padding-bottom: 1.75rem;
+py-8 - padding-top: 2rem; - padding-bottom: 2rem;
+py-9 - padding-top: 2.5rem; - padding-bottom: 2.5rem;
+py-10 - padding-top: 3rem; - padding-bottom: 3rem;
+py-11 - padding-top: 3.5rem; - padding-bottom: 3.5rem;
+py-12 - padding-top: 4rem; - padding-bottom: 4rem;
+py-13 - padding-top: 4.5rem; - padding-bottom: 4.5rem;
+py-14 - padding-top: 5rem; - padding-bottom: 5rem;
+py-15 - padding-top: 5.5rem; - padding-bottom: 5.5rem;
 
 //padding left and right
 px-0 - padding-left: 0; - padding-right: 0;
-px - padding-left: $spacer; - padding-right: $spacer;//2rem
-px-m - padding-left: $medium-spacer; - padding-right: $medium-spacer;//1rem
-px-s - padding-left: $small-spacer; - padding-right: $small-spacer;//0.5rem
-px-l - padding-left: $large-spacer; - padding-right: $large-spacer;//3rem
-px-b - padding-left: $big-spacer; - padding-right: $big-spacer;//4rem
+px-1 - padding-left: 0.25rem; - padding-right: 0.25rem;
+px-2 - padding-left: 0.5rem; - padding-right: 0.5rem;
+px-3 - padding-left: 0.75rem; - padding-right: 0.75rem;
+px-4 - padding-left: 1rem; - padding-right: 1rem;
+px-5 - padding-left: 1.25rem; - padding-right: 1.25rem;
+px-6 - padding-left: 1.5em; - padding-right: 1.5em;
+px-7 - padding-left: 1.75rem; - padding-right: 1.75rem;
+px-8 - padding-left: 2rem; - padding-right: 2rem;
+px-9 - padding-left: 2.5rem; - padding-right: 2.5rem;
+px-10 - padding-left: 3rem; - padding-right: 3rem;
+px-11 - padding-left: 3.5rem; - padding-right: 3.5rem;
+px-12 - padding-left: 4rem; - padding-right: 4rem;
+px-13 - padding-left: 4.5rem; - padding-right: 4.5rem;
+px-14 - padding-left: 5rem; - padding-right: 5rem;
+px-15 - padding-left: 5.5rem; - padding-right: 5.5rem;
 
 //padding top
 pt-0 - padding-top: 0;
-pt - padding-top: $spacer;//2rem
-pt-m - padding-top: $medium-spacer;//1rem
-pt-s - padding-top: $small-spacer;//0.5rem
-pt-l - padding-top: $large-spacer;//3rem
-pt-b - padding-top: $big-spacer;//4rem
+pt-1 - padding-top: 0.25rem;
+pt-3 - padding-top: 0.75rem;
+pt-4 - padding-top: 1rem;
+pt-5 - padding-top: 1.25rem;
+pt-6 - padding-top: 1.5em;
+pt-7 - padding-top: 1.75rem;
+pt-8 - padding-top: 2rem;
+pt-9 - padding-top: 2.5rem;
+pt-10 - padding-top: 3rem;
+pt-11 - padding-top: 3.5rem;
+pt-12 - padding-top: 4rem;
+pt-13 - padding-top: 4.5rem;
+pt-14 - padding-top: 5rem;
+pt-15 - padding-top: 5.5rem;
 
 //padding bottom
 pb-0 - padding-bottom: 0;
-pb - padding-bottom: $spacer;//2rem
-pb-m - padding-bottom: $medium-spacer;//1rem
-pb-s - padding-bottom: $small-spacer;//0.5rem
-pb-l - padding-bottom: $large-spacer;//3rem
-pb-b - padding-bottom: $big-spacer;//4rem
+pb-1 - padding-bottom: 0.25rem;
+pb-3 - padding-bottom: 0.75rem;
+pb-4 - padding-bottom: 1rem;
+pb-5 - padding-bottom: 1.25rem;
+pb-6 - padding-bottom: 1.5em;
+pb-7 - padding-bottom: 1.75rem;
+pb-8 - padding-bottom: 2rem;
+pb-9 - padding-bottom: 2.5rem;
+pb-10 - padding-bottom: 3rem;
+pb-11 - padding-bottom: 3.5rem;
+pb-12 - padding-bottom: 4rem;
+pb-13 - padding-bottom: 4.5rem;
+pb-14 - padding-bottom: 5rem;
+pb-15 - padding-bottom: 5.5rem;
 
 //padding left
 pl-0 - padding-left: 0;
-pl - padding-left: $spacer;//2rem
-pl-m - padding-left: $medium-spacer;//1rem
-pl-s - padding-left: $small-spacer;//0.5rem
-pl-l - padding-left: $large-spacer;//3rem
-pl-b - padding-left: $big-spacer;//4rem
+pl-1 - padding-left: 0.25rem;
+pl-3 - padding-left: 0.75rem;
+pl-4 - padding-left: 1rem;
+pl-5 - padding-left: 1.25rem;
+pl-6 - padding-left: 1.5em;
+pl-7 - padding-left: 1.75rem;
+pl-8 - padding-left: 2rem;
+pl-9 - padding-left: 2.5rem;
+pl-10 - padding-left: 3rem;
+pl-11 - padding-left: 3.5rem;
+pl-12 - padding-left: 4rem;
+pl-13 - padding-left: 4.5rem;
+pl-14 - padding-left: 5rem;
+pl-15 - padding-left: 5.5rem;
 
 //padding right
 pr-0 - padding-right: 0;
-pr - padding-right: $spacer;//2rem
-pr-m - padding-right: $medium-spacer;//1rem
-pr-s - padding-right: $small-spacer;//0.5rem
-pr-l - padding-right: $large-spacer;//3rem
-pr-b - padding-right: $big-spacer;//4rem
+pr-1 - padding-right: 0.25rem;
+pr-3 - padding-right: 0.75rem;
+pr-4 - padding-right: 1rem;
+pr-5 - padding-right: 1.25rem;
+pr-6 - padding-right: 1.5em;
+pr-7 - padding-right: 1.75rem;
+pr-8 - padding-right: 2rem;
+pr-9 - padding-right: 2.5rem;
+pr-10 - padding-right: 3rem;
+pr-11 - padding-right: 3.5rem;
+pr-12 - padding-right: 4rem;
+pr-13 - padding-right: 4.5rem;
+pr-14 - padding-right: 5rem;
+pr-15 - padding-right: 5.5rem;
 
 //media breakpoints
 //@media min-width 700px, 900px, 1100px
 //use _7, _9, _11 at the end of the class
 
 //examples
-py_7 - padding-top: $spacer; - padding-bottom: $spacer;//@700px
-px_9 - padding-left: $spacer; - padding-right: $spacer;//@900px
-pt_11 - padding-top: $spacer;//@1100px</code></pre>
+py-5_7 - padding-top: 1.25rem; - padding-bottom: 1.25rem;//@700px
+px-8_9 - padding-left: 2rem; - padding-right: 2rem;//@900px
+pt-3_11 - padding-top: 0.75rem;//@1100px</code></pre>
 </div>
 
 </div>
@@ -516,23 +512,17 @@ width100 - width: 100%;
 width90 - width: 90%;
 width80 - width: 80%;
 width75 - width: 75%;
+width70 - width: 70%;
+width60 - width: 60%;
 width50 - width: 50%;
+width40 - width: 40%;
+width30 - width: 30%;
 width25 - width: 25%;
-
-//width variables
-width - width: $spacer;//2rem
-width-s - width: $small-spacer;//0.5rem
-width-m - width: $medium-spacer;//1rem
-width-l - width: $large-spacer;//3rem
-width-b - width: $big-spacer;//4rem
+width20 - width: 20%;
+width10 - width: 10%;
 
 //height
 height100 - height: 100%;
-height - height: $spacer;//2rem
-height-s - height: $small-spacer;//0.5rem
-height-m - height: $medium-spacer;//1rem
-height-l - height: $large-spacer;//3rem
-height-b - height: $big-spacer;//4rem
 
 //radius
 rad - border-radius: $radius; //6px - 0.375rem
@@ -548,11 +538,8 @@ rad-full - border-radius: 3.125rem;
 
 //examples
 width90_7 - width: 90%;//@700px
-width-s_9 - width: $small-spacer;//@900px
-height-m_11 - height: $medium-spacer;//@1100px
-lh-2_7 - line-height: 1.2;//@700px
-rad-m_9 - border-radius: 0.625rem;//@900px
-height-b_11 - height: $big-spacer;//@1100px</code></pre>
+height100_11 - height: 100%;//@1100px
+rad-m_9 - border-radius: 0.625rem;//@900px</code></pre>
 </div>
 
 </div>
@@ -645,8 +632,7 @@ border-hidden - border-style: hidden;
 border-light - border-color: $light-gray;
 border-medium - border-color: $medium-gray;
 border-dark - border-color: $dark-gray;
-border-first - border-color: $first-color;
-border-second - border-color: $second-color;
+border-first - border-color: $first;
 border-black - border-color: $black;
 border-white - border-color: $white;
 border-trans - border-color: transparent;
@@ -685,12 +671,12 @@ wrap - flex-wrap: wrap;
 wrap-reverse - flex-wrap: wrap-reverse;
 
 //justify content
-content-start - justify-content: flex-start;
-content-end - justify-content: flex-end;
-content-center - justify-content: center;
-content-between - justify-content: space-between;
-content-around - justify-content: space-around;
-content-evenly - justify-content: space-evenly;
+justify-start - justify-content: flex-start;
+justify-end - justify-content: flex-end;
+justify-center - justify-content: center;
+justify-between - justify-content: space-between;
+justify-around - justify-content: space-around;
+justify-evenly - justify-content: space-evenly;
 
 //align-items
 items-start - align-items: flex-start;
@@ -708,7 +694,7 @@ grow - flex-grow: 1;
 
 //examples
 flex-row_7 - flex-direction: row;//@700px
-content-start_9 - justify-content: flex-start;//@900px
+justify-start_9 - justify-content: flex-start;//@900px
 items-center_11 - align-items: center;//@1100px</code></pre>
 </div>
 
@@ -724,27 +710,36 @@ items-center_11 - align-items: center;//@1100px</code></pre>
 <div id="dropdown-menu-18" class="dropdown-menu">
  <pre><code class="language-scss">//gap
 gap-0 - gap: 0;
-gap - gap: $spacer; //2rem
-gap-m - gap: $medium-spacer; //1rem
-gap-s - gap: $small-spacer; //0.5rem
-gap-l - gap: $large-spacer; //3rem
-gap-b - gap: $big-spacer; //4rem
+gap-1 - gap: 0.25rem;
+gap-2 - gap: 0.5rem;
+gap-3 - gap: 0.75rem;
+gap-4 - gap: 1rem;
+gap-5 - gap: 1.25rem;
+gap-6 - gap: 1.5rem;
+gap-7 - gap: 1.75rem;
+gap-8 - gap: 2rem;
 
 //gap row
 row-gap-0 - row-gap: 0;
-row-gap - row-gap: $spacer; //2rem
-row-gap-m - row-gap: $medium-spacer; //1rem
-row-gap-s - row-gap: $small-spacer; //0.5rem
-row-gap-l - row-gap: $large-spacer; //3rem
-row-gap-b - row-gap: $big-spacer; //4rem
+row-gap-1 - row-gap: 0.25rem;
+row-gap-2 - row-gap: 0.5rem;
+row-gap-3 - row-gap: 0.75rem;
+row-gap-4 - row-gap: 1rem;
+row-gap-5 - row-gap: 1.25rem;
+row-gap-6 - row-gap: 1.5rem;
+row-gap-7 - row-gap: 1.75rem;
+row-gap-8 - row-gap: 2rem;
 
 //gap column
 col-gap-0 - column-gap: 0;
-col-gap - column-gap: $spacer; //2rem
-col-gap-m - column-gap: $medium-spacer; //1rem
-col-gap-s - column-gap: $small-spacer; //0.5rem
-col-gap-l - column-gap: $large-spacer; //3rem
-col-gap-b - column-gap: $big-spacer; //4rem
+col-gap-1 - col-gap: 0.25rem;
+col-gap-2 - col-gap: 0.5rem;
+col-gap-3 - col-gap: 0.75rem;
+col-gap-4 - col-gap: 1rem;
+col-gap-5 - col-gap: 1.25rem;
+col-gap-6 - col-gap: 1.5rem;
+col-gap-7 - col-gap: 1.75rem;
+col-gap-8 - col-gap: 2rem;
 
 //media breakpoints
 //@media min-width 700px, 900px, 1100px
@@ -763,10 +758,39 @@ col-gap-l_11 - column-gap: $large-spacer;//@1100px</code></pre>
 <p class="third center mb-m"><a href="../index.html">Home</a> | <a href="about.html">About</a> | <a href="test.html">Test Page</a> | <a href="scss.html">Scss Mixins</a></p>
 </section>
 <footer class="center">
-	<a id="topBtn" class="btn" href="#top">Top</a>
-	<p class="third mt-s"> - <em>by</em> <a href="https://phone1st.org">phone1st.org</a> -</p>
-		<p class="third mt-s mb">&copy;2025 Phone1st Starter Theme for html <a href="https://github.com/chocolate-holding-company/phone1st-theme" title="Phone1st Starter Theme for html available on Github">available on Github</a></p>
+	<p class="third mt-3 mb-0"> - <em>by</em> <a href="https://phone1st.org">phone1st.org</a> -</p>
+		<p class="third mt-3 mb-4">&copy;2026 Phone1st Starter Theme for html <a href="https://github.com/chocolate-holding-company/phone1st-theme" title="Phone1st Starter Theme for html available on Github">available on Github</a></p>
 	</footer>
+	<button
+   id="back-to-top"
+   onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+  >
+   <svg width="50" height="50">
+    <circle
+     cx="25"
+     cy="25"
+     r="22"
+     stroke="#e5e7eb"
+     stroke-width="3"
+     fill="transparent"
+    />
+    <circle
+     id="progress-ring"
+     cx="25"
+     cy="25"
+     r="22"
+     stroke="#2563eb"
+     stroke-width="3"
+     fill="transparent"
+     stroke-dasharray="138.2"
+     stroke-dashoffset="138.2"
+    />
+   </svg>
+   <span style="position: absolute; color: #2563eb; font-weight: bold"
+    >↑</span
+   >
+  </button>
+
 </div><!-- wrapper   -->
 
  <script src="js/highlight.js"></script>
