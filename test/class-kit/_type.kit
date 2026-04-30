@@ -1,50 +1,72 @@
 <div id="dropdown-menu-11" class="dropdown-menu">
  <pre><code class="language-scss">//font family
 font - font-family: $font;
-heading-font - font-family: $heading-font;
-code-font - font-family: $code-font;
+heading - font-family: $heading-font;
+code - font-family: $code-font;
 
-//font-size
-normal - $font-size//1.2rem
-lead - $lead
-secondary - $secondary
-third - $third
+// Font Sizes (using variables)
+text-xs - font-size: $third;
+text-sm - font-size: $secondary;
+text-base - font-size: $font-size;
+text-lg - font-size: $lead;
 
 //see css/base/_typography.scss
-p - font-size: clamp($font-size, 1.1385rem + 0.3077vw, 1.35rem);
+p - font-size: clamp(1.0625rem, 1.0057rem + 0.2424vw, 1.1875rem);
 
 //headings
 //set your css Clamp function settings at https://clamp.font-size.app
 //see css/base/_typography.scss
 //all clamp functions based on screen width 320px to 1100px
-h1 - font-size: clamp(2rem, 0.58rem + 3.77vw, 3rem);
-h2 - font-size: clamp(1.75rem, 0.69rem + 2.83vw, 2.5rem);
-h3 - font-size: clamp(1.5rem, 0.79rem + 1.89vw, 2rem);
-h4 - font-size: clamp(1.25rem, 0.54rem + 1.89vw, 1.75rem);
-h5 - font-size: clamp(1.13rem, 0.59rem + 1.42vw, 1.5rem);
-h6 - font-size: clamp(1rem, 0.65rem + 0.94vw, 1.25rem);
+h1 - font-size: clamp(1.75rem, 1.3409rem + 1.8182vw, 2.75rem);
+h2 - font-size: clamp(1.625rem, 1.2273rem + 1.697vw, 2.5rem);
+h3 - font-size: clamp(1.5rem, 1.2159rem + 1.2121vw, 2.125rem);
+h4 - font-size: clamp(1.25rem, 0.9659rem + 1.2121vw, 1.875rem);
+h5 - font-size: clamp(1.125rem, 0.8409rem + 1.2121vw, 1.75rem);
+h6 - font-size: clamp(1rem, 0.7159rem + 1.2121vw, 1.625rem);
 
-//big heading sizes - classes and mixins
-//see css/class/_typography.scss
-bighead-1 - font-size: clamp(2.5rem, 2.2949rem + 1.0256vw, 3rem);
-bighead-2 - font-size: clamp(3rem, 2.7949rem + 1.0256vw, 3.5rem);
-bighead-3 - font-size: clamp(3.5rem, 3.2949rem + 1.0256vw, 4rem);
-bighead-4 - font-size: clamp(4rem, 3.7949rem + 1.0256vw, 4.5rem);
+//big heading sizes - mixins
+bighead-1 - font-size: clamp(2.125rem, 1.767rem + 1.5909vw, 3rem);
+bighead-2 - font-size: clamp(2.5rem, 2.142rem + 1.5909vw, 3.375rem);
+bighead-3 - font-size: clamp(3.25rem, 2.9432rem + 1.3636vw, 4rem);
+bighead-4 - font-size: clamp(3.75rem, 3.4432rem + 1.3636vw, 4.5rem);
 
 //hyphens
-hyphens - hyphens: auto;
+hyphens-auto - hyphens: auto;
 hyphens-man - hyphens: manual;
 hyphens-none - hyphens: none;
 
+//font weight
+font-100 - font-weight: 100;
+font-200 - font-weight: 200;
+font-300 - font-weight: 300;
+font-400 - font-weight: 400;
+font-500 - font-weight: 500;
+font-600 - font-weight: 600;
+font-700 - font-weight: 700;
+font-800 - font-weight: 800;
+font-900 - font-weight: 900;
+
+
 //align
-center - text-align: center
-left - text-align: left
-right - text-align: right
+text-center - text-align: center
+text-left - text-align: left
+text-right - text-align: right
+text-justify - text-align: justify;
+
+//font-style
+normal: font-style: normal;
+italic - font-style: italic;
+
+//text-transform
+upper - text-transform: uppercase;
+lower - text-transform: lowercase;
+caps - text-transform: capitalize;
+normal-case - text-transform: none;
 
 //letter spacing
 ls-tight - letter-spacing: -0.025em;
 ls-0 - letter-spacing: normal;
-ls - letter-spacing: 0.0625rem;
+ls-1 - letter-spacing: 0.0625rem;
 ls-2 - letter-spacing: 0.125rem;
 ls-3 - letter-spacing: 0.1875rem;
 ls-4 - letter-spacing: 0.25rem;
@@ -56,7 +78,7 @@ ls-9 - letter-spacing: 0.5625rem;
 ls-10 - letter-spacing: 0.625rem;
 
 //line-height
-lh - line-height: 1;
+lh-0 - line-hieght: 1;
 lh-1 - line-height: 1.1;
 lh-2 - line-height: 1.2;
 lh-3 - line-height: 1.3;
@@ -69,37 +91,15 @@ lh-9 - line-height: 1.9;
 lh-20 - line-height: 2;
 lh-21 - line-height: 2.1;
 
-//font weight
-font100 - font-weight: 100;
-font200 - font-weight: 200;
-font300 - font-weight: 300;
-font400 - font-weight: 400;
-font500 - font-weight: 500;
-font600 - font-weight: 600;
-font700 - font-weight: 700;
-font800 - font-weight: 800;
-font900 - font-weight: 900;
-
-//font-style
-italic - font-style: italic;
-not-italic - font-style: normal;
-
-//text-transform
-upper - text-transform: uppercase;
-lower - text-transform: lowercase;
-caps - text-transform: capitalize;
-normal-case - text-transform: none;
-
 //media breakpoints
-//not included font-family or headings. Headings using clamp function at the moment
-//@media min-width 700px, 900px, 1100px
-//use _7, _9, _11 at the end of the class
+//@media min-width  768px, 1020px, 1200px, 1440px
+//use _m, _l, _xl, _w at the end of the class
 
 //examples
-lead_7 - font-size: $lead;//@700px
-center_9 - text-align: center;//@900px
-ls-tight_11 - letter-spacing: -0.025em;//@1100px
-lh-2_7 - line-height: 1.2;//@700px
-font300_9 - font-weight: 300;//@900px
-caps_11 text-transform: capitalize;//@1100px</code></pre>
+text-lg_m - font-size: $lead;//@768px
+text-center_l - text-align: center;//@1020px
+ls-tight_xl - letter-spacing: -0.025em;//@1200px
+lh-2_w - line-height: 1.2;//@71440px
+font-300_l - font-weight: 300;//@1020px
+caps_xl text-transform: capitalize;//@1200px</code></pre>
 </div>

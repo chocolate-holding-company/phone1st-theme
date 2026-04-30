@@ -1,7 +1,17 @@
 <div class="theme-variables">
- <p>The default colors - see <em>css/base/_variables.scss</em> to change</p>
-<div class="first-color">
-  <p>$first</p>
+ <p class="p-0 mb-4">
+  The default colors - see <em>css/base/_variables.scss</em> to change
+ </p>
+ <p class="p-0">
+  The <em>$variables</em> below are fixed colors. The rest are
+  <em>var(--variables)</em> and are able to work with the
+  <em>dark-theme</em> mode.
+ </p>
+ <div class="first-color">
+  <p>$first-color</p>
+ </div>
+ <div class="second-color">
+  <p>$second-color</p>
  </div>
  <div class="black-color">
   <p>$black</p>
@@ -19,34 +29,34 @@
   <p>$light-gray</p>
  </div>
  <div class="font-color">
-  <p>$font-color</p>
+  <p>font-color</p>
  </div>
  <div class="link-color">
-  <p>$link-color</p>
+  <p>link-color</p>
  </div>
  <div class="hover-color">
-  <p>$hover-color</p>
+  <p>hover-color</p>
  </div>
  <div class="background">
-  <p>$background color</p>
+  <p>background color</p>
  </div>
  <div class="light-background">
-  <p>$light background color</p>
+  <p>light background color</p>
  </div>
  <div class="border">
-  <p>$border and $radius</p>
+  <p>border and $radius</p>
  </div>
- <div class="error-color">
-  <p>$error-color</p>
+ <div class="error">
+  <p>$error</p>
  </div>
- <div class="alert-color">
-  <p>$alert-color</p>
+ <div class="alert">
+  <p>$alert</p>
  </div>
- <div class="success-color">
-  <p>$success-color</p>
+ <div class="success">
+  <p>$success</p>
  </div>
 </div>
-<p>Spacings `$s-0` to `$s-15` - the theme <em>variables</em></p>
+<p>Spacings `$s-0` to `$s-15` - see the theme <em>variables</em></p>
 <div class="margin-spacer">
  <div class="small-margin">
   <p>
@@ -62,8 +72,8 @@
  </div>
  <div class="normal-margin">
   <p>
-   margin-left: $spacer;<br />
-   padding: $spacer; - 2rem
+   margin-left: $spacer; or $s-8;<br />
+   padding: $spacer; or $s-8; - 2rem
   </p>
  </div>
  <div class="large-margin">

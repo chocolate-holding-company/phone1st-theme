@@ -1,0 +1,120 @@
+<div id="dropdown-menu-10" class="dropdown-menu">
+ <h2>How it works</h2>
+ <p class="mb-4">See - <code>css/root/_base-color.scss, css/root/_variables.scss, css/root/mixins, css/class/...all</code></p>
+ <p class="mb-4">The <em>_class-helpers.scss</em> imports all the <em>partials</em> and runs them through a mixin to generate classes adding <em>breakpoints, color</em> and <em>spacing</em> where necessary</p>
+ <p>
+  The color palette is from <a href="https://tailwindcss.com">Tailwind</a>. To
+  use the colors is simple, being <em>color name and shade</em> eg <em>blue-500</em>. Precede it with what you want to color eg <em>text-, bg- or border-</em>. Add a <em>breakpoint</em> or <em>hover</em>.
+ </p>
+ <pre><code>//examples
+//text
+text-blue-400
+text-slate-200
+
+//background color
+bg-blue-400
+bg-slate-200
+
+//border
+border-blue-400
+border-slate-200
+
+//color variables
+//$variables don't change on dark mode
+//var(--variables) change with dark mode
+//use text-, bg- or border with the variables
+text-dark-gray - $dark-gray
+bg-medium-gray - $medium-gray
+border-light-gray - $light-gray
+text-first-color - $first-color
+bg-second-color - $second-color
+border-font-color - var(--font-color)
+text-link-color - var(--link-color)
+text-hover-color - var(--hover-color)
+bg-page-bg - var(--viewport-bg)
+bg-bg - var(--bg)
+bg-light-bg - var(--light-bg)
+border-black - $black
+text-white - $white
+text- error - $error
+bg-alert - $alert
+border-success - $success
+
+//breakpoints
+$medium: 768px; class - _m
+$large: 1024px; class - _l
+$xlarge: 1200px; class - _xl
+$wide: 1440px; class - _w
+
+//usage
+bg-blue-400_l
+bg-link-color_xl
+text-slate-200_m
+border-medium-gray_w
+
+//hovers
+hover-text-blue-300
+hover-text-success// variable
+
+hover-bg-blue-300
+hover-bg-success// variable
+
+hover-border-blue-300
+hover-border-success// variable</code></pre>
+
+ <h3>Spacing</h3>
+ <p>
+  Spacing works with the <code>$s-0 to $s-15 in the _variables.scss</code>. See the
+  <code>css/class/_spacing.scss</code> file
+ </p>
+
+ <pre><code>//the spacing variables
+0 - $s-0 - 0
+1 - $s-1 - 0.25rem
+2 - $s-2 - 0.5rem
+3 - $s-3 - 0.75rem
+4 - $s-4 - 1rem
+5 - $s-5 - 1.25rem
+6 - $s-6 - 1.5rem
+7 - $s-7 - 1.75rem
+8 - $s-8 - 2rem
+9 - $s-9 - 2.25rem
+10 - $s-10 - 3rem
+11 - $s-11 - 3.5rem
+12 - $s-12 - 4rem
+13 - $s-13 - 4.5rem
+14 - $s-14 - 5rem
+15 - $s-15 - 5.5rem
+auto - auto //class only</code></pre>
+
+ <pre><code class="language-scss">//spacing class examples
+//margin
+m-3 - margin: 0.75rem;
+my-6 - margin-block: 1.5rem;
+mx-auto - margin-inline: auto;
+mt-5 - margin-top: 1.25rem;
+mb-4 - margin-bottom: 1rem;
+ms-2 - margin-inline-start: 0.5rem;
+me-6 - margin-inline-end: 1.5rem;
+
+//padding
+p-3 - padding: 0.75rem;
+py-6 - padding-block: 1.5rem;
+px-12 - padding-inline: 4rem;
+pt-5 - padding-top: 1.25rem;
+pb-4 - padding-bottom: 1rem;
+ps-2 - padding-inline-start: 0.5rem;
+pe-6 - padding-inline-end: 1.5rem;
+
+//gap
+gap-6 - gap: 1.5rem;
+row-gap-7 row-gap: 1.75rem;
+col-gap-3 column-gap: 0.75rem;</code></pre>
+
+ <pre><code>//usage of utilities classes
+&lt;div class="p-8 bg-slate-100 m-4"&gt;
+&lt;h1 class="mb-4 text-blue-900"&gt;Hello World&lt;/h1&gt;
+&lt;p class="ps-2 text-slate-700"&gt;This has a left padding of 0.5rem.&lt;/p&gt;
+&lt;a href="#" class="my-2 text-rose-400 hover-text-rose-800"&gt;This link goes nowhere&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+</div>

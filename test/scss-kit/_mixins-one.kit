@@ -1,9 +1,10 @@
 <h3 id="center" class="mb-4">center elements</h3>
 
-<pre class="mt-4 mb-8"><code class="language-scss">.center-element {
-@include center;//mixin
-background: #E03D44;
-@include size(80%, 60px);
+<pre class="mt-4 mb-8"><code>.center-element {
+@include center; //mixin
+ background: #E03D44;
+ width: 80%;
+ height: 60px;
 }
 
 // this may need display: block to work in some cases
@@ -16,9 +17,46 @@ background: #E03D44;
 
 <hr />
 
+<h3 id="big-headings" class="mb-4">big head</h3>
+<pre class="mt-4 mb-8"><code class="language-scss">//bighead font title sizes
+//also classes see - class/_typography.scss
+.big-head {
+ h1 {
+  @include bighead-1;
+}
+//mixin - font-size: clamp(2.125rem, 1.767rem + 1.5909vw, 3rem);
+ line-height: 1.2;
+
+ h1 {
+  @include bighead-2;
+}
+//mixin - font-size: clamp(2.5rem, 2.142rem + 1.5909vw, 3.375rem);
+ line-height: 1.1;
+
+ h1 {
+  @include bighead-3;
+}
+//mixin - font-size: clamp(3.25rem, 2.9432rem + 1.3636vw, 4rem);
+ line-height: 1.1;
+
+ h1 {
+  @include bighead-4;
+}
+//mixin - font-size: clamp(3.75rem, 3.4432rem + 1.3636vw, 4.5rem);
+ line-height: 1.1;
+}</code></pre>
+
+<div class="big-head mb-5">
+  <h1 class="bighead-one">Bighead-1</h1>
+  <h1 class="bighead-two">Bighead-2</h1>
+  <h1 class="bighead-three">Bighead-3</h1>
+  <h1 class="bighead-four">Bighead-4</h1>
+</div>
+<hr>
 <h3 id="hide" class="mb-4">hide</h3>
 <pre class="mt-4 mb-8"><code class="language-scss">.hidden-box {
- @include size(300px, 70px);
+ width: 300px;
+ height: 70px;
  @include center;
  padding: 7px;
  font-size: .9rem;
@@ -46,7 +84,8 @@ background: #E03D44;
 
 <h3 id="show" class="mb-4">show</h3>
 <pre class="mt-4 mb-8"><code class="language-scss">.show-box {
- @include size(300px, 100px);
+ width: 300px;
+ height: 100px;
  @include center;
  padding: 7px;
  font-size: .9rem;
@@ -83,13 +122,13 @@ background: #E03D44;
  color: red;
 }
 
-@include media(600) {
+@include media($small) {
  .media-points p {
   color: blue;
  }
 }
 
-@include media(700) {
+@include media(768) {
  .media-points p {
   color: rgb(153, 71, 236);
  }
@@ -106,20 +145,20 @@ background: #E03D44;
   color: rgb(235, 220, 85);
  }
 }
-
-@mixin media($point) {
- // Convert unitless numbers to px, otherwise use the provided unit
- $breakpoint: if(math.is-unitless($point), #{$point}px, $point);
- @media only screen and (min-width: $breakpoint) {
-  @content;
- }
-}</code></pre>
+//see /root/_mixins.scss
+//use the breakpoint or rem/em/px
+// Breakpoint Constants
+$small: 480px;
+$medium: 768px;
+$large: 1024px;
+$xlarge: 1200px;
+$wide: 1440px;</code></pre>
 
 <div class="media-points">
  <p>
   At base level this text is red<br />
-  At 600px this text is blue<br />
-  At 700px this text is purple<br />
+  At $small(640px) this text is blue<br />
+  At 768px this text is purple<br />
   At 934px this text is green<br />
   At 93rem this text is yellow
  </p>
@@ -128,8 +167,9 @@ background: #E03D44;
 
 <h3 id="ellipsis" class="mb-4">ellipsis</h3>
 <pre class="mt-4 mb-8"><code class="language-scss">.ellipsis {
-@include size(300px, 80px);
 @include center;
+width: 300px;
+height: 80px;
 font-size: 1.1rem;
 padding: 10px;
 border: 1px solid blue;
@@ -155,18 +195,19 @@ border: 1px solid blue;
 <h3 id="triangle" class="mb-4">triangle</h3>
 <pre class="mt-4 mb-10"><code class="language-scss">//see css/root/_mixins.scss
 .element {
-@include size(300px, 50px);
-@include center;
-background-color: blue;
-position: relative;
+ width: 300px;
+ height: 50px;
+ @include center;
+ background-color: blue;
+ position: relative;
 
  &::before {
-  @include triangle(up, 2rem, 1rem, blue);//mixin
+  @include triangle(2.5rem, #6060ff, up);//mixin
   position: absolute;
   content: "";
-  //position triangle on box
-  top:-1rem;
-  left:6rem;
+  //positon triangle on the block
+  top: -2.5rem;
+  left: 6rem;
  }
 }</code></pre>
 <div class="triangle"></div>

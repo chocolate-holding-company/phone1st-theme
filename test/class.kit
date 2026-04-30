@@ -1,46 +1,53 @@
-<!-- $title Phone1st Classes -->
+<!-- $title Class -->
 <!-- $SEO-title Phone1st Classes -->
 <!-- $description Classes used with Phone1st for quick styling. -->
-<!-- $keyword Classes, Phone1st -->
 <!-- $url test/class.html -->
 <!-- $post-image test/test-images/phone1st-class.webp -->
 <!-- $css classes.css -->
 
 <!-- @import includes-kit/_test-header -->
- <section>
-
-
-<img src="../<!-- $post-image -->" alt="Phone1st class" class="width50 centered block" />
 
 <div>
-  <p class="center lead mb-s">Experimenting with <em>classes.</em></p>
- <p class="center ls-3 mb-s">Work in progress</p>
-    <p class="center">
-      Classes are based on the variable sizes set in the <em>_variables.scss</em> file and the default colors.
+  <p class="text-center text-lg font-500 mb-3">Experimenting with <em>classes.</em></p>
+    <p class="text-center mb-4">
+      Phone1st uses the color palette from <strong>Tailwind css</strong>.</p>
+      <p class="lh-6 mb-4">
+      <strong>A mixin is used to generate all the classes</strong>. In the <em>class</em> folder the <em>_class-helpers.scss</em> imports all the partials as <em>maps</em> and with a <em>mixin</em> adds <em>breakpoints</em>, <em>colors</em> and <em>size </em> where needed.</p>
+      <p class="mb-4">To add a <em>class</em> is simple you just add it to the <em>map partial</em>. In <em>development</em> the output file <em>style.css</em> in the <em>build</em> folder weighs about <em>82kb</em>. In <em>development</em> the mixin generates a lot of <em>classes</em>. In <em>production</em> the unused css styles should be purged and the file should come down to about <em>28kb</em>.
     </p>
+    <p>You can take the <em>class utilities</em> as far as you like or you can easily remove them</p>
   <hr>
   <h2 class="links-title">-- Links --</h2>
 <div class="links">
   <div>
-    <a href="#color">Color</a>
+    <a href="#read">Helper Classes</a>
+    <a href="#color">Color Palettes</a>
     <a href="#type">Typography</a>
-    <a href="#margin">Margin</a>
-    <a href="#padding">Padding</a>
     <a href="#size">Size</a>
   </div>
   <div>
     <a href="#display">Display</a>
     <a href="#appearance">Appearance</a>
     <a href="#flex">Flex</a>
-    <a href="#gap">Gap</a>
+    <a href="#grid">Grid</a>
   </div>
 </div>
 <hr />
 
   <div class="dropdown-container">
-<div id="color" class="dropdown">
+<div id="read" class="dropdown">
  <div class="dropdown-header" data-target="#dropdown-menu-10">
-  Color
+  Helper Classes
+  <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+   <path d="M7 10l5 5 5-5z" />
+  </svg>
+ </div>
+<!-- @import class-kit/_read-first -->
+</div>
+
+<div id="color" class="dropdown">
+ <div class="dropdown-header" data-target="#dropdown-menu-12">
+  Color Palettes
   <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
    <path d="M7 10l5 5 5-5z" />
   </svg>
@@ -56,26 +63,6 @@
   </svg>
  </div>
 <!-- @import class-kit/_type -->
-</div>
-
-<div id="margin" class="dropdown">
- <div class="dropdown-header" data-target="#dropdown-menu-12">
-  Margin
-  <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-   <path d="M7 10l5 5 5-5z" />
-  </svg>
- </div>
-<!-- @import class-kit/_margin -->
-</div>
-
-<div id="padding" class="dropdown">
- <div class="dropdown-header" data-target="#dropdown-menu-13">
-  Padding
-  <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-   <path d="M7 10l5 5 5-5z" />
-  </svg>
- </div>
-<!-- @import class-kit/_padding -->
 </div>
 
 <div id="size" class="dropdown">
@@ -118,24 +105,24 @@
 <!-- @import class-kit/_flex -->
 </div>
 
-<div id="gap" class="dropdown">
+<div id="grid" class="dropdown">
  <div class="dropdown-header" data-target="#dropdown-menu-18">
-  Gap
+  Grid
   <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
    <path d="M7 10l5 5 5-5z" />
   </svg>
  </div>
-<!-- @import class-kit/_gap -->
+<!-- @import class-kit/_grid -->
 </div>
 </div>
   </div>
 <hr>
-<p class="third center mb-m"><a href="../index.html">Home</a> | <a href="about.html">About</a> | <a href="test.html">Test Page</a> | <a href="scss.html">Scss Mixins</a></p>
+<div class="bottom-links text-center mb-4"></div>
 </section>
 <!-- @import includes-kit/_test-footer -->
- <script src="js/highlight.js"></script>
+ <script>const pageLink = "class";</script>
   <script src="js/scroll.js"></script>
+<script src="js/bottom-links.js"></script>
    <script src="js/dropdown.js"></script>
-
 </body>
 </html>

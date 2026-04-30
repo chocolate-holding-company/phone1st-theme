@@ -15,7 +15,7 @@ select,
 textarea {
  display: block;
  outline: none;
- color: var(--dark-gray);
+ color: $dark-gray;
 }
 
 [type="color"],
@@ -55,14 +55,14 @@ textarea {
 
   @media (hover: hover) {
    &:hover {
-    border-color: var(--error);
+    border-color: $error;
    }
   }
  }
  &::placeholder {
-  color: var(--medium-gray);
+  color: $medium-gray;
   font-size: $third;
-  opacity: var(--opacity);
+  opacity: 0.75;
  }
 }
 

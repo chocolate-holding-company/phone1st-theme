@@ -1,0 +1,30 @@
+<div id="dropdown-menu-18" class="dropdown-menu">
+ <pre><code class="language-scss">//grid
+// Columns
+grid-cols-1 - grid-template-columns: repeat(1, minmax(0, 1fr));
+grid-cols-2 - grid-template-columns: repeat(2, minmax(0, 1fr));
+grid-cols-3 - grid-template-columns: repeat(3, minmax(0, 1fr));
+grid-cols-4 - grid-template-columns: repeat(4, minmax(0, 1fr));
+grid-cols-6 - grid-template-columns: repeat(6, minmax(0, 1fr));
+grid-cols-12 - grid-template-columns: repeat(12, minmax(0, 1fr));
+grid-cols-none - grid-template-columns: none;
+
+//Column Spans
+col-auto - grid-column: auto;
+col-span-1 - grid-column: span 1 / span 1;
+col-span-2 - grid-column: span 2 / span 2;
+col-span-full - grid-column: 1 / -1;
+
+//Alignment
+place-items-center - place-items: center;
+place-content-center - place-content: center;
+
+//media breakpoints
+//@media min-width  768px, 1020px, 1200px, 1440px
+//use _m, _l, _xl, _w at the end of the class
+
+//examples
+grid-cols-3_m - grid-template-columns: repeat(3, minmax(0, 1fr));//@768px
+col-span-2_l - grid-column: span 2 / span 2;//@1020px
+place-items-center_xl - grid-column: 1 / -1;//@1200px</code></pre>
+</div>

@@ -1,3 +1,6 @@
+//highlight js
+hljs.highlightAll();
+
 //top progress bar and back to top
 window.addEventListener("scroll", () => {
  const scrollTotal = document.documentElement.scrollHeight - window.innerHeight;
@@ -13,5 +16,3 @@ window.addEventListener("scroll", () => {
   .getElementById("back-to-top")
   .classList.toggle("visible", window.scrollY > 300);
 });
-//highlight js
-hljs.highlightAll();

@@ -3,11 +3,25 @@
  <head>
   <!-- @import _meta -->
  <link rel="stylesheet" href="css/style.css" />
+ <style>
+  /* for the bottom links */
+  .bottom-links li {
+ a:after {
+  content: ".";
+  margin-left: 4px;
+  margin-right: 4px;
+ }
+ &:last-child a:after {
+  content: "";
+  margin: 0;
+ }
+}
+ </style>
  </head>
   <body>
    <div class="wrapper">
     <header>
-     <h1 class="center">
-     <!-- $title -->
+     <h1 class="text-center">
+     <!-- $SEO-title -->
     </h1>
    </header>

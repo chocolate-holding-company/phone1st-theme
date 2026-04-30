@@ -1,0 +1,100 @@
+// =======================
+// Refactored Variables
+// =======================
+@use "base-color" as *;
+
+// 1. STATIC SASS VARIABLES (For math and scales)
+$font: "Raleway", sans-serif !default;
+$heading-font: $font !default;
+$code-font: "Source Code Pro", monospace !default;
+$icon-font: "" !default;
+
+$font-size: 1.1rem !default;
+$lead: calc($font-size * 1.234) !default;
+$secondary: calc($font-size / 0.965) !default;
+$third: calc($font-size / 1.115) !default;
+
+// SIZE
+$s-0: 0 !default;
+$s-1: 0.25rem !default;
+$s-2: 0.5rem !default;
+$s-3: 0.75rem !default;
+$s-4: 1rem !default;
+$s-5: 1.25rem !default;
+$s-6: 1.5rem !default;
+$s-7: 1.75rem !default;
+$s-8: 2rem !default;
+$s-9: 2.25rem !default;
+$s-10: 3rem !default;
+$s-11: 3.5rem !default;
+$s-12: 4rem !default;
+$s-13: 4.5rem !default;
+$s-14: 5rem !default;
+$s-15: 5.5rem !default;
+
+$radius: calc($s-1 * 1.2) !default;
+$spacer: $s-8 !default;
+
+$duration: 150ms !default;
+$timing: ease !default;
+
+//colors with no dark mode
+$white: #{clr("slate", 50)};
+$black: #{clr("slate", 950)};
+$first-color: #{clr("blue", 600)};
+$second-color: #{clr("rose", 600)};
+$dark-gray: #{clr("neutral", 700)};
+$medium-gray: #{clr("neutral", 500)};
+$light-gray: #{clr("neutral", 200)};
+// Status
+$error: #{clr("rose", 700)};
+$alert: #{clr("amber", 500)};
+$success: #{clr("green", 700)};
+
+// 2. THEME TOKENS (CSS Custom Properties)
+:root {
+ // Typography & General
+ --font-color: #{clr("slate", 700)};
+ --heading-color: #{clr("slate", 900)};
+ --link-color: #{clr("sky", 900)};
+ --hover-color: #{clr("sky", 800)};
+
+ // Backgrounds
+ --viewport-bg: #{clr("slate", 100)};
+ --bg: #{clr("slate", 500)};
+ --light-bg: #{clr("slate", 200)};
+ --input-bg: transparent;
+
+ // Components
+ --border: 0.063rem solid #{clr("slate", 800)};
+ --table-hover: #{clr("slate", 800)};
+
+ // Buttons
+ --button-color: #{clr("sky", 100)};
+ --button-bg: #{clr("sky", 900)};
+ --button-bg-hover: #{clr("sky", 700)};
+
+ // Shadows
+ --form-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.26);
+ --form-focus-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.5);
+ --filter-shadow: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
+}
+
+// 3. DARK THEME OVERRIDES
+[data-theme="dark"] {
+ // Typography & General
+ --font-color: #{clr("slate", 100)};
+ --heading-color: #{clr("slate", 100)};
+ --link-color: #{clr("sky", 600)};
+ --hover-color: #{clr("sky", 400)};
+
+ // Backgrounds
+ --viewport-bg: #{clr("slate", 800)};
+ --input-bg: #{clr("slate", 200)};
+
+ // Components
+ --border: 0.063rem solid #{clr("slate", 200)};
+
+ // Shadows
+ --filter-shadow: drop-shadow(0px 0px 10px rgba(200, 200, 200, 0.5));
+}

@@ -40,11 +40,9 @@ a {
  padding: $spacer 5%;
 }
 
-@include media(900) {
+@include media($large) {
  .wrapper {
   max-width: 900px;
   @include center;
-  color: var(--link-color);
-  transition: color $duration $timing;
  }
 }

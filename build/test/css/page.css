@@ -3,11 +3,6 @@
   --heading-color: oklch(20.8% 0.042 265.755deg);
   --link-color: oklch(39.1% 0.09 240.876deg);
   --hover-color: oklch(44.3% 0.11 240.79deg);
-  --opacity: 0.75;
-  --first: oklch(54.6% 0.245 262.881deg);
-  --dark-gray: oklch(37.1% 0 0deg);
-  --medium-gray: oklch(55.6% 0 0deg);
-  --light-gray: oklch(92.2% 0 0deg);
   --viewport-bg: oklch(96.8% 0.007 247.896deg);
   --bg: oklch(55.4% 0.046 257.417deg);
   --light-bg: oklch(92.9% 0.013 255.508deg);
@@ -17,11 +12,8 @@
   --button-color: oklch(95.1% 0.026 236.824deg);
   --button-bg: oklch(39.1% 0.09 240.876deg);
   --button-bg-hover: oklch(50% 0.134 242.749deg);
-  --error: oklch(51.4% 0.222 16.935deg);
-  --alert: oklch(76.9% 0.188 70.08deg);
-  --success: oklch(52.7% 0.154 150.069deg);
   --form-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.26);
-  --form-focus-box-shadow: inset 0 1px 1px rgba(#000, 0.5);
+  --form-focus-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.5);
   --filter-shadow: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
 }
 
@@ -33,98 +25,7 @@
   --viewport-bg: oklch(27.9% 0.041 260.031deg);
   --input-bg: oklch(92.9% 0.013 255.508deg);
   --border: 0.063rem solid oklch(92.9% 0.013 255.508deg);
-  --form-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.26);
-  --form-focus-box-shadow: inset 0 1px 1px rgba(#000, 0.5);
   --filter-shadow: drop-shadow(0px 0px 10px rgba(200, 200, 200, 0.5));
-}
-
-pre code.hljs {
-  display: block;
-  overflow-x: auto;
-  padding: 1em;
-}
-
-code.hljs {
-  padding: 3px 6px;
-}
-
-.hljs {
-  background: #eee;
-  color: black;
-}
-
-.hljs-link,
-.hljs-emphasis,
-.hljs-attribute,
-.hljs-addition {
-  color: #070;
-}
-
-.hljs-emphasis {
-  font-style: italic;
-}
-
-.hljs-strong,
-.hljs-string,
-.hljs-deletion {
-  color: #d14;
-}
-
-.hljs-strong {
-  font-weight: bold;
-}
-
-.hljs-quote,
-.hljs-comment {
-  color: #998;
-}
-
-.hljs-section,
-.hljs-title {
-  color: #900;
-}
-
-.hljs-class .hljs-title,
-.hljs-title.class_,
-.hljs-type {
-  color: #458;
-}
-
-.hljs-variable,
-.hljs-template-variable {
-  color: #336699;
-}
-
-.hljs-bullet {
-  color: #997700;
-}
-
-.hljs-meta {
-  color: #3344bb;
-}
-
-.hljs-code,
-.hljs-number,
-.hljs-literal,
-.hljs-keyword,
-.hljs-selector-tag {
-  color: #099;
-}
-
-.hljs-regexp {
-  background-color: #fff0ff;
-  color: #880088;
-}
-
-.hljs-symbol {
-  color: #990073;
-}
-
-.hljs-tag,
-.hljs-name,
-.hljs-selector-id,
-.hljs-selector-class {
-  color: #007700;
 }
 
 /* --- Top Progress Bar --- */
@@ -139,7 +40,7 @@ code.hljs {
 
 #top-progress-bar {
   height: 100%;
-  background: var(--first);
+  background: oklch(54.6% 0.245 262.881deg);
   width: 0%;
 }
 
@@ -199,7 +100,17 @@ hr {
   font-size: 1.1398963731rem;
 }
 
-@media only screen and (min-width: 700px) {
+.bottom-links li a:after {
+  content: ".";
+  margin-left: 4px;
+  margin-right: 4px;
+}
+.bottom-links li:last-child a:after {
+  content: "";
+  margin: 0;
+}
+
+@media only screen and (min-width: 768px) {
   .links {
     display: flex;
     flex-direction: row;

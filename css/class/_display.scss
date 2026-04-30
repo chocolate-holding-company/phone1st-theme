@@ -1,107 +1,47 @@
 @use "../root/mixins" as *;
 
-.block {
- display: block;
-}
-.inline {
- display: inline;
-}
-.inline-block {
- display: inline-block;
-}
-.hidden {
- display: none;
-}
-.flex {
- display: flex;
-}
-.hide {
- @include hidden;
-}
-.show {
- @include show;
-}
-
-/////////////////////////////////////
-////////////////////////////////////
-//breakpoint 700px
-
-@include media(700) {
- .block_7 {
-  display: block;
- }
- .inline_7 {
-  display: inline;
- }
- .inline-block_7 {
-  display: inline-block;
- }
- .hidden_7 {
-  display: none;
- }
- .flex_7 {
-  display: flex;
- }
- .hide_7 {
-  @include hidden;
- }
- .show_7 {
-  @include show;
- }
-}
-
-/////////////////////////////////////
-////////////////////////////////////
-//breakpoint 900px
-
-@include media(900) {
- .block_9 {
-  display: block;
- }
- .inline_9 {
-  display: inline;
- }
- .inline-block_9 {
-  display: inline-block;
- }
- .hidden_9 {
-  display: none;
- }
- .flex_9 {
-  display: flex;
- }
- .hide_9 {
-  @include hidden;
- }
- .show_9 {
-  @include show;
- }
-}
-
-/////////////////////////////////////
-////////////////////////////////////
-//breakpoint 1100px
-
-@include media(1100) {
- .block_11 {
-  display: block;
- }
- .inline_11 {
-  display: inline;
- }
- .inline-block_11 {
-  display: inline-block;
- }
- .hidden_11 {
-  display: none;
- }
- .flex_11 {
-  display: flex;
- }
- .hide_11 {
-  @include hidden;
- }
- .show_11 {
-  @include show;
- }
-}
+// utilities/_display-map.scss
+$display-map: (
+ // Display
+ "block": (
+   display: block,
+  ),
+ "inline-block": (
+  display: inline-block,
+ ),
+ "inline": (
+  display: inline,
+ ),
+ "flex": (
+  display: flex,
+ ),
+ "inline-flex": (
+  display: inline-flex,
+ ),
+ "grid": (
+  display: grid,
+ ),
+ "inline-grid": (
+  display: inline-grid,
+ ),
+ "hidden": (
+  display: none,
+ ),
+ // Visibility
+ "visible": (
+   visibility: visible,
+  ),
+ "invisible": (
+  visibility: hidden,
+ ),
+ // Object Fit (Useful for responsive images)
+ "object-contain": (
+   object-fit: contain,
+  ),
+ "object-cover": (
+  object-fit: cover,
+ ),
+ "object-fill": (
+  object-fit: fill,
+ )
+);

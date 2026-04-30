@@ -3,7 +3,6 @@
 // =======================
 @use "sass:math";
 @use "../../css/root/" as *;
-@use "highlight";
 
 $shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 
@@ -18,7 +17,7 @@ $shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
 #top-progress-bar {
  height: 100%;
- background: var(--first);
+ background: $first-color;
  width: 0%;
 }
 
@@ -79,7 +78,19 @@ hr {
  }
 }
 
-@include media(700) {
+.bottom-links li {
+ a:after {
+  content: ".";
+  margin-left: 4px;
+  margin-right: 4px;
+ }
+ &:last-child a:after {
+  content: "";
+  margin: 0;
+ }
+}
+
+@include media($medium) {
  .links {
   display: flex;
   flex-direction: row;

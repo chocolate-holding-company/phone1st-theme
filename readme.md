@@ -105,7 +105,7 @@ Experimenting with the _class utitlity_ method for styling. I think the more com
 
 ### View Phone1st Theme
 
-[Phone1st Starter Theme](https://phone1st.org/)
+[Phone1st Starter Theme](https://phone1st-theme.org/)
 
 ---
 

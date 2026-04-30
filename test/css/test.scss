@@ -6,7 +6,7 @@
 
 .intro-para {
  text-align: center;
- margin-bottom: $spacer;
+ margin-bottom: $s-4;
  color: var(--font-color);
 }
 
@@ -25,7 +25,14 @@
 }
 
 .first-color {
- background: var(--first);
+ background: $first-color;
+ p {
+  color: $white;
+ }
+}
+
+.second-color {
+ background: $second-color;
  p {
   color: $white;
  }
@@ -47,7 +54,7 @@
 }
 
 .dark-gray {
- background: var(--dark-gray);
+ background: $dark-gray;
 
  p {
   color: $white;
@@ -55,14 +62,14 @@
 }
 
 .medium-gray {
- background: var(--medium-gray);
+ background: $medium-gray;
  p {
   color: $white;
  }
 }
 
 .light-gray {
- background: var(--light-gray);
+ background: $light-gray;
  p {
   color: $black;
  }
@@ -72,28 +79,28 @@
  background: var(--font-color);
 
  p {
-  color: $black;
+  color: var(--viewport-bg);
  }
 }
 
 .link-color {
  background: var(--link-color);
  p {
-  color: $white;
+  color: var(--viewport-bg);
  }
 }
 
 .hover-color {
  background: var(--hover-color);
  p {
-  color: $white;
+  color: var(--viewport-bg);
  }
 }
 
 .background {
  background: var(--bg);
  p {
-  color: $white;
+  color: var(--viewport-bg);
  }
 }
 
@@ -111,25 +118,26 @@
 
  p {
   margin: 0;
+  color: var(--font-color);
  }
 }
 
-.error-color {
- background: var(--error);
+.error {
+ background: $error;
  p {
   color: $white;
  }
 }
 
-.alert-color {
- background: var(--alert);
+.alert {
+ background: $alert;
  p {
   color: $white;
  }
 }
 
-.success-color {
- background: var(--success);
+.success {
+ background: $success;
  p {
   color: $white;
  }
@@ -175,6 +183,7 @@
  border-left: var(--border);
  p {
   font-size: $secondary;
+  color: var(--font-color);
  }
  .small-margin {
   border: var(--border);

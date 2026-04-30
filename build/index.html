@@ -2,47 +2,82 @@
 <html lang="en">
  <head>
   
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <title>Phone1st Starter Theme - A light and basic html starter theme to get you off to a quick start with your web developments</title>
-  <meta name="HandheldFriendly" content="True" />
-  <meta name="mobile-web-app-capable" content="yes">
-  <meta name="description" content="The CSS is put together using SCSS, a popular way of creating quick, organised stylesheets. Using Phone1st will save you time, building quicker, smarter projects. Once you start using Phone1st you'll keep using it.">
-  <meta name="author" content="h@phone1st.org">
-  <meta name="robots" content="INDEX,FOLLOW">
-  <meta name="keywords" content="phone1st">
-  <link rel="canonical" href="https://phone1st.org/" />
-  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   
-  <meta property="og:site_name" content="Phone1st Starter Theme" />
+  <title>Phone1st Starter Theme | Phone1st Starter Theme for Html</title>
+  <meta name="description" content="The CSS is put together using SCSS, a popular way of creating quick, organised stylesheets. Using Phone1st will save you time, building quicker, smarter projects. Once you start using Phone1st you'll keep using it." />
+  <link rel="canonical" href="https://phone1st.org/" />
+  
+  <meta property="og:site_name" content="Phone1st Starter Theme for Html" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Phone1st Starter Theme - A light and basic html starter theme to get you off to a quick start with your web developments" />
+  <meta property="og:title" content="Home" />
   <meta property="og:description" content="The CSS is put together using SCSS, a popular way of creating quick, organised stylesheets. Using Phone1st will save you time, building quicker, smarter projects. Once you start using Phone1st you'll keep using it." />
   <meta property="og:url" content="https://phone1st.org/" />
   <meta property="og:image" content="https://phone1st.org/test/test-images/phone1st-home.webp" />
-  <meta property="og:image:width" content="580"/>
-  <meta property="og:image:height" content="296"/>
+  <meta property="og:image:alt" content="Home header image" />
   
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Phone1st Starter Theme - A light and basic html starter theme to get you off to a quick start with your web developments" />
+  <meta name="twitter:title" content="Home" />
   <meta name="twitter:description" content="The CSS is put together using SCSS, a popular way of creating quick, organised stylesheets. Using Phone1st will save you time, building quicker, smarter projects. Once you start using Phone1st you'll keep using it." />
-  <meta name="twitter:url" content="https://phone1st.org/" />
-  <meta name="twitter:image:src" content="https://phone1st.org/test/test-images/phone1st-home.webp" />
+  <meta name="twitter:image" content="https://phone1st.org/test/test-images/phone1st-home.webp" />
+  
+  <script type="application/ld+json">
+   {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Home",
+    "url": "https://phone1st.org/",
+    "logo": "https:phone1st.org/apple-touch-icon.png",
+    "contactPoint": {
+     "@type": "ContactPoint",
+     "email": "h@phone1st.org",
+     "contactType": "customer support"
+    },
+    "sameAs": [
+     "https://facebook.com/phone1st.org/",
+     "https://instagram.com/phone1st.org/",
+     "https://x.com/phone1st.org/"
+    ],
+    "description": "The CSS is put together using SCSS, a popular way of creating quick, organised stylesheets. Using Phone1st will save you time, building quicker, smarter projects. Once you start using Phone1st you'll keep using it."
+   }
+  </script>
+  
+  
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  
+  <meta name="theme-color" content="#4A6741" />
+  
  <link rel="stylesheet" href="css/style.css" />
+ <style>
+  /* for the bottom links */
+  .bottom-links li {
+ a:after {
+  content: ".";
+  margin-left: 4px;
+  margin-right: 4px;
+ }
+ &:last-child a:after {
+  content: "";
+  margin: 0;
+ }
+}
+ </style>
  </head>
   <body>
    <div class="wrapper">
     <header>
-     <h1 class="center">
+     <h1 class="text-center">
      Phone1st Starter Theme
     </h1>
    </header>
 
 <section>
  <div class="flex flex-col items-center gap">
-  <img src="test/test-images/phone1st-home.webp" alt="Phone1st happy xmas image" class="width50" />
-  <div class="center">
+  <img src="test/test-images/phone1st-home.webp" alt="Phone1st image" class="width-50" />
+  <div class="text-center">
    <p class="mb-4">
     A <em>light</em> and <em>basic</em> html starter theme to get you off
     to a quick start with your web developments.
@@ -52,7 +87,7 @@
     <em>quicker, smarter projects</em>.
    </p>
   </div>
-  <div class="center">
+  <div class="text-center">
    <h2 class="heading-6 mb-3">Features</h2>
    <p class="mb-3">
     - A <strong>base</strong> stylesheet built with
@@ -69,16 +104,12 @@
  </div>
  <hr class="my-7">
 </section>
-<footer class="center">
- <p class="third center mb-3">
-  <a href="test/about.html">About</a> | <a href="test/test.html">Test Page</a> |
-  <a href="test/scss.html">Scss Mixins</a> |
-  <a href="test/class.html">Classes</a>
- </p>
- <p class="third mt-3 mb-0">
+<footer class="text-center">
+ <div class="bottom-links text-center mb-4"></div>
+ <p class="text-xs mt-3 mb-0">
   - <em>by</em> <a href="https://phone1st.org">phone1st.org</a> -
  </p>
- <p class="third mt-3 mb-4">
+ <p class="text-xs mt-3 mb-4">
   &copy;2026 Phone1st Starter Theme for html
   <a
    href="https://github.com/chocolate-holding-company/phone1st-theme"
@@ -89,7 +120,10 @@
 </footer>
 
 </div>
+<script>const pageLink = "home";</script>
 <script src="js/app.js"></script>
+<script src="test/js/bottom-links.js"></script>
+
 </body>
 
 </html>

@@ -2,7 +2,7 @@
 
 @use "sass:math";
 @use "sass:list";
-@use "helpers" as *;
+@use "sass:map";
 
 // Center Elements
 // @include center;
@@ -26,82 +26,65 @@
  visibility: visible;
 }
 
-// breakpoints - base styles are phone first
-// eg @include media(956) - min-width 956px
-// eg @include media(956rem) - min-width 956rem
-@mixin media($point) {
- // Convert unitless numbers to px, otherwise use the provided unit
- $breakpoint: if(math.is-unitless($point), #{$point}px, $point);
+//use the breakpoint or rem/em/px
+// Breakpoint Constants
+$small: 480px;
+$medium: 768px;
+$large: 1024px;
+$xlarge: 1200px;
+$wide: 1440px;
+
+// 1. MOBILE-FIRST (min-width)
+// Use for: Building up styles as screens get larger.
+@mixin media($size) {
+ $breakpoint: if(math.is-unitless($size), $size * 1px, $size);
+
  @media only screen and (min-width: $breakpoint) {
   @content;
  }
 }
 
-//bighead font title sizes - classes also -class/_typography.scss
+//bighead font title sizes - also classes see -class/_typography.scss
 //@include bighead-1;
 @mixin bighead-1 {
- font-size: clamp(2.5rem, 2.2949rem + 1.0256vw, 3rem);
+ font-size: clamp(2.125rem, 1.767rem + 1.5909vw, 3rem);
  line-height: 1.2;
 }
 
 @mixin bighead-2 {
- font-size: clamp(3rem, 2.7949rem + 1.0256vw, 3.5rem);
+ font-size: clamp(2.5rem, 2.142rem + 1.5909vw, 3.375rem);
  line-height: 1.1;
 }
 
 @mixin bighead-3 {
- font-size: clamp(3.5rem, 3.2949rem + 1.0256vw, 4rem);
+ font-size: clamp(3.25rem, 2.9432rem + 1.3636vw, 4rem);
  line-height: 1.1;
 }
 
 @mixin bighead-4 {
- font-size: clamp(4rem, 3.7949rem + 1.0256vw, 4.5rem);
+ font-size: clamp(3.75rem, 3.4432rem + 1.3636vw, 4.5rem);
  line-height: 1.1;
 }
 
-//@include triangle("up", 2rem, 1rem, blue);
-@mixin triangle($direction, $width, $height, $color) {
- @if not
-  list.index(
-   "up" "up-right" "right" "down-right" "down" "down-left" "left" "up-left",
-   $direction
-  )
- {
-  @error "Direction must be `up`, `up-right`, `right`, `down-right`, " +
-      "`down`, `down-left`, `left` or `up-left`.";
- } @else if not is-color($color) {
-  @error "`#{$color}` is not a valid color for the `$color` argument in " +
-      "the `triangle` mixin.";
- } @else {
-  border-style: solid;
-  height: 0;
-  width: 0;
+//@include triangle(5px, black, right);
+@mixin triangle($size, $color, $direction) {
+ height: 0;
+ width: 0;
 
-  @if $direction == "up" {
-   border-color: transparent transparent $color;
-   border-width: 0 math.div($width, 2) $height;
-  } @else if $direction == "up-right" {
-   border-color: transparent $color transparent transparent;
-   border-width: 0 $width $width 0;
-  } @else if $direction == "right" {
-   border-color: transparent transparent transparent $color;
-   border-width: math.div($height, 2) 0 math.div($height, 2) $width;
-  } @else if $direction == "down-right" {
-   border-color: transparent transparent $color;
-   border-width: 0 0 $width $width;
-  } @else if $direction == "down" {
-   border-color: $color transparent transparent;
-   border-width: $height math.div($width, 2) 0;
-  } @else if $direction == "down-left" {
-   border-color: transparent transparent transparent $color;
-   border-width: $width 0 0 $width;
-  } @else if $direction == "left" {
-   border-color: transparent $color transparent transparent;
-   border-width: math.div($height, 2) $width math.div($height, 2) 0;
-  } @else if $direction == "up-left" {
-   border-color: $color transparent transparent;
-   border-width: $width $width 0 0;
-  }
+ border-color: transparent;
+ border-style: solid;
+ border-width: math.div($size, 2);
+
+ @if $direction == up {
+  border-bottom-color: $color;
+ } @else if $direction == right {
+  border-left-color: $color;
+ } @else if $direction == down {
+  border-top-color: $color;
+ } @else if $direction == left {
+  border-right-color: $color;
+ } @else {
+  @error "Unknown direction #{$direction}.";
  }
 }
 

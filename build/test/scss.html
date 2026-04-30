@@ -3,52 +3,72 @@
 <html lang="en">
  <head>
   
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <title>Scss Mixins including user and Bourbon Mixins</title>
-  <meta name="HandheldFriendly" content="True" />
-  <meta name="mobile-web-app-capable" content="yes">
-  <meta name="description" content="Examples of Scss Mixins from the Bourbon Mixins Library and User Mixins embeded in the theme">
-  <meta name="author" content="h@phone1st.org">
-  <meta name="robots" content="INDEX,FOLLOW">
-  <meta name="keywords" content="scss">
-  <link rel="canonical" href="https://phone1st.org/test/scss.html" />
-  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   
-  <meta property="og:site_name" content="Phone1st Starter Theme" />
+  <title>Scss Mixins | Phone1st Starter Theme for Html</title>
+  <meta name="description" content="Examples of Scss Mixins embeded in the theme" />
+  <link rel="canonical" href="https://phone1st.org/test/scss.html" />
+  
+  <meta property="og:site_name" content="Phone1st Starter Theme for Html" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Scss Mixins including user and Bourbon Mixins" />
-  <meta property="og:description" content="Examples of Scss Mixins from the Bourbon Mixins Library and User Mixins embeded in the theme" />
+  <meta property="og:title" content="Scss" />
+  <meta property="og:description" content="Examples of Scss Mixins embeded in the theme" />
   <meta property="og:url" content="https://phone1st.org/test/scss.html" />
   <meta property="og:image" content="https://phone1st.org/test/test-images/phone1st-with-weights.webp" />
-  <meta property="og:image:width" content="580"/>
-  <meta property="og:image:height" content="296"/>
+  <meta property="og:image:alt" content="Scss header image" />
   
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Scss Mixins including user and Bourbon Mixins" />
-  <meta name="twitter:description" content="Examples of Scss Mixins from the Bourbon Mixins Library and User Mixins embeded in the theme" />
-  <meta name="twitter:url" content="https://phone1st.org/test/scss.html" />
-  <meta name="twitter:image:src" content="https://phone1st.org/test/test-images/phone1st-with-weights.webp" />
+  <meta name="twitter:title" content="Scss" />
+  <meta name="twitter:description" content="Examples of Scss Mixins embeded in the theme" />
+  <meta name="twitter:image" content="https://phone1st.org/test/test-images/phone1st-with-weights.webp" />
+  
+  <script type="application/ld+json">
+   {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Scss",
+    "url": "https://phone1st.org/test/scss.html",
+    "logo": "https:phone1st.org/apple-touch-icon.png",
+    "contactPoint": {
+     "@type": "ContactPoint",
+     "email": "h@phone1st.org",
+     "contactType": "customer support"
+    },
+    "sameAs": [
+     "https://facebook.com/phone1st.org/",
+     "https://instagram.com/phone1st.org/",
+     "https://x.com/phone1st.org/"
+    ],
+    "description": "Examples of Scss Mixins embeded in the theme"
+   }
+  </script>
+  
+  
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  
+  <meta name="theme-color" content="#4A6741" />
+  
   <link rel="stylesheet" href="../css/style.css" />
   <link rel="stylesheet" href="css/page.css" />
   <link rel="stylesheet" href="css/scss.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/base16/one-light.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+
  </head>
 
  <body>
   <div id="top-progress-container"><div id="top-progress-bar"></div></div>
   <div id="top" class="wrapper">
-   <header class="mb-m">
-    <h1 class="center">
+   <header class="mb-4">
+    <h1 class="text-center">
      Scss Mixins
     </h1>
    </header>
-
-
-<section>
-
-
-<img src="../test/test-images/phone1st-with-weights.webp" alt="Phone1st with weights" class="width50 centered block" />
+   <section>
+<img src="../test/test-images/phone1st-with-weights.webp" alt="Scss header image" class="width-50 mx-auto block" />
 
 
 <p>To see the full code for the mixins see <code>css/root/</code>
@@ -58,27 +78,25 @@
 <div class="links">
   <div>
     <a href="#center">center elements</a>
+    <a href="#big-headings">big head</a>
     <a href="#hide">hide</a>
     <a href="#show">show</a>
-    <a href="#breakpoints">media breakpoints</a>
-    <a href="#ellipsis">ellipsis</a>
   </div>
   <div>
+     <a href="#breakpoints">media breakpoints</a>
+    <a href="#ellipsis">ellipsis</a>
      <a href="#triangle">triangle</a>
-    <a href="#position">position</a>
-    <a href="#margin">margin</a>
-    <a href="#padding">padding</a>
-    <a href="#size">size</a>
   </div>
 </div>
 <hr />
 <div class="scss-extras">
   <h3 id="center" class="mb-4">center elements</h3>
   
-  <pre class="mt-4 mb-8"><code class="language-scss">.center-element {
-  @include center;//mixin
-  background: #E03D44;
-  @include size(80%, 60px);
+  <pre class="mt-4 mb-8"><code>.center-element {
+  @include center; //mixin
+   background: #E03D44;
+   width: 80%;
+   height: 60px;
   }
   
   // this may need display: block to work in some cases
@@ -91,9 +109,46 @@
   
   <hr />
   
+  <h3 id="big-headings" class="mb-4">big head</h3>
+  <pre class="mt-4 mb-8"><code class="language-scss">//bighead font title sizes
+  //also classes see - class/_typography.scss
+  .big-head {
+   h1 {
+    @include bighead-1;
+  }
+  //mixin - font-size: clamp(2.125rem, 1.767rem + 1.5909vw, 3rem);
+   line-height: 1.2;
+  
+   h1 {
+    @include bighead-2;
+  }
+  //mixin - font-size: clamp(2.5rem, 2.142rem + 1.5909vw, 3.375rem);
+   line-height: 1.1;
+  
+   h1 {
+    @include bighead-3;
+  }
+  //mixin - font-size: clamp(3.25rem, 2.9432rem + 1.3636vw, 4rem);
+   line-height: 1.1;
+  
+   h1 {
+    @include bighead-4;
+  }
+  //mixin - font-size: clamp(3.75rem, 3.4432rem + 1.3636vw, 4.5rem);
+   line-height: 1.1;
+  }</code></pre>
+  
+  <div class="big-head mb-5">
+    <h1 class="bighead-one">Bighead-1</h1>
+    <h1 class="bighead-two">Bighead-2</h1>
+    <h1 class="bighead-three">Bighead-3</h1>
+    <h1 class="bighead-four">Bighead-4</h1>
+  </div>
+  <hr>
   <h3 id="hide" class="mb-4">hide</h3>
   <pre class="mt-4 mb-8"><code class="language-scss">.hidden-box {
-   @include size(300px, 70px);
+   width: 300px;
+   height: 70px;
    @include center;
    padding: 7px;
    font-size: .9rem;
@@ -121,7 +176,8 @@
   
   <h3 id="show" class="mb-4">show</h3>
   <pre class="mt-4 mb-8"><code class="language-scss">.show-box {
-   @include size(300px, 100px);
+   width: 300px;
+   height: 100px;
    @include center;
    padding: 7px;
    font-size: .9rem;
@@ -158,13 +214,13 @@
    color: red;
   }
   
-  @include media(600) {
+  @include media($small) {
    .media-points p {
     color: blue;
    }
   }
   
-  @include media(700) {
+  @include media(768) {
    .media-points p {
     color: rgb(153, 71, 236);
    }
@@ -181,20 +237,20 @@
     color: rgb(235, 220, 85);
    }
   }
-  
-  @mixin media($point) {
-   // Convert unitless numbers to px, otherwise use the provided unit
-   $breakpoint: if(math.is-unitless($point), #{$point}px, $point);
-   @media only screen and (min-width: $breakpoint) {
-    @content;
-   }
-  }</code></pre>
+  //see /root/_mixins.scss
+  //use the breakpoint or rem/em/px
+  // Breakpoint Constants
+  $small: 480px;
+  $medium: 768px;
+  $large: 1024px;
+  $xlarge: 1200px;
+  $wide: 1440px;</code></pre>
   
   <div class="media-points">
    <p>
     At base level this text is red<br />
-    At 600px this text is blue<br />
-    At 700px this text is purple<br />
+    At $small(640px) this text is blue<br />
+    At 768px this text is purple<br />
     At 934px this text is green<br />
     At 93rem this text is yellow
    </p>
@@ -203,8 +259,9 @@
   
   <h3 id="ellipsis" class="mb-4">ellipsis</h3>
   <pre class="mt-4 mb-8"><code class="language-scss">.ellipsis {
-  @include size(300px, 80px);
   @include center;
+  width: 300px;
+  height: 80px;
   font-size: 1.1rem;
   padding: 10px;
   border: 1px solid blue;
@@ -230,113 +287,32 @@
   <h3 id="triangle" class="mb-4">triangle</h3>
   <pre class="mt-4 mb-10"><code class="language-scss">//see css/root/_mixins.scss
   .element {
-  @include size(300px, 50px);
-  @include center;
-  background-color: blue;
-  position: relative;
+   width: 300px;
+   height: 50px;
+   @include center;
+   background-color: blue;
+   position: relative;
   
    &::before {
-    @include triangle(up, 2rem, 1rem, blue);//mixin
+    @include triangle(2.5rem, #6060ff, up);//mixin
     position: absolute;
     content: "";
-    //position triangle on box
-    top:-1rem;
-    left:6rem;
+    //positon triangle on the block
+    top: -2.5rem;
+    left: 6rem;
    }
   }</code></pre>
   <div class="triangle"></div>
   <hr />
   
-  <h3 id="position">position</h3>
-    <pre class="mt-4 mb-8"><code class="language-scss">//see css/root/_position.scss
-     .position {
-      @include size(300px, 5em);
-      @include center;
-      border: 1px solid var(--first);
-      position: relative;
-      div {
-       @include position(absolute, 10px 30px 30px 0);
-       background-color: var(--bg);
-      }
-     }</code></pre>
-    
-    <div class="position mb-8"><div></div></div>
-    
-    <pre class="mt-4 mb-8"><code class="language-scss">//see css/root/_position.scss
-     .position-two {
-      @include size(300px, 5em);
-      @include center;
-      border: 1px solid var(--first);
-      position: relative;
-      div {
-       @include size(100px, 20px);
-       @include position(absolute, 10px null null 0);
-       background-color: var(--bg);
-      }
-     }</code></pre>
-    
-    <div class="position-two"><div></div></div>
-    
-    <hr>
-    
-    <h3 id="margin" class="mb-4">margin</h3>
-    <pre class="mt-4 mb-8"><code class="language-scss">//see css/root/_direction.scss
-    .margin {
-    @include size(300px, 5em);
-    @include center;
-    border: 1px solid red;
-     div {
-      @include size(80px, 50px);
-      @include margin(30px null null 40px);//mixin
-      border: 1px solid blue;
-     }
-    }</code></pre>
-    <div class="margin">
-     <div></div>
-    </div>
-    <hr />
-    
-    <h3 id="padding" class="mb-4">padding</h3>
-    <pre class="mt-4 mb-8"><code class="language-scss">//see css/root/_direction.scss
-    .padding {
-    max-width: 500px;
-    @include center;
-    border: 1px solid red;
-    @include padding(15px 20px);//mixin
-    }</code></pre>
-    <div class="padding">
-     <p class="third">
-      padding-top: 15px padding-right: 20px padding-bottom: 15px padding-left: 20px
-     </p>
-    </div>
-    <hr />
-    
-    <h3 id="size" class="mb-4">size</h3>
-    <pre class="mt-4 mb-8"><code class="language-scss">//see css/root/_size.scss
-    .size {
-    @include size(300px, 1.8em);//mixin
-     border: 1px solid blue;
-    }</code></pre>
-    
-    <div class="size mb-8"></div>
-    <pre class="mt-4 mb-8"><code class="language-scss">//see css/root/_size.scss
-    .size-two {
-    @include size(auto, 5em);//mixin
-    @include center;
-    border: 1px solid red;
-    }</code></pre>
-    <div class="size-two mb-10"></div>
-    <hr>
-    
-    
 
 </div>
-<p class="third center mb-4"><a href="../index.html">Home</a> | <a href="about.html">About</a> | <a href="test.html">Test Page</a> | <a href="class.html">Classes</a></p>
+<div class="bottom-links text-center mb-4"></div>
 </section>
 
-<footer class="center">
-	<p class="third mt-3 mb-0"> - <em>by</em> <a href="https://phone1st.org">phone1st.org</a> -</p>
-		<p class="third mt-3 mb-4">&copy;2026 Phone1st Starter Theme for html <a href="https://github.com/chocolate-holding-company/phone1st-theme" title="Phone1st Starter Theme for html available on Github">available on Github</a></p>
+<footer class="text-center">
+	<p class="text-xs mt-3 mb-0"> - <em>by</em> <a href="https://phone1st.org">phone1st.org</a> -</p>
+		<p class="text-xs mt-3 mb-4">&copy;2026 Phone1st Starter Theme for html <a href="https://github.com/chocolate-holding-company/phone1st-theme" title="Phone1st Starter Theme for html available on Github">available on Github</a></p>
 	</footer>
 	<button
    id="back-to-top"
@@ -371,9 +347,9 @@
 </div><!-- wrapper   -->
 
  </div>
- <script src="js/highlight.js"></script>
+ <script>const pageLink = "scss";</script>
+<script src="js/bottom-links.js"></script>
 <script src="js/scroll.js"></script>
-
 </body>
 
 </html>

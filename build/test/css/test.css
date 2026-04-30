@@ -3,11 +3,6 @@
   --heading-color: oklch(20.8% 0.042 265.755deg);
   --link-color: oklch(39.1% 0.09 240.876deg);
   --hover-color: oklch(44.3% 0.11 240.79deg);
-  --opacity: 0.75;
-  --first: oklch(54.6% 0.245 262.881deg);
-  --dark-gray: oklch(37.1% 0 0deg);
-  --medium-gray: oklch(55.6% 0 0deg);
-  --light-gray: oklch(92.2% 0 0deg);
   --viewport-bg: oklch(96.8% 0.007 247.896deg);
   --bg: oklch(55.4% 0.046 257.417deg);
   --light-bg: oklch(92.9% 0.013 255.508deg);
@@ -17,11 +12,8 @@
   --button-color: oklch(95.1% 0.026 236.824deg);
   --button-bg: oklch(39.1% 0.09 240.876deg);
   --button-bg-hover: oklch(50% 0.134 242.749deg);
-  --error: oklch(51.4% 0.222 16.935deg);
-  --alert: oklch(76.9% 0.188 70.08deg);
-  --success: oklch(52.7% 0.154 150.069deg);
   --form-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.26);
-  --form-focus-box-shadow: inset 0 1px 1px rgba(#000, 0.5);
+  --form-focus-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.5);
   --filter-shadow: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
 }
 
@@ -33,14 +25,12 @@
   --viewport-bg: oklch(27.9% 0.041 260.031deg);
   --input-bg: oklch(92.9% 0.013 255.508deg);
   --border: 0.063rem solid oklch(92.9% 0.013 255.508deg);
-  --form-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.26);
-  --form-focus-box-shadow: inset 0 1px 1px rgba(#000, 0.5);
   --filter-shadow: drop-shadow(0px 0px 10px rgba(200, 200, 200, 0.5));
 }
 
 .intro-para {
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   color: var(--font-color);
 }
 
@@ -59,80 +49,87 @@
 }
 
 .first-color {
-  background: var(--first);
+  background: oklch(54.6% 0.245 262.881deg);
 }
 .first-color p {
-  color: #fff;
+  color: oklch(98.4% 0.003 247.858deg);
+}
+
+.second-color {
+  background: oklch(58.6% 0.253 17.585deg);
+}
+.second-color p {
+  color: oklch(98.4% 0.003 247.858deg);
 }
 
 .black-color {
-  background: #000;
+  background: oklch(12.9% 0.042 264.695deg);
 }
 .black-color p {
-  color: #fff;
+  color: oklch(98.4% 0.003 247.858deg);
 }
 
 .white-color {
-  background: #fff;
+  background: oklch(98.4% 0.003 247.858deg);
 }
 .white-color p {
-  color: #000;
+  color: oklch(12.9% 0.042 264.695deg);
 }
 
 .dark-gray {
-  background: var(--dark-gray);
+  background: oklch(37.1% 0 0deg);
 }
 .dark-gray p {
-  color: #fff;
+  color: oklch(98.4% 0.003 247.858deg);
 }
 
 .medium-gray {
-  background: var(--medium-gray);
+  background: oklch(55.6% 0 0deg);
 }
 .medium-gray p {
-  color: #fff;
+  color: oklch(98.4% 0.003 247.858deg);
 }
 
 .light-gray {
-  background: var(--light-gray);
+  background: oklch(92.2% 0 0deg);
 }
 .light-gray p {
-  color: #000;
+  color: oklch(12.9% 0.042 264.695deg);
 }
 
 .font-color {
   background: var(--font-color);
 }
 .font-color p {
-  color: #000;
+  color: var(--viewport-bg);
 }
 
 .link-color {
   background: var(--link-color);
 }
 .link-color p {
-  color: #fff;
+  color: var(--viewport-bg);
 }
 
 .hover-color {
   background: var(--hover-color);
 }
 .hover-color p {
-  color: #fff;
+  color: var(--viewport-bg);
 }
 
 .background {
   background: var(--bg);
 }
 .background p {
-  color: #fff;
+  color: var(--viewport-bg);
 }
 
 .light-background {
   background: var(--light-bg);
 }
 .light-background p {
-  color: #000;
+  color: oklch(12.9% 0.042 264.695deg);
 }
 
 .border {
@@ -142,27 +139,28 @@
 }
 .border p {
   margin: 0;
+  color: var(--font-color);
 }
 
-.error-color {
-  background: var(--error);
+.error {
+  background: oklch(51.4% 0.222 16.935deg);
 }
-.error-color p {
-  color: #fff;
-}
-
-.alert-color {
-  background: var(--alert);
-}
-.alert-color p {
-  color: #fff;
+.error p {
+  color: oklch(98.4% 0.003 247.858deg);
 }
 
-.success-color {
-  background: var(--success);
+.alert {
+  background: oklch(76.9% 0.188 70.08deg);
 }
-.success-color p {
-  color: #fff;
+.alert p {
+  color: oklch(98.4% 0.003 247.858deg);
+}
+
+.success {
+  background: oklch(52.7% 0.154 150.069deg);
+}
+.success p {
+  color: oklch(98.4% 0.003 247.858deg);
 }
 
 .one {
@@ -206,6 +204,7 @@
 }
 .margin-spacer p {
   font-size: 1.1398963731rem;
+  color: var(--font-color);
 }
 .margin-spacer .small-margin {
   border: var(--border);

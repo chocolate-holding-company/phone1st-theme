@@ -1,14 +1,14 @@
 <p>
- The headings use the body font from <em>Google Fonts</em> - Raleway - uses 9 weights and includes <em>italic</em><br />
- The heading font-sizes are set using the on-line
- <em><a href="https://clamp.font-size.app/">clamp font-size app</a></em
+ The headings use the body font from <em>Google Fonts</em> - Raleway - uses 9 weights and includes <em>italic</em>.<br />
+ The heading font-sizes are set using the <em>clamp function</em>, set with <em><a href="https://utopia.fyi/type/calculator/">utopia.fyi</a></em
  ><br />
- - see <em>css/base/_typography.scss</em>
+ - see <em>css/base/_typography.scss</em><br>
+ The headings use class - <em>.h1 .h2 .h3 .h4 .h5 .h6</em>
 </p>
 <h1>Heading h1</h1>
 <h2>Heading h2 weight normal</h2>
-<h2 class="font300">Heading h2 weight 300</h2>
-<h2 class="font700">Heading h2 weight 700</h2>
+<h2 class="font-300">Heading h2 weight 300</h2>
+<h2 class="font-900">Heading h2 weight 900</h2>
 <h2>
  Heading h2 check line-height with this really long, I mean really long, I
  really mean this really long title.
@@ -20,10 +20,10 @@
 <hr />
 <p>
  Big headings are <em>classes</em> and <em>mixins</em><br />
- Font-sizes set with the
- <a href="https://clamp.font-size.app/">clamp font-size app</a>
+ Font-sizes set using the <em>clamp function</em>, set with <em><a href="https://utopia.fyi/type/calculator/">utopia.fyi</a></em
+ >
  <br />
- - see <em>css/class/_typography.scss</em>
+ - see <em>css/class/_typography.scss and css/root/_mixins.scss</em>
 </p>
 <h1 class="bighead-1">This is h1 as bighead-1</h1>
 <h1 class="bighead-2">This is h1 as bighead-2</h1>
@@ -32,8 +32,8 @@
 <hr />
 <p>
  The body font from <em>Google Fonts</em> - Raleway - uses 9 weights and
- includes <em>italic</em>. The body font-size is <em>$font-size - 1.2rem</em> -
- see <em>css/root/_variables.scss</em> and <em>css/site/_site.scss</em>
+ includes <em>italic</em>. The body font-size is fixed <em>$font-size - 1.1rem</em> -
+ see <em>css/root/_variables.scss</em> and <em>css/site/_site.scss</em>. The <em>&lt;p&gt;</em> paragraph is set using <a href="https://utopia.fyi/type/calculator/">utopia.fyi</a>
 </p>
 <p>
  <span class="one"
@@ -70,46 +70,46 @@
 </p>
 <hr />
 
-<p class="lead">
- <strong>Lead Paragraph</strong> Lorem ipsum dolor sit amet,
+<p class="text-lg">
+ <strong>Lead Paragraph</strong> $lead or class - text-lg - Lorem ipsum dolor sit amet,
  <em>emphasis</em> consectetuer adipiscing elit. Nullam dignissim convallis est.
  Quisque aliquam. Donec faucibus. Nunc iaculis <strong>strong</strong> dui. Nam
  sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida
- vehicula, nisl. Praesent mattis, massa quis luctus fermentum, turpis mi
- volutpat justo, eu volutpat enim diam eget metus. Maecenas ornare tortor. Donec
+ vehicula, nisl. <a href="#" title="test link">Praesent mattis, massa quis luctus fermentum, turpis mi</a>
+ volutpat justo, eu <strong>volutpat enim diam eget metus.</strong> Maecenas ornare tortor. Donec
  sed tellus eget sapien fringilla nonummy. Mauris a ante. Suspendisse quam sem,
  consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis
  tellus.
 </p>
 <p>
- <strong>Normal Paragraph</strong> - the &lt;p&gt; is tag set with the
- <a href="https://clamp.font-size.app/">clamp font-size app</a> - see
- <em>css/base/_typography.scss</em> - Lorem ipsum dolor sit amet,
+ <strong>Normal Paragraph</strong> - the <em>&lt;p&gt;</em> tag set with the
+ <a href="https://utopia.fyi/type/calculator/">utopia.fyi</a> - see
+ <em>css/base/_typography.scss</em> - The <em>&lt;body&gt;</em> font has a fixed value of <em>$font-size: 1.1rem</em> in the variables and a class of <em>text-base</em>. <em>The lead, secondary and third paragraphs are tied to $font-size</em>. Lorem ipsum dolor sit amet,
  <a href="#" title="test link">test link</a> adipiscing elit. Nullam dignissim
  convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam
  sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida
- vehicula, nisl. Praesent mattis, massa quis luctus fermentum, turpis mi
+ vehicula, nisl. <strong>Praesent mattis, massa quis</strong> luctus fermentum, turpis mi
  volutpat justo, eu volutpat enim diam eget metus. Maecenas ornare tortor. Donec
  sed tellus eget sapien fringilla nonummy. Mauris a ante.
 </p>
-<p class="secondary">
+<p class="text-sm">
  <strong>Secondary Paragraph</strong> Lorem ipsum dolor sit amet,
  <a href="#" title="test link">test link</a> adipiscing elit. Nullam dignissim
  convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam
  sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida
- vehicula, nisl. Praesent mattis, massa quis luctus fermentum, turpis mi
+ vehicula, nisl. <strong>Praesent mattis,</strong> massa quis luctus fermentum, turpis mi
  volutpat justo, eu volutpat enim diam eget metus. Maecenas ornare tortor. Donec
  sed tellus eget sapien fringilla nonummy. Mauris a ante. Suspendisse quam sem,
  consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis
  tellus.
 </p>
-<p class="third">
+<p class="text-xs">
  <strong>Third Paragraph</strong> Lorem ipsum dolor sit amet,
  <em>emphasis</em> consectetuer adipiscing elit. Nullam dignissim convallis est.
  Quisque aliquam. Donec faucibus. Nunc iaculis <strong>strong</strong> dui. Nam
  sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida
- vehicula, nisl. Praesent mattis, massa quis luctus fermentum, turpis mi
- volutpat justo, eu volutpat enim diam eget metus. Maecenas ornare tortor. Donec
+ vehicula, nisl. <a href="#" title="test link">Praesent mattis, massa quis</a> luctus fermentum, turpis mi
+ volutpat justo, <strong>eu volutpat enim diam</strong> eget metus. Maecenas ornare tortor. Donec
  sed tellus eget sapien fringilla nonummy. Mauris a ante. Suspendisse quam sem,
  consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis
  tellus.
@@ -188,7 +188,7 @@ Another surprise was how much water there was. Water was pumped around fields fo
 <code>&lt;p&gt;This is the code tag.&lt;/p&gt;</code>
 <p></p>
 <h3>Pre-Code (pre)(code)</h3>
-<pre><code>&lt;p&gt;This is the pre tag followed by a code tag.&lt;/p&gt;
+<pre><code class="nohighlight">&lt;p&gt;This is the pre tag followed by a code tag.&lt;/p&gt;
 
 h1 {
  color: red;

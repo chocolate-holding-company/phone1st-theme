@@ -3,11 +3,6 @@
   --heading-color: oklch(20.8% 0.042 265.755deg);
   --link-color: oklch(39.1% 0.09 240.876deg);
   --hover-color: oklch(44.3% 0.11 240.79deg);
-  --opacity: 0.75;
-  --first: oklch(54.6% 0.245 262.881deg);
-  --dark-gray: oklch(37.1% 0 0deg);
-  --medium-gray: oklch(55.6% 0 0deg);
-  --light-gray: oklch(92.2% 0 0deg);
   --viewport-bg: oklch(96.8% 0.007 247.896deg);
   --bg: oklch(55.4% 0.046 257.417deg);
   --light-bg: oklch(92.9% 0.013 255.508deg);
@@ -17,11 +12,8 @@
   --button-color: oklch(95.1% 0.026 236.824deg);
   --button-bg: oklch(39.1% 0.09 240.876deg);
   --button-bg-hover: oklch(50% 0.134 242.749deg);
-  --error: oklch(51.4% 0.222 16.935deg);
-  --alert: oklch(76.9% 0.188 70.08deg);
-  --success: oklch(52.7% 0.154 150.069deg);
   --form-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.26);
-  --form-focus-box-shadow: inset 0 1px 1px rgba(#000, 0.5);
+  --form-focus-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.5);
   --filter-shadow: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.5));
 }
 
@@ -33,8 +25,6 @@
   --viewport-bg: oklch(27.9% 0.041 260.031deg);
   --input-bg: oklch(92.9% 0.013 255.508deg);
   --border: 0.063rem solid oklch(92.9% 0.013 255.508deg);
-  --form-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.26);
-  --form-focus-box-shadow: inset 0 1px 1px rgba(#000, 0.5);
   --filter-shadow: drop-shadow(0px 0px 10px rgba(200, 200, 200, 0.5));
 }
 
@@ -63,7 +53,7 @@
 }
 
 .dropdown-header {
-  color: oklch(42.4% 0.199 265.638deg);
+  color: oklch(54.6% 0.245 262.881deg);
   padding: 14px 16px;
   display: flex;
   justify-content: space-between;
@@ -75,8 +65,8 @@
 }
 
 .dropdown-header.open {
-  background-color: var(--first);
-  color: #fff;
+  background-color: oklch(54.6% 0.245 262.881deg);
+  color: oklch(98.4% 0.003 247.858deg);
 }
 
 .dropdown-menu {
@@ -93,27 +83,27 @@
 .arrow {
   width: 25px;
   height: 25px;
-  fill: oklch(42.4% 0.199 265.638deg);
+  fill: oklch(54.6% 0.245 262.881deg);
   transition: transform 0.3s ease-in-out, fill 0.3s ease-in-out, filter 0.2s ease-in-out;
   transform-origin: center;
 }
 
 .dropdown-header.open .arrow {
-  fill: #fff;
+  fill: oklch(98.4% 0.003 247.858deg);
 }
 
 .dropdown-header.open .arrow {
-  fill: #fff;
+  fill: oklch(98.4% 0.003 247.858deg);
   transform: rotate(180deg);
 }
 
-@media only screen and (min-width: 700px) {
+@media only screen and (min-width: 768px) {
   .dropdown-header:hover {
     transition: all 0.7s ease;
     transform: translate3D(0, -1px, 0) scale(1.02);
   }
 }
-@media only screen and (min-width: 900px) {
+@media only screen and (min-width: 1024px) {
   .dropdown-menu.open-menu {
     padding: 18px 2rem;
   }

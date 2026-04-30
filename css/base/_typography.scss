@@ -36,8 +36,8 @@ h4 {
 
 p,
 .p {
- font-size: clamp(1.1rem, 1.291rem + -0.0597vw, 1.25rem);
- //based on screen width 320px to 1100px and fontsize 1.1rem to 1.25rem
+ font-size: clamp(1.0625rem, 1.0057rem + 0.2424vw, 1.1875rem);
+ //see https://utopia.fyi/type/calculator/
 }
 
 p,
@@ -64,19 +64,19 @@ address {
 
 abbr,
 acronym {
- border-bottom: 1px dotted var(--medium-gray);
+ border-bottom: 1px dotted $medium-gray;
  cursor: help;
 }
 
 mark,
 ins {
- background: var(--light-gray);
+ background: $light-gray;
  text-decoration: none;
- color: $black;
+ color: clr("slate", 700);
 }
 
 del {
- text-decoration-color: var(--error);
+ text-decoration-color: $error;
 }
 
 small {
@@ -116,32 +116,31 @@ sub {
 //Set the headings
 h1,
 .h1 {
- font-size: clamp(2rem, 0.58rem + 3.77vw, 3rem);
+ font-size: clamp(1.75rem, 1.3409rem + 1.8182vw, 2.75rem);
 }
 
 h2,
 .h2 {
- font-size: clamp(1.75rem, 0.69rem + 2.83vw, 2.5rem);
+ font-size: clamp(1.625rem, 1.2273rem + 1.697vw, 2.5rem);
 }
 
 h3,
 .h3 {
- font-size: clamp(1.5rem, 0.79rem + 1.89vw, 2rem);
+ font-size: clamp(1.5rem, 1.2159rem + 1.2121vw, 2.125rem);
 }
 
 h4,
 .h4 {
- font-size: clamp(1.25rem, 0.54rem + 1.89vw, 1.75rem);
+ font-size: clamp(1.25rem, 0.9659rem + 1.2121vw, 1.875rem);
 }
 
 h5,
 .h5 {
- font-size: clamp(1.13rem, 0.59rem + 1.42vw, 1.5rem);
+ font-size: clamp(1.125rem, 0.8409rem + 1.2121vw, 1.75rem);
 }
 
 h6,
 .h6 {
- font-size: clamp(1rem, 0.65rem + 0.94vw, 1.25rem);
+ font-size: clamp(1rem, 0.7159rem + 1.2121vw, 1.625rem);
 }
-//the above is based on screen width 320px to 1100px
-//go to https://clamp.font-size.app to set your own type sizes using the css clamp function
+//go to https://utopia.fyi/type/calculator/ to set your own type sizes using the css clamp function

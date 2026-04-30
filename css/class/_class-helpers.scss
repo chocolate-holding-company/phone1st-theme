@@ -1,0 +1,170 @@
+@use "../root/base-color" as *;
+@use "../root/variables" as v;
+@use "../root/mixins" as m;
+@use "flex" as f;
+@use "spacing" as s;
+@use "typography" as t;
+@use "display" as d;
+@use "border-shadow" as bs;
+@use "grid" as g;
+@use "position" as p;
+@use "size" as si;
+@use "appearance" as a;
+@use "color" as c;
+
+// Breakpoint Definitions
+$breakpoints: (
+ "": null,
+ "_m": m.$medium,
+ //768px
+ "_l": m.$large,
+ //1024px
+ "_xl": m.$xlarge,
+ //1200px
+ "_w": m.$wide, //1440px
+);
+
+// Color Utility Generator
+@mixin generate-color-utilities($suffix) {
+ @each $name, $shades in $palettes {
+  @each $shade, $value in $shades {
+   $base-class: "#{$name}-#{$shade}";
+
+   .bg-#{$base-class}#{$suffix} {
+    background-color: $value !important;
+   }
+   .text-#{$base-class}#{$suffix} {
+    color: $value !important;
+   }
+   .border-#{$base-class}#{$suffix} {
+    border-color: $value !important;
+   }
+    .hover-bg-#{$base-class}#{$suffix}:hover {
+     background-color: $value !important;
+    }
+    .hover-text-#{$base-class}#{$suffix}:hover {
+     color: $value !important;
+    }
+   }
+  }
+ }
+
+// The Main Content Generator (Everything goes inside here)
+@mixin generate-content($suffix) {
+ // Generate palette colors
+ @include generate-color-utilities($suffix);
+
+ // Accessibility & Typography Mixins
+ .hide#{$suffix} {
+  @include m.hidden;
+ }
+ .show#{$suffix} {
+  @include m.show;
+ }
+ .bighead-1#{$suffix} {
+  @include m.bighead-1;
+ }
+ .bighead-2#{$suffix} {
+  @include m.bighead-2;
+ }
+ .bighead-3#{$suffix} {
+  @include m.bighead-3;
+ }
+ .bighead-4#{$suffix} {
+  @include m.bighead-4;
+ }
+
+ // Semantic/Variable Colors (The loop for "error", etc.)
+ @each $name, $value in c.$var-color-map {
+  .bg-#{$name}#{$suffix} {
+   background-color: $value !important;
+  }
+  .text-#{$name}#{$suffix} {
+   color: $value !important;
+  }
+  .border-#{$name}#{$suffix} {
+   border-color: $value !important;
+  }
+
+   .hover-bg-#{$name}#{$suffix}:hover {
+    background-color: $value !important;
+   }
+   .hover-text-#{$name}#{$suffix}:hover {
+    color: $value !important;
+   }
+  }
+
+ // Standard Utility Maps (Flex, Grid, Size, etc.)
+ $all-maps: (
+  f.$flex-map,
+  t.$typography-map,
+  d.$display-map,
+  bs.$border-shadow-map,
+  g.$grid-map,
+  p.$position-map,
+  p.$z-map,
+  si.$size-map,
+  a.$cursor-map,
+  a.$list-style-map
+ );
+
+ @each $map in $all-maps {
+  @each $class, $declaration in $map {
+   .#{$class}#{$suffix} {
+    @each $prop, $value in $declaration {
+     #{$prop}: #{$value} !important;
+    }
+   }
+  }
+ }
+
+ // Spacing Utilities (Margin, Padding, Gaps)
+ $sides: (
+  "": "",
+  "t": "-top",
+  "b": "-bottom",
+  "s": "-inline-start",
+  "e": "-inline-end",
+  "x": "-inline",
+  "y": "-block",
+ );
+
+ @each $key, $val in s.$spacing-map {
+  @each $char, $prop in $sides {
+   .m#{$char}-#{$key}#{$suffix} {
+    margin#{$prop}: $val !important;
+   }
+   @if $key != "auto" {
+    .p#{$char}-#{$key}#{$suffix} {
+     padding#{$prop}: $val !important;
+    }
+   }
+  }
+
+  .gap-#{$key}#{$suffix} {
+   gap: $val !important;
+  }
+  .row-gap-#{$key}#{$suffix} {
+   row-gap: $val !important;
+  }
+  .col-gap-#{$key}#{$suffix} {
+   column-gap: $val !important;
+  }
+ }
+}
+
+// The Render Loop (Triggers the code above)
+@mixin render-utilities() {
+ @each $suffix, $breakpoint in $breakpoints {
+  @if $breakpoint {
+   @include m.media($breakpoint) {
+    @include generate-content($suffix);
+   }
+  } @else {
+   @include generate-content($suffix);
+  }
+ }
+}
+
+// Execution
+@include render-utilities();

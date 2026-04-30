@@ -1,107 +1,23 @@
-@use "../root/base-color" as *;
 @use "../root/variables" as *;
-@use "../root/mixins" as *;
 
-//variables color
-.dark-gray {
- color: var(--dark-gray);
-}
-.medium-gray {
- color: var(--medium-gray);
-}
-.light-gray {
- color: var(--light-gray);
-}
-.first {
- color: var(--first);
-}
-
-.font-color {
- color: var(--font-color);
-}
-.link-color {
- color: var(--link-color);
-}
-.hover-color {
- color: var(--hover-color);
-}
-
-.page-bg {
- color: var(--viewport-bg);
-}
-.bg {
- color: var(--bg);
-}
-
-.light-bg {
- color: var(--light-bg);
-}
-
-.black {
- color: var(--black);
-}
-.white {
- color: var(--white);
-}
-
-.error {
- color: var(--error);
-}
-.alert {
- color: var(--alert);
-}
-.success {
- color: var(--success);
-}
-
-//variables background color
-.bg-dark-gray {
- background-color: var(--dark-gray);
-}
-.bg-medium-gray {
- background-color: var(--medium-gray);
-}
-.bg-light-gray {
- background-color: var(--light-gray);
-}
-.bg-first {
- background-color: var(--first);
-}
-
-.bg-font-color {
- background-color: var(--font-color);
-}
-.bg-link-color {
- background-color: var(--link-color);
-}
-.bg-hover-color {
- background-color: var(--hover-color);
-}
-
-.bg-page-bg {
- background-color: var(--viewport-bg);
-}
-.bg-bg {
- background-color: var(--bg);
-}
-
-.bg-light-bg {
- background-color: var(--light-bg);
-}
-
-.bg-black {
- background-color: var(--black);
-}
-.bg-white {
- background-color: var(--white);
-}
-
-.bg-error {
- background-color: var(--error);
-}
-.bg-alert {
- background-color: var(--alert);
-}
-.bg-success {
- background-color: var(--success);
-}
+//variables color Map
+//$variables don't change on dark mode
+//var(--variables) change with dark mode
+$var-color-map: (
+ "dark-gray": $dark-gray,
+ "medium-gray": $medium-gray,
+ "light-gray": $light-gray,
+ "first-color": $first-color,
+ "second-color": $second-color,
+ "font-color": var(--font-color),
+ "link-color": var(--link-color),
+ "hover-color": var(--hover-color),
+ "page-bg": var(--viewport-bg),
+ "bg": var(--bg),
+ "light-bg": var(--light-bg),
+ "black": $black,
+ "white": $white,
+ "error": $error,
+ "alert": $alert,
+ "success": $success,
+);

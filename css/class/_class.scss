@@ -1,12 +1,6 @@
 //experimenting with classes
 
-//see _media.scss and _table.scss for more classes used with Phone1st
-@forward "color";
-@forward "typography";
-@forward "margin";
-@forward "padding";
-@forward "display";
-@forward "size";
-@forward "flex";
-@forward "gap";
-@forward "appearance";
+@use "class-helpers" as helper;
+
+// This one line triggers the entire responsive build
+@include helper.render-utilities();

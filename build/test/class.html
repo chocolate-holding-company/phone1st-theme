@@ -3,128 +3,275 @@
 <html lang="en">
  <head>
   
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <title>Phone1st Classes</title>
-  <meta name="HandheldFriendly" content="True" />
-  <meta name="mobile-web-app-capable" content="yes">
-  <meta name="description" content="Classes used with Phone1st for quick styling.">
-  <meta name="author" content="h@phone1st.org">
-  <meta name="robots" content="INDEX,FOLLOW">
-  <meta name="keywords" content="Classes, Phone1st">
-  <link rel="canonical" href="https://phone1st.org/test/class.html" />
-  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   
-  <meta property="og:site_name" content="Phone1st Starter Theme" />
+  <title>Phone1st Classes | Phone1st Starter Theme for Html</title>
+  <meta name="description" content="Classes used with Phone1st for quick styling." />
+  <link rel="canonical" href="https://phone1st.org/test/class.html" />
+  
+  <meta property="og:site_name" content="Phone1st Starter Theme for Html" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Phone1st Classes" />
+  <meta property="og:title" content="Class" />
   <meta property="og:description" content="Classes used with Phone1st for quick styling." />
   <meta property="og:url" content="https://phone1st.org/test/class.html" />
   <meta property="og:image" content="https://phone1st.org/test/test-images/phone1st-class.webp" />
-  <meta property="og:image:width" content="580"/>
-  <meta property="og:image:height" content="296"/>
+  <meta property="og:image:alt" content="Class header image" />
   
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Phone1st Classes" />
+  <meta name="twitter:title" content="Class" />
   <meta name="twitter:description" content="Classes used with Phone1st for quick styling." />
-  <meta name="twitter:url" content="https://phone1st.org/test/class.html" />
-  <meta name="twitter:image:src" content="https://phone1st.org/test/test-images/phone1st-class.webp" />
+  <meta name="twitter:image" content="https://phone1st.org/test/test-images/phone1st-class.webp" />
+  
+  <script type="application/ld+json">
+   {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Class",
+    "url": "https://phone1st.org/test/class.html",
+    "logo": "https:phone1st.org/apple-touch-icon.png",
+    "contactPoint": {
+     "@type": "ContactPoint",
+     "email": "h@phone1st.org",
+     "contactType": "customer support"
+    },
+    "sameAs": [
+     "https://facebook.com/phone1st.org/",
+     "https://instagram.com/phone1st.org/",
+     "https://x.com/phone1st.org/"
+    ],
+    "description": "Classes used with Phone1st for quick styling."
+   }
+  </script>
+  
+  
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  
+  <meta name="theme-color" content="#4A6741" />
+  
   <link rel="stylesheet" href="../css/style.css" />
   <link rel="stylesheet" href="css/page.css" />
   <link rel="stylesheet" href="css/classes.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/base16/one-light.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+
  </head>
 
  <body>
   <div id="top-progress-container"><div id="top-progress-bar"></div></div>
   <div id="top" class="wrapper">
-   <header class="mb-m">
-    <h1 class="center">
+   <header class="mb-4">
+    <h1 class="text-center">
      Phone1st Classes
     </h1>
    </header>
+   <section>
+<img src="../test/test-images/phone1st-class.webp" alt="Class header image" class="width-50 mx-auto block" />
 
- <section>
-
-
-<img src="../test/test-images/phone1st-class.webp" alt="Phone1st class" class="width50 centered block" />
 
 <div>
-  <p class="center lead mb-s">Experimenting with <em>classes.</em></p>
- <p class="center ls-3 mb-s">Work in progress</p>
-    <p class="center">
-      Classes are based on the variable sizes set in the <em>_variables.scss</em> file and the default colors.
+  <p class="text-center text-lg font-500 mb-3">Experimenting with <em>classes.</em></p>
+    <p class="text-center mb-4">
+      Phone1st uses the color palette from <strong>Tailwind css</strong>.</p>
+      <p class="lh-6 mb-4">
+      <strong>A mixin is used to generate all the classes</strong>. In the <em>class</em> folder the <em>_class-helpers.scss</em> imports all the partials as <em>maps</em> and with a <em>mixin</em> adds <em>breakpoints</em>, <em>colors</em> and <em>size </em> where needed.</p>
+      <p class="mb-4">To add a <em>class</em> is simple you just add it to the <em>map partial</em>. In <em>development</em> the output file <em>style.css</em> in the <em>build</em> folder weighs about <em>82kb</em>. In <em>development</em> the mixin generates a lot of <em>classes</em>. In <em>production</em> the unused css styles should be purged and the file should come down to about <em>28kb</em>.
     </p>
+    <p>You can take the <em>class utilities</em> as far as you like or you can easily remove them</p>
   <hr>
   <h2 class="links-title">-- Links --</h2>
 <div class="links">
   <div>
-    <a href="#color">Color</a>
+    <a href="#read">Helper Classes</a>
+    <a href="#color">Color Palettes</a>
     <a href="#type">Typography</a>
-    <a href="#margin">Margin</a>
-    <a href="#padding">Padding</a>
     <a href="#size">Size</a>
   </div>
   <div>
     <a href="#display">Display</a>
     <a href="#appearance">Appearance</a>
     <a href="#flex">Flex</a>
-    <a href="#gap">Gap</a>
+    <a href="#grid">Grid</a>
   </div>
 </div>
 <hr />
 
   <div class="dropdown-container">
-<div id="color" class="dropdown">
+<div id="read" class="dropdown">
  <div class="dropdown-header" data-target="#dropdown-menu-10">
-  Color
+  Helper Classes
   <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
    <path d="M7 10l5 5 5-5z" />
   </svg>
  </div>
 <div id="dropdown-menu-10" class="dropdown-menu">
- <pre><code class="language-scss">//variables color
-dark-gray - color: var(--dark-gray);
-medium-gray color: var(--medium-gray);
-light-gray - color: var(--light-gray);
-first - color: var(--first);
-black - color: var(--black);
-white - color: var(--white);
+ <h2>How it works</h2>
+ <p class="mb-4">See - <code>css/root/_base-color.scss, css/root/_variables.scss, css/root/mixins, css/class/...all</code></p>
+ <p class="mb-4">The <em>_class-helpers.scss</em> imports all the <em>partials</em> and runs them through a mixin to generate classes adding <em>breakpoints, color</em> and <em>spacing</em> where necessary</p>
+ <p>
+  The color palette is from <a href="https://tailwindcss.com">Tailwind</a>. To
+  use the colors is simple, being <em>color name and shade</em> eg <em>blue-500</em>. Precede it with what you want to color eg <em>text-, bg- or border-</em>. Add a <em>breakpoint</em> or <em>hover</em>.
+ </p>
+ <pre><code>//examples
+//text
+text-blue-400
+text-slate-200
 
-font-color color: var(--font-color);
-link-color - color: var(--link-color);
-hover-color - color: var(--hover-color);
+//background color
+bg-blue-400
+bg-slate-200
 
-page-bg - color: var(--viewport-bg);
-bg - color: var(--bg);
-light-bg - color: var(--light-bg);
+//border
+border-blue-400
+border-slate-200
 
-error - color: var(--error);
-alert - color: var(--alert);
-success - color: var(--success);
+//color variables
+//$variables don't change on dark mode
+//var(--variables) change with dark mode
+//use text-, bg- or border with the variables
+text-dark-gray - $dark-gray
+bg-medium-gray - $medium-gray
+border-light-gray - $light-gray
+text-first-color - $first-color
+bg-second-color - $second-color
+border-font-color - var(--font-color)
+text-link-color - var(--link-color)
+text-hover-color - var(--hover-color)
+bg-page-bg - var(--viewport-bg)
+bg-bg - var(--bg)
+bg-light-bg - var(--light-bg)
+border-black - $black
+text-white - $white
+text- error - $error
+bg-alert - $alert
+border-success - $success
 
-//variables background-color
-bg-dark-gray - background-color: var(--dark-gray);
-bg-medium-gray background-color: var(--medium-gray);
-bg-light-gray - background-color: var(--light-gray);
-bg-first - background-color: var(--first);
-bg-black - background-color: var(--black);
-bg-white - background-color: var(--white);
+//breakpoints
+$medium: 768px; class - _m
+$large: 1024px; class - _l
+$xlarge: 1200px; class - _xl
+$wide: 1440px; class - _w
 
-bg-font-color background-color: var(--font-color);
-bg-link-color - background-color: var(--link-color);
-bg-hover-color - background-color: var(--hover-color);
+//usage
+bg-blue-400_l
+bg-link-color_xl
+text-slate-200_m
+border-medium-gray_w
 
-bg-page-bg - background-color: var(--viewport-bg);
-bg-bg - background-color: var(--bg);
-bg-light-bg - background-color: var(--light-bg);
+//hovers
+hover-text-blue-300
+hover-text-success// variable
 
-bg-error - background-color: var(--error);
-bg-alert - background-color: var(--alert);
-bg-success - background-color: var(--success);
+hover-bg-blue-300
+hover-bg-success// variable
 
-//media breakpoints
-//none for color as yet</code></pre>
+hover-border-blue-300
+hover-border-success// variable</code></pre>
+
+ <h3>Spacing</h3>
+ <p>
+  Spacing works with the <code>$s-0 to $s-15 in the _variables.scss</code>. See the
+  <code>css/class/_spacing.scss</code> file
+ </p>
+
+ <pre><code>//the spacing variables
+0 - $s-0 - 0
+1 - $s-1 - 0.25rem
+2 - $s-2 - 0.5rem
+3 - $s-3 - 0.75rem
+4 - $s-4 - 1rem
+5 - $s-5 - 1.25rem
+6 - $s-6 - 1.5rem
+7 - $s-7 - 1.75rem
+8 - $s-8 - 2rem
+9 - $s-9 - 2.25rem
+10 - $s-10 - 3rem
+11 - $s-11 - 3.5rem
+12 - $s-12 - 4rem
+13 - $s-13 - 4.5rem
+14 - $s-14 - 5rem
+15 - $s-15 - 5.5rem
+auto - auto //class only</code></pre>
+
+ <pre><code class="language-scss">//spacing class examples
+//margin
+m-3 - margin: 0.75rem;
+my-6 - margin-block: 1.5rem;
+mx-auto - margin-inline: auto;
+mt-5 - margin-top: 1.25rem;
+mb-4 - margin-bottom: 1rem;
+ms-2 - margin-inline-start: 0.5rem;
+me-6 - margin-inline-end: 1.5rem;
+
+//padding
+p-3 - padding: 0.75rem;
+py-6 - padding-block: 1.5rem;
+px-12 - padding-inline: 4rem;
+pt-5 - padding-top: 1.25rem;
+pb-4 - padding-bottom: 1rem;
+ps-2 - padding-inline-start: 0.5rem;
+pe-6 - padding-inline-end: 1.5rem;
+
+//gap
+gap-6 - gap: 1.5rem;
+row-gap-7 row-gap: 1.75rem;
+col-gap-3 column-gap: 0.75rem;</code></pre>
+
+ <pre><code>//usage of utilities classes
+&lt;div class="p-8 bg-slate-100 m-4"&gt;
+&lt;h1 class="mb-4 text-blue-900"&gt;Hello World&lt;/h1&gt;
+&lt;p class="ps-2 text-slate-700"&gt;This has a left padding of 0.5rem.&lt;/p&gt;
+&lt;a href="#" class="my-2 text-rose-400 hover-text-rose-800"&gt;This link goes nowhere&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+</div>
+
+<div id="color" class="dropdown">
+ <div class="dropdown-header" data-target="#dropdown-menu-12">
+  Color Palettes
+  <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+   <path d="M7 10l5 5 5-5z" />
+  </svg>
+ </div>
+<div id="dropdown-menu-12" class="dropdown-menu">
+ <pre><code class="language-scss">//colors from Tailwindcss
+//see css/root/_base-color.scss
+red
+50: oklch(0.971 0.013 17.38),
+100: oklch(0.936 0.032 17.717),
+200: oklch(0.885 0.062 18.334),
+300: oklch(0.808 0.114 19.571),
+400: oklch(0.704 0.191 22.216),
+500: oklch(0.637 0.237 25.331),
+600: oklch(0.577 0.245 27.325),
+700: oklch(0.505 0.213 27.518),
+800: oklch(0.444 0.177 26.899),
+900: oklch(0.396 0.141 25.723),
+950: oklch(0.258 0.092 26.042)
+orange
+amber
+yellow
+lime
+green
+emerald
+teal
+cyan
+sky
+blue
+indigo
+violet
+purple
+fucshia
+pink
+rose
+slate
+gray
+zinc
+neutral
+stone</code></pre>
 </div>
 
 </div>
@@ -139,50 +286,72 @@ bg-success - background-color: var(--success);
 <div id="dropdown-menu-11" class="dropdown-menu">
  <pre><code class="language-scss">//font family
 font - font-family: $font;
-heading-font - font-family: $heading-font;
-code-font - font-family: $code-font;
+heading - font-family: $heading-font;
+code - font-family: $code-font;
 
-//font-size
-normal - $font-size//1.2rem
-lead - $lead
-secondary - $secondary
-third - $third
+// Font Sizes (using variables)
+text-xs - font-size: $third;
+text-sm - font-size: $secondary;
+text-base - font-size: $font-size;
+text-lg - font-size: $lead;
 
 //see css/base/_typography.scss
-p - font-size: clamp($font-size, 1.1385rem + 0.3077vw, 1.35rem);
+p - font-size: clamp(1.0625rem, 1.0057rem + 0.2424vw, 1.1875rem);
 
 //headings
 //set your css Clamp function settings at https://clamp.font-size.app
 //see css/base/_typography.scss
 //all clamp functions based on screen width 320px to 1100px
-h1 - font-size: clamp(2rem, 0.58rem + 3.77vw, 3rem);
-h2 - font-size: clamp(1.75rem, 0.69rem + 2.83vw, 2.5rem);
-h3 - font-size: clamp(1.5rem, 0.79rem + 1.89vw, 2rem);
-h4 - font-size: clamp(1.25rem, 0.54rem + 1.89vw, 1.75rem);
-h5 - font-size: clamp(1.13rem, 0.59rem + 1.42vw, 1.5rem);
-h6 - font-size: clamp(1rem, 0.65rem + 0.94vw, 1.25rem);
+h1 - font-size: clamp(1.75rem, 1.3409rem + 1.8182vw, 2.75rem);
+h2 - font-size: clamp(1.625rem, 1.2273rem + 1.697vw, 2.5rem);
+h3 - font-size: clamp(1.5rem, 1.2159rem + 1.2121vw, 2.125rem);
+h4 - font-size: clamp(1.25rem, 0.9659rem + 1.2121vw, 1.875rem);
+h5 - font-size: clamp(1.125rem, 0.8409rem + 1.2121vw, 1.75rem);
+h6 - font-size: clamp(1rem, 0.7159rem + 1.2121vw, 1.625rem);
 
-//big heading sizes - classes and mixins
-//see css/class/_typography.scss
-bighead-1 - font-size: clamp(2.5rem, 2.2949rem + 1.0256vw, 3rem);
-bighead-2 - font-size: clamp(3rem, 2.7949rem + 1.0256vw, 3.5rem);
-bighead-3 - font-size: clamp(3.5rem, 3.2949rem + 1.0256vw, 4rem);
-bighead-4 - font-size: clamp(4rem, 3.7949rem + 1.0256vw, 4.5rem);
+//big heading sizes - mixins
+bighead-1 - font-size: clamp(2.125rem, 1.767rem + 1.5909vw, 3rem);
+bighead-2 - font-size: clamp(2.5rem, 2.142rem + 1.5909vw, 3.375rem);
+bighead-3 - font-size: clamp(3.25rem, 2.9432rem + 1.3636vw, 4rem);
+bighead-4 - font-size: clamp(3.75rem, 3.4432rem + 1.3636vw, 4.5rem);
 
 //hyphens
-hyphens - hyphens: auto;
+hyphens-auto - hyphens: auto;
 hyphens-man - hyphens: manual;
 hyphens-none - hyphens: none;
 
+//font weight
+font-100 - font-weight: 100;
+font-200 - font-weight: 200;
+font-300 - font-weight: 300;
+font-400 - font-weight: 400;
+font-500 - font-weight: 500;
+font-600 - font-weight: 600;
+font-700 - font-weight: 700;
+font-800 - font-weight: 800;
+font-900 - font-weight: 900;
+
+
 //align
-center - text-align: center
-left - text-align: left
-right - text-align: right
+text-center - text-align: center
+text-left - text-align: left
+text-right - text-align: right
+text-justify - text-align: justify;
+
+//font-style
+normal: font-style: normal;
+italic - font-style: italic;
+
+//text-transform
+upper - text-transform: uppercase;
+lower - text-transform: lowercase;
+caps - text-transform: capitalize;
+normal-case - text-transform: none;
 
 //letter spacing
 ls-tight - letter-spacing: -0.025em;
 ls-0 - letter-spacing: normal;
-ls - letter-spacing: 0.0625rem;
+ls-1 - letter-spacing: 0.0625rem;
 ls-2 - letter-spacing: 0.125rem;
 ls-3 - letter-spacing: 0.1875rem;
 ls-4 - letter-spacing: 0.25rem;
@@ -194,7 +363,7 @@ ls-9 - letter-spacing: 0.5625rem;
 ls-10 - letter-spacing: 0.625rem;
 
 //line-height
-lh - line-height: 1;
+lh-0 - line-hieght: 1;
 lh-1 - line-height: 1.1;
 lh-2 - line-height: 1.2;
 lh-3 - line-height: 1.3;
@@ -207,294 +376,17 @@ lh-9 - line-height: 1.9;
 lh-20 - line-height: 2;
 lh-21 - line-height: 2.1;
 
-//font weight
-font100 - font-weight: 100;
-font200 - font-weight: 200;
-font300 - font-weight: 300;
-font400 - font-weight: 400;
-font500 - font-weight: 500;
-font600 - font-weight: 600;
-font700 - font-weight: 700;
-font800 - font-weight: 800;
-font900 - font-weight: 900;
-
-//font-style
-italic - font-style: italic;
-not-italic - font-style: normal;
-
-//text-transform
-upper - text-transform: uppercase;
-lower - text-transform: lowercase;
-caps - text-transform: capitalize;
-normal-case - text-transform: none;
-
 //media breakpoints
-//not included font-family or headings. Headings using clamp function at the moment
-//@media min-width 700px, 900px, 1100px
-//use _7, _9, _11 at the end of the class
+//@media min-width  768px, 1020px, 1200px, 1440px
+//use _m, _l, _xl, _w at the end of the class
 
 //examples
-lead_7 - font-size: $lead;//@700px
-center_9 - text-align: center;//@900px
-ls-tight_11 - letter-spacing: -0.025em;//@1100px
-lh-2_7 - line-height: 1.2;//@700px
-font300_9 - font-weight: 300;//@900px
-caps_11 text-transform: capitalize;//@1100px</code></pre>
-</div>
-
-</div>
-
-<div id="margin" class="dropdown">
- <div class="dropdown-header" data-target="#dropdown-menu-12">
-  Margin
-  <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-   <path d="M7 10l5 5 5-5z" />
-  </svg>
- </div>
-<div id="dropdown-menu-12" class="dropdown-menu">
- <pre><code class="language-scss">//centered
-centered - margin-left: auto; - margin-right: auto;
-
-//margin top and bottom
-my-0 - margin-top: 0; - margin-bottom: 0;
-my-1 - margin-top: 0.25rem; - margin-bottom: 0.25rem;
-my-2 - margin-top: 0.5rem; - margin-bottom: 0.5rem;
-my-3 - margin-top: 0.75rem; - margin-bottom: 0.75rem;
-my-4 - margin-top: 1rem; - margin-bottom: 1rem;
-my-5 - margin-top: 1.25rem; - margin-bottom: 1.25rem;
-my-6 - margin-top: 1.5em; - margin-bottom: 1.5em;
-my-7 - margin-top: 1.75rem; - margin-bottom: 1.75rem;
-my-8 - margin-top: 2rem; - margin-bottom: 2rem;
-my-9 - margin-top: 2.5rem; - margin-bottom: 2.5rem;
-my-10 - margin-top: 3rem; - margin-bottom: 3rem;
-my-11 - margin-top: 3.5rem; - margin-bottom: 3.5rem;
-my-12 - margin-top: 4rem; - margin-bottom: 4rem;
-my-13 - margin-top: 4.5rem; - margin-bottom: 4.5rem;
-my-14 - margin-top: 5rem; - margin-bottom: 5rem;
-my-15 - margin-top: 5.5rem; - margin-bottom: 5.5rem;
-
-//margin left and right
-mx-0 - margin-left: 0; - margin-right: 0;
-mx-1 - margin-left: 0.25rem; - margin-right: 0.25rem;
-mx-2 - margin-left: 0.5rem; - margin-right: 0.5rem;
-mx-3 - margin-left: 0.75rem; - margin-right: 0.75rem;
-mx-4 - margin-left: 1rem; - margin-right: 1rem;
-mx-5 - margin-left: 1.25rem; - margin-right: 1.25rem;
-mx-6 - margin-left: 1.5em; - margin-right: 1.5em;
-mx-7 - margin-left: 1.75rem; - margin-right: 1.75rem;
-mx-8 - margin-left: 2rem; - margin-right: 2rem;
-mx-9 - margin-left: 2.5rem; - margin-right: 2.5rem;
-mx-10 - margin-left: 3rem; - margin-right: 3rem;
-mx-11 - margin-left: 3.5rem; - margin-right: 3.5rem;
-mx-12 - margin-left: 4rem; - margin-right: 4rem;
-mx-13 - margin-left: 4.5rem; - margin-right: 4.5rem;
-mx-14 - margin-left: 5rem; - margin-right: 5rem;
-mx-15 - margin-left: 5.5rem; - margin-right: 5.5rem;
-
-//margin top
-mt-0 - margin-top: 0;
-mt-1 - margin-top: 0.25rem;
-mt-2 - margin-top: 0.5rem;
-mt-3 - margin-top: 0.75rem;
-mt-4 - margin-top: 1rem;
-mt-5 - margin-top: 1.25rem;
-mt-6 - margin-top: 1.5em;
-mt-7 - margin-top: 1.75rem;
-mt-8 - margin-top: 2rem;
-mt-9 - margin-top: 2.5rem;
-mt-10 - margin-top: 3rem;
-mt-11 - margin-top: 3.5rem;
-mt-12 - margin-top: 4rem;
-mt-13 - margin-top: 4.5rem;
-mt-14 - margin-top: 5rem;
-mt-15 - margin-top: 5.5rem;
-
-//margin bottom
-mb-0 - margin-bottom: 0;
-mb-1 - margin-bottom: 0.25rem;
-mb-2 - margin-bottom: 0.5rem;
-mb-3 - margin-bottom: 0.75rem;
-mb-4 - margin-bottom: 1rem;
-mb-5 - margin-bottom: 1.25rem;
-mb-6 - margin-bottom: 1.5em;
-mb-7 - margin-bottom: 1.75rem;
-mb-8 - margin-bottom: 2rem;
-mb-9 - margin-bottom: 2.5rem;
-mb-10 - margin-bottom: 3rem;
-mb-11 - margin-bottom: 3.5rem;
-mb-12 - margin-bottom: 4rem;
-mb-13 - margin-bottom: 4.5rem;
-mb-14 - margin-bottom: 5rem;
-mb-15 - margin-bottom: 5.5rem;
-
-//margin left
-ml-0 - margin-left: 0;
-ml-1 - margin-left: 0.25rem;
-ml-2 - margin-left: 0.5rem;
-ml-3 - margin-left: 0.75rem;
-ml-4 - margin-left: 1rem;
-ml-5 - margin-left: 1.25rem;
-ml-6 - margin-left: 1.5em;
-ml-7 - margin-left: 1.75rem;
-ml-8 - margin-left: 2rem;
-ml-9 - margin-left: 2.5rem;
-ml-10 - margin-left: 3rem;
-ml-11 - margin-left: 3.5rem;
-ml-12 - margin-left: 4rem;
-ml-13 - margin-left: 4.5rem;
-ml-14 - margin-left: 5rem;
-ml-15 - margin-left: 5.5rem;
-
-//margin right
-mr-0 - margin-right: 0;
-mr-1 - margin-right: 0.25rem;
-mr-2 - margin-right: 0.5rem;
-mr-3 - margin-right: 0.75rem;
-mr-4 - margin-right: 1rem;
-mr-5 - margin-right: 1.25rem;
-mr-6 - margin-right: 1.5em;
-mr-7 - margin-right: 1.75rem;
-mr-8 - margin-right: 2rem;
-mr-9 - margin-right: 2.5rem;
-mr-10 - margin-right: 3rem;
-mr-11 - margin-right: 3.5rem;
-mr-12 - margin-right: 4rem;
-mr-13 - margin-right: 4.5rem;
-mr-14 - margin-right: 5rem;
-mr-15 - margin-right: 5.5rem;
-
-//media breakpoints
-//@media min-width 700px, 900px, 1100px
-//use _7, _9, _11 at the end of the class
-
-//examples
-my-7_7 - margin-top: 1.75rem; - margin-bottom: 1.75rem;//@700px
-mx-11_9 - margin-left: 3.5rem; - margin-right: 3.5rem;//@900px
-mt-2_11 - margin-top: 0.5rem;//@1100px</code></pre>
-</div>
-
-</div>
-
-<div id="padding" class="dropdown">
- <div class="dropdown-header" data-target="#dropdown-menu-13">
-  Padding
-  <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-   <path d="M7 10l5 5 5-5z" />
-  </svg>
- </div>
-<div id="dropdown-menu-13" class="dropdown-menu">
- <pre><code class="language-scss">//padding top and bottom
-py-0 - padding-top: 0; - padding-bottom: 0;
-py-1 - padding-top: 0.25rem; - padding-bottom: 0.25rem;
-py-2 - padding-top: 0.5rem; - padding-bottom: 0.5rem;
-py-3 - padding-top: 0.75rem; - padding-bottom: 0.75rem;
-py-4 - padding-top: 1rem; - padding-bottom: 1rem;
-py-5 - padding-top: 1.25rem; - padding-bottom: 1.25rem;
-py-6 - padding-top: 1.5em; - padding-bottom: 1.5em;
-py-7 - padding-top: 1.75rem; - padding-bottom: 1.75rem;
-py-8 - padding-top: 2rem; - padding-bottom: 2rem;
-py-9 - padding-top: 2.5rem; - padding-bottom: 2.5rem;
-py-10 - padding-top: 3rem; - padding-bottom: 3rem;
-py-11 - padding-top: 3.5rem; - padding-bottom: 3.5rem;
-py-12 - padding-top: 4rem; - padding-bottom: 4rem;
-py-13 - padding-top: 4.5rem; - padding-bottom: 4.5rem;
-py-14 - padding-top: 5rem; - padding-bottom: 5rem;
-py-15 - padding-top: 5.5rem; - padding-bottom: 5.5rem;
-
-//padding left and right
-px-0 - padding-left: 0; - padding-right: 0;
-px-1 - padding-left: 0.25rem; - padding-right: 0.25rem;
-px-2 - padding-left: 0.5rem; - padding-right: 0.5rem;
-px-3 - padding-left: 0.75rem; - padding-right: 0.75rem;
-px-4 - padding-left: 1rem; - padding-right: 1rem;
-px-5 - padding-left: 1.25rem; - padding-right: 1.25rem;
-px-6 - padding-left: 1.5em; - padding-right: 1.5em;
-px-7 - padding-left: 1.75rem; - padding-right: 1.75rem;
-px-8 - padding-left: 2rem; - padding-right: 2rem;
-px-9 - padding-left: 2.5rem; - padding-right: 2.5rem;
-px-10 - padding-left: 3rem; - padding-right: 3rem;
-px-11 - padding-left: 3.5rem; - padding-right: 3.5rem;
-px-12 - padding-left: 4rem; - padding-right: 4rem;
-px-13 - padding-left: 4.5rem; - padding-right: 4.5rem;
-px-14 - padding-left: 5rem; - padding-right: 5rem;
-px-15 - padding-left: 5.5rem; - padding-right: 5.5rem;
-
-//padding top
-pt-0 - padding-top: 0;
-pt-1 - padding-top: 0.25rem;
-pt-3 - padding-top: 0.75rem;
-pt-4 - padding-top: 1rem;
-pt-5 - padding-top: 1.25rem;
-pt-6 - padding-top: 1.5em;
-pt-7 - padding-top: 1.75rem;
-pt-8 - padding-top: 2rem;
-pt-9 - padding-top: 2.5rem;
-pt-10 - padding-top: 3rem;
-pt-11 - padding-top: 3.5rem;
-pt-12 - padding-top: 4rem;
-pt-13 - padding-top: 4.5rem;
-pt-14 - padding-top: 5rem;
-pt-15 - padding-top: 5.5rem;
-
-//padding bottom
-pb-0 - padding-bottom: 0;
-pb-1 - padding-bottom: 0.25rem;
-pb-3 - padding-bottom: 0.75rem;
-pb-4 - padding-bottom: 1rem;
-pb-5 - padding-bottom: 1.25rem;
-pb-6 - padding-bottom: 1.5em;
-pb-7 - padding-bottom: 1.75rem;
-pb-8 - padding-bottom: 2rem;
-pb-9 - padding-bottom: 2.5rem;
-pb-10 - padding-bottom: 3rem;
-pb-11 - padding-bottom: 3.5rem;
-pb-12 - padding-bottom: 4rem;
-pb-13 - padding-bottom: 4.5rem;
-pb-14 - padding-bottom: 5rem;
-pb-15 - padding-bottom: 5.5rem;
-
-//padding left
-pl-0 - padding-left: 0;
-pl-1 - padding-left: 0.25rem;
-pl-3 - padding-left: 0.75rem;
-pl-4 - padding-left: 1rem;
-pl-5 - padding-left: 1.25rem;
-pl-6 - padding-left: 1.5em;
-pl-7 - padding-left: 1.75rem;
-pl-8 - padding-left: 2rem;
-pl-9 - padding-left: 2.5rem;
-pl-10 - padding-left: 3rem;
-pl-11 - padding-left: 3.5rem;
-pl-12 - padding-left: 4rem;
-pl-13 - padding-left: 4.5rem;
-pl-14 - padding-left: 5rem;
-pl-15 - padding-left: 5.5rem;
-
-//padding right
-pr-0 - padding-right: 0;
-pr-1 - padding-right: 0.25rem;
-pr-3 - padding-right: 0.75rem;
-pr-4 - padding-right: 1rem;
-pr-5 - padding-right: 1.25rem;
-pr-6 - padding-right: 1.5em;
-pr-7 - padding-right: 1.75rem;
-pr-8 - padding-right: 2rem;
-pr-9 - padding-right: 2.5rem;
-pr-10 - padding-right: 3rem;
-pr-11 - padding-right: 3.5rem;
-pr-12 - padding-right: 4rem;
-pr-13 - padding-right: 4.5rem;
-pr-14 - padding-right: 5rem;
-pr-15 - padding-right: 5.5rem;
-
-//media breakpoints
-//@media min-width 700px, 900px, 1100px
-//use _7, _9, _11 at the end of the class
-
-//examples
-py-5_7 - padding-top: 1.25rem; - padding-bottom: 1.25rem;//@700px
-px-8_9 - padding-left: 2rem; - padding-right: 2rem;//@900px
-pt-3_11 - padding-top: 0.75rem;//@1100px</code></pre>
+text-lg_m - font-size: $lead;//@768px
+text-center_l - text-align: center;//@1020px
+ls-tight_xl - letter-spacing: -0.025em;//@1200px
+lh-2_w - line-height: 1.2;//@71440px
+font-300_l - font-weight: 300;//@1020px
+caps_xl text-transform: capitalize;//@1200px</code></pre>
 </div>
 
 </div>
@@ -508,38 +400,30 @@ pt-3_11 - padding-top: 0.75rem;//@1100px</code></pre>
  </div>
 <div id="dropdown-menu-14" class="dropdown-menu">
  <pre><code class="language-scss">//width
-width100 - width: 100%;
-width90 - width: 90%;
-width80 - width: 80%;
-width75 - width: 75%;
-width70 - width: 70%;
-width60 - width: 60%;
-width50 - width: 50%;
-width40 - width: 40%;
-width30 - width: 30%;
-width25 - width: 25%;
-width20 - width: 20%;
-width10 - width: 10%;
+width-100 - width: 100%;
+width-90 - width: 90%;
+width-80 - width: 80%;
+width-75 - width: 75%;
+width-70 - width: 70%;
+width-60 - width: 60%;
+width-50 - width: 50%;
+width-40 - width: 40%;
+width-30 - width: 30%;
+width-25 - width: 25%;
+width-20 - width: 20%;
+width-10 - width: 10%;
 
 //height
-height100 - height: 100%;
-
-//radius
-rad - border-radius: $radius; //6px - 0.375rem
-rad-m - border-radius: 0.625rem;
-rad-s - border-radius: 0.1875rem;
-rad-l - border-radius: 0.9375rem;
-rad-b - border-radius: 1.25rem;
-rad-full - border-radius: 3.125rem;
+height-100 - height: 100%;
 
 //media breakpoints
-//@media min-width 700px, 900px, 1100px
-//use _7, _9, _11 at the end of the class
+//@media min-width  768px, 1020px, 1200px, 1440px
+//use _m, _l, _xl, _w at the end of the class
 
 //examples
-width90_7 - width: 90%;//@700px
-height100_11 - height: 100%;//@1100px
-rad-m_9 - border-radius: 0.625rem;//@900px</code></pre>
+width90_m - width: 90%;//@768px
+height100_xl - height: 100%;//@1200px
+width-20_w - width: 20%;//@1440px</code></pre>
 </div>
 
 </div>
@@ -554,21 +438,35 @@ rad-m_9 - border-radius: 0.625rem;//@900px</code></pre>
 <div id="dropdown-menu-15" class="dropdown-menu">
  <pre><code class="language-scss">//display
 block - display: block;
-inline - display: inline;
 inline-block - display: inline-block;
-hidden - display: none;
+inline - display: inline;
 flex - display: flex;
+inline-flex: display: inline-flex;
+grid: display: grid;
+inline-grid: display: inline-grid;
+hidden - display: none;
+visible: visibility: visible;
+invisible: visibility: hidden;
+
+// Object Fit (Useful for responsive images)
+object-contain: object-fit: contain;
+object-cover: object-fit: cover;
+object-fill: object-fit: fill;
+
+//mixins - will these change with breakpoints? -test test test
 hide - @include hidden;
 show - @include show;
 
 //media breakpoints
-//@media min-width 700px, 900px, 1100px
-//use _7, _9, _11 at the end of the class
+//@media min-width  768px, 1020px, 1200px, 1440px
+//use _m, _l, _xl, _w at the end of the class
 
 //examples
-inline_7 - display: inline;//@700px
-hidden_9 - display: none;//@900px
-flex_11 - display: flex;//@1100px</code></pre>
+inline_m - display: inline;//@768px
+hidden_l - display: none;//@1020px
+flex_xl - display: flex;//@1200px
+hide_l - hide with mixin @include hidden @1020px
+show_w - show with mixin @include show @1440px</code></pre>
 </div>
 
 </div>
@@ -601,51 +499,14 @@ list-square - list-style: square;
 list-inside - list-style-position: inside;
 list-outside - list-style-position: outside;
 
-//border
-border - border: $border;
-no-border - border: none;
-
-//border width
-border-2 - border-width: 0.125rem;
-border-3 - border-width: 0.188rem;
-border-4 - border-width: 0.25rem;
-border-5 - border-width: 0.313rem;
-border-6 - border-width: 0.375rem;
-border-7 - border-width: 0.438rem;
-border-8 - border-width: 0.5rem;
-border-9 - border-width: 0.563rem;
-border-10 - border-width: 0.625rem;
-
-//border style
-border-solid - border-style: solid;
-border-dashed - border-style: dashed;
-border-groove - border-style: groove;
-border-double - border-style: double;
-border-dotted - border-style: dotted;
-border-ridge - border-style: ridge;
-border-inset - border-style: inset;
-border-outset - border-style: outset;
-border-none - border-style: none;
-border-hidden - border-style: hidden;
-
-//border color
-border-light - border-color: $light-gray;
-border-medium - border-color: $medium-gray;
-border-dark - border-color: $dark-gray;
-border-first - border-color: $first;
-border-black - border-color: $black;
-border-white - border-color: $white;
-border-trans - border-color: transparent;
-
 //media breakpoints
-//no media breaks for cursor and list styles
-//@media min-width 700px, 900px, 1100px
-//use _7, _9, _11 at the end of the class
+//@media min-width 768px, 1020px, 1200px, 1440px
+//use _m, _l, _xl, _w at the end of the class
 
 //examples
-border_7 - border: $border;//@700px
-border-3_9 - border-width: 0.188rem;//@900px
-border-groove_11 - border-style: groove;//@1100px</code></pre>
+cursor-w_m - cursor: wait;//@768px
+list-none_l - list-style: none;//@1020px
+list-square_xl - list-style: square;//@1200px</code></pre>
 </div>
 
 </div>
@@ -687,79 +548,69 @@ items-stretch - align-items: stretch;
 
 //flex container items
 grow - flex-grow: 1;
+grow-0 - flex-grow: 0;
+shrink - flex-shrink: 1;
+shrink-0 - flex-shrink: 0;
 
 //media breakpoints
-//@media min-width 700px, 900px, 1100px
-//use _7, _9, _11 at the end of the class
+//@media min-width  768px, 1020px, 1200px, 1440px
+//use _m, _l, _xl, _w at the end of the class
 
 //examples
-flex-row_7 - flex-direction: row;//@700px
-justify-start_9 - justify-content: flex-start;//@900px
-items-center_11 - align-items: center;//@1100px</code></pre>
+flex-row_m - flex-direction: row;//@768px
+justify-start_l - justify-content: flex-start;//@1020px
+items-center_w - align-items: center;//@1440px</code></pre>
 </div>
 
 </div>
 
-<div id="gap" class="dropdown">
+<div id="grid" class="dropdown">
  <div class="dropdown-header" data-target="#dropdown-menu-18">
-  Gap
+  Grid
   <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
    <path d="M7 10l5 5 5-5z" />
   </svg>
  </div>
 <div id="dropdown-menu-18" class="dropdown-menu">
- <pre><code class="language-scss">//gap
-gap-0 - gap: 0;
-gap-1 - gap: 0.25rem;
-gap-2 - gap: 0.5rem;
-gap-3 - gap: 0.75rem;
-gap-4 - gap: 1rem;
-gap-5 - gap: 1.25rem;
-gap-6 - gap: 1.5rem;
-gap-7 - gap: 1.75rem;
-gap-8 - gap: 2rem;
+ <pre><code class="language-scss">//grid
+// Columns
+grid-cols-1 - grid-template-columns: repeat(1, minmax(0, 1fr));
+grid-cols-2 - grid-template-columns: repeat(2, minmax(0, 1fr));
+grid-cols-3 - grid-template-columns: repeat(3, minmax(0, 1fr));
+grid-cols-4 - grid-template-columns: repeat(4, minmax(0, 1fr));
+grid-cols-6 - grid-template-columns: repeat(6, minmax(0, 1fr));
+grid-cols-12 - grid-template-columns: repeat(12, minmax(0, 1fr));
+grid-cols-none - grid-template-columns: none;
 
-//gap row
-row-gap-0 - row-gap: 0;
-row-gap-1 - row-gap: 0.25rem;
-row-gap-2 - row-gap: 0.5rem;
-row-gap-3 - row-gap: 0.75rem;
-row-gap-4 - row-gap: 1rem;
-row-gap-5 - row-gap: 1.25rem;
-row-gap-6 - row-gap: 1.5rem;
-row-gap-7 - row-gap: 1.75rem;
-row-gap-8 - row-gap: 2rem;
+//Column Spans
+col-auto - grid-column: auto;
+col-span-1 - grid-column: span 1 / span 1;
+col-span-2 - grid-column: span 2 / span 2;
+col-span-full - grid-column: 1 / -1;
 
-//gap column
-col-gap-0 - column-gap: 0;
-col-gap-1 - col-gap: 0.25rem;
-col-gap-2 - col-gap: 0.5rem;
-col-gap-3 - col-gap: 0.75rem;
-col-gap-4 - col-gap: 1rem;
-col-gap-5 - col-gap: 1.25rem;
-col-gap-6 - col-gap: 1.5rem;
-col-gap-7 - col-gap: 1.75rem;
-col-gap-8 - col-gap: 2rem;
+//Alignment
+place-items-center - place-items: center;
+place-content-center - place-content: center;
 
 //media breakpoints
-//@media min-width 700px, 900px, 1100px
-//use _7, _9, _11 at the end of the class
+//@media min-width  768px, 1020px, 1200px, 1440px
+//use _m, _l, _xl, _w at the end of the class
 
 //examples
-gap-m_7 - gap: $medium-spacer;//@700px
-row-gap-m_9 - row-gap: $medium-spacer;//@900px
-col-gap-l_11 - column-gap: $large-spacer;//@1100px</code></pre>
+grid-cols-3_m - grid-template-columns: repeat(3, minmax(0, 1fr));//@768px
+col-span-2_l - grid-column: span 2 / span 2;//@1020px
+place-items-center_xl - grid-column: 1 / -1;//@1200px</code></pre>
 </div>
 
 </div>
 </div>
   </div>
 <hr>
-<p class="third center mb-m"><a href="../index.html">Home</a> | <a href="about.html">About</a> | <a href="test.html">Test Page</a> | <a href="scss.html">Scss Mixins</a></p>
+<div class="bottom-links text-center mb-4"></div>
 </section>
-<footer class="center">
-	<p class="third mt-3 mb-0"> - <em>by</em> <a href="https://phone1st.org">phone1st.org</a> -</p>
-		<p class="third mt-3 mb-4">&copy;2026 Phone1st Starter Theme for html <a href="https://github.com/chocolate-holding-company/phone1st-theme" title="Phone1st Starter Theme for html available on Github">available on Github</a></p>
+<footer class="text-center">
+	<p class="text-xs mt-3 mb-0"> - <em>by</em> <a href="https://phone1st.org">phone1st.org</a> -</p>
+		<p class="text-xs mt-3 mb-4">&copy;2026 Phone1st Starter Theme for html <a href="https://github.com/chocolate-holding-company/phone1st-theme" title="Phone1st Starter Theme for html available on Github">available on Github</a></p>
 	</footer>
 	<button
    id="back-to-top"
@@ -793,9 +644,9 @@ col-gap-l_11 - column-gap: $large-spacer;//@1100px</code></pre>
 
 </div><!-- wrapper   -->
 
- <script src="js/highlight.js"></script>
+ <script>const pageLink = "class";</script>
   <script src="js/scroll.js"></script>
+<script src="js/bottom-links.js"></script>
    <script src="js/dropdown.js"></script>
-
 </body>
 </html>
