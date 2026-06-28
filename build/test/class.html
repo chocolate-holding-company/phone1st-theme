@@ -29,7 +29,7 @@
     "@type": "Organization",
     "name": "Class",
     "url": "https://phone1st.org/test/class.html",
-    "logo": "https:phone1st.org/apple-touch-icon.png",
+    "logo": "https:phone1st.org/logo.jpg",
     "contactPoint": {
      "@type": "ContactPoint",
      "email": "h@phone1st.org",
@@ -68,7 +68,7 @@
     </h1>
    </header>
    <section>
-<img src="../test/test-images/phone1st-class.webp" alt="Class header image" class="width-50 mx-auto block" />
+<img src="../test/test-images/phone1st-class.webp" alt="Class header image" class="w-50 mx-auto block" />
 
 
 <div>
@@ -88,9 +88,10 @@
     <a href="#color">Color Palettes</a>
     <a href="#type">Typography</a>
     <a href="#size">Size</a>
+    <a href="#display">Display</a>
   </div>
   <div>
-    <a href="#display">Display</a>
+    <a href="#border-shadow">Border, Shadow, Opacity</a>
     <a href="#appearance">Appearance</a>
     <a href="#flex">Flex</a>
     <a href="#grid">Grid</a>
@@ -251,6 +252,7 @@ red
 800: oklch(0.444 0.177 26.899),
 900: oklch(0.396 0.141 25.723),
 950: oklch(0.258 0.092 26.042)
+// the rest of the colors follow this shade pattern 50: - 950:
 orange
 amber
 yellow
@@ -400,21 +402,36 @@ caps_xl text-transform: capitalize;//@1200px</code></pre>
  </div>
 <div id="dropdown-menu-14" class="dropdown-menu">
  <pre><code class="language-scss">//width
-width-100 - width: 100%;
-width-90 - width: 90%;
-width-80 - width: 80%;
-width-75 - width: 75%;
-width-70 - width: 70%;
-width-60 - width: 60%;
-width-50 - width: 50%;
-width-40 - width: 40%;
-width-30 - width: 30%;
-width-25 - width: 25%;
-width-20 - width: 20%;
-width-10 - width: 10%;
+w-100 - width: 100%;
+w-90 - width: 90%;
+w-80 - width: 80%;
+w-75 - width: 75%;
+w-70 - width: 70%;
+w-60 - width: 60%;
+w-50 - width: 50%;
+w-40 - width: 40%;
+w-30 - width: 30%;
+w-25 - width: 25%;
+w-20 - width: 20%;
+w-10 - width: 10%;
+
+//max-width
+mw-100 - max-width: 100%;
+mw-90 - max-width: 90%;
+mw-80 - max-width: 80%;
+mw-75 - max-width: 75%;
+mw-70 - max-width: 70%;
+mw-60 - max-width: 60%;
+mw-50 - max-width: 50%;
+mw-40 - max-width: 40%;
+mw-30 - max-width: 30%;
+mw-25 - max-width: 25%;
+mw-20 - max-width: 20%;
+mw-10 - max-width: 10%;
 
 //height
-height-100 - height: 100%;
+h-100 - height: 100%;
+mh-100 - max-height: 100%;
 
 //media breakpoints
 //@media min-width  768px, 1020px, 1200px, 1440px
@@ -467,6 +484,104 @@ hidden_l - display: none;//@1020px
 flex_xl - display: flex;//@1200px
 hide_l - hide with mixin @include hidden @1020px
 show_w - show with mixin @include show @1440px</code></pre>
+</div>
+
+</div>
+
+<div id="border-shadow" class="dropdown">
+ <div class="dropdown-header" data-target="#dropdown-menu-155">
+  Border, Shadow, Opacity
+  <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+   <path d="M7 10l5 5 5-5z" />
+  </svg>
+ </div>
+<div id="dropdown-menu-155" class="dropdown-menu">
+ <pre><code class="language-scss">//default border
+border - border: var(--border) - 1px solid slate-800 dark: slate-200
+
+//border-color
+border-red-400: border-color: red-400;
+border-slate-700: border-color: slate-700;
+
+//directional
+border-l-rose-300: border-left-color: rose-300;
+border-t-blue-400: border-top-color: blue-400;
+border-r-brown-500: border-right-color: brown-500;
+border-b-gray-300: border-bottom-color: gray-300;
+
+
+//border style
+border-solid - border-style: solid;
+border-dashed - border-style: dashed;
+border-groove - border-style: groove;
+border-double - border-style: double;
+border-dotted - border-style: dotted;
+border-ridge - border-style: ridge;
+border-inset - border-style: inset;
+border-outset - border-style: outset;
+border-none - border-style: none;
+
+//directional
+border-t-double - border-top-style: double;
+border-b-groove - border-bottom-style: groove;
+border-l-solid - border-left-style: solid;
+border-r-dashed - border-right-style: dashed;
+
+
+//border width
+border-w-0 to 10: border-width: 0 to 10px;
+eg. border-w-0 - border-width: 0;
+eg. border-w-6 - border-width: 6px;
+
+//directional
+border-t-7 - border-top-width: 7px;
+border-b-8 - border-bottom-width: 8px;
+border-l-9 - border-left-width: 9px;
+border-r-10 - border-right-width: 10px;
+
+
+//border radius
+//default radius
+rounded: border-radius: $radius; //$s-2: 0.5rem
+
+rounded-full: border-radius: //9999px
+rounded-0 to 10 : border-radius: 0px to 10px
+eg. rounded-5: border-radius: 5px;
+eg. rounded-9: border-radius: 9px;
+
+//Directional
+rounded-tl: border-top-left-radius;
+rounded-tr: border-top-right-radius;
+rounded-bl: border-bottom-left-radius;
+rounded-br: border-bottom-right-radius;
+eg. rounded-bl-4: border-bottom-left-radius: 4px;
+eg. rounded-tr-7: border-top-right-radius: 7px;
+
+
+// Shadows
+shadow-sm - box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+
+shadow - box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+                     0 2px 4px -1px rgba(0, 0, 0, 0.06);
+shadow-lg - box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+                     0 4px 6px -2px rgba(0, 0, 0, 0.05);
+shadow-form -  box-shadow: var(--form-shadow);
+
+// Opacity
+opacity-0 - opacity: 0;
+opacity-50 - opacity: 0.5;
+opacity-75 - opacity: var(--opacity);
+opacity-100 - opacity: 1;
+
+//media breakpoints
+//@media min-width 768px, 1020px, 1200px, 1440px
+//use _m, _l, _xl, _w at the end of the class
+
+//examples
+rounded-6_m - border-radius: 6mm;//@768px
+border-w-4_l - border-width: 4px;//@1020px
+opacity-50_xl - opacity: 0.5;//@1200px
+shadow_w - box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);@1440px</code></pre>
 </div>
 
 </div>

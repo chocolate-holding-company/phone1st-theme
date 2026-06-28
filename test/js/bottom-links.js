@@ -1,4 +1,4 @@
-const getBottomLinks = ["Home", "About", "Test", "Scss", "Class", "Tester"];
+const getBottomLinks = ["Home", "About", "Test", "Scss", "Class"];
 const docTitle = pageLink.toLowerCase();
 const container = document.querySelector(".bottom-links");
 

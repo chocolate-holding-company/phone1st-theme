@@ -39,15 +39,31 @@ $breakpoints: (
    .border-#{$base-class}#{$suffix} {
     border-color: $value !important;
    }
-    .hover-bg-#{$base-class}#{$suffix}:hover {
-     background-color: $value !important;
-    }
-    .hover-text-#{$base-class}#{$suffix}:hover {
-     color: $value !important;
-    }
+
+   // --- ADDED: Directional Border Colors for Palettes ---
+   .border-t-#{$base-class}#{$suffix} {
+    border-top-color: $value !important;
+   }
+   .border-b-#{$base-class}#{$suffix} {
+    border-bottom-color: $value !important;
+   }
+   .border-l-#{$base-class}#{$suffix} {
+    border-left-color: $value !important;
+   }
+   .border-r-#{$base-class}#{$suffix} {
+    border-right-color: $value !important;
+   }
+   // hovers
+
+   .hover-bg-#{$base-class}#{$suffix}:hover {
+    background-color: $value !important;
+   }
+   .hover-text-#{$base-class}#{$suffix}:hover {
+    color: $value !important;
    }
   }
  }
+}
 
 // The Main Content Generator (Everything goes inside here)
 @mixin generate-content($suffix) {
@@ -86,13 +102,28 @@ $breakpoints: (
    border-color: $value !important;
   }
 
-   .hover-bg-#{$name}#{$suffix}:hover {
-    background-color: $value !important;
-   }
-   .hover-text-#{$name}#{$suffix}:hover {
-    color: $value !important;
-   }
+  // --- ADDED: Directional Border Colors for Variables ---
+  .border-t-#{$name}#{$suffix} {
+   border-top-color: $value !important;
   }
+  .border-b-#{$name}#{$suffix} {
+   border-bottom-color: $value !important;
+  }
+  .border-l-#{$name}#{$suffix} {
+   border-left-color: $value !important;
+  }
+  .border-r-#{$name}#{$suffix} {
+   border-right-color: $value !important;
+  }
+  // ------------------------------------------------------
+
+  .hover-bg-#{$name}#{$suffix}:hover {
+   background-color: $value !important;
+  }
+  .hover-text-#{$name}#{$suffix}:hover {
+   color: $value !important;
+  }
+ }
 
  // Standard Utility Maps (Flex, Grid, Size, etc.)
  $all-maps: (
@@ -151,6 +182,76 @@ $breakpoints: (
    column-gap: $val !important;
   }
  }
+
+ // --- ADDED: Directional Border Styles ---
+ $border-sides: (
+  "t": "top",
+  "b": "bottom",
+  "l": "left",
+  "r": "right",
+ );
+ $border-styles: (
+  "solid",
+  "dashed",
+  "groove",
+  "dotted",
+  "double",
+  "ridge",
+  "inset",
+  "outset",
+  "none"
+ );
+
+ // 1. Global Border Styles (Generated once per breakpoint)
+ @each $style in $border-styles {
+  .border-#{$style}#{$suffix} {
+   border-style: #{$style} !important;
+  }
+ }
+
+ // 2. Directional Border Styles (Generated once per side per breakpoint)
+ @each $side-key, $side-prop in $border-sides {
+  @each $style in $border-styles {
+   .border-#{$side-key}-#{$style}#{$suffix} {
+    border-#{$side-prop}-style: #{$style} !important;
+   }
+  }
+ }
+
+ // --- ADDED: Border Widths and Radii Loops (0 to 10mm) ---
+ @for $i from 0 through 10 {
+  .border-w-#{$i}#{$suffix} {
+   border-width: #{$i}mm !important;
+  }
+  .border-l-#{$i}#{$suffix} {
+   border-left-width: #{$i}mm !important;
+  }
+  .border-r-#{$i}#{$suffix} {
+   border-right-width: #{$i}mm !important;
+  }
+  .border-t-#{$i}#{$suffix} {
+   border-top-width: #{$i}mm !important;
+  }
+  .border-b-#{$i}#{$suffix} {
+   border-bottom-width: #{$i}mm !important;
+  }
+  .rounded-#{$i}#{$suffix} {
+   border-radius: #{$i}mm !important;
+  }
+  .rounded-tl-#{$i}#{$suffix} {
+   border-top-left-radius: #{$i}mm !important;
+  }
+  .rounded-tr-#{$i}#{$suffix} {
+   border-top-right-radius: #{$i}mm !important;
+  }
+  .rounded-bl-#{$i}#{$suffix} {
+   border-bottom-left-radius: #{$i}mm !important;
+  }
+  .rounded-br-#{$i}#{$suffix} {
+   border-bottom-right-radius: #{$i}mm !important;
+  }
+ }
+ // ---------------------------------------------------------
 }
 
 // The Render Loop (Triggers the code above)

@@ -1,1 +1,10 @@
-function toggleTheme(){const e="dark"===document.body.getAttribute("data-theme");document.body.setAttribute("data-theme",e?"light":"dark"),document.getElementById("theme-toggle").innerText=e?"🌙 Dark Mode":"☀️ Light Mode",localStorage.setItem("theme",e?"light":"dark")}"dark"===localStorage.getItem("theme")&&toggleTheme();
+//change theme to dark mode
+function toggleTheme() {
+ const isDark = document.body.getAttribute("data-theme") === "dark";
+ document.body.setAttribute("data-theme", isDark ? "light" : "dark");
+ document.getElementById("theme-toggle").innerText = isDark
+  ? "🌙 Dark Mode"
+  : "☀️ Light Mode";
+ localStorage.setItem("theme", isDark ? "light" : "dark");
+}
+if (localStorage.getItem("theme") === "dark") toggleTheme();

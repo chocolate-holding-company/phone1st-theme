@@ -32,7 +32,7 @@ $s-13: 4.5rem !default;
 $s-14: 5rem !default;
 $s-15: 5.5rem !default;
 
-$radius: calc($s-1 * 1.2) !default;
+$radius: $s-2 !default;
 $spacer: $s-8 !default;
 
 $duration: 150ms !default;

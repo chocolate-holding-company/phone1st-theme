@@ -1,10 +1,17 @@
-<div id="dropdown-menu-16" class="dropdown-menu">
- <pre><code class="language-scss">//border radius
-rounded-none:border-radius: 0;
-rounded-sm: border-radius: calc($radius * 0.5);//figure
-rounded: border-radius: $radius;//what is
-rounded-lg: border-radius: calc($radius * 2);//figure
-rounded-full: border-radius: 9999px;
+<div id="dropdown-menu-155" class="dropdown-menu">
+ <pre><code class="language-scss">//default border
+border - border: var(--border) - 1px solid slate-800 dark: slate-200
+
+//border-color
+border-red-400: border-color: red-400;
+border-slate-700: border-color: slate-700;
+
+//directional
+border-l-rose-300: border-left-color: rose-300;
+border-t-blue-400: border-top-color: blue-400;
+border-r-brown-500: border-right-color: brown-500;
+border-b-gray-300: border-bottom-color: gray-300;
+
 
 //border style
 border-solid - border-style: solid;
@@ -16,20 +23,43 @@ border-ridge - border-style: ridge;
 border-inset - border-style: inset;
 border-outset - border-style: outset;
 border-none - border-style: none;
-border-hidden - border-style: hidden;
+
+//directional
+border-t-double - border-top-style: double;
+border-b-groove - border-bottom-style: groove;
+border-l-solid - border-left-style: solid;
+border-r-dashed - border-right-style: dashed;
+
 
 //border width
-border-0 - border-width: 0;
-border: - border-width: 1px;
-border-2 - border-width: 2px;
-border-3 - border-width: 3px;
-border-4 - border-width: 4px;
-border-5 - border-width: 5px;
-border-6 - border-width: 6px;
-border-7 - border-width: 7px;
-border-8 - border-width: 8px;
-border-9 - border-width: 9px;
-border-10 - border-width: 10px;
+border-w-0 to 10: border-width: 0 to 10px;
+eg. border-w-0 - border-width: 0;
+eg. border-w-6 - border-width: 6px;
+
+//directional
+border-t-7 - border-top-width: 7px;
+border-b-8 - border-bottom-width: 8px;
+border-l-9 - border-left-width: 9px;
+border-r-10 - border-right-width: 10px;
+
+
+//border radius
+//default radius
+rounded: border-radius: $radius; //$s-2: 0.5rem
+
+rounded-full: border-radius: //9999px
+rounded-0 to 10 : border-radius: 0px to 10px
+eg. rounded-5: border-radius: 5px;
+eg. rounded-9: border-radius: 9px;
+
+//Directional
+rounded-tl: border-top-left-radius;
+rounded-tr: border-top-right-radius;
+rounded-bl: border-bottom-left-radius;
+rounded-br: border-bottom-right-radius;
+eg. rounded-bl-4: border-bottom-left-radius: 4px;
+eg. rounded-tr-7: border-top-right-radius: 7px;
+
 
 // Shadows
 shadow-sm - box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
@@ -51,8 +81,8 @@ opacity-100 - opacity: 1;
 //use _m, _l, _xl, _w at the end of the class
 
 //examples
-rounded-lg_7 - border-radius: ?????;//@768px
-border-4_9 - border-width: 4px;//@1020px
-opacity-50_11 - opacity: 0.5;//@1200px
+rounded-6_m - border-radius: 6mm;//@768px
+border-w-4_l - border-width: 4px;//@1020px
+opacity-50_xl - opacity: 0.5;//@1200px
 shadow_w - box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);@1440px</code></pre>
 </div>
