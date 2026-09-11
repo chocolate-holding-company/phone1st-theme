@@ -5,41 +5,41 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   
-  <title>Phone1st Starter Theme | Phone1st Starter Theme for Html</title>
-  <meta name="description" content="The CSS is put together using SCSS, a popular way of creating quick, organised stylesheets. Using Phone1st will save you time, building quicker, smarter projects. Once you start using Phone1st you'll keep using it." />
-  <link rel="canonical" href="https://phone1st.org/" />
+  <title>Phone1st | Phone1st Starter Theme for Html</title>
+  <meta name="description" content="Phone1st is a clean, streamlined starter theme designed to help you launch smarter web projects in less time." />
+  <link rel="canonical" href="https://phone1st-theme.uk/" />
   
   <meta property="og:site_name" content="Phone1st Starter Theme for Html" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Home" />
-  <meta property="og:description" content="The CSS is put together using SCSS, a popular way of creating quick, organised stylesheets. Using Phone1st will save you time, building quicker, smarter projects. Once you start using Phone1st you'll keep using it." />
-  <meta property="og:url" content="https://phone1st.org/" />
-  <meta property="og:image" content="https://phone1st.org/test/test-images/phone1st-home.webp" />
+  <meta property="og:description" content="Phone1st is a clean, streamlined starter theme designed to help you launch smarter web projects in less time." />
+  <meta property="og:url" content="https://phone1st-theme.uk/" />
+  <meta property="og:image" content="https://phone1st-theme.uk/test/test-images/phone1st-home.webp" />
   <meta property="og:image:alt" content="Home header image" />
   
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Home" />
-  <meta name="twitter:description" content="The CSS is put together using SCSS, a popular way of creating quick, organised stylesheets. Using Phone1st will save you time, building quicker, smarter projects. Once you start using Phone1st you'll keep using it." />
-  <meta name="twitter:image" content="https://phone1st.org/test/test-images/phone1st-home.webp" />
+  <meta name="twitter:description" content="Phone1st is a clean, streamlined starter theme designed to help you launch smarter web projects in less time." />
+  <meta name="twitter:image" content="https://phone1st-theme.uk/test/test-images/phone1st-home.webp" />
   
   <script type="application/ld+json">
    {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Home",
-    "url": "https://phone1st.org/",
-    "logo": "https:phone1st.org/logo.jpg",
+    "url": "https://phone1st-theme.uk/",
+    "logo": "https:phone1st-theme.uk/logo.jpg",
     "contactPoint": {
      "@type": "ContactPoint",
      "email": "h@phone1st.org",
      "contactType": "customer support"
     },
     "sameAs": [
-     "https://facebook.com/phone1st.org/",
-     "https://instagram.com/phone1st.org/",
-     "https://x.com/phone1st.org/"
+     "https://facebook.com/phone1st-theme.uk/",
+     "https://instagram.com/phone1st-theme.uk/",
+     "https://x.com/phone1st-theme.uk/"
     ],
-    "description": "The CSS is put together using SCSS, a popular way of creating quick, organised stylesheets. Using Phone1st will save you time, building quicker, smarter projects. Once you start using Phone1st you'll keep using it."
+    "description": "Phone1st is a clean, streamlined starter theme designed to help you launch smarter web projects in less time."
    }
   </script>
   
@@ -49,6 +49,27 @@
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   
   <meta name="theme-color" content="#4A6741" />
+  
+  <!-- Below hopefully stops the white flash seen when the dark mode kicks in -->
+  <script>
+   const isDark =
+    localStorage.theme === "dark" ||
+    (!("theme" in localStorage) &&
+     window.matchMedia("(prefers-color-scheme: dark)").matches);
+   if (isDark) {
+    document.documentElement.classList.add("dark");
+   } else {
+    document.documentElement.classList.remove("dark");
+   }
+  </script>
+  <style>
+   :root {
+    background-color: var(--viewport-bg);
+   }
+   .dark {
+    background-color: var(--viewport-bg);
+   }
+  </style>
   
  <link rel="stylesheet" href="css/style.css" />
  <style>
@@ -70,7 +91,7 @@
    <div class="wrapper">
     <header>
      <h1 class="text-center">
-     Phone1st Starter Theme
+     Phone1st
     </h1>
    </header>
 

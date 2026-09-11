@@ -2,7 +2,7 @@
 
 ## A light, clean, starter theme that starts... _phone1st_
 
-![](test/test-images/phone1st-home.png)
+![](apple-touch-icon.png)
 
 > A light and basic html starter theme to get you off to a quick start with your web developments. The CSS is put together using SCSS, a popular way of creating quick, organised stylesheets. Using Phone1st will save you time, building quicker, smarter projects.
 
@@ -24,7 +24,7 @@ Upload the **build folder** to your server
 
 Phone1st is designed to be used with [CodeKit](https://codekitapp.com/) (_Mac only_). Taking advantage of _CodeKits_ - _kit_ templates and _kit_ variables.
 
-If you don't have _CodeKit_ the _css_ folder and _scss_ files may be adapted to suit your use. You'll need a _Scss processor_ to parse the scss. The _main Css style-sheet_ in the _build_ folder isn't minified and measures _82kb_. Minified it measures _28kb_.
+If you don't have _CodeKit_ the _css_ folder and _scss_ files may be adapted to suit your use. You'll need a _Scss processor_ to parse the scss. The _main Css style-sheet_ in the _build_ folder isn't minified and measures approx _82kb_. Minified it measures approx _28kb_.
 
 The theme should build correctly when imported into Codekit, but if not:
 
@@ -69,7 +69,7 @@ Default mixins used with the Phone1st theme.
 
 #### Class Page - Work in progress
 
-A _class utilities_ page - **experimental** - see [Experimenting with Classes][ex].
+Experimenting with the _class utitlity_ method for styling.
 
 ---
 
@@ -97,15 +97,9 @@ See _includes/\_meta.kit_.
 
 ---
 
-### Experimenting with Classes [ex]
-
-Experimenting with the _class utitlity_ method for styling. I think the more complicated elements with quite a number of styles are still easier using a conventional stylesheet. _Utitlity classes_ seem to work well with _template structures_ ensuring consistant styles potentially leading to faster development and execution times. _Will have to see how it goes and see what evolves_.
-
----
-
 ### View Phone1st Theme
 
-[Phone1st Starter Theme](https://phone1st-theme.netlify.app/)
+[Phone1st Starter Theme](https://phone1st-theme.uk/)
 
 ---
 
