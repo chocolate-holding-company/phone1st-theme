@@ -21,15 +21,16 @@ button,
  user-select: none;
  vertical-align: middle;
  white-space: nowrap;
+ filter: drop-shadow(var(--filter-shadow));
  border-radius: $radius;
  padding: 10px 6px;
  width: 150px;
- color: var(--button-color);
+ color: var(--button-col);
  background: var(--button-bg);
 
  &:hover {
   background: var(--button-bg-hover);
-  color: var(--button-color);
+  color: var(--button-col-hover);
  }
 
  &:disabled {

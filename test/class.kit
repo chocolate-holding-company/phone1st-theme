@@ -27,6 +27,7 @@
     <a href="#display">Display</a>
   </div>
   <div>
+    <a href="#position">Position</a>
     <a href="#border-shadow">Border, Shadow, Opacity</a>
     <a href="#appearance">Appearance</a>
     <a href="#flex">Flex</a>
@@ -86,6 +87,16 @@
 <!-- @import class-kit/_display -->
 </div>
 
+<div id="position" class="dropdown">
+ <div class="dropdown-header" data-target="#dropdown-menu-156">
+  Position
+  <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+   <path d="M7 10l5 5 5-5z" />
+  </svg>
+ </div>
+<!-- @import class-kit/_position -->
+</div>
+
 <div id="border-shadow" class="dropdown">
  <div class="dropdown-header" data-target="#dropdown-menu-155">
   Border, Shadow, Opacity
@@ -127,13 +138,19 @@
 </div>
 </div>
   </div>
-<hr>
+<hr class="mt-12">
 <div class="bottom-links text-center mb-4"></div>
+ <button id="theme-toggle" class="mx-auto block my-6" onclick="toggleTheme()">🌙 Dark Mode</button>
 </section>
 <!-- @import includes-kit/_test-footer -->
- <script>const pageLink = "class";</script>
+ <script>
+ const pageLink = "class";
+ //highlight js
+hljs.highlightAll();
+ </script>
   <script src="js/scroll.js"></script>
 <script src="js/bottom-links.js"></script>
    <script src="js/dropdown.js"></script>
+   <script src="js/dark-theme.js"></script>
 </body>
 </html>

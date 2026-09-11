@@ -1,10 +1,22 @@
 <div id="dropdown-menu-10" class="dropdown-menu">
  <h2>How it works</h2>
- <p class="mb-4">See - <code>css/root/_base-color.scss, css/root/_variables.scss, css/root/mixins, css/class/...all</code></p>
- <p class="mb-4">The <em>_class-helpers.scss</em> imports all the <em>partials</em> and runs them through a mixin to generate classes adding <em>breakpoints, color</em> and <em>spacing</em> where necessary</p>
+ <p class="mb-4">
+  See -
+  <code
+   >css/root/_base-color.scss, css/root/_variables.scss, css/root/mixins,
+   css/class/...all</code
+  >
+ </p>
+ <p class="mb-4">
+  The <em>_class-helpers.scss</em> imports all the <em>partials</em> and runs
+  them through a mixin to generate classes adding
+  <em>breakpoints, color</em> and <em>spacing</em> where necessary
+ </p>
  <p>
   The color palette is from <a href="https://tailwindcss.com">Tailwind</a>. To
-  use the colors is simple, being <em>color name and shade</em> eg <em>blue-500</em>. Precede it with what you want to color eg <em>text-, bg- or border-</em>. Add a <em>breakpoint</em> or <em>hover</em>.
+  use the colors is simple, being <em>color name and shade</em> eg
+  <em>blue-500</em>. Precede it with what you want to color eg
+  <em>text-, bg- or border-</em>. Add a <em>breakpoint</em> or <em>hover</em>.
  </p>
  <pre><code>//examples
 //text
@@ -63,9 +75,12 @@ hover-border-blue-300
 hover-border-success// variable</code></pre>
 
  <h3>Spacing</h3>
- <p>
-  Spacing works with the <code>$s-0 to $s-15 in the _variables.scss</code>. See the
-  <code>css/class/_spacing.scss</code> file
+ <p class="mb-2">
+  Spacing works with the <code>$s-0 to $s-15 in the _variables.scss</code>. See
+  the <code>css/class/_spacing.scss</code> file
+ </p>
+ <p class="mb-4">
+  The <em>margin, padding, width, height and gap</em> take the spacing values
  </p>
 
  <pre><code>//the spacing variables
@@ -105,6 +120,14 @@ pt-5 - padding-top: 1.25rem;
 pb-4 - padding-bottom: 1rem;
 ps-2 - padding-inline-start: 0.5rem;
 pe-6 - padding-inline-end: 1.5rem;
+
+//width and height
+w-0 - width: 0;
+w-2 - width: 0.5rem;
+w-6 - width: 1.5rem;
+h-8 - height: 2rem;
+h-10 - height: 3rem;
+h-15 - height: 5.5rem
 
 //gap
 gap-6 - gap: 1.5rem;

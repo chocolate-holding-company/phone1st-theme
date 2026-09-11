@@ -21,12 +21,13 @@ dt {
  font-weight: 600;
 }
 
-dt, dd {
+dt,
+dd {
  margin: 0;
  color: var(--font-color);
 }
 //make a small margin on lists after a <p>
 p:has(+ ul),
 p:has(+ ol) {
- margin-bottom: 5px;
+ margin-bottom: 10px;
 }

@@ -2,10 +2,26 @@
 <!-- $SEO-title Test Page -->
 <!-- $description Set and preview the very basic html elements and theme settings and then remove the test folder if you wish -->
 <!-- $url test/test.html -->
-<!-- $post-image test/test-images/phone1st-test.webp -->
-<!-- $css test.css -->
+ <!-- $post-image nil -->
 
-<!-- @import includes-kit/_test-header -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <!-- @import ../includes/_meta -->
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="css/test.css" />
+ </head>
+
+ <body>
+  <div id="top-progress-container"><div id="top-progress-bar"></div></div>
+  <div id="top" class="wrapper">
+   <header class="mb-4">
+    <h1 class="text-center">
+     <!-- $SEO-title -->
+    </h1>
+   </header>
+   <section>
+<img src="test-images/phone1st-test.webp" alt="Test header image" class="w-50 mx-auto block" />
 
 <p class="intro-para">
   The <em>default style sheet</em> formats this page.<br />
@@ -15,7 +31,6 @@
   your site.</p>
   <p class="my-6 font-700 text-center">-- So start your website by making this page look <em>pretty!</em> --
 </p>
-<button id="theme-toggle" class="mx-auto block" onclick="toggleTheme()">🌙 Dark Mode</button>
 
 <hr />
 <h2 class="links-title">-- Links --</h2>
@@ -57,6 +72,7 @@
 <a class="secondary" href="../404.html">404.html</a>
 <hr />
 <div class="bottom-links text-center mb-4"></div>
+<button id="theme-toggle" class="mx-auto block" onclick="toggleTheme()">🌙 Dark Mode</button>
 </section>
 
 <!-- @import includes-kit/_test-footer -->

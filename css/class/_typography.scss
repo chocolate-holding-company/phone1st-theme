@@ -96,9 +96,12 @@ $typography-map: (
   text-transform: none,
  ),
  //letter spacing
- "ls-tight": (
-   letter-spacing: -0.025em,
+ "ls-tighter": (
+   letter-spacing: -0.055em,
   ),
+ "ls-tight": (
+  letter-spacing: -0.025em,
+ ),
  "ls-0": (
   letter-spacing: normal,
  ),

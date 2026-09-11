@@ -1,3 +1,4 @@
+ 
 
 <!DOCTYPE html>
 <html lang="en">
@@ -15,13 +16,13 @@
   <meta property="og:title" content="Test" />
   <meta property="og:description" content="Set and preview the very basic html elements and theme settings and then remove the test folder if you wish" />
   <meta property="og:url" content="https://phone1st.org/test/test.html" />
-  <meta property="og:image" content="https://phone1st.org/test/test-images/phone1st-test.webp" />
+  <meta property="og:image" content="https://phone1st.org/" />
   <meta property="og:image:alt" content="Test header image" />
   
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Test" />
   <meta name="twitter:description" content="Set and preview the very basic html elements and theme settings and then remove the test folder if you wish" />
-  <meta name="twitter:image" content="https://phone1st.org/test/test-images/phone1st-test.webp" />
+  <meta name="twitter:image" content="https://phone1st.org/" />
   
   <script type="application/ld+json">
    {
@@ -52,11 +53,7 @@
   <meta name="theme-color" content="#4A6741" />
   
   <link rel="stylesheet" href="../css/style.css" />
-  <link rel="stylesheet" href="css/page.css" />
   <link rel="stylesheet" href="css/test.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/base16/one-light.min.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
-
  </head>
 
  <body>
@@ -68,8 +65,7 @@
     </h1>
    </header>
    <section>
-<img src="../test/test-images/phone1st-test.webp" alt="Test header image" class="w-50 mx-auto block" />
-
+<img src="test-images/phone1st-test.webp" alt="Test header image" class="w-50 mx-auto block" />
 
 <p class="intro-para">
   The <em>default style sheet</em> formats this page.<br />
@@ -79,7 +75,6 @@
   your site.</p>
   <p class="my-6 font-700 text-center">-- So start your website by making this page look <em>pretty!</em> --
 </p>
-<button id="theme-toggle" class="mx-auto block" onclick="toggleTheme()">🌙 Dark Mode</button>
 
 <hr />
 <h2 class="links-title">-- Links --</h2>
@@ -155,7 +150,13 @@
   <p>$success</p>
  </div>
 </div>
-<p>Spacings `$s-0` to `$s-15` - see the theme <em>variables</em></p>
+<p class="mb-1">
+ Spacings `$s-0` to `$s-15` - see the theme <em>variables</em>
+</p>
+<p class="mb-4">
+ The <em>margin, padding, width, height and gap classes</em> use the spacings
+ values
+</p>
 <div class="margin-spacer">
  <div class="small-margin">
   <p>
@@ -194,9 +195,7 @@
 <hr />
 <p>
  The headings use the body font from <em>Google Fonts</em> - Raleway - uses 9 weights and includes <em>italic</em>.<br />
- The heading font-sizes are set using the <em>clamp function</em>, set with <em><a href="https://utopia.fyi/type/calculator/">utopia.fyi</a></em
- ><br />
- - see <em>css/base/_typography.scss</em><br>
+ The heading font-sizes are set using the <em>clamp function</em> - see <em>css/base/_typography.scss</em><br>
  The headings use class - <em>.h1 .h2 .h3 .h4 .h5 .h6</em>
 </p>
 <h1>Heading h1</h1>
@@ -213,21 +212,7 @@
 <h6>Heading h6</h6>
 <hr />
 <p>
- Big headings are <em>classes</em> and <em>mixins</em><br />
- Font-sizes set using the <em>clamp function</em>, set with <em><a href="https://utopia.fyi/type/calculator/">utopia.fyi</a></em
- >
- <br />
- - see <em>css/class/_typography.scss and css/root/_mixins.scss</em>
-</p>
-<h1 class="bighead-1">This is h1 as bighead-1</h1>
-<h1 class="bighead-2">This is h1 as bighead-2</h1>
-<h1 class="bighead-3">This is h1 as bighead-3</h1>
-<h1 class="bighead-4">This is h1 as bighead-4</h1>
-<hr />
-<p>
- The body font from <em>Google Fonts</em> - Raleway - uses 9 weights and
- includes <em>italic</em>. The body font-size is fixed <em>$font-size - 1.1rem</em> -
- see <em>css/root/_variables.scss</em> and <em>css/site/_site.scss</em>. The <em>&lt;p&gt;</em> paragraph is set using <a href="https://utopia.fyi/type/calculator/">utopia.fyi</a>
+ The body font from <em>Google Fonts</em> - Raleway - uses 9 weights and includes <em>italic</em>. The body font-size uses the <em>clamp function</em> - see <em>css/root/_variables.scss</em>.
 </p>
 <p>
  <span class="one"
@@ -265,8 +250,7 @@
 <hr />
 
 <p class="text-lg">
- <strong>Lead Paragraph</strong> $lead or class - text-lg - Lorem ipsum dolor sit amet,
- <em>emphasis</em> consectetuer adipiscing elit. Nullam dignissim convallis est.
+ <strong>Lead Paragraph</strong> $lead or class - text-lg - The font-size is set using the <em>clamp function</em> - see <em>css/root/_variables.scss</em>. Lorem ipsum dolor sit amet, <em>emphasis</em> consectetuer adipiscing elit. Nullam dignissim convallis est.
  Quisque aliquam. Donec faucibus. Nunc iaculis <strong>strong</strong> dui. Nam
  sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida
  vehicula, nisl. <a href="#" title="test link">Praesent mattis, massa quis luctus fermentum, turpis mi</a>
@@ -276,19 +260,14 @@
  tellus.
 </p>
 <p>
- <strong>Normal Paragraph</strong> - the <em>&lt;p&gt;</em> tag set with the
- <a href="https://utopia.fyi/type/calculator/">utopia.fyi</a> - see
- <em>css/base/_typography.scss</em> - The <em>&lt;body&gt;</em> font has a fixed value of <em>$font-size: 1.1rem</em> in the variables and a class of <em>text-base</em>. <em>The lead, secondary and third paragraphs are tied to $font-size</em>. Lorem ipsum dolor sit amet,
- <a href="#" title="test link">test link</a> adipiscing elit. Nullam dignissim
+ <strong>Normal Paragraph</strong> - The font-size is set to $font-size - see <em>css/base/_typography.scss</em> - and has a class of <em>text-base</em>. Lorem ipsum dolor sit amet, <a href="#" title="test link">test link</a> adipiscing elit. Nullam dignissim
  convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam
  sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida
  vehicula, nisl. <strong>Praesent mattis, massa quis</strong> luctus fermentum, turpis mi
  volutpat justo, eu volutpat enim diam eget metus. Maecenas ornare tortor. Donec
  sed tellus eget sapien fringilla nonummy. Mauris a ante.
 </p>
-<p class="text-sm">
- <strong>Secondary Paragraph</strong> Lorem ipsum dolor sit amet,
- <a href="#" title="test link">test link</a> adipiscing elit. Nullam dignissim
+<p class="text-sm"> <strong>Secondary Paragraph</strong> $secondary or class - text-sm - The font-size is set using the <em>clamp function</em> - see <em>css/root/_variables.scss</em>. Lorem ipsum dolor sit amet, <a href="#" title="test link">test link</a> adipiscing elit. Nullam dignissim
  convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam
  sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida
  vehicula, nisl. <strong>Praesent mattis,</strong> massa quis luctus fermentum, turpis mi
@@ -298,9 +277,7 @@
  tellus.
 </p>
 <p class="text-xs">
- <strong>Third Paragraph</strong> Lorem ipsum dolor sit amet,
- <em>emphasis</em> consectetuer adipiscing elit. Nullam dignissim convallis est.
- Quisque aliquam. Donec faucibus. Nunc iaculis <strong>strong</strong> dui. Nam
+ <strong>Third Paragraph</strong> $third or class - text-xs - The font-size is set using the <em>clamp function</em> - see <em>css/root/_variables.scss</em> Lorem ipsum dolor sit amet, <em>emphasis</em> consectetuer adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis <strong>strong</strong> dui. Nam
  sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida
  vehicula, nisl. <a href="#" title="test link">Praesent mattis, massa quis</a> luctus fermentum, turpis mi
  volutpat justo, <strong>eu volutpat enim diam</strong> eget metus. Maecenas ornare tortor. Donec
@@ -308,6 +285,12 @@
  consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis
  tellus.
 </p>
+<p><em>&lt;p&gt; before &lt;ul&gt; - the margin bottom is usually smaller than the default &lt;p&gt; bottom margin - see css/base/_lists.scss</em>. Volutpat justo, <strong>eu volutpat enim diam</strong> eget metus. Maecenas ornare tortor. Donec sed tellus eget sapien fringilla nonummy. Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus.</p>
+<ul>
+   <li>List Item after &lt;p&gt;</li>
+   <li>List Item</li>
+   <li>List Item</li>
+  </ul>
 <hr />
 <h2>Basic Tags</h2>
 <h4>small</h4>
@@ -382,7 +365,7 @@ Another surprise was how much water there was. Water was pumped around fields fo
 <code>&lt;p&gt;This is the code tag.&lt;/p&gt;</code>
 <p></p>
 <h3>Pre-Code (pre)(code)</h3>
-<pre><code class="nohighlight">&lt;p&gt;This is the pre tag followed by a code tag.&lt;/p&gt;
+<pre><code>&lt;p&gt;This is the pre tag followed by a code tag.&lt;/p&gt;
 
 h1 {
  color: red;
@@ -420,7 +403,6 @@ h1 {
  <li>List Item 4</li>
  <li>List Item 5</li>
 </ul>
-
 <h2>Definition List</h2>
 <dl>
  <dt>Definition Title 1</dt>
@@ -509,11 +491,11 @@ h1 {
  <input type="submit" value="Submit" />
  <input type="submit" value="Disabled" disabled />
  <br />
- <code>&lt;button tags&gt;</code>
+ <code>&lt;button tags&gt; with classes w-15 and py-2</code>
  <br />
- <button>Reset</button>
- <button>Submit</button>
- <button disabled>Disabled</button>
+ <button class="w-15 py-2">Reset</button>
+ <button class="w-15 py-2">Submit</button>
+ <button class="w-15 py-2" disabled>Disabled</button>
  <br />
  <code>&lt;a tag with class btn&gt;</code>
  <br />
@@ -533,38 +515,10 @@ h1 {
 <h2 class="test-subheader" id="tables">Tables</h2>
 <hr />
 <p>
- The tables are pretty much formatted and consist of two basic tables and four
- tables with <em>classes</em>. It shouldn't take much to tweak them to your
+ The tables are pretty much formatted and consist of a basic table and three tables with <em>classes</em>. It shouldn't take much to tweak them to your
  liking.
 </p>
 <h4>Basic table</h4>
-<table>
- <caption>
-  Table Caption
- </caption>
- <tr>
-  <th>Table Header 1</th>
-  <th>Table Header 2</th>
-  <th>Table Header 3</th>
- </tr>
- <tr>
-  <td>Division 1</td>
-  <td>Division 2</td>
-  <td>Division 3</td>
- </tr>
- <tr>
-  <td>Division 1</td>
-  <td>Division 2</td>
-  <td>Division 3</td>
- </tr>
- <tr>
-  <td>Division 1</td>
-  <td>Division 2</td>
-  <td>Division 3</td>
- </tr>
-</table>
-
-<h4>General table</h4>
 <table>
  <thead>
   <tr>
@@ -675,34 +629,7 @@ h1 {
   </tr>
  </tbody>
 </table>
-<hr />
-<h4>Table (table-bordered and table-striped)</h4>
-<table class="table-bordered table-striped">
- <thead>
-  <tr>
-   <th scope="col">Header</th>
-   <th>Header</th>
-   <th>Header</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <th scope="row">Data</th>
-   <td>Data</td>
-   <td>Data</td>
-  </tr>
-  <tr>
-   <th scope="row">Data</th>
-   <td>Data</td>
-   <td>Data</td>
-  </tr>
-  <tr>
-   <th scope="row">Data</th>
-   <td>Data</td>
-   <td>Data</td>
-  </tr>
- </tbody>
-</table>
+
 
 <hr />
 <h2 class="test-subheader" id="images">Images</h2>
@@ -731,6 +658,7 @@ h1 {
 <a class="secondary" href="../404.html">404.html</a>
 <hr />
 <div class="bottom-links text-center mb-4"></div>
+<button id="theme-toggle" class="mx-auto block" onclick="toggleTheme()">🌙 Dark Mode</button>
 </section>
 
 <footer class="text-center">

@@ -219,6 +219,7 @@
 </div>
 <hr>
 <div class="bottom-links text-center mb-4"></div>
+ <button id="theme-toggle" class="mx-auto block my-6" onclick="toggleTheme()">🌙 Dark Mode</button>
 </section>
 <footer class="text-center">
 	<p class="text-xs mt-3 mb-0"> - <em>by</em> <a href="https://phone1st.org">phone1st.org</a> -</p>
@@ -256,8 +257,13 @@
 
 </div><!-- wrapper   -->
 
- <script>const pageLink = "about";</script>
+ <script>
+ const pageLink = "about";
+ //highlight js
+hljs.highlightAll();
+ </script>
  <script src="js/bottom-links.js"></script>
   <script src="js/scroll.js"></script>
+  <script src="js/dark-theme.js"></script>
 </body>
 </html>

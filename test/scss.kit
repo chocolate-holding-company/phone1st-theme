@@ -14,7 +14,6 @@
 <div class="links">
   <div>
     <a href="#center">center elements</a>
-    <a href="#big-headings">big head</a>
     <a href="#hide">hide</a>
     <a href="#show">show</a>
   </div>
@@ -29,14 +28,20 @@
   <!-- @import scss-kit/_mixins-one -->
 
 </div>
-<div class="bottom-links text-center mb-4"></div>
+<div class="bottom-links text-center md-3"></div>
+ <button id="theme-toggle" class="mx-auto block my-6" onclick="toggleTheme()">🌙 Dark Mode</button>
 </section>
 
 <!-- @import includes-kit/_test-footer -->
  </div>
- <script>const pageLink = "scss";</script>
+ <script>
+ const pageLink = "scss";
+ //highlight js
+hljs.highlightAll();
+ </script>
 <script src="js/bottom-links.js"></script>
 <script src="js/scroll.js"></script>
+<script src="js/dark-theme.js"></script>
 </body>
 
 </html>

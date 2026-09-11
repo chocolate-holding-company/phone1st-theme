@@ -10,6 +10,7 @@ hr {
  border-left: 0;
  border-right: 0;
  border-top: 0;
+ margin: $spacer 1rem;
 }
 
 h1,
@@ -36,8 +37,7 @@ h4 {
 
 p,
 .p {
- font-size: clamp(1.0625rem, 1.0057rem + 0.2424vw, 1.1875rem);
- //see https://utopia.fyi/type/calculator/
+ font-size: $font-size;
 }
 
 p,
@@ -143,4 +143,4 @@ h6,
 .h6 {
  font-size: clamp(1rem, 0.7159rem + 1.2121vw, 1.625rem);
 }
-//go to https://utopia.fyi/type/calculator/ to set your own type sizes using the css clamp function
+//go to https://clamp.font-size.app/ or similar to set your own type sizes using the css clamp function

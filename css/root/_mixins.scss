@@ -44,28 +44,6 @@ $wide: 1440px;
  }
 }
 
-//bighead font title sizes - also classes see -class/_typography.scss
-//@include bighead-1;
-@mixin bighead-1 {
- font-size: clamp(2.125rem, 1.767rem + 1.5909vw, 3rem);
- line-height: 1.2;
-}
-
-@mixin bighead-2 {
- font-size: clamp(2.5rem, 2.142rem + 1.5909vw, 3.375rem);
- line-height: 1.1;
-}
-
-@mixin bighead-3 {
- font-size: clamp(3.25rem, 2.9432rem + 1.3636vw, 4rem);
- line-height: 1.1;
-}
-
-@mixin bighead-4 {
- font-size: clamp(3.75rem, 3.4432rem + 1.3636vw, 4.5rem);
- line-height: 1.1;
-}
-
 //@include triangle(5px, black, right);
 @mixin triangle($size, $color, $direction) {
  height: 0;

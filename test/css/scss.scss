@@ -12,24 +12,9 @@
 
  .center-element {
   @include center;
-  background: var(--bg);
+  background: rgb(80.186, 139.45, 19.922);
   width: 80%;
   height: 60px;
- }
-
- .big-head {
-  .bighead-one {
-   @include bighead-1;
-  }
-  .bighead-two {
-   @include bighead-2;
-  }
-  .bighead-three {
-   @include bighead-3;
-  }
-  .bighead-four {
-   @include bighead-4;
-  }
  }
 
  .hidden-box,

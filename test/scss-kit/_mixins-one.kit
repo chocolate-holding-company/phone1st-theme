@@ -2,7 +2,7 @@
 
 <pre class="mt-4 mb-8"><code>.center-element {
 @include center; //mixin
- background: #E03D44;
+ background: rgb(80.186, 139.45, 19.922);
  width: 80%;
  height: 60px;
 }
@@ -17,42 +17,6 @@
 
 <hr />
 
-<h3 id="big-headings" class="mb-4">big head</h3>
-<pre class="mt-4 mb-8"><code class="language-scss">//bighead font title sizes
-//also classes see - class/_typography.scss
-.big-head {
- h1 {
-  @include bighead-1;
-}
-//mixin - font-size: clamp(2.125rem, 1.767rem + 1.5909vw, 3rem);
- line-height: 1.2;
-
- h1 {
-  @include bighead-2;
-}
-//mixin - font-size: clamp(2.5rem, 2.142rem + 1.5909vw, 3.375rem);
- line-height: 1.1;
-
- h1 {
-  @include bighead-3;
-}
-//mixin - font-size: clamp(3.25rem, 2.9432rem + 1.3636vw, 4rem);
- line-height: 1.1;
-
- h1 {
-  @include bighead-4;
-}
-//mixin - font-size: clamp(3.75rem, 3.4432rem + 1.3636vw, 4.5rem);
- line-height: 1.1;
-}</code></pre>
-
-<div class="big-head mb-5">
-  <h1 class="bighead-one">Bighead-1</h1>
-  <h1 class="bighead-two">Bighead-2</h1>
-  <h1 class="bighead-three">Bighead-3</h1>
-  <h1 class="bighead-four">Bighead-4</h1>
-</div>
-<hr>
 <h3 id="hide" class="mb-4">hide</h3>
 <pre class="mt-4 mb-8"><code class="language-scss">.hidden-box {
  width: 300px;

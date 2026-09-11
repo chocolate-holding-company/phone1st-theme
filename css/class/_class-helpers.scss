@@ -77,18 +77,6 @@ $breakpoints: (
  .show#{$suffix} {
   @include m.show;
  }
- .bighead-1#{$suffix} {
-  @include m.bighead-1;
- }
- .bighead-2#{$suffix} {
-  @include m.bighead-2;
- }
- .bighead-3#{$suffix} {
-  @include m.bighead-3;
- }
- .bighead-4#{$suffix} {
-  @include m.bighead-4;
- }
 
  // Semantic/Variable Colors (The loop for "error", etc.)
  @each $name, $value in c.$var-color-map {
@@ -249,6 +237,18 @@ $breakpoints: (
   }
   .rounded-br-#{$i}#{$suffix} {
    border-bottom-right-radius: #{$i}mm !important;
+  }
+ }
+
+ //width abd height values in px
+ @each $key, $val in s.$spacing-map {
+  @if $key != "auto" {
+   .w-#{$key}#{$suffix} {
+    width: $val !important;
+   }
+   .h-#{$key}#{$suffix} {
+    height: $val !important;
+   }
   }
  }
  // ---------------------------------------------------------
