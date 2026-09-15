@@ -1,6 +1,6 @@
 $size-map: (
  // widths
- "w-100": (
+ "w-full": (
    width: 100%,
   ),
  "w-90": (
@@ -34,8 +34,8 @@ $size-map: (
   width: 20%,
  ),
 
- //max-width
- "mw-100": (
+ //max-width %
+ "mw-full": (
    max-width: 100%,
   ),
  "mw-90": (
@@ -71,13 +71,13 @@ $size-map: (
  "mw-10": (
   max-width: 10%,
  ),
- "mw-50px": (
+ 
+ //max-width px
+ "mw-small": (
   max-width: 50px,
-  //confusion with mw-50 % see above
  ),
- "mw-100px": (
+ "mw-100": (
   max-width: 100px,
-  //confusion with mw-100 % see above
  ),
  "mw-200": (
   max-width: 200px,
